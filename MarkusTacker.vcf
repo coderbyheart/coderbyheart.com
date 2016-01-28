@@ -2,13 +2,11 @@ BEGIN:VCARD
 VERSION:2.1
 N:Tacker;Markus;;;
 FN:Markus Tacker
-TEL;HOME;VOICE:+491796678859
-TEL;WORK;VOICE:+4915163438474
-EMAIL;HOME:m@cto.hiv
-EMAIL;WORK:markus.tacker@fintura.de
+TEL;WORK;VOICE:+491796678859
+EMAIL;WORK:m@cto.hiv
 ADR;WORK:;;Berger Straße 175;Frankfurt;Hessen;60385;Deutschland
-ORG:Fintura GmbH
-TITLE:Chief Technical Officer
+ORG:coder.by(<3);
+TITLE:Tech Leadership Coach & Interim CTO (Freelance)
 URL:http://cto.hiv/
 PHOTO;JPEG:https://farm8.staticflickr.com/7336/13376420184_1f7c386fd7_n.jpg
 TZ:+01:00

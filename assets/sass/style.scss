@@ -1012,3 +1012,20 @@ $size-header-pad:		4em;
 .hidden {
   display: none;
 }
+
+/* Anchors */
+.anchored {
+	margin-left: -2em;
+	padding-left: 2em;
+	.anchor {
+		margin-left: -1.5em;
+		position: absolute;
+		font-size: 50%;
+		display: none;
+	}
+	&:hover {
+		.anchor {
+			display: inline;
+		}
+	}
+}
