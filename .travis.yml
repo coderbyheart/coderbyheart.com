@@ -16,7 +16,8 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
 install:
-  - gem install -N jekyll html-proofer sass
+  - gem install -N bundler
+  - bundle install
 
 script:
   - ./_test.sh
