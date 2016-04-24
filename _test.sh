@@ -20,6 +20,6 @@ trap finish EXIT
 jekyll build
 jekyll serve -B -P 4000 -H 127.0.0.1 -c _config.yml,_config.travis.yml
 
-htmlproofer --disable-external --check-html --check-favicon ./_site
+htmlproofer --check-html --check-favicon ./_site
 
 killJekyll
