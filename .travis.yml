@@ -16,8 +16,8 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
 install:
-  - gem install html-proofer
+  - gem install jekyll jekyll-paginate html-proofer
 
 script:
-  - htmlproof --disable-external --check-html --check-favicon ./index.html
+  - ./_test.sh
 
