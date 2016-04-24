@@ -1,0 +1,23 @@
+branches:
+  except:
+    - /^v[0-9]/
+  only:
+    - gh-pages
+
+language: ruby
+
+rvm:
+  - 2.2.4
+
+sudo: false
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+install:
+  - gem install html-proofer
+
+script:
+  - htmlproof --disable-external --check-html --check-favicon ./index.html
+
