@@ -305,3 +305,10 @@ a[itemtype='http://schema.org/Event'] {
     content: $fa-var-crosshairs;
   }
 }
+
+span[itemtype='http://schema.org/Event'] {
+  a::before {
+    @include fa-icon();
+    content: $fa-var-crosshairs;
+  }
+}
