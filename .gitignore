@@ -1,4 +1,2 @@
-.sass-cache
-_site
-.bundle
-.jekyll-metadata
+build
+node_modules
