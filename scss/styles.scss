@@ -7,7 +7,7 @@ body {
   font-size: 16px;
 }
 
-a[itemprop=url] {
+a[itemprop=url], a[href] {
   text-decoration: none;
   border-bottom: dotted 1px;
   &:hover {
@@ -27,6 +27,10 @@ h1, h2, h3, h4, h5, h6 {
 dt {
   font-weight: normal;
   color: rgba(#000, 0.5);
+}
+
+dd {
+  font-size: 85%;
 }
 
 abbr[title] {
@@ -281,6 +285,7 @@ body > header {
     &:before {
       content: "";
     }
+    border-bottom: none;
   }
 }
 
@@ -320,16 +325,16 @@ a[href^='https://www.youtube.com/'] {
   }
 }
 
-a[itemtype='http://schema.org/Event'] {
-  &::before {
+*[itemtype='http://schema.org/Place'] {
+  a::before {
     @include fa-icon();
     content: $fa-var-crosshairs;
   }
 }
 
-span[itemtype='http://schema.org/Event'] {
-  a::before {
+a[href^="https://goo.gl/maps/"] {
+  &::before {
     @include fa-icon();
-    content: $fa-var-crosshairs;
+    content: $fa-var-map-marker;
   }
 }
