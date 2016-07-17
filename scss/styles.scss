@@ -272,6 +272,13 @@ a[href^='https://github.com'] {
   }
 }
 
+a[href^='https://www.facebook.com'] {
+  &::before {
+    @include fa-icon();
+    content: $fa-var-facebook-official;
+  }
+}
+
 a[href^='http://www.flickr.com'] {
   &::before {
     @include fa-icon();
