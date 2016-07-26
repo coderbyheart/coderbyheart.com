@@ -1,18 +1,18 @@
 {
-  "name": "cto.hiv",
-  "description": "Source code for cto.hiv",
+  "name": "coderbyheart.com",
+  "description": "Source code for coderbyheart.com",
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coderbyheart/cto.hiv.git"
+    "url": "git+https://github.com/coderbyheart/coderbyheart.com.git"
   },
   "keywords": [
     "homepage",
     "profile"
   ],
-  "author": "Markus Tacker <m@cto.hiv>",
+  "author": "Markus Tacker <m@coderbyheart.com>",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/coderbyheart/cto.hiv",
+  "homepage": "https://github.com/coderbyheart/coderbyheart.com",
   "dependencies": {
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4-dev",
     "browserify": "^13.0.1",
