@@ -31,7 +31,7 @@
     "ghooks": "^1.2.3",
     "istanbul": "^0.4.3",
     "standard": "^7.1.2",
-    "validate-commit-msg": "^2.6.1"
+    "validate-commit-msg": "^2.7.0"
   },
   "config": {
     "ghooks": {
