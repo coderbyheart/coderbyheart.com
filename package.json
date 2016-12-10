@@ -30,7 +30,7 @@
     "babelify": "^7.3.0",
     "ghooks": "^1.2.3",
     "istanbul": "^0.4.3",
-    "standard": "^8.0.0",
+    "standard": "^8.6.0",
     "validate-commit-msg": "^2.7.0"
   },
   "config": {
