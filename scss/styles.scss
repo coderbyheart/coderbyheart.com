@@ -253,13 +253,6 @@ a[href^='https://www.youtube.com/'] {
   }
 }
 
-*[itemtype='http://schema.org/Place'] {
-  a::before {
-    @include fa-icon();
-    content: $fa-var-crosshairs;
-  }
-}
-
 a[href^="https://goo.gl/maps/"] {
   &::before {
     @include fa-icon();
