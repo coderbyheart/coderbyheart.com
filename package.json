@@ -3,6 +3,7 @@
   "description": "Source code for coderbyheart.com",
   "main": "index.html",
   "scripts": {
+    "lint": "standard",
     "dev-server": "static ./build",
     "precommit": "npm run lint",
     "commitmsg": "validate-commit-msg"
