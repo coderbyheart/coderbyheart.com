@@ -3,128 +3,130 @@
 @import "../node_modules/font-awesome/scss/font-awesome";
 
 body {
-  color: rgba(#000, 0.85);
-  font-size: 16px;
-}
-
-a[itemprop=url], a[href] {
-  text-decoration: none;
-  border-bottom: dotted 1px;
-  &:hover {
-    text-decoration: none;
-  }
-  @include transition(color .2s ease-in-out, border-color .2s ease-in-out);
-}
-
-span[itemprop="description"] {
-  display: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-}
-
-dt {
-  font-weight: normal;
-  color: rgba(#000, 0.5);
-}
-
-dd {
-  font-size: 85%;
-}
-
-abbr[title] {
-  text-decoration: none;
-}
-
-body > nav {
-  display: flex;
-  justify-content: space-around;
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-  padding: 0.5rem;
-  background-color: rgba($brand-secondary, 0.85);
-  font-size: 40px;
   @include media-breakpoint-up(lg) {
-    font-size: 16px;
-  }
-  a {
-    @include transition(color .2s ease-in-out, border-color .2s ease-in-out);
-    color: rgba(#fff, 0.9);
-    text-decoration: none;
-    &:hover {
-      color: $brand-primary;
-      text-decoration: none;
-    }
+    display: flex;
   }
 }
 
 body > header {
-  text-align: center;
   display: flex;
   flex-direction: column-reverse;
-  background: $brand-secondary url(../images/bg.jpg) center;
-  background-size: cover;
-  color: rgba(#fff, 0.9);
-  img[itemprop=image] {
-    border-radius: 100%;
-    border: 2px solid rgba(#fff, 0.95);
-    box-shadow: 0 5px 15px rgba(#000, 0.25);
+  text-align: center;
+  .avatar {
+    width: 50%;
+    margin-bottom: 2rem;
+    max-width: 250px;
+  }
+  @include media-breakpoint-down(md) {
+    @include make-container();
+    @include make-container-max-widths();
+    margin-top: 100px;
+  }
+  @include media-breakpoint-up(lg) {
     width: 33%;
-    max-width: 200px;
-    margin: 5rem 0 1rem 0;
-  }
-  a[itemprop=url] {
+    background: $brand-secondary url(../images/bg.jpg) center;
+    background-size: cover;
+    position: fixed;
+    height: 100%;
     color: rgba(#fff, 0.9);
-    &:hover {
-      color: $brand-primary;
-    }
-  }
-  a[href^='http://www.flickr.com'] {
-    &:hover {
-      text-decoration: none;
-    }
-  }
-  section {
-    margin: 2rem;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.75);
-    h1 {
-      font-size: 64px;
-      @include media-breakpoint-up(lg) {
-        font-size: 32px;
-      }
-    }
-  }
-}
-
-main {
-  @include make-container();
-  article {
-    margin-top: 1rem;
-    @include make-row();
-    header, section {
-      @include make-col(12);
-    }
-    header {
-      h1, h2, h3, h4, h5, h6 {
-        padding-top: 3rem;
-      }
-    }
+    padding-bottom: 10rem;
   }
   nav {
-    @include clearfix();
-    a {
-      float: left;
-      clear: left;
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+    margin-top: 2rem;
+    text-align: center;
+    padding: 2rem;
+    color: rgba(#fff, 0.5);
+    a[itemprop=url] {
+      color: rgba(#fff, 0.5);
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+    a[itemprop=url] {
+      border-bottom: none;
+      font-size: 32px;
+      margin: 0.5rem;
+      span {
+        display: none;
+      }
     }
   }
 }
 
+body > main {
+  margin-top: 70px;
+  margin-bottom: 2rem;
+  & > article, & > footer {
+    @include make-container();
+    @include make-container-max-widths();
+    header, section, footer {
+      @include make-col(12);
+      @include media-breakpoint-up(lg) {
+        @include make-col(10);
+        @include make-col-offset(1);
+      }
+      @include media-breakpoint-up(xl) {
+        @include make-col(8);
+        @include make-col-offset(2);
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    margin-left: 33%;
+    width: 66%;
+  }
+  footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 2rem;
+    font-size: 12px;
+  }
+}
+
+h2 {
+  padding-top: 70px;
+}
+
+.heart {
+  color: $heart-color;
+}
+
+img {
+  max-width: 100%;
+  &.avatar {
+    border-radius: 100%;
+  }
+}
+
+// Talks
+span[itemprop="description"] {
+  display: none;
+}
+
+// Contact
+nav.links {
+  display: flex;
+  flex-direction: column;
+  a::before {
+    padding-right: 0.5rem;
+  }
+}
+
+// Footer
 body > footer {
+  display: none;
+  @include media-breakpoint-up(lg) {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 33%;
+  }
   margin-top: 2rem;
-  background-color: $brand-secondary;
-  text-align: center;
   padding: 2rem;
   font-size: 12px;
   color: rgba(#fff, 0.5);
@@ -143,87 +145,6 @@ body > footer {
       margin: 0.5rem;
       span {
         display: none;
-      }
-    }
-  }
-}
-
-// Media Styles
-@include media-breakpoint-up(lg) {
-  main {
-    article {
-      &#contact {
-        section {
-          @include make-col(5);
-          @include make-col-offset(0);
-          &:last-child {
-            @include make-col(5);
-            @include make-col-offset(0);
-          }
-        }
-      }
-    }
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  body > header {
-    position: fixed;
-    justify-content: flex-end;
-    width: 33%;
-    height: 100%;
-    img[itemprop="image"] {
-      margin-top: 4rem;
-    }
-  }
-  body > footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 33%;
-    background-color: transparent;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.75);
-    color: rgba(#fff, 0.9);
-    a[itemprop=url] {
-      color: $brand-secondary;
-      &:hover {
-        color: $brand-primary;
-      }
-    }
-  }
-  body > nav {
-    width: 67%;
-    right: 0;
-    background-color: rgba(#fff, 0.85);
-    border-bottom: 1px dotted rgba($brand-secondary, 0.75);
-    a {
-      color: rgba($brand-secondary, 0.9);
-      &:hover {
-        color: $brand-primary;
-      }
-    }
-  }
-  main {
-    position: absolute;
-    width: 67%;
-    left: 33%;
-    article {
-      header, section {
-        @include make-col(10);
-        @include make-col-offset(1);
-      }
-      &:last-child {
-        margin-bottom: 5rem;
-      }
-      &#contact {
-        section {
-          @include make-col-offset(1);
-        }
-      }
-      header {
-        h1, h2, h3, h4, h5, h6 {
-          padding-top: 5rem;
-        }
       }
     }
   }
@@ -329,13 +250,6 @@ a[href^='https://www.youtube.com/'] {
   &::before {
     @include fa-icon();
     content: $fa-var-youtube-play;
-  }
-}
-
-*[itemtype='http://schema.org/Place'] {
-  a::before {
-    @include fa-icon();
-    content: $fa-var-crosshairs;
   }
 }
 
