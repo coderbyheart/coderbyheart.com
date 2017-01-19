@@ -29,7 +29,22 @@ body > header {
     position: fixed;
     height: 100%;
     color: rgba(#fff, 0.9);
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
+  }
+  h1, p {
+    @include media-breakpoint-up(lg) {
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+  }
+  p {
+    width: 90%;
+    margin-left: 5%;
+    @include media-breakpoint-up(lg) {
+      a {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
   }
   nav {
     display: none;
@@ -40,13 +55,11 @@ body > header {
     text-align: center;
     padding: 2rem;
     color: rgba(#fff, 0.5);
-    a[itemprop=url] {
+    a {
       color: rgba(#fff, 0.5);
       &:hover {
         color: $brand-primary;
       }
-    }
-    a[itemprop=url] {
       border-bottom: none;
       font-size: 32px;
       margin: 0.5rem;
@@ -102,11 +115,6 @@ img {
   }
 }
 
-// Talks
-span[itemprop="description"] {
-  display: none;
-}
-
 // Contact
 nav.links {
   display: flex;
@@ -130,7 +138,7 @@ body > footer {
   padding: 2rem;
   font-size: 12px;
   color: rgba(#fff, 0.5);
-  a[itemprop=url] {
+  a {
     color: rgba(#fff, 0.5);
     &:hover {
       color: $brand-primary;
@@ -139,7 +147,7 @@ body > footer {
   nav {
     text-align: center;
     margin-bottom: 1rem;
-    a[itemprop=url] {
+    a {
       border-bottom: none;
       font-size: 32px;
       margin: 0.5rem;
