@@ -163,6 +163,7 @@ a[href^=mailto] {
   &::before {
     @include fa-icon();
     content: $fa-var-envelope-o;
+    padding-right: 0.25rem;
   }
 }
 
@@ -170,6 +171,7 @@ a[href^='https://twitter.com'] {
   &::before {
     @include fa-icon();
     content: $fa-var-twitter;
+    padding-right: 0.25rem;
   }
 }
 
@@ -177,6 +179,7 @@ a[href^='https://www.linkedin.com'] {
   &::before {
     @include fa-icon();
     content: $fa-var-linkedin;
+    padding-right: 0.25rem;
   }
 }
 
@@ -184,6 +187,7 @@ a[href^='https://www.xing.com'] {
   &::before {
     @include fa-icon();
     content: $fa-var-xing;
+    padding-right: 0.25rem;
   }
 }
 
@@ -191,6 +195,7 @@ a[href^='https://angel.co'] {
   &::before {
     @include fa-icon();
     content: $fa-var-angellist;
+    padding-right: 0.25rem;
   }
 }
 
@@ -198,6 +203,7 @@ a[href^='https://github.com'] {
   &::before {
     @include fa-icon();
     content: $fa-var-github;
+    padding-right: 0.25rem;
   }
 }
 
@@ -205,6 +211,7 @@ a[href^='https://www.facebook.com'] {
   &::before {
     @include fa-icon();
     content: $fa-var-facebook-official;
+    padding-right: 0.25rem;
   }
 }
 
@@ -212,6 +219,7 @@ a[href^='http://www.flickr.com'] {
   &::before {
     @include fa-icon();
     content: $fa-var-flickr;
+    padding-right: 0.25rem;
   }
 }
 
@@ -229,6 +237,7 @@ a[href^='http://www.amazon.de'] {
   &::before {
     @include fa-icon();
     content: $fa-var-amazon;
+    padding-right: 0.25rem;
   }
 }
 
@@ -236,6 +245,7 @@ a[href^='http://pgp.mit.edu'] {
   &::before {
     @include fa-icon();
     content: $fa-var-lock;
+    padding-right: 0.25rem;
   }
 }
 
@@ -243,6 +253,7 @@ a[href^='tel:'] {
   &::before {
     @include fa-icon();
     content: $fa-var-mobile-phone;
+    padding-right: 0.25rem;
   }
 }
 
@@ -251,6 +262,7 @@ a[href^='https://drive.google.com/'] {
   &::before {
     @include fa-icon();
     content: $fa-var-file-powerpoint-o;
+    padding-right: 0.25rem;
   }
 }
 
@@ -258,6 +270,7 @@ a[href^='https://www.youtube.com/'] {
   &::before {
     @include fa-icon();
     content: $fa-var-youtube-play;
+    padding-right: 0.25rem;
   }
 }
 
@@ -265,5 +278,6 @@ a[href^="https://goo.gl/maps/"] {
   &::before {
     @include fa-icon();
     content: $fa-var-map-marker;
+    padding-right: 0.25rem;
   }
 }
