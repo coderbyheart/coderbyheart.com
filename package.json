@@ -37,7 +37,7 @@
     "husky": "<2.0.0",
     "istanbul": "^0.4.3",
     "node-static": "^0.7.9",
-    "standard": "^8.6.0",
+    "standard": "^9.0.0",
     "validate-commit-msg": "^2.7.0"
   },
   "browserify": {
