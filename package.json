@@ -21,7 +21,7 @@
   "homepage": "https://github.com/coderbyheart/coderbyheart.com",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.5",
-    "browserify": "^14.1.0",
+    "browserify": "^14.3.0",
     "browserify-shim": "^3.8.12",
     "font-awesome": "^4.6.3",
     "jquery": "^3.0.0",
