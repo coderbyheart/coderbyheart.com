@@ -5,10 +5,7 @@ cache:
     - node_modules
 notifications:
   email: false
-node_js:
-  - 'stable'
-before_install:
-  - npm i -g npm@^2.0.0
+node_js: 'node'
 script:
   - make build
 after_success:
