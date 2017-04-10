@@ -1,16 +1,7 @@
 .DEFAULT_GOAL := help
 .PHONY: help build
 
-build: build/css/styles.min.css build/js/script.min.js build/index.html build/favicon.ico build/robots.txt build/images ## Build for production environment
-
-build/js:
-	mkdir -p build/js
-
-build/js/script.js: package.json build/js js/*.js
-	./node_modules/.bin/browserify js/script.js -o $@
-
-build/js/script.min.js: build/js/script.js
-	./node_modules/.bin/uglifyjs build/js/script.js -o $@
+build: build/css/styles.min.css build/index.html build/favicon.ico build/robots.txt build/images ## Build for production environment
 
 build/css:
 	mkdir -p build/css
