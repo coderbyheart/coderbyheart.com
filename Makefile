@@ -29,8 +29,11 @@ else
 	./node_modules/.bin/uglifycss build/css/styles.css > $@
 endif
 
-build/index.html: index.html
-	cp -u index.html build/
+build/config.json: js/config.js
+	node $< > $@
+
+build/index.html: index.html build/config.json
+	./node_modules/.bin/rheactor-build-views build -m build/config.json $< $@
 
 build/robots.txt: robots.txt
 	cp robots.txt build/

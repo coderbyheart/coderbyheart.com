@@ -1,5 +1,6 @@
 {
   "name": "coderbyheart.com",
+  "version": "1.0.0",
   "description": "Source code for coderbyheart.com",
   "main": "index.html",
   "scripts": {
@@ -37,6 +38,7 @@
     "husky": "<2.0.0",
     "istanbul": "^0.4.3",
     "node-static": "^0.7.9",
+    "rheactor-build-views": "^4.0.1",
     "standard": "^10.0.1",
     "validate-commit-msg": "^2.7.0"
   },
