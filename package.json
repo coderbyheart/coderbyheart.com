@@ -21,7 +21,7 @@
   "license": "UNLICENSED",
   "homepage": "https://github.com/coderbyheart/coderbyheart.com",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.5",
+    "bootstrap": "4.0.0-alpha.5",
     "font-awesome": "^4.6.3",
     "material-design-icons": "^3.0.1",
     "node-sass": "^4.0.0",
