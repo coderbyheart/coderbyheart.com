@@ -1,0 +1,39 @@
+{
+  "name": "coderbyheart.com",
+  "version": "0.0.0-development",
+  "description": "Source code for coderbyheart.com",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard",
+    "precommit": "npm run lint",
+    "commitmsg": "validate-commit-msg",
+    "dev-server": "static ./build",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderbyheart/coderbyheart.com.git"
+  },
+  "keywords": [
+    "Markus Tacker",
+    "coderbyheart",
+    "homepage",
+    "profile"
+  ],
+  "author": "Markus Tacker <m@coderbyheart.com>",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/coderbyheart/coderbyheart.com",
+  "dependencies": {
+    "@coderbyheart/underline": "^1.1.0"
+  },
+  "devDependencies": {
+    "@coderbyheart/contentful-static-website-generator": "^1.1.0",
+    "husky": "^0.13.3",
+    "node-sass": "^4.5.2",
+    "node-static": "^0.7.9",
+    "semantic-release": "^6.3.2",
+    "standard": "^10.0.2",
+    "uglifycss": "0.0.27",
+    "validate-commit-msg": "^2.12.1"
+  }
+}

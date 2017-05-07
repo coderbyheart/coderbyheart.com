@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Tacker;Markus;;;
+FN:Markus Tacker
+TEL;TYPE=CELL:+491796678859
+EMAIL;WORK:m@coderbyheart.com
+ADR;WORK:;;Berger Straße 175;Frankfurt;Hessen;60385;Deutschland
+ORG:coder.by(♥)
+TITLE:Freelance Software Craftsman
+URL:https://coderbyheart.com/
+PHOTO;JPEG:https://farm8.staticflickr.com/7336/13376420184_1f7c386fd7_n.jpg
+TZ:+01:00
+GEO:50.125338,8.706209
+END:VCARD
