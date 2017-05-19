@@ -27,6 +27,16 @@ build/css/%.css: src/scss/%.scss
 	@mkdir -p $(dir $@)
 	node_modules/.bin/node-sass $< $@
 
+# JavaScript
+
+build/js/%.min.js: build/js/%.js
+	@mkdir -p $(dir $@)
+	./node_modules/.bin/uglifyjs $< -o $@
+
+build/js/%.js: js/%.js
+	@mkdir -p $(dir $@)
+	./node_modules/.bin/browserify $< -o $@ -t [ babelify ]
+
 # HTML
 
 build/templates: src/**/*.html node_modules/@coderbyheart/underline/templates/*.html node_modules/@coderbyheart/underline/templates/**/*.html
@@ -104,5 +114,5 @@ clean:
 development: ## Build for development environment
 	ENVIRONMENT=development make build
 
-build: build/content.json build/templates underline guard-CONTENTFUL_LOCALE ## Build for production environment
+build: build/content.json build/templates build/js/coderbyheart.min.js underline guard-CONTENTFUL_LOCALE ## Build for production environment
 	node_modules/.bin/cswg build -c $< -v $(VERSION) -l $(CONTENTFUL_LOCALE) -e production -t build/templates
