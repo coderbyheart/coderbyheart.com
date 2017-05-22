@@ -1,5 +1,15 @@
 $brand-primary: #00b4ef;
-@import "../../node_modules/@coderbyheart/underline/scss/underline";
+
+@import "../../node_modules/@coderbyheart/underline/scss/module/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+@import "../../node_modules/@coderbyheart/underline/scss/module/base";
+@import "../../node_modules/@coderbyheart/underline/scss/module/header";
+@import "../../node_modules/@coderbyheart/underline/scss/module/hero";
+@import "../../node_modules/@coderbyheart/underline/scss/module/footer";
+@import "../../node_modules/@coderbyheart/underline/scss/module/main";
+@import "../../node_modules/@coderbyheart/underline/scss/module/sharingbuttons";
+@import "../../node_modules/@coderbyheart/underline/scss/module/icons";
 
 aside {
   img {
