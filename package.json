@@ -1,7 +1,10 @@
 {
-  "name": "coderbyheart.com",
+  "name": "@coderbyheart/coderbyheart.com",
   "version": "0.0.0-development",
   "description": "Source code for coderbyheart.com",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard",
@@ -12,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coderbyheart/coderbyheart.com.git"
+    "url": "https://github.com/coderbyheart/coderbyheart.com.git"
   },
   "keywords": [
     "Markus Tacker",

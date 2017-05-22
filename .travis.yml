@@ -5,20 +5,21 @@ cache:
 notifications:
   email: false
 node_js: node
+before_script:
+- npm prune
 script:
 - npm run lint
 - make build
 after_success:
+- npm run semantic-release
 - |
-  if [ "${TRAVIS_BRANCH}" = "master" ]; then
-    cd build
-    git init
-    git config user.name "Travis CI"
-    git config user.email "github@coderbyheart.com"
-    git add .
-    git commit -m "Deploy to GitHub Pages"
-    git push --force --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" master:gh-pages > /dev/null 2>&1
-  fi
+  cd build
+  git init
+  git config user.name "Travis CI"
+  git config user.email "github@coderbyheart.com"
+  git add .
+  git commit -m "Deploy to GitHub Pages"
+  git push --force --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" master:gh-pages > /dev/null 2>&1
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
