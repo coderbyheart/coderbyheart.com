@@ -33,7 +33,7 @@ build/js/%.min.js: build/js/%.js
 	@mkdir -p $(dir $@)
 	./node_modules/.bin/uglifyjs $< -o $@
 
-build/js/%.js: js/%.js
+build/js/%.js: src/js/%.js
 	@mkdir -p $(dir $@)
 	./node_modules/.bin/browserify $< -o $@ -t [ babelify ]
 
@@ -48,11 +48,15 @@ build/fonts:
 	@mkdir -p $@
 	cp node_modules/@coderbyheart/underline/dist/fonts/* $@
 
-build/js/underline.min.js:
+build/js/coderbyheart.min.js: build/js/coderbyheart.js
 	@mkdir -p $(dir $@)
-	cp -r node_modules/@coderbyheart/underline/dist/js/* $(dir $@)
+	./node_modules/.bin/uglifyjs $< -o $@
 
-underline: build/css/underline.min.css build/js/underline.min.js build/fonts build/templates
+build/coderbyheart.js: src/coderbyheart.js
+	@mkdir -p $(dir $@)
+	./node_modules/.bin/browserify $< -o $@ -t [ babelify ]
+
+underline: build/css/underline.min.css build/js/coderbyheart.min.js build/fonts build/templates
 
 # DEPLOY
 

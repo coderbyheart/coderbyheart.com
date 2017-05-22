@@ -1,2 +1,20 @@
 $brand-primary: #00b4ef;
 @import "../../node_modules/@coderbyheart/underline/scss/underline";
+
+aside {
+  img {
+    width: 40%;
+    float: right;
+    border-radius: 100%;
+    margin-left: 0.5rem;
+  }
+}
+
+body > footer nav.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  a {
+    font-size: 300%;
+  }
+}
