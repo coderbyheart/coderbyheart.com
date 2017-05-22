@@ -119,4 +119,8 @@ development: ## Build for development environment
 	ENVIRONMENT=development make build
 
 build: build/content.json build/templates build/js/coderbyheart.min.js underline guard-CONTENTFUL_LOCALE ## Build for production environment
-	node_modules/.bin/cswg build -c $< -v $(VERSION) -l $(CONTENTFUL_LOCALE) -e production -t build/templates
+ifeq ($(ENVIRONMENT),production)
+	node_modules/.bin/cswg build -c $< -v $(VERSION) -l $(CONTENTFUL_LOCALE) -e $(ENVIRONMENT) -t build/templates -m
+else
+	node_modules/.bin/cswg build -c $< -v $(VERSION) -l $(CONTENTFUL_LOCALE) -e $(ENVIRONMENT) -t build/templates
+endif

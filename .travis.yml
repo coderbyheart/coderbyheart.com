@@ -9,9 +9,9 @@ before_script:
 - npm prune
 script:
 - npm run lint
-- make build
 after_success:
 - npm run semantic-release
+- make build
 - |
   cd build
   git init
