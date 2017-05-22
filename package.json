@@ -38,6 +38,7 @@
     "babelify": "^7.3.0",
     "browserify": "^14.3.0",
     "husky": "^0.13.3",
+    "meownica-web-fonts-loader": "^1.2.1",
     "node-sass": "^4.5.2",
     "node-static": "^0.7.9",
     "semantic-release": "^6.3.6",
