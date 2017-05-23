@@ -69,9 +69,9 @@ VERSION ?= $(shell node -e "process.stdout.write(require('./package.json').versi
 DEPLOY_TIME ?= $(shell date +%s)
 ENVIRONMENT ?= development
 
-build: build/content.json layout build/js/coderbyheart.min.js guard-CONTENTFUL_LOCALE ## Build for production environment
+build: build/content.json layout build/js/coderbyheart.min.js ## Build for production environment
 
-layout: build/templates underline
+layout: build/templates underline guard-CONTENTFUL_LOCALE
 ifeq ($(ENVIRONMENT),production)
 	node_modules/.bin/cswg build -c build/content.json -v $(VERSION) -l $(CONTENTFUL_LOCALE) -e $(ENVIRONMENT) -t build/templates -m
 else
