@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-.PHONY: help deploy development build underline layout
+.PHONY: help deploy development build underline layout assets
 
 help: ## (default), display the list of make commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
@@ -56,6 +56,9 @@ build/coderbyheart.js: src/coderbyheart.js
 	@mkdir -p $(dir $@)
 	./node_modules/.bin/browserify $< -o $@ -t [ babelify ]
 
+assets:
+	cp assets/* build/
+
 underline: build/css/underline.min.css build/js/coderbyheart.min.js build/fonts build/templates
 
 # DEPLOY
@@ -69,7 +72,7 @@ VERSION ?= $(shell node -e "process.stdout.write(require('./package.json').versi
 DEPLOY_TIME ?= $(shell date +%s)
 ENVIRONMENT ?= development
 
-build: build/content.json layout build/js/coderbyheart.min.js ## Build for production environment
+build: build/content.json layout build/js/coderbyheart.min.js assets ## Build for production environment
 
 layout: build/templates underline guard-CONTENTFUL_LOCALE
 ifeq ($(ENVIRONMENT),production)
