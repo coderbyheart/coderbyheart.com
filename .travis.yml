@@ -11,7 +11,7 @@ script:
 - npm run lint
 after_success:
 - npm run semantic-release
-- make build
+- ENVIRONMENT=production make build
 - |
   cd build
   git init
