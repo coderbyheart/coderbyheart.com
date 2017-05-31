@@ -4,7 +4,7 @@ cache:
   - node_modules
 notifications:
   email: false
-node_js: node
+node_js: '7'
 before_script:
 - npm prune
 script:
