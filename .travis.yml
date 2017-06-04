@@ -5,6 +5,12 @@ cache:
 notifications:
   email: false
 node_js: '7'
+addons:
+  apt:
+    packages:
+    - python-pip
+before_install:
+- pip install --user s3cmd
 before_script:
 - npm prune
 script:
@@ -12,14 +18,7 @@ script:
 after_success:
 - npm run semantic-release
 - ENVIRONMENT=production make build
-- |
-  cd build
-  git init
-  git config user.name "Travis CI"
-  git config user.email "github@coderbyheart.com"
-  git add .
-  git commit -m "Deploy to GitHub Pages"
-  git push --force --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" master:gh-pages > /dev/null 2>&1
+- ENVIRONMENT=production make deploy
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
