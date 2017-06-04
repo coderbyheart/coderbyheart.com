@@ -68,7 +68,7 @@ clean:
 
 # MAIN
 
-VERSION ?= $(shell node -e "process.stdout.write(require('./package.json').version)")
+VERSION ?= $(shell npm view @coderbyheart/coderbyheart.com version)
 DEPLOY_TIME ?= $(shell date +%s)
 ENVIRONMENT ?= development
 
