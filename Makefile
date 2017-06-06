@@ -110,7 +110,7 @@ deploy: guard-AWS_ACCESS_KEY_ID guard-AWS_SECRET_ACCESS_KEY ## Deploy to AWS S3
 		--add-header=Cache-Control:public,max-age=600 \
 		--remove-header=Expires \
 		--add-header=x-amz-meta-version:$(VERSION)-$(DEPLOY_TIME) \
-		--exclude "*" --include "*.html" --include "*.txt" \
+		--exclude "*" --include "*.html" --include "*.xml" --include "*.txt" \
 		s3://$(AWS_BUCKET)/
 
 	# Expires 1 year for everything else
@@ -119,5 +119,5 @@ deploy: guard-AWS_ACCESS_KEY_ID guard-AWS_SECRET_ACCESS_KEY ## Deploy to AWS S3
 		--add-header=Cache-Control:public,max-age=31536000 \
 		--remove-header=Expires \
 		--add-header=x-amz-meta-version:$(VERSION)-$(DEPLOY_TIME) \
-		--exclude "*.html" --exclude "*.txt" \
+		--exclude "*.html" --exclude "*.xml" --exclude "*.txt" \
 		s3://$(AWS_BUCKET)/
