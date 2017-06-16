@@ -30,16 +30,6 @@ build/css/%.css: src/scss/%.scss
 	@mkdir -p $(dir $@)
 	node_modules/.bin/node-sass $< $@
 
-# JavaScript
-
-build/js/%.min.js: build/js/%.js
-	@mkdir -p $(dir $@)
-	./node_modules/.bin/uglifyjs $< -o $@
-
-build/js/%.js: src/js/%.js
-	@mkdir -p $(dir $@)
-	./node_modules/.bin/browserify $< -o $@ -t [ babelify ]
-
 # HTML
 
 build/templates: src/**/*.html node_modules/@coderbyheart/underline/templates/*.html node_modules/@coderbyheart/underline/templates/**/*.html
@@ -51,18 +41,14 @@ build/fonts:
 	@mkdir -p $@
 	cp node_modules/@coderbyheart/underline/dist/fonts/* $@
 
-build/js/coderbyheart.min.js: build/js/coderbyheart.js
-	@mkdir -p $(dir $@)
-	./node_modules/.bin/uglifyjs $< -o $@
-
-build/coderbyheart.js: src/coderbyheart.js
-	@mkdir -p $(dir $@)
-	./node_modules/.bin/browserify $< -o $@ -t [ babelify ]
-
 assets:
 	cp assets/* build/
 
-underline: build/css/underline.min.css build/js/coderbyheart.min.js build/fonts build/templates
+build/js/underline.min.js: node_modules/@coderbyheart/underline/dist/underline.min.js
+	@mkdir -p $(dir $@)
+	cp $< $@
+
+underline: build/css/underline.min.css build/fonts build/templates build/js/underline.min.js
 
 # MAIN
 
@@ -70,7 +56,7 @@ VERSION ?= $(shell npm view @coderbyheart/coderbyheart.com version)
 DEPLOY_TIME ?= $(shell date +%s)
 ENVIRONMENT ?= development
 
-build: build/content.json layout build/js/coderbyheart.min.js assets ## Build for production environment
+build: build/content.json layout assets ## Build for production environment
 
 layout: build/templates underline guard-CONTENTFUL_LOCALE
 ifeq ($(ENVIRONMENT),production)
