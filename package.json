@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "homepage": "https://github.com/coderbyheart/coderbyheart.com",
   "dependencies": {
-    "@coderbyheart/underline": "^1.8.1",
+    "@coderbyheart/underline": "^1.9.0",
     "bootstrap": "^4.0.0-alpha.6",
     "contentful": "^4.4.0",
     "font-awesome": "^4.7.0",
