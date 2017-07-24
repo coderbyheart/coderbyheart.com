@@ -27,21 +27,21 @@
   "license": "UNLICENSED",
   "homepage": "https://github.com/coderbyheart/coderbyheart.com",
   "dependencies": {
-    "@coderbyheart/underline": "^1.9.1",
+    "@coderbyheart/underline": "^1.10.0",
     "bootstrap": "^4.0.0-alpha.6",
-    "contentful": "^4.4.0",
+    "contentful": "^4.5.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "meownica-web-fonts-loader": "^1.2.1"
   },
   "devDependencies": {
     "@coderbyheart/contentful-static-website-generator": "^1.6.2",
-    "husky": "^0.14.0",
+    "husky": "^0.14.3",
     "node-sass": "^4.5.3",
     "node-static": "^0.7.9",
     "semantic-release": "^6.3.6",
     "standard": "^10.0.2",
     "uglifycss": "0.0.27",
-    "validate-commit-msg": "^2.12.1"
+    "validate-commit-msg": "^2.13.1"
   }
 }
