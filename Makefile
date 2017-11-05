@@ -53,7 +53,6 @@ underline: build/css/underline.min.css build/fonts build/templates build/js/unde
 # MAIN
 
 VERSION ?= $(shell npm view @coderbyheart/coderbyheart.com version)
-DEPLOY_TIME ?= $(shell date +%s)
 ENVIRONMENT ?= development
 
 build: build/content.json layout assets ## Build for production environment
@@ -95,7 +94,7 @@ deploy: guard-AWS_ACCESS_KEY_ID guard-AWS_SECRET_ACCESS_KEY ## Deploy to AWS S3
 		modify --recursive \
 		--add-header=Cache-Control:public,max-age=600 \
 		--remove-header=Expires \
-		--add-header=x-amz-meta-version:$(VERSION)-$(DEPLOY_TIME) \
+		--add-header=x-amz-meta-version:$(VERSION) \
 		--exclude "*" --include "*.html" --include "*.xml" --include "*.txt" \
 		s3://$(AWS_BUCKET)/
 
@@ -104,6 +103,6 @@ deploy: guard-AWS_ACCESS_KEY_ID guard-AWS_SECRET_ACCESS_KEY ## Deploy to AWS S3
 		modify --recursive \
 		--add-header=Cache-Control:public,max-age=31536000 \
 		--remove-header=Expires \
-		--add-header=x-amz-meta-version:$(VERSION)-$(DEPLOY_TIME) \
+		--add-header=x-amz-meta-version:$(VERSION) \
 		--exclude "*.html" --exclude "*.xml" --exclude "*.txt" \
 		s3://$(AWS_BUCKET)/

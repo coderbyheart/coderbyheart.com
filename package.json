@@ -27,16 +27,16 @@
   "license": "UNLICENSED",
   "homepage": "https://github.com/coderbyheart/coderbyheart.com",
   "dependencies": {
-    "@coderbyheart/underline": "^1.11.0"
+    "@coderbyheart/underline": "^1.12.0"
   },
   "devDependencies": {
-    "@coderbyheart/contentful-static-website-generator": "^1.6.2",
-    "@commitlint/cli": "^4.1.1",
-    "@commitlint/config-angular": "^4.2.0",
+    "@coderbyheart/contentful-static-website-generator": "^1.7.0",
+    "@commitlint/cli": "^4.2.2",
+    "@commitlint/config-angular": "^4.2.1",
     "husky": "^0.14.3",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.6.0",
     "node-static": "^0.7.10",
-    "semantic-release": "^8.0.3",
+    "semantic-release": "^8.2.0",
     "standard": "^10.0.3",
     "uglifycss": "0.0.27"
   }
