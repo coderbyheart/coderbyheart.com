@@ -38,6 +38,6 @@
     "node-static": "^0.7.10",
     "semantic-release": "^12.4.1",
     "standard": "^10.0.3",
-    "uglifycss": "0.0.27"
+    "uglifycss": "0.0.28"
   }
 }
