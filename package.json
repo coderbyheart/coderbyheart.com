@@ -33,7 +33,7 @@
     "@coderbyheart/contentful-static-website-generator": "^1.7.1",
     "@commitlint/cli": "^7.1.1",
     "@commitlint/config-angular": "^7.1.1",
-    "husky": "^1.0.0",
+    "husky": "^2.0.0",
     "node-sass": "^4.9.3",
     "node-static": "^0.7.10",
     "semantic-release": "^15.9.12",
