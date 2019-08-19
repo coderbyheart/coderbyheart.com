@@ -37,7 +37,7 @@
     "node-sass": "^4.9.3",
     "node-static": "^0.7.10",
     "semantic-release": "^15.9.12",
-    "standard": "^13.0.1",
+    "standard": "^14.0.0",
     "uglifycss": "0.0.29"
   }
 }
