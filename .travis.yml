@@ -13,7 +13,8 @@ before_script:
 script:
 - npm run lint
 after_success:
-- npm run semantic-release
+- npm i --no-save semantic-release@next
+- npx semantic-release
 - ENVIRONMENT=production make build
 - ENVIRONMENT=production make deploy
 branches:

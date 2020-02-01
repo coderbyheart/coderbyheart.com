@@ -10,8 +10,7 @@
     "lint": "standard",
     "precommit": "npm run lint",
     "commitmsg": "commitlint -e",
-    "dev-server": "static ./build",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "dev-server": "static ./build"
   },
   "repository": {
     "type": "git",
@@ -36,7 +35,6 @@
     "husky": "^4.2.1",
     "node-sass": "^4.13.1",
     "node-static": "^0.7.11",
-    "semantic-release": "^17.0.2",
     "standard": "^14.3.1",
     "uglifycss": "0.0.29"
   },
