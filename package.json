@@ -31,13 +31,16 @@
   },
   "devDependencies": {
     "@coderbyheart/contentful-static-website-generator": "^1.7.1",
-    "@commitlint/cli": "^8.0.0",
-    "@commitlint/config-angular": "^8.0.0",
-    "husky": "^3.0.0",
-    "node-sass": "^4.9.3",
-    "node-static": "^0.7.10",
-    "semantic-release": "^15.9.12",
-    "standard": "^14.0.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-angular": "^8.3.4",
+    "husky": "^4.2.1",
+    "node-sass": "^4.13.1",
+    "node-static": "^0.7.11",
+    "semantic-release": "^17.0.2",
+    "standard": "^14.3.1",
     "uglifycss": "0.0.29"
+  },
+  "release": {
+    "branch": "saga"
   }
 }
