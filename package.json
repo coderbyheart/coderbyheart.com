@@ -29,7 +29,7 @@
   "homepage": "https://github.com/coderbyheart/coderbyheart.com",
   "dependencies": {
     "@coderbyheart/underline": "^1.12.0",
-    "snyk": "^1.316.2"
+    "snyk": "^1.398.0"
   },
   "devDependencies": {
     "@coderbyheart/contentful-static-website-generator": "^1.7.1",
