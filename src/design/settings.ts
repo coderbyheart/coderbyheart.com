@@ -6,11 +6,10 @@ export const fonts = {
 		},
 	},
 	headline: {
-		name: 'Spartan',
+		name: 'Raleway',
 		weights: {
-			light: 200,
-			regular: 400,
-			heavy: 700,
+			light: 500,
+			regular: 700,
 		},
 	},
 } as const
