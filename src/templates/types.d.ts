@@ -1,6 +1,6 @@
 export type SiteMetaData = {
 	title: string
-	subTitle: string
+	tagLine: string
 	description: string
 	gitHubUrl: string
 }
@@ -27,10 +27,11 @@ export type Page = {
 			value: string
 		}[]
 		frontmatter: {
-			title: string | null
+			title: string
 			subtitle: string | null
 			abstract: string | null
 			hero: string | null
+			noheadline: boolean | null
 		}
 	}
 }

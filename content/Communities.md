@@ -6,9 +6,23 @@ I'm constantly trying to improve the community I am part of. Since 2012 I've
 volunteered and initiated conferences, barcamps, meetups, events and platforms
 that support them:
 
-## [Codefreeze](https://codefreeze.fi/)
+## Distribute Aid
 
-Since 2017 I am helping to make Codefreeze the
+I am a code contributor at [Distribute Aid](https://distributeaid.org) where I
+help build the software that helps aid workers across Europe improve the lives
+of newcomers.
+
+> We are always looking for new contributors and maintain an up-to-date
+> [Getting Started Guide](https://www.notion.so/CONTRIBUTING-4ba5060441e44925b5e22aa674d4729e).
+
+Here are some posts about my work there:
+
+- [Volunteer Impact: Distribute Aid Refugees Care](https://www.designtocombatcovid19.com/blog/distribute-aid)
+- [COVID-19 guide for Aid Workers built with GatsbyJS from a Google Drive folder](https://coderbyheart.com/covid-19-guide-for-aid-workers-built-with-gatsbyjs-from-a-google-drive/)
+
+## Codefreeze
+
+Since 2017 I am helping to make [Codefreeze](https://codefreeze.fi/) the
 [most amazing software conference in the world](https://coderbyheart.com/codefreeze-brings-the-magic-of-socrates-to-lapland/).
 Since 2019 there is also a summer-version:
 [Codebreeze](https://codebreeze.netlify.com/).

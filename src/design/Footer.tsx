@@ -13,12 +13,12 @@ export const StyledFooter = styled.footer`
 	color: var(--text-color-light);
 	font-size: var(--small-font-size);
 	a {
-		color: var(--highlight-color);
+		color: var(--highlight-color-on-dark);
 		text-decoration: none;
 	}
 	hr {
 		border: 0;
-		border-bottom: 1px solid var(--highlight-color);
+		border-bottom: 1px solid var(--highlight-color-on-dark);
 		opacity: 0.5;
 		width: 5rem;
 		margin: 0;
@@ -31,7 +31,7 @@ export const StyledFooter = styled.footer`
 			content: ' ';
 			width: 5rem;
 			height: 1px;
-			border-bottom: 1px solid var(--highlight-color);
+			border-bottom: 1px solid var(--highlight-color-on-dark);
 			opacity: 0.5;
 			position: absolute;
 			left: 0;
@@ -109,7 +109,7 @@ export const Footer = ({
 }: React.PropsWithChildren<{
 	content: Page
 	className?: string
-	siteMetaData: Pick<SiteMetaData, 'title' | 'subTitle'>
+	siteMetaData: Pick<SiteMetaData, 'title' | 'tagLine'>
 }>) => (
 	<StyledFooter className={className}>
 		<Wrapper>

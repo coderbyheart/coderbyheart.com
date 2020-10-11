@@ -3,21 +3,26 @@ import { createGlobalStyle } from 'styled-components'
 import { Helmet } from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import { SiteMetaData } from '../templates/types'
-import { fonts, colors, breakpoints } from './settings'
+import { fonts, breakpoints } from './settings'
 
 const GlobalStyle = createGlobalStyle`
 	:root {
 		--text-font-family: ${fonts.text.name}, sans-serif;
 		--text-font-weigth: ${fonts.text.weights.regular};
+		--text-font-weigth-bold: ${fonts.text.weights.bold};
 		--headline-font-family: ${fonts.headline.name}, sans-serif;
 		--headline-font-weight: ${fonts.headline.weights.regular};
 		--headline-font-weight-light: ${fonts.headline.weights.light};
-		--background-color: ${colors.background};
-		--background-color-dark: ${colors.darkBackground};
-		--highlight-color: ${colors.highlight};
-		--text-color: ${colors.text};
-		--text-color-light: ${colors.textLight};
-		--heart-color: ${colors.heart};
+		--headline-font-weight-thin: ${fonts.headline.weights.thin};
+		--background-color: #ffffff;
+		--background-color-dark: #191919;
+		--highlight-color: #007da7;
+		--highlight-color-on-dark: #00b4ef;
+		--note-bg-color: #e7f9ff;
+		--text-color: #3f3f3f;
+		--text-color-light: #ffffffd9;
+		--heart-color: #e00073;
+		--heart-color-on-note: #d8006f;
 		--small-font-size: 12px;
 		--max-width: ${breakpoints.content};
 	}
@@ -31,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
 		h1, h2, h3, h4, h5, h6 {
 			font-family: var(--headline-font-family);
 			font-weight: var(--headline-font-weight);
-			line-height: 100%;
+			line-height: 115%;
 		}
 	}
 	#___gatsby, #gatsby-focus-wrapper {
@@ -61,13 +66,12 @@ export const Head = ({
 	pageTitle,
 }: {
 	siteMetaData: Pick<SiteMetaData, 'title' | 'description'>
-	pageTitle?: string
+	pageTitle: string
 }) => (
 	<>
 		<Helmet>
 			<title>
-				{siteTitle}
-				{pageTitle !== undefined ? ` · ${pageTitle}` : ''}
+				{siteTitle} · {pageTitle}
 			</title>
 			<meta name="description" content={description} />
 			<html lang="en" />
@@ -100,6 +104,11 @@ export const Head = ({
 			<script
 				async
 				src={withPrefix('scrolling.js')}
+				crossOrigin="anonymous"
+			></script>
+			<script
+				async
+				src="https://platform.twitter.com/widgets.js"
 				crossOrigin="anonymous"
 			></script>
 		</Helmet>

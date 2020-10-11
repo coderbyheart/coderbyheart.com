@@ -5,4 +5,44 @@ export const Content = styled.div`
 		width: 100%;
 	}
 	line-height: 150%;
+	a {
+		color: var(--highlight-color);
+	}
+	h1,
+	h2 {
+		position: relative;
+		margin-top: 4rem;
+		margin-bottom: 1.5rem;
+		:after {
+			content: ' ';
+			width: 5rem;
+			height: 1px;
+			border-bottom: 1px solid var(--highlight-color);
+			opacity: 0.5;
+			position: absolute;
+			left: 0;
+			bottom: -0.5rem;
+		}
+		small {
+			font-weight: var(--headline-font-weight-thin);
+			font-size: 50%;
+			text-transform: uppercase;
+		}
+	}
+	strong {
+		font-weight: var(--text-font-weigth-bold);
+	}
+	blockquote {
+		border: 1px solid var(--heart-color);
+		border-radius: 5px;
+		padding: 0 1rem;
+		margin: 0;
+		background-color: var(--note-bg-color);
+		a {
+			color: var(--heart-color-on-note);
+		}
+	}
+	div.twitter-tweet-rendered {
+		margin: 2rem auto !important;
+	}
 `
