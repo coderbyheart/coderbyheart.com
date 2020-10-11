@@ -16,8 +16,8 @@ export const fonts = {
 
 export const colors = {
 	background: '#ffffff',
-	darkBackground: '#000000e6',
-	text: '#000000bf',
+	darkBackground: '#191919',
+	text: '#191919',
 	textLight: '#ffffffd9',
 	highlight: '#00b4ef',
 	heart: '#e00073',

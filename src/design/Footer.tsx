@@ -27,7 +27,6 @@ export const StyledFooter = styled.footer`
 	h2 {
 		position: relative;
 		margin-bottom: 1.5rem;
-		margin-top: 3rem;
 		:after {
 			content: ' ';
 			width: 5rem;
@@ -46,20 +45,21 @@ export const StyledFooter = styled.footer`
 			display: flex;
 		}
 		svg {
-			width: 52px;
-			height: 52px;
+			width: calc(42px * 1.25);
+			height: calc(42px * 1.25);
 		}
 	}
 	h2 {
+		margin-top: 3rem;
 	}
 `
 
 const Wrapper = styled.div`
-	margin: 0 auto;
 	max-width: var(--max-width);
-	padding: 2rem 1rem;
+	padding: 1rem 1rem;
 	@media (min-width: ${breakpoints.content}) {
 		padding: 4rem 0;
+		margin: 0 auto;
 	}
 	p {
 		max-width: calc(var(--max-width) / 2);
