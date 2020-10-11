@@ -13,7 +13,7 @@ const cfg = {
 	pathPrefix: process.env.SITE_DIR,
 	siteMetadata: {
 		title: `Markus Tacker`,
-		subTitle: `coder by heart and organizational hacker by passion`,
+		tagLine: `coder by heart and organizational hacker by passion`,
 		siteUrl,
 		description: `As a Software Crafter
 		I am using my 20+ years of experience working as a software developer,

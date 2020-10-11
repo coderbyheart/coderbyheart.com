@@ -86,9 +86,26 @@ export const MainNav = ({
 				>
 					Home
 				</a>
-				<a href={withPrefix('/archive/')}>Archive</a>
-				<a href={withPrefix('/talks/')}>Talks</a>
-				<a href={withPrefix('/communitities/')}>Communities</a>
+				<a
+					href={withPrefix('/archive/')}
+					className={location.pathname.startsWith('/archive') ? 'active' : ''}
+				>
+					Blog
+				</a>
+				<a
+					href={withPrefix('/talks/')}
+					className={location.pathname.startsWith('/talks') ? 'active' : ''}
+				>
+					Talks
+				</a>
+				<a
+					href={withPrefix('/communities/')}
+					className={
+						location.pathname.startsWith('/communities') ? 'active' : ''
+					}
+				>
+					Communities
+				</a>
 			</ContentNav>
 		</Wrapper>
 	</StyledNav>

@@ -24,6 +24,7 @@ const StyledNav = styled.nav`
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 99999;
 `
 
 const Shrink = styled.div`
@@ -81,10 +82,10 @@ body.scrolling {
 `
 
 export const MetaNav = ({
-	siteMetaData: { title, subTitle },
+	siteMetaData: { title, tagLine },
 	className,
 }: React.PropsWithChildren<{
-	siteMetaData: Pick<SiteMetaData, 'title' | 'subTitle'>
+	siteMetaData: Pick<SiteMetaData, 'title' | 'tagLine'>
 	className?: string
 }>) => (
 	<>
@@ -93,18 +94,18 @@ export const MetaNav = ({
 				<Shrink>
 					<a href={withPrefix('/')}>
 						<strong>{title}</strong>
-						<span> &middot; {subTitle}</span>
+						<span> &middot; {tagLine}</span>
 					</a>
 				</Shrink>
 				<ContentNav>
 					<span>
-						<a href={withPrefix('/archive/')}>Archive</a>
+						<a href={withPrefix('/archive/')}>Blog</a>
 					</span>
 					<span>
 						<a href={withPrefix('/talks/')}>Talks</a>
 					</span>
 					<span>
-						<a href={withPrefix('/communitities/')}>Communities</a>
+						<a href={withPrefix('/communities/')}>Communities</a>
 					</span>
 				</ContentNav>
 			</Wrapper>

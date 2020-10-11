@@ -14,7 +14,7 @@ export const query = graphql`
 		site {
 			siteMetadata {
 				title
-				subTitle
+				tagLine
 				description
 				gitHubUrl
 			}
@@ -26,8 +26,8 @@ const Main = styled.main`
 	padding: 1rem;
 	@media (min-width: ${breakpoints.content}) {
 		padding: 0;
+		margin: 4rem auto;
 	}
-	margin: 0 auto;
 	max-width: var(--max-width);
 `
 
@@ -55,10 +55,27 @@ const PageTemplate = (data: {
 	const footerContent = findPageByRelativePath('Footer.md')
 	return (
 		<>
-			<Head siteMetaData={data.data.site.siteMetadata} />
+			<Head
+				siteMetaData={data.data.site.siteMetadata}
+				pageTitle={data.pageContext.page.remark.frontmatter.title}
+			/>
 			<Header siteMetaData={data.data.site.siteMetadata} location={location} />
 			<Main>
 				<Content>
+					{data.pageContext.page.remark.frontmatter.noheadline !== true && (
+						<h1>
+							{data.pageContext.page.remark.frontmatter.subtitle && (
+								<>
+									<small>
+										{data.pageContext.page.remark.frontmatter.subtitle}
+									</small>
+									<br />
+								</>
+							)}
+							{data.pageContext.page.remark.frontmatter.title}
+						</h1>
+					)}
+
 					{data.pageContext.page.remark?.htmlAst !== undefined &&
 						renderHtmlAstToReact(data.pageContext.page.remark.htmlAst)}
 				</Content>

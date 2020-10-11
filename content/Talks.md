@@ -1,5 +1,6 @@
 ---
 title: Talks
+subtitle: A list of my talks
 ---
 
 > I am available for speaking engagements! Just contact me if you feel I can
@@ -101,9 +102,8 @@ challenge for applying TDD.
 [Slides](https://docs.google.com/presentation/d/1syRztRCV8BeF9p1vAHy6AepvNUa1n2hUUBRskbqx_3k/edit)
 
 - [Tradebyte /dev/night](https://dev-night.io/ "/dev/night - Meetup für Entwickler")
-  📅 May 16th 2017 🇩🇪 Ansbach
-- **[Developer Camp 2017](https://developercamp.io/)** 📅 17. May 2017 🇩🇪
-  Nürnberg
+  📅 May 16th 2017 🇩🇪 Ansbach -[Developer Camp 2017](https://developercamp.io/)
+  📅 17. May 2017 🇩🇪 Nürnberg
 
 ## 5 years CTOing: sharing the good and the bad
 
@@ -112,8 +112,7 @@ Fintura, and Resourceful Humans.
 
 [Slides](https://docs.google.com/presentation/d/14Q6FQUg2YNkFINWAMSHyKKP1-h11kQ51dc9r_j70PAQ/edit)
 
-- **[Developer Camp 2017](https://developercamp.io/)** 📅 17. May 2017 🇩🇪
-  Nürnberg
+- [Developer Camp 2017](https://developercamp.io/) 📅 17. May 2017 🇩🇪 Nürnberg
 
 ## Tools + Tipps für Freelancer und Selbständige
 

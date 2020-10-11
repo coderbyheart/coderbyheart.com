@@ -23,6 +23,8 @@ const renderContentPage = async (
 							htmlAst
 							frontmatter {
 								title
+								subtitle
+								noheadline
 							}
 							headings {
 								id
@@ -65,4 +67,12 @@ const renderContentPage = async (
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
 	await renderContentPage('About.md', '/', 'page', createPage, graphql)
+	await renderContentPage(
+		'Communities.md',
+		'/communities',
+		'page',
+		createPage,
+		graphql,
+	)
+	await renderContentPage('Talks.md', '/talks', 'page', createPage, graphql)
 }
