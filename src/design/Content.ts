@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from './settings'
 
 export const Content = styled.div`
 	img {
@@ -44,5 +45,17 @@ export const Content = styled.div`
 	}
 	div.twitter-tweet-rendered {
 		margin: 2rem auto !important;
+	}
+	img {
+		width: 100vw;
+		margin-left: -1rem;
+		margin-right: -1rem;
+		@media (min-width: ${breakpoints.content}) {
+			margin-top: 4rem;
+			margin-bottom: 4rem;
+			margin-left: calc((100vw - ${breakpoints.content}) / 2 * -1);
+			margin-right: calc((100vw - ${breakpoints.content}) / 2 * -1);
+			width: 100vw;
+		}
 	}
 `

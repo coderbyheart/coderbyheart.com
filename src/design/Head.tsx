@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
 			font-weight: var(--headline-font-weight);
 			line-height: 115%;
 		}
+		overflow-x: hidden;
 	}
 	#___gatsby, #gatsby-focus-wrapper {
 		height: 100%;
