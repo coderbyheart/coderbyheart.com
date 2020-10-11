@@ -2,13 +2,16 @@ import { withPrefix } from 'gatsby'
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import { SiteMetaData } from '../templates/types'
+import { breakpoints } from './settings'
+
+import Heart from './heart.svg'
 
 const MetaNav = styled.nav`
 	background-color: var(--background-color-dark);
 	color: var(--text-color-light);
 	font-size: var(--small-font-size);
 	font-family: var(--headline-font-family);
-	font-weight: var(--headline-font-weight-regular);
+	font-weight: var(--headline-font-weight-light);
 	strong {
 		font-weight: var(--headline-font-weight);
 	}
@@ -36,22 +39,31 @@ const ContentNav = styled.div`
 `
 
 const Wrapper = styled.div`
+	padding: 0 1rem;
+	@media (min-width: ${breakpoints.content}) {
+		padding: 0;
+	}
 	margin: 0 auto;
 	max-width: var(--max-width);
 	display: flex;
 	justify-content: space-between;
-	padding: 1rem;
+	align-items: center;
 	span + span {
 		:before {
 			content: '·';
 			padding: 0.25rem;
 		}
 	}
+	svg {
+		height: 32px;
+		width: 32px;
+	}
+	height: 50px;
 `
 
 const GlobalStyle = createGlobalStyle`
 body.scrolling {
-	margin-top: 45px;
+	margin-top: 72px;
 	${MetaNav} {
 		position: fixed;
 		top: 0;
@@ -63,6 +75,11 @@ body.scrolling {
 	}
 	${Shrink} {
 		span {
+			display: none;
+		}
+	}
+	${Wrapper} {
+		svg {
 			display: none;
 		}
 	}
@@ -99,6 +116,7 @@ export const Header = ({
 						<a href={withPrefix('/communitities/')}>Communities</a>
 					</span>
 				</ContentNav>
+				<Heart />
 			</Wrapper>
 		</MetaNav>
 		<GlobalStyle />

@@ -10,8 +10,7 @@ const GlobalStyle = createGlobalStyle`
 		--text-font-family: ${fonts.text.name}, sans-serif;
 		--text-font-weigth: ${fonts.text.weights.regular};
 		--headline-font-family: ${fonts.headline.name}, sans-serif;
-		--headline-font-weight: ${fonts.headline.weights.heavy};
-		--headline-font-weight-regular: ${fonts.headline.weights.regular};
+		--headline-font-weight: ${fonts.headline.weights.regular};
 		--headline-font-weight-light: ${fonts.headline.weights.light};
 		--background-color: ${colors.background};
 		--background-color-dark: ${colors.darkBackground};

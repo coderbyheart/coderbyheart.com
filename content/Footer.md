@@ -3,14 +3,14 @@ Software Crafter building 🌩️ cloud-based cellular IoT solutions at
 Code contributor at [Distribute Aid](https://distributeaid.org/).  
 Mentor. Speaker. Conference & Community builder. Camper. 🏕️ 🚐
 
-# Markus Tacker
+## Markus Tacker
 
 **Media Computer Scientist (B.Sc.)**
 
 - 📨 [m@coderbyheart.com](mailto:m@coderbyheart.com)
 - 📱 [464 42 649](tel:+4746442649)
 
-## Connect …
+## Connect
 
 You can find me on these sites.
 

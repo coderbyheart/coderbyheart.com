@@ -6,6 +6,8 @@ import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
 import { Content } from './Content'
 import { breakpoints } from './settings'
 
+import Heart from './heart.svg'
+
 export const StyledFooter = styled.footer`
 	background-color: var(--background-color-dark);
 	color: var(--text-color-light);
@@ -23,7 +25,6 @@ export const StyledFooter = styled.footer`
 	}
 	h1,
 	h2 {
-		font-weight: var(--headline-font-weight-light);
 		position: relative;
 		margin-bottom: 1.5rem;
 		margin-top: 3rem;
@@ -37,6 +38,19 @@ export const StyledFooter = styled.footer`
 			left: 0;
 			bottom: -0.5rem;
 		}
+	}
+	h1 {
+		font-size: 42px;
+		a {
+			color: inherit;
+			display: flex;
+		}
+		svg {
+			width: 52px;
+			height: 52px;
+		}
+	}
+	h2 {
 	}
 `
 
@@ -75,10 +89,6 @@ const Wrapper = styled.div`
 	}
 `
 
-const Logo = styled.img`
-	max-width: 200px;
-`
-
 const Copyright = styled.p`
 	margin-top: 2rem;
 `
@@ -93,7 +103,7 @@ const Photo = styled.img`
 `
 
 export const Footer = ({
-	siteMetaData: { title, subTitle },
+	siteMetaData: { title },
 	content,
 	className,
 }: React.PropsWithChildren<{
@@ -103,19 +113,17 @@ export const Footer = ({
 }>) => (
 	<StyledFooter className={className}>
 		<Wrapper>
-			<a href={withPrefix('/')}>
-				<Logo
-					data-src="https://images.contentful.com/bncv3c2gt878/nUlL9mkFGgaUyke6yIWMW/8aca6483526847fe9542d5f3b3c4f5b3/logo-inverted.svg"
-					className="lazyload"
-					alt={`${title} · ${subTitle}`}
-				/>
-			</a>
+			<h1>
+				<a href={withPrefix('/')}>
+					coder.by(
+					<Heart />)
+				</a>
+			</h1>
 			<Photo
 				className="lazyload"
 				alt={title}
 				data-src="https://images.contentful.com/bncv3c2gt878/6CWMgqeZdCmkk6KkIUksgQ/50922090bc6566c6624c12b82a4bf78c/36671282034_427eace68d_o.jpg?w=150"
 			/>
-			<hr />
 			<Content>{renderHtmlAstToReact(content.remark.htmlAst)}</Content>
 			<Copyright>
 				© 2015-{new Date().getFullYear()}{' '}
