@@ -98,11 +98,6 @@ export const Head = ({
 			></script>
 			<script
 				async
-				src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"
-				crossOrigin="anonymous"
-			></script>
-			<script
-				async
 				src={withPrefix('scrolling.js')}
 				crossOrigin="anonymous"
 			></script>
