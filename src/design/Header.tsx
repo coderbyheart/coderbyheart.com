@@ -22,6 +22,10 @@ const MetaNav = styled.nav`
 			text-decoration: underline;
 		}
 	}
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 `
 
 const Shrink = styled.div`
@@ -62,13 +66,13 @@ const Wrapper = styled.div`
 `
 
 const GlobalStyle = createGlobalStyle`
+#___gatsby {
+	padding-top: 50px;
+}
 body.scrolling {
-	margin-top: 72px;
+
 	${MetaNav} {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
+
 	}
 	${ContentNav} {
 		display: block;
