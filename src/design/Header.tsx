@@ -111,9 +111,6 @@ export const Header = ({
 						<a href={withPrefix('/archive/')}>Archive</a>
 					</span>
 					<span>
-						<a href={withPrefix('/about/')}>About</a>
-					</span>
-					<span>
 						<a href={withPrefix('/talks/')}>Talks</a>
 					</span>
 					<span>
