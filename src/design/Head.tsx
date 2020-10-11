@@ -31,6 +31,7 @@ const GlobalStyle = createGlobalStyle`
 		h1, h2, h3, h4, h5, h6 {
 			font-family: var(--headline-font-family);
 			font-weight: var(--headline-font-weight);
+			line-height: 100%;
 		}
 	}
 	#___gatsby, #gatsby-focus-wrapper {
