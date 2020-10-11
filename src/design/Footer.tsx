@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Page, SiteMetaData } from '../templates/types'
 import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
+import { Content } from './Content'
 import { breakpoints } from './settings'
 
 export const StyledFooter = styled.footer`
@@ -49,6 +50,29 @@ const Wrapper = styled.div`
 	p {
 		max-width: calc(var(--max-width) / 2);
 	}
+	ul {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+		li + li {
+			:before {
+				content: '·';
+				padding: 0.5rem;
+			}
+		}
+	}
+	@media (min-width: ${breakpoints.content}) {
+		ul {
+			flex-direction: column;
+			li + li {
+				:before {
+					content: '';
+					padding: 0;
+				}
+			}
+		}
+	}
 `
 
 const Logo = styled.img`
@@ -92,10 +116,10 @@ export const Footer = ({
 				data-src="https://images.contentful.com/bncv3c2gt878/6CWMgqeZdCmkk6KkIUksgQ/50922090bc6566c6624c12b82a4bf78c/36671282034_427eace68d_o.jpg?w=150"
 			/>
 			<hr />
-			{renderHtmlAstToReact(content.remark.htmlAst)}
+			<Content>{renderHtmlAstToReact(content.remark.htmlAst)}</Content>
 			<Copyright>
 				© 2015-{new Date().getFullYear()}{' '}
-				<a href="https://coderbyheart.com/">{title}</a>.
+				<a href="https://coderbyheart.com/">{title}</a>. All rights reserved.
 			</Copyright>
 		</Wrapper>
 	</StyledFooter>
