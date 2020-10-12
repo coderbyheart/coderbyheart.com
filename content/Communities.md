@@ -105,6 +105,10 @@ on-location event registration and general support.
 
 ## Platforms
 
+**[Homeferences](https://homeferences.netlify.app/)**
+
+A list of conferences that can be attended online.
+
 **[#RheinMainRocks](https://t.co/U5I9KmGd27)**
 
 A _hashtag_ where a lot of the activities that happen are shared. I did create
