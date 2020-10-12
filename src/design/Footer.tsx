@@ -9,6 +9,7 @@ import { breakpoints } from './settings'
 import Heart from './heart.svg'
 
 export const StyledFooter = styled.footer`
+	min-height: 100%;
 	background-color: var(--background-color-dark);
 	color: var(--text-color-light);
 	font-size: var(--small-font-size);
@@ -109,7 +110,7 @@ export const Footer = ({
 }: React.PropsWithChildren<{
 	content: Page
 	className?: string
-	siteMetaData: Pick<SiteMetaData, 'title' | 'tagLine'>
+	siteMetaData: Pick<SiteMetaData, 'title'>
 }>) => (
 	<StyledFooter className={className}>
 		<Wrapper>
