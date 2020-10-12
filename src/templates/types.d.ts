@@ -35,16 +35,3 @@ export type Page = {
 		}
 	}
 }
-
-export type GatsbyLocation = {
-	ancestorOrigins: Record<string, any>
-	href: string
-	origin: string
-	protocol: string
-	host: string
-	hostname: string
-	port: string
-	pathname: string
-	search: string
-	hash: string
-}

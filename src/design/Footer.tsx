@@ -1,4 +1,4 @@
-import { withPrefix } from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import { Page, SiteMetaData } from '../templates/types'
@@ -114,10 +114,10 @@ export const Footer = ({
 	<StyledFooter className={className}>
 		<Wrapper>
 			<h1>
-				<a href={withPrefix('/')}>
+				<Link to={'/'}>
 					coder.by(
 					<Heart />)
-				</a>
+				</Link>
 			</h1>
 			<Photo
 				className="lazyload"

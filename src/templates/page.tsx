@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
-import { SiteMetaData, Page, GatsbyLocation } from './types'
+import { SiteMetaData, Page } from './types'
 import { Head } from '../design/Head'
 import { Header } from '../design/Header'
 import { Content } from '../design/Content'
@@ -41,7 +41,6 @@ const PageTemplate = (data: {
 		page: Page
 		pages: Page[]
 	}
-	location: GatsbyLocation
 }) => {
 	const findPageByRelativePath = (search: string): Page => {
 		const p = data.pageContext.pages.find(
@@ -59,7 +58,7 @@ const PageTemplate = (data: {
 				siteMetaData={data.data.site.siteMetadata}
 				pageTitle={data.pageContext.page.remark.frontmatter.title}
 			/>
-			<Header siteMetaData={data.data.site.siteMetadata} location={location} />
+			<Header siteMetaData={data.data.site.siteMetadata} />
 			<Main>
 				<Content>
 					{data.pageContext.page.remark.frontmatter.noheadline !== true && (
