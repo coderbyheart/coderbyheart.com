@@ -1,5 +1,6 @@
 require('ts-node').register({ files: true })
 const path = require('path')
+const { cacheImages } = require('./contentful')
 
 const renderContentPage = async (
 	name,
@@ -53,13 +54,21 @@ const renderContentPage = async (
 		component: path.join(process.cwd(), 'src', 'templates', `${template}.tsx`),
 		context: {
 			page: {
-				remark: page.node.childMarkdownRemark,
+				remark: {
+					...page.node.childMarkdownRemark,
+					htmlAst: await cacheImages(page.node.childMarkdownRemark.htmlAst),
+				},
 			},
-			pages: pages.data.allFile.edges.map(
-				({ node: { childMarkdownRemark, ...rest } }) => ({
-					remark: childMarkdownRemark,
-					...rest,
-				}),
+			pages: await Promise.all(
+				pages.data.allFile.edges.map(
+					async ({ node: { childMarkdownRemark, ...rest } }) => ({
+						remark: {
+							...childMarkdownRemark,
+							htmlAst: await cacheImages(childMarkdownRemark.htmlAst),
+						},
+						...rest,
+					}),
+				),
 			),
 		},
 	})
