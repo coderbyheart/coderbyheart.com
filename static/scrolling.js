@@ -18,7 +18,7 @@ const setClass = (el, classes) => {
 		...classes,
 	}
 	el.className = Object.entries(elClasses)
-		.filter(([k, v]) => v)
+		.filter(([, v]) => v)
 		.map(([k]) => k)
 		.join(' ')
 		.trim()
@@ -31,6 +31,6 @@ window.setTimeout(setScroll, 250)
 
 loadScriptAsync(
 	'https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js',
-).then((res) => {
+).then(() => {
 	window.onscroll = _.debounce(setScroll, 250)
 })
