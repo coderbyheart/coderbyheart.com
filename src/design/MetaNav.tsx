@@ -1,4 +1,4 @@
-import { withPrefix } from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import { SiteMetaData } from '../templates/types'
@@ -92,20 +92,20 @@ export const MetaNav = ({
 		<StyledNav className={className}>
 			<Wrapper>
 				<Shrink>
-					<a href={withPrefix('/')}>
+					<Link to={'/'}>
 						<strong>{title}</strong>
 						<span> &middot; {tagLine}</span>
-					</a>
+					</Link>
 				</Shrink>
 				<ContentNav>
 					<span>
-						<a href={withPrefix('/archive/')}>Blog</a>
+						<Link to={'/archive'}>Blog</Link>
 					</span>
 					<span>
-						<a href={withPrefix('/talks/')}>Talks</a>
+						<Link to={'/talks'}>Talks</Link>
 					</span>
 					<span>
-						<a href={withPrefix('/communities/')}>Communities</a>
+						<Link to={'/communities'}>Communities</Link>
 					</span>
 				</ContentNav>
 			</Wrapper>

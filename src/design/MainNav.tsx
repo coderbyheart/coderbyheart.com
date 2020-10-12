@@ -1,10 +1,9 @@
-import { withPrefix } from 'gatsby'
+import { withPrefix, Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import { breakpoints } from './settings'
 
 import Heart from './heart.svg'
-import { GatsbyLocation } from '../templates/types'
 
 const StyledNav = styled.nav`
 	font-family: var(--headline-font-family);
@@ -68,10 +67,8 @@ const Wrapper = styled.div`
 
 export const MainNav = ({
 	className,
-	location,
 }: React.PropsWithChildren<{
 	className?: string
-	location: GatsbyLocation
 }>) => (
 	<StyledNav className={className}>
 		<Wrapper>
@@ -80,32 +77,18 @@ export const MainNav = ({
 				<Heart />)
 			</Logo>
 			<ContentNav>
-				<a
-					href={withPrefix('/')}
-					className={location.pathname === '/' ? 'active' : ''}
-				>
+				<Link to={'/'} activeClassName="active">
 					Home
-				</a>
-				<a
-					href={withPrefix('/archive/')}
-					className={location.pathname.startsWith('/archive') ? 'active' : ''}
-				>
+				</Link>
+				<Link to={'/archive'} activeClassName="active">
 					Blog
-				</a>
-				<a
-					href={withPrefix('/talks/')}
-					className={location.pathname.startsWith('/talks') ? 'active' : ''}
-				>
+				</Link>
+				<Link to={'/talks'} activeClassName="active">
 					Talks
-				</a>
-				<a
-					href={withPrefix('/communities/')}
-					className={
-						location.pathname.startsWith('/communities') ? 'active' : ''
-					}
-				>
+				</Link>
+				<Link to={'/communities'} activeClassName="active">
 					Communities
-				</a>
+				</Link>
 			</ContentNav>
 		</Wrapper>
 	</StyledNav>
