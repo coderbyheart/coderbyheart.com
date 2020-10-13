@@ -116,11 +116,6 @@ export const Head = ({
 				src={withPrefix(`responsive-images.js?v=${process.env.VERSION}`)}
 				crossOrigin="anonymous"
 			></script>
-			<script
-				async
-				src="https://platform.twitter.com/widgets.js"
-				crossOrigin="anonymous"
-			></script>
 		</Helmet>
 		<GlobalStyle />
 	</>

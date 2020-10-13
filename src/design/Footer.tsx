@@ -97,6 +97,7 @@ const Copyright = styled.p`
 const Photo = styled.img`
 	width: 33%;
 	max-width: 150px;
+	height: auto;
 	float: right;
 	border-radius: 100%;
 	border: 2px solid var(--heart-color);
