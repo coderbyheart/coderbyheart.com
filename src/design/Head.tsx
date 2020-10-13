@@ -103,17 +103,17 @@ export const Head = ({
 			></script>
 			<script
 				async
-				src={withPrefix('outline.js')}
+				src={withPrefix(`outline.js?v=${process.env.VERSION}`)}
 				crossOrigin="anonymous"
 			></script>
 			<script
 				async
-				src={withPrefix('scrolling.js')}
+				src={withPrefix(`scrolling.js?v=${process.env.VERSION}`)}
 				crossOrigin="anonymous"
 			></script>
 			<script
 				async
-				src={withPrefix('responsive-images.js')}
+				src={withPrefix(`responsive-images.js?v=${process.env.VERSION}`)}
 				crossOrigin="anonymous"
 			></script>
 			<script

@@ -2,6 +2,8 @@ require('ts-node').register({ files: true })
 const path = require('path')
 const { cacheImages } = require('./contentful')
 
+process.env.VERSION = process.env.VERSION ?? Date.now()
+
 const renderContentPage = async (
 	name,
 	pagePath,
