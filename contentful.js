@@ -7,7 +7,7 @@ const crypto = require('crypto')
 const { parse } = require('url')
 const chalk = require('chalk')
 
-const cacheDir = path.join(process.cwd(), '.contentful')
+const cacheDir = path.join(process.cwd(), '.contentful-media')
 
 const cf = contentful.createClient({
 	space: process.env.CONTENTFUL_SPACE,
