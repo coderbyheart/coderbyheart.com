@@ -1,5 +1,5 @@
 import React from 'react'
-import { SiteMetaData } from '../templates/types'
+import { SiteMetaData } from '../types'
 import { MainNav } from './MainNav'
 import { MetaNav } from './MetaNav'
 

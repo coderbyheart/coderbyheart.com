@@ -1,8 +1,7 @@
 const contentful = require('contentful')
 const contentfulManagement = require('contentful-management')
-const os = require('os')
 const path = require('path')
-const { promises: fs } = require('fs')
+const { promises: fs, createReadStream } = require('fs')
 const crypto = require('crypto')
 const { parse } = require('url')
 const chalk = require('chalk')
@@ -23,79 +22,117 @@ const hashString = (src) => {
 	return hash.digest('hex')
 }
 
+const hashFile = async (path) =>
+	new Promise((resolve) => {
+		const hash = crypto.createHash('sha1')
+		hash.setEncoding('hex')
+		const fileStream = createReadStream(path)
+		fileStream.pipe(hash, { end: false })
+		fileStream.on('end', () => {
+			hash.end()
+			const h = hash.read().toString()
+			resolve(h)
+		})
+	})
+
 const mediaUrls = {}
 
 const getUrl = (asset) => {
 	const {
-		fields: { file },
+		fields: {
+			file: {
+				url,
+				details: {
+					image: { width, height },
+				},
+			},
+		},
 	} = asset
-	const url = file?.['en-US']?.url ?? file?.url
-	const { width, height } =
-		file?.['en-US']?.details?.image ?? file?.details?.image
 	return `${url}?w=${width}&h=${height}`
 }
 
-const cacheMediaData = async (id, media, asset) => {
-	const mediaCache = path.join(cacheDir, `${id}.json`)
-	await fs.writeFile(
-		mediaCache,
-		JSON.stringify(
-			{
-				media,
-				asset,
-			},
-			null,
-			2,
-		),
-		'utf-8',
-	)
-}
-
-const cacheMedia = async (src) => {
-	const parsed = parse(src)
-	let contentType = 'image/jpeg'
-	if (/\.png$/i.test(src)) contentType = 'image/png'
-	const id = hashString(src)
+const getMediaEntry = async (id) => {
 	const mediaCache = path.join(cacheDir, `${id}.json`)
 	try {
-		const { asset } = JSON.parse(await fs.readFile(mediaCache), 'utf-8')
-		return getUrl(asset)
+		return JSON.parse(await fs.readFile(mediaCache), 'utf-8')
 	} catch {
-		console.log(
-			chalk.yellow('contentful'),
-			chalk.gray('caching'),
-			chalk.blue(src),
-		)
 		const { items } = await cf.getEntries({
 			content_type: 'image',
 			'fields.id': id,
 		})
-		if (items.length > 0) {
-			const media = items[0]
-			const asset = await cf.getAsset(media.fields.media.sys.id)
-			await cacheMediaData(id, media, asset)
-			return getUrl(asset)
-		}
+		if (items.length === 0) throw new Error(`Media entry for ${id} not found.`)
+		const media = items[0]
+		const asset = await cf.getAsset(media.fields.media.sys.id)
+		await fs.writeFile(
+			mediaCache,
+			JSON.stringify(
+				{
+					media,
+					asset,
+				},
+				null,
+				2,
+			),
+			'utf-8',
+		)
+		return { media, asset }
+	}
+}
+
+const cacheMedia = async (src) => {
+	let contentType = 'image/jpeg'
+	if (/\.png$/i.test(src)) contentType = 'image/png'
+	let isFile = false
+	try {
+		await fs.stat(src)
+		isFile = true
+	} catch {}
+	const id = isFile ? await hashFile(src) : hashString(src)
+	console.log(
+		chalk.yellow('contentful'),
+		chalk.gray('caching'),
+		chalk.blue(src),
+	)
+	try {
+		const { asset } = await getMediaEntry(id)
+		return getUrl(asset)
+	} catch {
 		// Create new asset
 		const space = await cfM.getSpace(process.env.CONTENTFUL_SPACE)
 		const envs = await space.getEnvironments()
-		const assetDraft = await envs.items[0].createAsset({
-			fields: {
-				title: {
-					'en-US': id,
-				},
-				description: {
-					'en-US': `Automatically created from GatsbyJS\n\nSource: ${src}`,
-				},
-				file: {
-					'en-US': {
-						contentType,
-						fileName: parsed.path.split('/').pop(),
-						upload: src,
-					},
-				},
+		const fileInfo = {
+			title: {
+				'en-US': id,
 			},
-		})
+			description: {
+				'en-US': `Automatically created from GatsbyJS\n\nSource: ${src}`,
+			},
+		}
+		const assetDraft = await (isFile
+			? envs.items[0].createAssetFromFiles({
+					fields: {
+						...fileInfo,
+						file: {
+							'en-US': {
+								contentType,
+								fileName: src.split('/').pop(),
+								file: createReadStream(src),
+							},
+						},
+					},
+			  })
+			: envs.items[0].createAsset({
+					fields: {
+						...fileInfo,
+						file: {
+							'en-US': {
+								contentType,
+								fileName: parse(src).path.split('/').pop(),
+								upload: src,
+							},
+						},
+					},
+			  }))
 		const readyAsset = await assetDraft.processForAllLocales()
 		const asset = await readyAsset.publish()
 		// Create new Media
@@ -115,10 +152,10 @@ const cacheMedia = async (src) => {
 				},
 			},
 		})
-		const media = await mediaDraft.publish()
-		// Create
-		await cacheMediaData(id, media, asset)
-		const url = getUrl(asset)
+		await mediaDraft.publish()
+
+		const { asset: createdAsset } = await getMediaEntry(id)
+		const url = getUrl(createdAsset)
 		console.log(
 			chalk.green('contentful'),
 			chalk.gray('cached'),
@@ -135,34 +172,54 @@ const getMediaUrl = async (src) => {
 	return mediaUrls[src]
 }
 
-const replaceImageTags = async ({ children, tagName, properties, ...rest }) => {
+const replaceImageTags = (relativeDirectory) => async ({
+	children,
+	tagName,
+	properties,
+	...rest
+}) => {
 	if (tagName === 'img') {
+		const isFile = !/^http/.test(properties.src)
+		const src = isFile
+			? path.normalize(
+					path.join(
+						process.cwd(),
+						'content',
+						relativeDirectory,
+						properties.src,
+					),
+			  )
+			: properties.src
 		return {
-			children: children?.map(replaceImageTags) ?? [],
+			children: children?.map(replaceImageTags(relativeDirectory)) ?? [],
 			tagName,
 			properties: {
 				...properties,
-				src: await getMediaUrl(properties.src),
+				src: await getMediaUrl(src),
 			},
 			...rest,
 		}
 	}
 	return {
-		children: await Promise.all(children?.map(replaceImageTags) ?? []),
+		children: await Promise.all(
+			children?.map(replaceImageTags(relativeDirectory)) ?? [],
+		),
 		tagName,
 		properties,
 		...rest,
 	}
 }
 
-exports.cacheImages = async ({ children, ...rest }) => {
+exports.cacheImages = async ({ children, ...rest }, relativeDirectory) => {
 	try {
 		await fs.stat(cacheDir)
 	} catch {
 		await fs.mkdir(cacheDir)
 	}
 	return {
-		children: await Promise.all(children?.map(replaceImageTags) ?? []),
+		children: await Promise.all(
+			children?.map(replaceImageTags(relativeDirectory)) ?? [],
+		),
 		...rest,
 	}
 }
