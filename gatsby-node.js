@@ -70,6 +70,8 @@ const renderContentPage = async (
 					}),
 				),
 			),
+			pagePath,
+			template,
 		},
 	})
 }
