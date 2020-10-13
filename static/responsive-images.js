@@ -1,6 +1,10 @@
 ;((document) => {
 	const step = (n) => Math.floor(n / 50) * 50
 
+	window.lazySizesConfig = window.lazySizesConfig || {}
+	window.lazySizesConfig.expand = 50
+	window.lazySizesConfig.expandFactor = 4
+
 	document.addEventListener('lazybeforeunveil', (e) => {
 		if (!e.target.getAttribute('class').includes('responsive')) return
 		const [width, height] = [
