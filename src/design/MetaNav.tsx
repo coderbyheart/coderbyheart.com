@@ -99,9 +99,6 @@ export const MetaNav = ({
 				</Shrink>
 				<ContentNav>
 					<span>
-						<Link to={'/archive'}>Blog</Link>
-					</span>
-					<span>
 						<Link to={'/talks'}>Talks</Link>
 					</span>
 					<span>
