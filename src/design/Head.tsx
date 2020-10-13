@@ -45,6 +45,9 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		overflow-x: hidden;
 	}
+	img.lazyload:not([src]) {
+		visibility: hidden;
+	}
 `
 
 const loadAsync = (src: string): string => `(function(d){
@@ -107,6 +110,11 @@ export const Head = ({
 			<script
 				async
 				src={withPrefix('scrolling.js')}
+				crossOrigin="anonymous"
+			></script>
+			<script
+				async
+				src={withPrefix('responsive-images.js')}
 				crossOrigin="anonymous"
 			></script>
 			<script
