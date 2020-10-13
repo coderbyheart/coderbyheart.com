@@ -80,9 +80,6 @@ export const MainNav = ({
 				<Link to={'/'} activeClassName="active">
 					Home
 				</Link>
-				<Link to={'/archive'} activeClassName="active">
-					Blog
-				</Link>
 				<Link to={'/talks'} activeClassName="active">
 					Talks
 				</Link>
