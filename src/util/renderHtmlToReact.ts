@@ -16,6 +16,7 @@ export const renderHtmlAstToReact = (tree: unknown): any =>
 					attrs['data-aspectratio'] = (h / w).toFixed(3)
 					attrs.width = w.toString()
 					attrs.height = h.toString()
+					attrs.className = `${attrs.className} responsive`
 				}
 			}
 			return React.createElement(name, attrs, children)
