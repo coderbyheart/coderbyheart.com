@@ -67,56 +67,65 @@ const googleFontsArgs = Object.values(fonts)
 	)
 	.join('&')
 
+const isSSR = typeof window === 'undefined'
+
 export const Head = ({
 	siteMetaData: { title: siteTitle, description },
 	pageTitle,
 }: {
 	siteMetaData: Pick<SiteMetaData, 'title' | 'description'>
 	pageTitle: string
-}) => (
-	<>
-		<Helmet>
-			<title>
-				{siteTitle} · {pageTitle}
-			</title>
-			<meta name="description" content={description} />
-			<html lang="en" />
-			<link rel="icon" type="image/x-icon" href={withPrefix('favicon.ico')} />
-			<script type="text/javascript">
-				{loadAsync(
-					`https://fonts.googleapis.com/css2?${googleFontsArgs}&display=swap`,
-				)}
-			</script>
-			<link
-				rel="stylesheet"
-				href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
-			/>
-			<script
-				async
-				src="https://afarkas.github.io/lazysizes/lazysizes.min.js"
-				crossOrigin="anonymous"
-			></script>
-			<script
-				async
-				src="https://afarkas.github.io/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"
-				crossOrigin="anonymous"
-			></script>
-			<script
-				async
-				src={withPrefix(`outline.js?v=${process.env.VERSION}`)}
-				crossOrigin="anonymous"
-			></script>
-			<script
-				async
-				src={withPrefix(`scrolling.js?v=${process.env.VERSION}`)}
-				crossOrigin="anonymous"
-			></script>
-			<script
-				async
-				src={withPrefix(`responsive-images.js?v=${process.env.VERSION}`)}
-				crossOrigin="anonymous"
-			></script>
-		</Helmet>
-		<GlobalStyle />
-	</>
-)
+}) => {
+	const version = isSSR
+		? process.env.VERSION ?? Date.now()
+		: document.head.querySelector<HTMLMetaElement>("meta[name='version']")
+				?.content ?? Date.now()
+	console.debug('Version:', version)
+	return (
+		<>
+			<Helmet>
+				<title>
+					{siteTitle} · {pageTitle}
+				</title>
+				<meta name="description" content={description} />
+				<html lang="en" />
+				<link rel="icon" type="image/x-icon" href={withPrefix('favicon.ico')} />
+				<script type="text/javascript">
+					{loadAsync(
+						`https://fonts.googleapis.com/css2?${googleFontsArgs}&display=swap`,
+					)}
+				</script>
+				<link
+					rel="stylesheet"
+					href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+				/>
+				<script
+					async
+					src="https://afarkas.github.io/lazysizes/lazysizes.min.js"
+					crossOrigin="anonymous"
+				></script>
+				<script
+					async
+					src="https://afarkas.github.io/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"
+					crossOrigin="anonymous"
+				></script>
+				<script
+					async
+					src={withPrefix(`outline.js?v=${version}`)}
+					crossOrigin="anonymous"
+				></script>
+				<script
+					async
+					src={withPrefix(`scrolling.js?v=${version}`)}
+					crossOrigin="anonymous"
+				></script>
+				<script
+					async
+					src={withPrefix(`responsive-images.js?v=${version}`)}
+					crossOrigin="anonymous"
+				></script>
+			</Helmet>
+			<GlobalStyle />
+		</>
+	)
+}
