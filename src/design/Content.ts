@@ -48,6 +48,7 @@ export const Content = styled.div`
 	}
 	img {
 		width: 100vw;
+		height: auto;
 		margin-left: -1rem;
 		margin-right: -1rem;
 		@media (min-width: ${breakpoints.content}) {
@@ -55,7 +56,6 @@ export const Content = styled.div`
 			margin-bottom: 4rem;
 			margin-left: calc((100vw - ${breakpoints.content}) / 2 * -1);
 			margin-right: calc((100vw - ${breakpoints.content}) / 2 * -1);
-			width: 100vw;
 		}
 	}
 `
