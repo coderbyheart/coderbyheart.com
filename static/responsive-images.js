@@ -24,9 +24,13 @@
 		params.set('fit', 'thumb')
 		e.target.setAttribute(
 			'data-src',
-			[e.target.getAttribute('data-src').split('?')[0], params.toString()].join(
-				'?',
-			),
+			[
+				e.target
+					.getAttribute('data-src')
+					.split('?')[0]
+					.replace(/^\/\//, 'https://'),
+				params.toString(),
+			].join('?'),
 		)
 	})
 })(document)
