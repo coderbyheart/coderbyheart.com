@@ -124,6 +124,8 @@ export const Footer = ({
 				className="lazyload"
 				alt={title}
 				data-src="https://images.contentful.com/bncv3c2gt878/6CWMgqeZdCmkk6KkIUksgQ/50922090bc6566c6624c12b82a4bf78c/36671282034_427eace68d_o.jpg?w=150"
+				width="150"
+				height="150"
 			/>
 			<Content>{renderHtmlAstToReact(content.remark.htmlAst)}</Content>
 			<Copyright>
