@@ -15,7 +15,7 @@
 		const ratio = e.target.getAttribute('data-aspectratio')
 		const params = new URLSearchParams()
 		// Assumes all images to be full-screen width
-		const imgWidth = Math.min(window.innerWidth, width)
+		const imgWidth = Math.min(Math.max(window.innerWidth, 1000), width)
 		const imgHeight = imgWidth * parseFloat(ratio)
 		e.target.setAttribute('height', imgHeight.toString())
 		params.set('w', step(imgWidth))
