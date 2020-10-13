@@ -99,31 +99,7 @@ export const Head = ({
 					rel="stylesheet"
 					href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
 				/>
-				<script
-					async
-					src="https://afarkas.github.io/lazysizes/lazysizes.min.js"
-					crossOrigin="anonymous"
-				></script>
-				<script
-					async
-					src="https://afarkas.github.io/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"
-					crossOrigin="anonymous"
-				></script>
-				<script
-					async
-					src={withPrefix(`outline.js?v=${version}`)}
-					crossOrigin="anonymous"
-				></script>
-				<script
-					async
-					src={withPrefix(`scrolling.js?v=${version}`)}
-					crossOrigin="anonymous"
-				></script>
-				<script
-					async
-					src={withPrefix(`responsive-images.js?v=${version}`)}
-					crossOrigin="anonymous"
-				></script>
+				<script async src={withPrefix(`main.js?v=${version}`)}></script>
 			</Helmet>
 			<GlobalStyle />
 		</>
