@@ -2,6 +2,7 @@
 	const step = (n) => Math.floor(n / 50) * 50
 
 	document.addEventListener('lazybeforeunveil', (e) => {
+		if (!e.target.getAttribute('class').includes('responsive')) return
 		const [width, height] = [
 			e.target.getAttribute('width'),
 			e.target.getAttribute('height'),
