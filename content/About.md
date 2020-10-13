@@ -21,9 +21,9 @@ follow me there for my daily ramblings about the challenges of writing software.
 
 [![Stokkøya](https://live.staticflickr.com/65535/50180400301_5da8837da3_k_d.jpg)](https://www.flickr.com/photos/tacker)
 
-> I live in Trondheim, Norway 🇳🇴 and share photos about my camping adventures
-> here on [flickr](https://www.flickr.com/photos/tacker) and
-> [Instagram](https://instagram.com/coderbyheart).
+I live in Trondheim, Norway 🇳🇴 and share photos about my camping adventures here
+on [flickr](https://www.flickr.com/photos/tacker) and
+[Instagram](https://instagram.com/coderbyheart).
 
 My professional career has been greatly influenced by taking an active role in
 communities, whether as a participant, contributor, community initiator, or

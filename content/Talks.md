@@ -3,8 +3,8 @@ title: Talks
 subtitle: A list of my talks
 ---
 
-> I am available for speaking engagements! Just contact me if you feel I can
-> contribute to your event or conference.
+I am available for speaking engagements! Just contact me if you feel I can
+contribute to your event or conference.
 
 ## It does not run on my machine: Integration testing a cloud-native application
 
