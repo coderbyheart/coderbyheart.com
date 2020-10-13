@@ -5,9 +5,10 @@ import { SiteMetaData, Page } from './types'
 import { Head } from '../design/Head'
 import { Header } from '../design/Header'
 import { Content } from '../design/Content'
-import { Footer } from '../design/Footer'
+import { Footer, avatarUrl } from '../design/Footer'
 import styled from 'styled-components'
 import { breakpoints } from '../design/settings'
+import classNames from 'classnames'
 
 export const query = graphql`
 	query PageTemplateQuery {
@@ -22,6 +23,12 @@ export const query = graphql`
 	}
 `
 
+const pagePathToClass = (pagePath: string): string => {
+	const s = pagePath.replace(/\//, ' ').trim().split(' ').join('-')
+	if (s === '') return 'home'
+	return s
+}
+
 const Main = styled.main`
 	padding: 1rem;
 	@media (min-width: ${breakpoints.content}) {
@@ -29,6 +36,24 @@ const Main = styled.main`
 		margin: 4rem auto;
 	}
 	max-width: var(--max-width);
+	&.home ${Content} {
+		:before {
+			display: inline-block;
+			content: '';
+			background-image: url('${avatarUrl}');
+			width: 150px;
+			height: 150px;
+			border-radius: 100%;
+			border: 2px solid var(--heart-color);
+			margin-top: 3rem;
+			margin-left: calc((100vw / 2) - (154px / 2) - 1rem);
+			box-shadow: 0px 0px 15px 3px #00000057;
+			@media (min-width: ${breakpoints.content}) {
+				margin-top: 0;
+				margin-left: calc(${breakpoints.content} / 2 - 154px / 2);
+			}
+		}
+	}
 `
 
 const PageTemplate = (data: {
@@ -40,6 +65,8 @@ const PageTemplate = (data: {
 	pageContext: {
 		page: Page
 		pages: Page[]
+		pagePath: string
+		template: string
 	}
 }) => {
 	const findPageByRelativePath = (search: string): Page => {
@@ -59,7 +86,12 @@ const PageTemplate = (data: {
 				pageTitle={data.pageContext.page.remark.frontmatter.title}
 			/>
 			<Header siteMetaData={data.data.site.siteMetadata} />
-			<Main>
+			<Main
+				className={classNames([
+					data.pageContext.template,
+					pagePathToClass(data.pageContext.pagePath),
+				])}
+			>
 				<Content>
 					{data.pageContext.page.remark.frontmatter.noheadline !== true && (
 						<h1>
