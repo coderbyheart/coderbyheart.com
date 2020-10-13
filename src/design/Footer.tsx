@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-import { Page, SiteMetaData } from '../templates/types'
+import { Page, SiteMetaData } from '../types'
 import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
 import { Content } from './Content'
 import { breakpoints } from './settings'

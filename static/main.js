@@ -71,7 +71,8 @@
 			const ratio = e.target.getAttribute('data-aspectratio')
 			const params = new URLSearchParams()
 			// Assumes all images to be full-screen width
-			const imgWidth = Math.min(Math.max(window.innerWidth, 1000), width)
+			const maxSize = Math.min(window.innerWidth, width) // Do not upscale images
+			const imgWidth = Math.min(Math.max(maxSize, 1000), width)
 			const imgHeight = imgWidth * parseFloat(ratio)
 			params.set('w', step(imgWidth))
 			params.set('h', step(imgHeight))
@@ -87,6 +88,9 @@
 					params.toString(),
 				].join('?'),
 			)
+			if (maxSize == window.innerWidth) {
+				e.target.setAttribute('data-large-source', '1')
+			}
 		})
 	})
 })(document)

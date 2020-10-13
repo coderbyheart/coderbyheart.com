@@ -5,8 +5,10 @@ subtitle: resources.distributeaid.org
 abstract: >-
   [resources.distributeaid.org](https://resources.distributeaid.org) provides a
   browser-friendly UI for a Google Drive folder.
-hero: resources.distributeaid.org.png
+date: 2020-05-19
 ---
+
+![COVID-19 guide for Aid Workers built with GatsbyJS from a Google Drive folder](../media/resources.distributeaid.org.png)
 
 Last year in October I joined [Distribute Aid](https://distributeaid.org/) as a
 volunteer. I craft software for them which helps with their mission: build tools

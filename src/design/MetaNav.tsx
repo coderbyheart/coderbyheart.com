@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import { SiteMetaData } from '../templates/types'
+import { SiteMetaData } from '../types'
 import { breakpoints } from './settings'
 
 const StyledNav = styled.nav`
@@ -98,6 +98,9 @@ export const MetaNav = ({
 					</Link>
 				</Shrink>
 				<ContentNav>
+					<span>
+						<Link to={'/archive'}>Blog</Link>
+					</span>
 					<span>
 						<Link to={'/talks'}>Talks</Link>
 					</span>

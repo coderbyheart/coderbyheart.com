@@ -1,7 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
-import { SiteMetaData, Page } from './types'
+import { SiteMetaData, PageContext, Page } from '../types'
 import { Head } from '../design/Head'
 import { Header } from '../design/Header'
 import { Content } from '../design/Content'
@@ -9,25 +7,7 @@ import { Footer, avatarUrl } from '../design/Footer'
 import styled from 'styled-components'
 import { breakpoints } from '../design/settings'
 import classNames from 'classnames'
-
-export const query = graphql`
-	query PageTemplateQuery {
-		site {
-			siteMetadata {
-				title
-				tagLine
-				description
-				gitHubUrl
-			}
-		}
-	}
-`
-
-const pagePathToClass = (pagePath: string): string => {
-	const s = pagePath.replace(/\//, ' ').trim().split(' ').join('-')
-	if (s === '') return 'home'
-	return s
-}
+import { pagePathToClass } from './utils/pagePathToClass'
 
 const Main = styled.main`
 	padding: 1rem;
@@ -56,21 +36,16 @@ const Main = styled.main`
 	}
 `
 
-const PageTemplate = (data: {
-	data: {
-		site: {
-			siteMetadata: SiteMetaData
-		}
-	}
-	pageContext: {
-		page: Page
-		pages: Page[]
-		pagePath: string
-		template: string
-	}
-}) => {
+const PageTemplate = ({
+	siteMetadata,
+	pageContext,
+	children,
+}: React.PropsWithChildren<{
+	siteMetadata: SiteMetaData
+	pageContext: PageContext
+}>) => {
 	const findPageByRelativePath = (search: string): Page => {
-		const p = data.pageContext.pages.find(
+		const p = pageContext.pages.find(
 			({ relativePath }) => relativePath === search,
 		)
 		if (p === undefined) {
@@ -82,39 +57,14 @@ const PageTemplate = (data: {
 	return (
 		<>
 			<Head
-				siteMetaData={data.data.site.siteMetadata}
-				pageTitle={data.pageContext.page.remark.frontmatter.title}
+				siteMetaData={siteMetadata}
+				pageTitle={pageContext.page.remark.frontmatter.title}
 			/>
-			<Header siteMetaData={data.data.site.siteMetadata} />
-			<Main
-				className={classNames([
-					data.pageContext.template,
-					pagePathToClass(data.pageContext.pagePath),
-				])}
-			>
-				<Content>
-					{data.pageContext.page.remark.frontmatter.noheadline !== true && (
-						<h1>
-							{data.pageContext.page.remark.frontmatter.subtitle && (
-								<>
-									<small>
-										{data.pageContext.page.remark.frontmatter.subtitle}
-									</small>
-									<br />
-								</>
-							)}
-							{data.pageContext.page.remark.frontmatter.title}
-						</h1>
-					)}
-
-					{data.pageContext.page.remark?.htmlAst !== undefined &&
-						renderHtmlAstToReact(data.pageContext.page.remark.htmlAst)}
-				</Content>
+			<Header siteMetaData={siteMetadata} />
+			<Main className={classNames([pagePathToClass(pageContext.pagePath)])}>
+				<Content>{children}</Content>
 			</Main>
-			<Footer
-				siteMetaData={data.data.site.siteMetadata}
-				content={footerContent}
-			/>
+			<Footer siteMetaData={siteMetadata} content={footerContent} />
 		</>
 	)
 }

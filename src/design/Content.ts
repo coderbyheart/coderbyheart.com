@@ -46,7 +46,7 @@ export const Content = styled.div`
 	div.twitter-tweet-rendered {
 		margin: 2rem auto !important;
 	}
-	img {
+	img[data-large-source='1'] {
 		width: 100vw;
 		height: auto;
 		margin-left: -1rem;
