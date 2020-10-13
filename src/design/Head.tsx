@@ -48,6 +48,15 @@ const GlobalStyle = createGlobalStyle`
 	img.lazyload:not([src]) {
 		visibility: hidden;
 	}
+	// Bigger tap targets on mobile
+	li + li {
+		padding-top: 1rem;
+	}
+	@media(min-width: 60em) {
+		li + li {
+			padding-top: 0;
+		}
+	}
 `
 
 const loadAsync = (src: string): string => `(function(d){
