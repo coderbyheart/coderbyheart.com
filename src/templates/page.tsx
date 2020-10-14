@@ -11,6 +11,7 @@ import { pagePathToClass } from './utils/pagePathToClass'
 
 const Main = styled.main`
 	padding: 1rem;
+	margin-bottom: 4rem;
 	@media (min-width: ${breakpoints.content}) {
 		padding: 0;
 		margin: 4rem auto;
@@ -26,6 +27,7 @@ const Main = styled.main`
 			border-radius: 100%;
 			border: 2px solid var(--heart-color);
 			margin-top: 3rem;
+			margin-bottom: 2rem;
 			margin-left: calc((100vw / 2) - (154px / 2) - 1rem);
 			box-shadow: 0px 0px 15px 3px #00000057;
 			@media (min-width: ${breakpoints.content}) {

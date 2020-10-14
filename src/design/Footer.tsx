@@ -71,6 +71,7 @@ const Wrapper = styled.div`
 		display: flex;
 		flex-direction: row;
 		li + li {
+			padding-top: 0;
 			:before {
 				content: '·';
 				padding: 0.5rem;
