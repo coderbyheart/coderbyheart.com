@@ -23,10 +23,14 @@ const Wrapper = styled.div`
 
 export const Title = ({ page }: { page: Page }) => (
 	<Wrapper>
-		<Subtitle>{page.remark.frontmatter.subtitle}</Subtitle>
+		{page.remark.frontmatter.subtitle && (
+			<Subtitle>{page.remark.frontmatter.subtitle}</Subtitle>
+		)}
 		<h1>{page.remark.frontmatter.title}</h1>
-		<Time dateTime={page.remark.frontmatter.date}>
-			{format(new Date(page.remark.frontmatter.date), 'd. MMMM yyyy')}
-		</Time>
+		{page.remark.frontmatter.date && (
+			<Time dateTime={page.remark.frontmatter.date}>
+				{format(new Date(page.remark.frontmatter.date), 'd. MMMM yyyy')}
+			</Time>
+		)}
 	</Wrapper>
 )
