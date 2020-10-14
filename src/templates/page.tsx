@@ -1,5 +1,5 @@
 import React from 'react'
-import { SiteMetaData, PageContext, Page } from '../types'
+import { SiteMetaData, PageContext, Page } from '../site'
 import { Head } from '../design/Head'
 import { Header } from '../design/Header'
 import { Content } from '../design/Content'

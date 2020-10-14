@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import { SiteMetaData } from '../types'
+import { SiteMetaData } from '../site'
 import { breakpoints } from './settings'
 
 const StyledNav = styled.nav`

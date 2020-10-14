@@ -1,6 +1,6 @@
 import React from 'react'
 import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
-import { SiteMetaData, PageContext } from '../types'
+import { SiteMetaData, PageContext } from '../site'
 import PageTemplate from '../templates/page'
 import { Title } from '../design/Title'
 import { graphql } from 'gatsby'

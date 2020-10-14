@@ -1,5 +1,5 @@
 import React from 'react'
-import { Page } from '../types'
+import { Page } from '../site'
 import styled from 'styled-components'
 import { formatDistanceToNow } from 'date-fns'
 
