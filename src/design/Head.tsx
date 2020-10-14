@@ -2,7 +2,7 @@ import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { Helmet } from 'react-helmet'
 import { withPrefix } from 'gatsby'
-import { SiteMetaData } from '../types'
+import { SiteMetaData } from '../site'
 import { fonts, breakpoints } from './settings'
 
 const GlobalStyle = createGlobalStyle`

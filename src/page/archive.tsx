@@ -1,5 +1,5 @@
 import React from 'react'
-import { SiteMetaData, PageContext, Page } from '../types'
+import { SiteMetaData, PageContext, Page } from '../site'
 import PageTemplate from '../templates/page'
 import { Title } from '../design/Title'
 import { graphql, Link } from 'gatsby'
