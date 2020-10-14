@@ -90,6 +90,9 @@ export const Head = ({
 				<meta name="description" content={description} />
 				<html lang="en" />
 				<link rel="icon" type="image/x-icon" href={withPrefix('favicon.ico')} />
+				<link rel="preconnect" href="https://fonts.gstatic.com"></link>
+				<link rel="preconnect" href="https://cdn.jsdelivr.net"></link>
+				<link rel="preconnect" href="https://fonts.googleapis.com"></link>
 				<script type="text/javascript">
 					{loadAsync(
 						`https://fonts.googleapis.com/css2?${googleFontsArgs}&display=swap`,
