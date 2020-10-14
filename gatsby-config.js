@@ -46,6 +46,12 @@ const cfg = {
 		},
 		`gatsby-plugin-styled-components`,
 		`gatsby-plugin-react-helmet`,
+		{
+			resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+			options: {
+				siteUrl: `https://coderbyheart.com`,
+			},
+		},
 		`gatsby-plugin-react-svg`,
 	],
 }

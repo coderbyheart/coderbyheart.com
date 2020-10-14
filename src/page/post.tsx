@@ -1,0 +1,131 @@
+import React, { useEffect } from 'react'
+import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
+import { SiteMetaData, PageContext } from '../site'
+import PageTemplate from '../templates/page'
+import { Title } from '../design/Title'
+import { graphql } from 'gatsby'
+import styled from 'styled-components'
+
+export const query = graphql`
+	query PostPageQuery {
+		site {
+			siteMetadata {
+				title
+				tagLine
+				description
+				gitHubUrl
+			}
+		}
+	}
+`
+
+const ShareButton = styled.a`
+	color: #fff !important;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	text-decoration: none;
+	& + & {
+		margin-left: 1rem;
+	}
+`
+const TwitterShare = styled(ShareButton)`
+	background-color: #55acee;
+`
+const LinkedInShare = styled(ShareButton)`
+	background-color: #0077b5;
+`
+const FacebookShare = styled(ShareButton)`
+	background-color: #3b5998;
+`
+
+const Footer = styled.footer`
+	margin: 4rem 0;
+	section {
+		margin: 4rem 0;
+	}
+`
+
+const isSSR = typeof window === 'undefined'
+
+const PostPage = ({
+	data,
+	pageContext,
+	location,
+}: {
+	data: {
+		site: {
+			siteMetadata: SiteMetaData
+		}
+	}
+	pageContext: PageContext
+	location: {
+		href?: string
+	}
+}) => {
+	useEffect(() => {
+		let isMounted = true
+
+		return () => {
+			isMounted = false
+		}
+	}, [isSSR])
+	return (
+		<PageTemplate
+			siteMetadata={data.site.siteMetadata}
+			pageContext={pageContext}
+		>
+			<article>
+				<Title page={pageContext.page} />
+				{pageContext.page.remark?.htmlAst !== undefined &&
+					renderHtmlAstToReact(pageContext.page.remark.htmlAst)}
+				<Footer>
+					<section>
+						<h2>Share</h2>
+						<TwitterShare
+							href={`https://twitter.com/intent/tweet/?text=${encodeURIComponent(
+								pageContext.page.remark.frontmatter.title,
+							)}&url=${encodeURIComponent(location.href ?? '')}`}
+							target="_blank"
+							rel="noreferrer noopener"
+							aria-label="Share on Twitter"
+						>
+							Twitter
+						</TwitterShare>
+
+						<LinkedInShare
+							href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+								location.href ?? '',
+							)}&title=${encodeURIComponent(
+								pageContext.page.remark.frontmatter.title,
+							)}&summary=${encodeURIComponent(
+								pageContext.page.remark.frontmatter.abstract,
+							)}&source=${encodeURIComponent(location.href ?? '')}`}
+							target="_blank"
+							rel="noreferrer noopener"
+							aria-label="Share on LinkedIn"
+						>
+							LinkedIn
+						</LinkedInShare>
+
+						<FacebookShare
+							href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+								location.href ?? '',
+							)}`}
+							rel="noreferrer noopener"
+							target="_blank"
+							aria-label="Share on Facebook"
+						>
+							Facebook
+						</FacebookShare>
+					</section>
+					<section>
+						<h2>Comments</h2>
+						<div id="disqus_thread"></div>
+					</section>
+				</Footer>
+			</article>
+		</PageTemplate>
+	)
+}
+
+export default PostPage

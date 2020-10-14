@@ -31,10 +31,11 @@
 
 	window.setTimeout(setScroll, 250)
 
-	loadScriptAsync(
+	const _load = loadScriptAsync(
 		'https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js',
-	).then(() => {
-		window.onscroll = _.debounce(setScroll, 250)
+	)
+	_load.then(() => {
+		window.addEventListener('scroll', _.debounce(setScroll, 250))
 	})
 
 	// Remove outline when user use mouse. Adapted from https://github.com/lindsayevans/outline.js/ */
@@ -92,5 +93,58 @@
 				e.target.setAttribute('data-large-source', '1')
 			}
 		})
+	})
+
+	// Disqus
+	const canonicalUrl = document.head.querySelector("link[rel='canonical']").href
+	const disqusId = document.head.querySelector("meta[name='disqus']").content
+	let hasDisqus = false
+	let disqusInited = false
+	const disqusThread = document.getElementById('disqus_thread')
+	if (disqusId && disqusThread) {
+		hasDisqus = true
+		window.disqus_config = function () {
+			this.page.url = canonicalUrl
+			this.page.identifier = new URL(canonicalUrl).pathname.substr(1)
+		}
+	}
+	/**
+	 * @param {object} el
+	 * @returns {boolean}
+	 */
+	const shouldBeShown = (el) => {
+		const rect = el.getBoundingClientRect()
+
+		if (rect.top < 0) return true // user has scrolled over it, load it anyway
+		if (
+			rect.top <
+			window.scrollY +
+				(window.innerHeight || document.documentElement.clientHeight)
+		)
+			return true // top of element is in viewport
+		return false
+	}
+
+	const loadDisqus = () => {
+		console.log('loading disqus')
+		console.log({
+			hasDisqus,
+			disqusInited,
+			shouldBeShown: shouldBeShown(disqusThread),
+		})
+		if (hasDisqus && !disqusInited && shouldBeShown(disqusThread)) {
+			disqusInited = true
+			const s = document.createElement('script')
+			s.src = `//${disqusId}.disqus.com/embed.js`
+			s.setAttribute('data-timestamp', +new Date())
+			document.body.appendChild(s)
+		}
+	}
+	_load.then(() => {
+		loadDisqus()
+	})
+
+	_load.then(() => {
+		window.addEventListener('scroll', _.debounce(loadDisqus, 250))
 	})
 })(document)
