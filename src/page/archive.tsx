@@ -3,6 +3,7 @@ import { SiteMetaData, PageContext, Page } from '../site'
 import PageTemplate from '../templates/page'
 import { Title } from '../design/Title'
 import { graphql, Link } from 'gatsby'
+import styled from 'styled-components'
 
 export const query = graphql`
 	query ArchiveQuery {
@@ -17,8 +18,15 @@ export const query = graphql`
 	}
 `
 
-const PageLink = ({ page }: { page: Page }) => (
-	<Link to={`/${page.name}`}>{page.remark.frontmatter.title}</Link>
+const P = styled.p`
+	margin-top: 0;
+`
+
+const Entry = ({ page }: { page: Page }) => (
+	<>
+		<Link to={`/${page.name}`}>{page.remark.frontmatter.title}</Link>
+		<P>{page.remark.frontmatter.abstract}</P>
+	</>
 )
 
 const Archive = ({
@@ -38,8 +46,11 @@ const Archive = ({
 		)}
 		{pageContext.pages
 			.filter(({ relativeDirectory }) => relativeDirectory === 'post')
+			.sort((a, b) =>
+				b.remark.frontmatter.date?.localeCompare(a.remark.frontmatter.date),
+			)
 			.map((p, i) => (
-				<PageLink key={i} page={p} />
+				<Entry key={i} page={p} />
 			))}
 	</PageTemplate>
 )
