@@ -22,6 +22,7 @@ const Main = styled.main`
 			display: inline-block;
 			content: '';
 			background-image: url('${avatarUrl}');
+			background-size: cover;
 			width: 150px;
 			height: 150px;
 			border-radius: 100%;
