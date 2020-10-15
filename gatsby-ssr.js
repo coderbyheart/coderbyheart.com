@@ -9,6 +9,5 @@ exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
 			name="version"
 			content={process.env.VERSION ?? Date.now()}
 		/>,
-		<meta key="disqus" name="disqus" content="coderbyheart" />,
 	])
 }

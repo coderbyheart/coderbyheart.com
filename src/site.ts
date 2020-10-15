@@ -3,6 +3,7 @@ export type SiteMetaData = {
 	tagLine: string
 	description: string
 	gitHubUrl: string
+	siteUrl: string
 }
 
 export type Page = {

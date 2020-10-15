@@ -6,7 +6,7 @@ const pJSON = JSON.parse(
 	fs.readFileSync(path.join(process.cwd(), 'package.json'), 'utf-8'),
 )
 
-const siteUrl = (process.env.SITE_URL || pJSON.homepage).replace(/\//g, '')
+const siteUrl = (process.env.SITE_URL || pJSON.homepage).replace(/\/$/g, '')
 const gitHubUrl = pJSON.repository.url
 
 const cfg = {
@@ -53,6 +53,12 @@ const cfg = {
 			},
 		},
 		`gatsby-plugin-react-svg`,
+		{
+			resolve: `gatsby-plugin-disqus`,
+			options: {
+				shortname: `coderbyheart`,
+			},
+		},
 	],
 }
 
