@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
 import { SiteMetaData, PageContext } from '../site'
 import PageTemplate from '../templates/page'
 import { Title } from '../design/Title'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { Comments } from '../design/Comments'
+import { Comments } from '../components/Comments'
 
 export const query = graphql`
 	query PostPageQuery {
@@ -47,8 +47,6 @@ const Footer = styled.footer`
 	}
 `
 
-const isSSR = typeof window === 'undefined'
-
 const PostPage = ({
 	data,
 	pageContext,
@@ -64,13 +62,6 @@ const PostPage = ({
 		href?: string
 	}
 }) => {
-	useEffect(() => {
-		let isMounted = true
-
-		return () => {
-			isMounted = false
-		}
-	}, [isSSR])
 	return (
 		<PageTemplate
 			siteMetadata={data.site.siteMetadata}
