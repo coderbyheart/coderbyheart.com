@@ -5,6 +5,7 @@ import PageTemplate from '../templates/page'
 import { Title } from '../design/Title'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
+import { Comments } from '../design/Comments'
 
 export const query = graphql`
 	query PostPageQuery {
@@ -14,6 +15,7 @@ export const query = graphql`
 				tagLine
 				description
 				gitHubUrl
+				siteUrl
 			}
 		}
 	}
@@ -118,10 +120,10 @@ const PostPage = ({
 							Facebook
 						</FacebookShare>
 					</section>
-					<section>
-						<h2>Comments</h2>
-						<div id="disqus_thread"></div>
-					</section>
+					<Comments
+						page={pageContext.page}
+						siteUrl={data.site.siteMetadata.siteUrl}
+					/>
 				</Footer>
 			</article>
 		</PageTemplate>

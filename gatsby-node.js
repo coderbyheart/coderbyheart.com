@@ -22,6 +22,7 @@ const renderContentPage = async (
 		component: path.join(process.cwd(), 'src', 'page', `${template}.tsx`),
 		context: {
 			page: {
+				...page.node,
 				remark: {
 					...page.node.childMarkdownRemark,
 					htmlAst: await cacheImages(

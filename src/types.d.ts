@@ -6,3 +6,5 @@ declare module '*.svg' {
 declare module 'hast-to-hyperscript'
 
 declare module 'remark-preset-lint-recommended'
+
+declare module 'gatsby-plugin-disqus'

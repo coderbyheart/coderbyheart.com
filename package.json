@@ -24,7 +24,7 @@
   ],
   "author": "Markus Tacker <m@coderbyheart.com>",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/coderbyheart/coderbyheart.com",
+  "homepage": "https://coderbyheart.com",
   "bugs": {
     "url": "https://github.com/coderbyheart/coderbyheart.com/issues"
   },
@@ -35,8 +35,10 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "date-fns": "^2.16.1",
+    "gatsby-plugin-disqus": "^1.2.2",
     "hast-to-hyperscript": "9.0.0",
     "polished": "4.0.2",
+    "react-intersection-observer": "^8.29.0",
     "styled-components": "5.2.0"
   },
   "snyk": true,
