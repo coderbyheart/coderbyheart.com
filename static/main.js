@@ -89,7 +89,7 @@
 					params.toString(),
 				].join('?'),
 			)
-			if (maxSize == window.innerWidth) {
+			if (width > window.innerWidth) {
 				e.target.setAttribute('data-large-source', '1')
 			}
 		})
