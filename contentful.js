@@ -54,7 +54,10 @@ const getUrl = (asset) => {
 const getMediaEntry = async (id) => {
 	const mediaCache = path.join(cacheDir, `${id}.json`)
 	try {
-		return JSON.parse(await fs.readFile(mediaCache), 'utf-8')
+		return {
+			...JSON.parse(await fs.readFile(mediaCache), 'utf-8'),
+			local: true,
+		}
 	} catch {
 		const { items } = await cf.getEntries({
 			content_type: 'image',
@@ -75,7 +78,7 @@ const getMediaEntry = async (id) => {
 			),
 			'utf-8',
 		)
-		return { media, asset }
+		return { media, asset, local: false }
 	}
 }
 
@@ -88,13 +91,15 @@ const cacheMedia = async (src) => {
 		isFile = true
 	} catch {}
 	const id = isFile ? await hashFile(src) : hashString(src)
-	console.log(
-		chalk.yellow('contentful'),
-		chalk.gray('caching'),
-		chalk.blue(src),
-	)
+
 	try {
-		const { asset } = await getMediaEntry(id)
+		const { asset, local } = await getMediaEntry(id)
+		console.log(
+			chalk.yellow('contentful'),
+			chalk.gray('cached'),
+			local ? chalk.blueBright('local') : chalk.blue('remote'),
+			chalk.blue(src),
+		)
 		return getUrl(asset)
 	} catch {
 		// Create new asset
@@ -158,7 +163,7 @@ const cacheMedia = async (src) => {
 		const url = getUrl(createdAsset)
 		console.log(
 			chalk.green('contentful'),
-			chalk.gray('cached'),
+			chalk.green('uploaded'),
 			chalk.blueBright(url),
 		)
 		return url
