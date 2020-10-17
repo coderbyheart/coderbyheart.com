@@ -16,7 +16,8 @@
         "uses-rel-preconnect": "off",
         "legacy-javascript": "off",
         "largest-contentful-paint": ["warning", { "minScore": 0.8 }],
-        "apple-touch-icon": "off"
+        "apple-touch-icon": "off",
+        "canonical": "off"
       }
     },
     "upload": {
