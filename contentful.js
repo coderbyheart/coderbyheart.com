@@ -5,6 +5,11 @@ const { promises: fs, createReadStream } = require('fs')
 const crypto = require('crypto')
 const { parse } = require('url')
 const chalk = require('chalk')
+const Bottleneck = require('bottleneck')
+const limiter = new Bottleneck({
+	minTime: 1000 / 5,
+	maxConcurrent: 5,
+})
 
 const cacheDir = path.join(process.cwd(), '.contentful-media')
 
@@ -59,13 +64,17 @@ const getMediaEntry = async (id) => {
 			local: true,
 		}
 	} catch {
-		const { items } = await cf.getEntries({
-			content_type: 'image',
-			'fields.id': id,
-		})
+		const { items } = await limiter.schedule(() =>
+			cf.getEntries({
+				content_type: 'image',
+				'fields.id': id,
+			}),
+		)
 		if (items.length === 0) throw new Error(`Media entry for ${id} not found.`)
 		const media = items[0]
-		const asset = await cf.getAsset(media.fields.media.sys.id)
+		const asset = await limiter.schedule(() =>
+			cf.getAsset(media.fields.media.sys.id),
+		)
 		await fs.writeFile(
 			mediaCache,
 			JSON.stringify(
@@ -82,9 +91,9 @@ const getMediaEntry = async (id) => {
 	}
 }
 
-const cacheMedia = async (src) => {
-	let contentType = 'image/jpeg'
-	if (/\.png$/i.test(src)) contentType = 'image/png'
+const mediaEntries = {}
+
+const cacheMedia = async ({ src, env }) => {
 	let isFile = false
 	try {
 		await fs.stat(src)
@@ -102,82 +111,108 @@ const cacheMedia = async (src) => {
 		)
 		return getUrl(asset)
 	} catch {
-		// Create new asset
-		const space = await cfM.getSpace(process.env.CONTENTFUL_SPACE)
-		const envs = await space.getEnvironments()
-		const fileInfo = {
-			title: {
-				'en-US': id,
-			},
-			description: {
-				'en-US': `Automatically created from GatsbyJS\n\nSource: ${src}`,
-			},
-		}
-		const assetDraft = await (isFile
-			? envs.items[0].createAssetFromFiles({
-					fields: {
-						...fileInfo,
-						file: {
-							'en-US': {
-								contentType,
-								fileName: src.split('/').pop(),
-								file: createReadStream(src),
+		if (!mediaEntries[id]) {
+			mediaEntries[id] = new Promise(async (resolve) => {
+				// Create new asset
+				console.log(
+					chalk.yellow('contentful'),
+					chalk.gray('uploading'),
+					chalk.blue(src),
+				)
+				const fileInfo = {
+					title: {
+						'en-US': id,
+					},
+					description: {
+						'en-US': `Automatically created from GatsbyJS\n\nSource: ${src}`,
+					},
+				}
+				let contentType = 'image/jpeg'
+				if (/\.png$/i.test(src)) contentType = 'image/png'
+				if (/\.gif$/i.test(src)) contentType = 'image/gif'
+				const assetDraft = await (isFile
+					? limiter.schedule(() =>
+							env.createAssetFromFiles({
+								fields: {
+									...fileInfo,
+									file: {
+										'en-US': {
+											contentType,
+											fileName: src.split('/').pop(),
+											file: createReadStream(src),
+										},
+									},
+								},
+							}),
+					  )
+					: limiter.schedule(() =>
+							env.createAsset({
+								fields: {
+									...fileInfo,
+									file: {
+										'en-US': {
+											contentType,
+											fileName: parse(src).path.split('/').pop(),
+											upload: src,
+										},
+									},
+								},
+							}),
+					  ))
+				const readyAsset = await limiter.schedule(() =>
+					assetDraft.processForAllLocales(),
+				)
+				const asset = await limiter.schedule(() => readyAsset.publish())
+				// Create new Media
+				console.log(
+					chalk.yellow('contentful'),
+					chalk.gray('creating image entry'),
+					chalk.blue(src),
+				)
+				const mediaDraft = await limiter.schedule(() =>
+					env.createEntry('image', {
+						fields: {
+							id: {
+								'en-US': id,
+							},
+							media: {
+								'en-US': {
+									sys: {
+										type: 'Link',
+										linkType: 'Asset',
+										id: asset.sys.id,
+									},
+								},
 							},
 						},
-					},
-			  })
-			: envs.items[0].createAsset({
-					fields: {
-						...fileInfo,
-						file: {
-							'en-US': {
-								contentType,
-								fileName: parse(src).path.split('/').pop(),
-								upload: src,
-							},
-						},
-					},
-			  }))
-		const readyAsset = await assetDraft.processForAllLocales()
-		const asset = await readyAsset.publish()
-		// Create new Media
-		const mediaDraft = await envs.items[0].createEntry('image', {
-			fields: {
-				id: {
-					'en-US': id,
-				},
-				media: {
-					'en-US': {
-						sys: {
-							type: 'Link',
-							linkType: 'Asset',
-							id: asset.sys.id,
-						},
-					},
-				},
-			},
-		})
-		await mediaDraft.publish()
+					}),
+				)
+				await limiter.schedule(() => mediaDraft.publish())
 
-		const { asset: createdAsset } = await getMediaEntry(id)
-		const url = getUrl(createdAsset)
-		console.log(
-			chalk.green('contentful'),
-			chalk.green('uploaded'),
-			chalk.blueBright(url),
-		)
-		return url
+				const { asset: createdAsset } = await getMediaEntry(id)
+				const url = getUrl(createdAsset)
+				console.log(
+					chalk.green('contentful'),
+					chalk.green('uploaded'),
+					chalk.blueBright(url),
+				)
+				return resolve(url)
+			})
+		}
+		return mediaEntries[id]
 	}
 }
 
-const getMediaUrl = async (src) => {
+const getMediaUrl = async ({ env, src }) => {
 	if (mediaUrls[src] === undefined) {
-		mediaUrls[src] = new Promise((resolve) => cacheMedia(src).then(resolve))
+		mediaUrls[src] = new Promise((resolve) =>
+			cacheMedia({ env, src }).then(resolve),
+		)
 	}
 	return mediaUrls[src]
 }
 
-const replaceImageTags = (relativeDirectory) => async ({
+const replaceImageTags = ({ env, relativeDirectory }) => async ({
 	children,
 	tagName,
 	properties,
@@ -196,18 +231,19 @@ const replaceImageTags = (relativeDirectory) => async ({
 			  )
 			: properties.src
 		return {
-			children: children?.map(replaceImageTags(relativeDirectory)) ?? [],
+			children:
+				children?.map(replaceImageTags({ env, relativeDirectory })) ?? [],
 			tagName,
 			properties: {
 				...properties,
-				src: await getMediaUrl(src),
+				src: await getMediaUrl({ env, src }),
 			},
 			...rest,
 		}
 	}
 	return {
 		children: await Promise.all(
-			children?.map(replaceImageTags(relativeDirectory)) ?? [],
+			children?.map(replaceImageTags({ env, relativeDirectory })) ?? [],
 		),
 		tagName,
 		properties,
@@ -215,15 +251,26 @@ const replaceImageTags = (relativeDirectory) => async ({
 	}
 }
 
-exports.cacheImages = async ({ children, ...rest }, relativeDirectory) => {
+const envPromise = limiter
+	.schedule(() => cfM.getSpace(process.env.CONTENTFUL_SPACE))
+	.then((space) => limiter.schedule(() => space.getEnvironments()))
+	.then((res) => res.items[0])
+
+const cacheDirPromise = (async () => {
 	try {
 		await fs.stat(cacheDir)
 	} catch {
 		await fs.mkdir(cacheDir)
 	}
+})()
+
+exports.cacheImages = async ({ children, ...rest }, relativeDirectory) => {
+	await cacheDirPromise
+	const env = await envPromise
+
 	return {
 		children: await Promise.all(
-			children?.map(replaceImageTags(relativeDirectory)) ?? [],
+			children?.map(replaceImageTags({ env, relativeDirectory })) ?? [],
 		),
 		...rest,
 	}

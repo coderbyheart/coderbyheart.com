@@ -103,7 +103,13 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 		pages.data.allFile.edges
 			.filter(({ node: { relativeDirectory } }) => relativeDirectory === 'post')
 			.map(({ node: { relativePath, name } }) =>
-				renderContentPage(relativePath, `/${name}`, 'post', createPage, pages),
+				renderContentPage(
+					relativePath,
+					`/${name.replace(/^[0-9]{4}-[0-9]{2}-[0-9]{2}-/, '')}`,
+					'post',
+					createPage,
+					pages,
+				),
 			),
 	)
 	await renderContentPage(
