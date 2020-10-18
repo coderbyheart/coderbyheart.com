@@ -6,6 +6,7 @@ import { Title } from '../design/Title'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Comments } from '../components/Comments'
+import { breakpoints } from '../design/settings'
 
 export const query = graphql`
 	query PostPageQuery {
@@ -22,7 +23,8 @@ export const query = graphql`
 `
 
 const ShareButton = styled.a`
-	color: #fff !important;
+	background-color: var(--highlight-color);
+	color: var(--background-color) !important;
 	padding: 0.5rem 1rem;
 	border-radius: 5px;
 	text-decoration: none;
@@ -30,14 +32,12 @@ const ShareButton = styled.a`
 		margin-left: 1rem;
 	}
 `
-const TwitterShare = styled(ShareButton)`
-	background-color: #55acee;
-`
-const LinkedInShare = styled(ShareButton)`
-	background-color: #0077b5;
-`
-const FacebookShare = styled(ShareButton)`
-	background-color: #3b5998;
+
+const Share = styled.section`
+	display: none;
+	@media (min-width: ${breakpoints.content}) {
+		display: block;
+	}
 `
 
 const Footer = styled.footer`
@@ -72,9 +72,9 @@ const PostPage = ({
 				{pageContext.page.remark?.htmlAst !== undefined &&
 					renderHtmlAstToReact(pageContext.page.remark.htmlAst)}
 				<Footer>
-					<section>
+					<Share>
 						<h2>Share</h2>
-						<TwitterShare
+						<ShareButton
 							href={`https://twitter.com/intent/tweet/?text=${encodeURIComponent(
 								pageContext.page.remark.frontmatter.title,
 							)}&url=${encodeURIComponent(location.href ?? '')}`}
@@ -83,9 +83,9 @@ const PostPage = ({
 							aria-label="Share on Twitter"
 						>
 							Twitter
-						</TwitterShare>
+						</ShareButton>
 
-						<LinkedInShare
+						<ShareButton
 							href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
 								location.href ?? '',
 							)}&title=${encodeURIComponent(
@@ -98,19 +98,8 @@ const PostPage = ({
 							aria-label="Share on LinkedIn"
 						>
 							LinkedIn
-						</LinkedInShare>
-
-						<FacebookShare
-							href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-								location.href ?? '',
-							)}`}
-							rel="noreferrer noopener"
-							target="_blank"
-							aria-label="Share on Facebook"
-						>
-							Facebook
-						</FacebookShare>
-					</section>
+						</ShareButton>
+					</Share>
 					<Comments
 						page={pageContext.page}
 						siteUrl={data.site.siteMetadata.siteUrl}
