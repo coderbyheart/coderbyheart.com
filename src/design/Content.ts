@@ -4,6 +4,7 @@ import { breakpoints } from './settings'
 export const Content = styled.div`
 	img {
 		width: 100%;
+		height: auto;
 	}
 	line-height: 150%;
 	a {
@@ -53,7 +54,6 @@ export const Content = styled.div`
 	}
 	img[data-large-source='1'] {
 		width: 100vw;
-		height: auto;
 		margin-left: -1rem;
 		margin-right: -1rem;
 		@media (min-width: ${breakpoints.content}) {
