@@ -20,13 +20,6 @@ export const Comments = ({
 		title: page.remark.frontmatter.title,
 	}
 	return (
-		<section ref={ref}>
-			{inView && (
-				<>
-					<h2>Comments</h2>
-					<Disqus config={disqusConfig} />
-				</>
-			)}
-		</section>
+		<section ref={ref}>{inView && <Disqus config={disqusConfig} />}</section>
 	)
 }
