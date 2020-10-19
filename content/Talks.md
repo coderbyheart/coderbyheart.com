@@ -13,8 +13,9 @@ application. I will cover the challenges when developing solutions on top of
 serverless components which you cannot run on your own machine and how I
 designed a BDD driven approach to run the integration tests.
 
-[Slides](https://docs.google.com/presentation/d/1Vlzwqw0siIK-2IL0MjahFUvnuHFDf9NqFQr95mG_tEI/edit?usp=sharing),
-[Video](https://youtu.be/yt7oJ-To4kI)
+[Blog post](/it-does-not-run-on-my-machine) ·
+[Slides](https://docs.google.com/presentation/d/1Vlzwqw0siIK-2IL0MjahFUvnuHFDf9NqFQr95mG_tEI/edit?usp=sharing)
+· [Video](https://youtu.be/yt7oJ-To4kI)
 
 - Session: [SoCraTes Conference 2018](https://www.socrates-conference.de/)
   📅 31. August 2018 🇩🇪 Soltau
@@ -35,8 +36,8 @@ designed a BDD driven approach to run the integration tests.
 
 Lightning talk about how conference call for papers work.
 
-[Slides](https://docs.google.com/presentation/d/1Jmsf7aU2saJBzrWMCFrtxfiofWOSvS62BKKMRLDhb_Q/edit?usp=sharing),
-[Video](https://www.youtube.com/watch?v=jzqCzGXT7hw)
+[Slides](https://docs.google.com/presentation/d/1Jmsf7aU2saJBzrWMCFrtxfiofWOSvS62BKKMRLDhb_Q/edit?usp=sharing)
+· [Video](https://www.youtube.com/watch?v=jzqCzGXT7hw)
 
 - [Global Diversity CFP Day](https://www.globaldiversitycfpday.com/events/169)
   📅 2. March 2019 🇩🇪 Frankfurt
