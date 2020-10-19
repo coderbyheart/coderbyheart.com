@@ -8,7 +8,7 @@ abstract: |
 date: 2017-04-27T10:00+02:00
 ---
 
-![3-people-office-2k](../media/office-design-by-an-office-hater/hero.jpg)
+![3-people-office-2k](../media/office-design-by-an-office-hater/3-people-office-2k.jpg)
 
 I hate offices. I feel uncomfortable in most of them because they are too loud,
 too crammed, smell, are too hot or cold. Being a knowledge worker I first and
