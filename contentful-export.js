@@ -46,7 +46,7 @@ const download = async (url, target) => {
 	}
 }
 
-const trimTwitterSize = (s) => s.replace(/:[a-z]+$/, '')
+const trimTwitterSize = (s) => s.replace(/[:_][a-z]+$/, '')
 
 const indent = (s) =>
 	s

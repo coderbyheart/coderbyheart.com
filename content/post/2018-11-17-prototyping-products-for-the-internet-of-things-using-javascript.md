@@ -8,7 +8,7 @@ abstract: |
 date: 2018-11-17
 ---
 
-![Markus Tacker giving a talk at code.talks Hamburg 2018](../media/2018-11-17-prototyping-products-for-the-internet-of-things-using-javascript/hero.jpg_orig)
+![Markus Tacker giving a talk at code.talks Hamburg 2018](../media/2018-11-17-prototyping-products-for-the-internet-of-things-using-javascript/hero.jpg)
 
 My 2018 conference talk focused on how to prototype for the Internet of Things
 using the language we all love: JavaScript.
