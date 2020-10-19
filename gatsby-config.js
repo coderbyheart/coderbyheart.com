@@ -28,7 +28,14 @@ const cfg = {
 			options: {
 				name: `pages`,
 				path: path.join(process.cwd(), 'content'),
-				ignore: [`**/*\.{gif,png,jpeg,jpg}`], // ignore files starting with a dot
+				ignore: [
+					'**/.*',
+					// ignore files starting with a dot
+					'**/*.gif',
+					'**/*.png',
+					'**/*.jpeg',
+					'**/*.jpg',
+				],
 			},
 		},
 		{
