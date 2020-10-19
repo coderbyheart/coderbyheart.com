@@ -75,12 +75,7 @@ const main = async () => {
 				},
 			}) => {
 				// Download images
-				const mediaDir = path.join(
-					process.cwd(),
-					'content',
-					'media',
-					`${publicationDate.substr(0, 10)}-${slug}`,
-				)
+				const mediaDir = path.join(process.cwd(), 'content', 'media', slug)
 
 				const images = [
 					...(content.match(
@@ -104,7 +99,7 @@ const main = async () => {
 							path.join(
 								'..',
 								`media`,
-								`${publicationDate.substr(0, 10)}-${slug}`,
+								slug,
 								`hero.${trimTwitterSize(heroFilename.split('.').pop())}`,
 							),
 						])
@@ -118,15 +113,7 @@ const main = async () => {
 							)
 							const imagePath = path.join(mediaDir, filename)
 							await download(src, imagePath)
-							replacements.push([
-								src,
-								path.join(
-									'..',
-									`media`,
-									`${publicationDate.substr(0, 10)}-${slug}`,
-									filename,
-								),
-							])
+							replacements.push([src, path.join('..', `media`, slug, filename)])
 						}),
 					)
 				} else if (heroUrl !== defaultHero) {
@@ -134,9 +121,7 @@ const main = async () => {
 						process.cwd(),
 						'content',
 						'media',
-						`${publicationDate.substr(0, 10)}-${slug}.${trimTwitterSize(
-							heroFilename.split('.').pop(),
-						)}`,
+						`${slug}.${trimTwitterSize(heroFilename.split('.').pop())}`,
 					)
 					await download(heroUrl, heroPath)
 					replacements.push([
@@ -144,9 +129,7 @@ const main = async () => {
 						path.join(
 							'..',
 							`media`,
-							`${publicationDate.substr(0, 10)}-${slug}.${trimTwitterSize(
-								heroFilename.split('.').pop(),
-							)}`,
+							`${slug}.${trimTwitterSize(heroFilename.split('.').pop())}`,
 						),
 					])
 				}
@@ -155,7 +138,7 @@ const main = async () => {
 					process.cwd(),
 					'content',
 					'post',
-					`${publicationDate.substr(0, 10)}-${slug}.md`,
+					`${slug}.md`,
 				)
 				return fs.writeFile(
 					filename,
