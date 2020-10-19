@@ -158,7 +158,7 @@ about new CfPs. Check out:
 
 ## Submitting
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">We so often think we need to be an expert at something in order to give a talk about it. But all you need to know is something interesting. And chances are, if you’ve been working on something you find interesting, you have insight and experience to share with others.</p>&mdash; Mary Thengvall - v2019 (@mary_grace) <a href="https://twitter.com/mary_grace/status/1090988453226074113?ref_src=twsrc%5Etfw">January 31, 2019</a></blockquote>
+<https://twitter.com/mary_grace/status/1090988453226074113?embed>
 
 Once start submitting remember that you will receive rejections, and quite a lot
 of them. It's hard to give a ratio, because it depends on your talk and which
@@ -197,7 +197,7 @@ read:
 
 ## Code of Conducts
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Having a real Code of Conduct and enforcing it is not a cozy activity. If this was not rough, we wouldn’t have to talk about diversity and inclusion, we’d have it already.</p>&mdash; Patricia Aas (@pati_gallardo) <a href="https://twitter.com/pati_gallardo/status/1058282328177471488?ref_src=twsrc%5Etfw">November 2, 2018</a></blockquote>
+<https://twitter.com/pati_gallardo/status/1058282328177471488?embed>
 
 If you apply to a conference I highly encourage you to check out their Code of
 Conduct. Having **no** is a red flag, but having a single-paragraph one mit even
@@ -219,7 +219,7 @@ A good example is the
 
 ## Now, go and become a speaker!
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If you&#39;re hesitating to submit a talk proposal to a conference cause you think your topic is boring, remember that you don&#39;t get to decide what&#39;s interesting, the conference committee does, so do it anyway! 😉</p>&mdash; Charlie Gerard 🏳️‍🌈 (@devdevcharlie) <a href="https://twitter.com/devdevcharlie/status/1090367939889397760?ref_src=twsrc%5Etfw">January 29, 2019</a></blockquote>
+<https://twitter.com/devdevcharlie/status/1090367939889397760?embed>
 
 You can find more resources on public speaking here:
 

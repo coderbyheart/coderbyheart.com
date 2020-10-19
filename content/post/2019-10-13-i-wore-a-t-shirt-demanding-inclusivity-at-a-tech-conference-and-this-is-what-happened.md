@@ -49,7 +49,7 @@ and not as a way to selectively address the male members of a group.
 
 After all **_Guys_ is not gender neutral**:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Every time someone tells me &quot;guys&quot; is gender neutral, I ask how many guys did they date.</p>&mdash; Etiene Dalcol 🇪🇺🚩🇧🇷🚩44.9%🚩☀️ (@etiene_d) <a href="https://twitter.com/etiene_d/status/994509163693838337?ref_src=twsrc%5Etfw">May 10, 2018</a></blockquote>
+<https://twitter.com/etiene_d/status/994509163693838337?embed>
 
 Not convinced? Please read [this](https://www.xaprb.com/blog/you-guys/)
 extensive post about the topic.
@@ -73,7 +73,7 @@ This obviously is not possible at events.
 
 So I made this t-shirt:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This is the front of the t-shirt I&#39;m wearing today at <a href="https://twitter.com/hashtag/socrates2019?src=hash&amp;ref_src=twsrc%5Etfw">#socrates2019</a> <a href="https://t.co/Ti8iC5v2gf">https://t.co/Ti8iC5v2gf</a> <a href="https://t.co/OsCVR5sRU1">pic.twitter.com/OsCVR5sRU1</a></p>&mdash; Markus Tacker 🇳🇴 (@coderbyheart) <a href="https://twitter.com/coderbyheart/status/1164957001438433280?ref_src=twsrc%5Etfw">August 23, 2019</a></blockquote>
+<https://twitter.com/coderbyheart/status/1164957001438433280?embed>
 
 You can download the layout files
 [here](https://github.com/coderbyheart/inclusive-language-t-shirt), so you can

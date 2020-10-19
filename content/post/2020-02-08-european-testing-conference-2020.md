@@ -25,7 +25,7 @@ attendees were coming from all over the world to meet with people who care about
 quality, customers, mental health and bring the desire to learn, share and
 teach.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Very excited to share the next days with a group of people who care for quality in software! It&#39;s all about <a href="https://twitter.com/hashtag/humans?src=hash&amp;ref_src=twsrc%5Etfw">#humans</a>, <a href="https://twitter.com/hashtag/testing?src=hash&amp;ref_src=twsrc%5Etfw">#testing</a>, <a href="https://twitter.com/hashtag/innovation?src=hash&amp;ref_src=twsrc%5Etfw">#innovation</a>, <a href="https://twitter.com/hashtag/collaboration?src=hash&amp;ref_src=twsrc%5Etfw">#collaboration</a> and more.<a href="https://twitter.com/hashtag/EuroTestConf?src=hash&amp;ref_src=twsrc%5Etfw">#EuroTestConf</a> is on! <a href="https://t.co/y2juzWaG6N">pic.twitter.com/y2juzWaG6N</a></p>&mdash; Markus Tacker 🇳🇱 #AMS @EuroTestingConf (@coderbyheart) <a href="https://twitter.com/coderbyheart/status/1225330258569764864?ref_src=twsrc%5Etfw">February 6, 2020</a></blockquote>
+<https://twitter.com/coderbyheart/status/1225330258569764864?embed>
 
 It is a safe place to acknowledge that we, our behaviour and our skills are far
 from perfect, to connect with others and figure out _together_ how to be better
@@ -34,7 +34,7 @@ humans who work on computers.
 The closing keynote by [Ulrika Malmgren](https://twitter.com/Ulrikama)
 summarized this perfectly:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">With the great power we have as developers comes the responsibility to have honest conversations about our work.<a href="https://twitter.com/Ulrikama?ref_src=twsrc%5Etfw">@Ulrikama</a> at <a href="https://twitter.com/hashtag/EuroTestConf?src=hash&amp;ref_src=twsrc%5Etfw">#EuroTestConf</a> <a href="https://t.co/gV2taRhcTt">pic.twitter.com/gV2taRhcTt</a></p>&mdash; Markus Tacker 🇳🇱 #AMS @EuroTestingConf (@coderbyheart) <a href="https://twitter.com/coderbyheart/status/1225807205783527424?ref_src=twsrc%5Etfw">February 7, 2020</a></blockquote>
+<https://twitter.com/coderbyheart/status/1225807205783527424?embed>
 
 It is our responsibility to have honest conversations about our work because we
 happen to be influential to the lives of other with every keystroke and we owe
@@ -65,7 +65,7 @@ which currently is done using Confluence, Slack and email.
 from:
 [Discover to Deliver](https://www.ebgconsulting.com/blog/a-quick-dip-into-our-new-book-discover-to-deliver-agile-product-planning-analysis/)
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">In the <a href="https://twitter.com/hashtag/EuroTestConf?src=hash&amp;ref_src=twsrc%5Etfw">#EuroTestConf</a> with <a href="https://twitter.com/lisacrispin?ref_src=twsrc%5Etfw">@lisacrispin</a> and <a href="https://twitter.com/janetgregoryca?ref_src=twsrc%5Etfw">@janetgregoryca</a> to learn how to create a shared understanding in your team using frameworks like the 7 dimensions of quality. <a href="https://t.co/WjTPObRmK3">pic.twitter.com/WjTPObRmK3</a></p>&mdash; Markus Tacker 🇳🇱 #AMS @EuroTestingConf (@coderbyheart) <a href="https://twitter.com/coderbyheart/status/1225389623448342528?ref_src=twsrc%5Etfw">February 6, 2020</a></blockquote>
+<https://twitter.com/coderbyheart/status/1225389623448342528?embed>
 
 This is super useful technique to uncover blind spots in a project and can be
 done with straightforward exercises which don't take up too much time. I will
@@ -94,7 +94,7 @@ Design Europe, and
 the same DNA, and hopefull next year, we can bring these three communities
 closer together.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/EuroTestConf?src=hash&amp;ref_src=twsrc%5Etfw">#EuroTestConf</a> speakers dinner, is merging with speakers from <a href="https://twitter.com/hashtag/dddeu?src=hash&amp;ref_src=twsrc%5Etfw">#dddeu</a>. Amazing to have these two communities in one place. <a href="https://t.co/jISs5TlOD6">pic.twitter.com/jISs5TlOD6</a></p>&mdash; Markus Tacker 🇳🇱 #AMS @EuroTestingConf (@coderbyheart) <a href="https://twitter.com/coderbyheart/status/1225859527255392256?ref_src=twsrc%5Etfw">February 7, 2020</a></blockquote>
+<https://twitter.com/coderbyheart/status/1225859527255392256?embed>
 
 ---
 

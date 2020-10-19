@@ -104,7 +104,7 @@ ago:
 Podio responded to
 [the Twitter thread](https://twitter.com/Podio/status/1148152555177857026):
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Hi everyone, we working to ensure it is more clear Podio profile information is public whenever invited to the user forum workspace. Currently a user has to manually click to request access to the User Forum workspace before being a member.</p>&mdash; Podio (@Podio) <a href="https://twitter.com/Podio/status/1148152555177857026?ref_src=twsrc%5Etfw">July 8, 2019</a></blockquote>
+<https://twitter.com/Podio/status/1148152555177857026?embed>
 
 ## Update 11. July 2019
 
