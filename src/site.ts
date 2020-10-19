@@ -36,9 +36,3 @@ export type Page = {
 		}
 	}
 }
-
-export type PageContext = {
-	page: Page
-	pages: Page[]
-	pagePath: string
-}

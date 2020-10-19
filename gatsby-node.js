@@ -4,50 +4,21 @@ const { cacheImages } = require('./contentful')
 const chalk = require('chalk')
 
 const renderContentPage = async (
-	name,
+	page,
 	pagePath,
 	template,
 	createPage,
-	pages,
+	context,
 ) => {
 	console.log(chalk.yellow('renderContentPage'), pagePath)
-	// Find requested page
-	const page = pages.data.allFile.edges.find(
-		({ node: { relativePath } }) => name === relativePath,
-	)
 
 	// Render requested page
 	await createPage({
 		path: pagePath,
 		component: path.join(process.cwd(), 'src', 'page', `${template}.tsx`),
 		context: {
-			page: {
-				...page.node,
-				remark: {
-					...page.node.childMarkdownRemark,
-					htmlAst: await cacheImages(
-						page.node.childMarkdownRemark.htmlAst,
-						page.node.relativeDirectory,
-					),
-				},
-			},
-			pages: await Promise.all(
-				pages.data.allFile.edges.map(
-					async ({
-						node: { relativeDirectory, childMarkdownRemark, ...rest },
-					}) => ({
-						remark: {
-							...childMarkdownRemark,
-							htmlAst: await cacheImages(
-								childMarkdownRemark.htmlAst,
-								relativeDirectory,
-							),
-						},
-						...rest,
-						relativeDirectory,
-					}),
-				),
-			),
+			...context,
+			page,
 			pagePath,
 		},
 	})
@@ -89,28 +60,84 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 		throw pages.errors
 	}
 
-	await renderContentPage('About.md', '/', 'default', createPage, pages)
+	const findPage = (name) => {
+		const { node: Page } = pages.data.allFile.edges.find(
+			({ node: { relativePath } }) => relativePath === name,
+		)
+		if (Page === undefined) {
+			throw new Error(`Failed to locate ${name}!`)
+		}
+		return Page
+	}
+
+	const parsePageMarkdown = async (page) => {
+		const { childMarkdownRemark, ...rest } = page
+		return {
+			...rest,
+			remark: {
+				...childMarkdownRemark,
+				htmlAst: await cacheImages(
+					childMarkdownRemark.htmlAst,
+					rest.relativeDirectory,
+				),
+			},
+		}
+	}
+
+	const Footer = await parsePageMarkdown(findPage('Footer.md'))
+
 	await renderContentPage(
-		'Communities.md',
+		await parsePageMarkdown(findPage('About.md')),
+		'/',
+		'default',
+		createPage,
+		{
+			Footer,
+		},
+	)
+	await renderContentPage(
+		await parsePageMarkdown(findPage('Communities.md')),
 		'/communities',
 		'default',
 		createPage,
-		pages,
+		{ Footer },
 	)
-	await renderContentPage('Talks.md', '/talks', 'default', createPage, pages)
+	await renderContentPage(
+		await parsePageMarkdown(findPage('Talks.md')),
+		'/talks',
+		'default',
+		createPage,
+		{ Footer },
+	)
 	// Render blog posts
 	await Promise.all(
 		pages.data.allFile.edges
 			.filter(({ node: { relativeDirectory } }) => relativeDirectory === 'post')
-			.map(({ node: { relativePath, name } }) =>
-				renderContentPage(relativePath, `/${name}`, 'post', createPage, pages),
+			.map(async ({ node: page }) =>
+				renderContentPage(
+					await parsePageMarkdown(page),
+					`/${page.name}`,
+					'post',
+					createPage,
+					{
+						page,
+						Footer,
+					},
+				),
 			),
 	)
 	await renderContentPage(
-		'Archive.md',
+		await parsePageMarkdown(findPage('Archive.md')),
 		'/archive',
 		'archive',
 		createPage,
-		pages,
+		{
+			Footer,
+			pages: await Promise.all(
+				pages.data.allFile.edges.map(async ({ node: page }) =>
+					parsePageMarkdown(page),
+				),
+			),
+		},
 	)
 }
