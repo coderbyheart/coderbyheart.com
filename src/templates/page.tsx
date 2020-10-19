@@ -1,5 +1,5 @@
 import React from 'react'
-import { SiteMetaData, PageContext, Page } from '../site'
+import { SiteMetaData, Page } from '../site'
 import { Head } from '../design/Head'
 import { Header } from '../design/Header'
 import { Content } from '../design/Content'
@@ -45,31 +45,23 @@ const PageTemplate = ({
 	children,
 }: React.PropsWithChildren<{
 	siteMetadata: SiteMetaData
-	pageContext: PageContext
-}>) => {
-	const findPageByRelativePath = (search: string): Page => {
-		const p = pageContext.pages.find(
-			({ relativePath }) => relativePath === search,
-		)
-		if (p === undefined) {
-			throw new Error(`Failed to locate page ${search}!`)
-		}
-		return p
+	pageContext: {
+		pagePath: string
+		page: Page
+		Footer: Page
 	}
-	const footerContent = findPageByRelativePath('Footer.md')
-	return (
-		<>
-			<Head
-				siteMetaData={siteMetadata}
-				pageTitle={pageContext.page.remark.frontmatter.title}
-			/>
-			<Header siteMetaData={siteMetadata} />
-			<Main className={classNames([pagePathToClass(pageContext.pagePath)])}>
-				<Content>{children}</Content>
-			</Main>
-			<Footer siteMetaData={siteMetadata} content={footerContent} />
-		</>
-	)
-}
+}>) => (
+	<>
+		<Head
+			siteMetaData={siteMetadata}
+			pageTitle={pageContext.page.remark.frontmatter.title}
+		/>
+		<Header siteMetaData={siteMetadata} />
+		<Main className={classNames([pagePathToClass(pageContext.pagePath)])}>
+			<Content>{children}</Content>
+		</Main>
+		<Footer siteMetaData={siteMetadata} content={pageContext.Footer} />
+	</>
+)
 
 export default PageTemplate

@@ -1,6 +1,6 @@
 import React from 'react'
 import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
-import { SiteMetaData, PageContext } from '../site'
+import { Page, SiteMetaData } from '../site'
 import PageTemplate from '../templates/page'
 import { Title } from '../design/Title'
 import { graphql } from 'gatsby'
@@ -57,7 +57,11 @@ const PostPage = ({
 			siteMetadata: SiteMetaData
 		}
 	}
-	pageContext: PageContext
+	pageContext: {
+		page: Page
+		Footer: Page
+		pagePath: string
+	}
 	location: {
 		href?: string
 	}

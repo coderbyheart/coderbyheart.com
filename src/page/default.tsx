@@ -1,6 +1,6 @@
 import React from 'react'
 import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
-import { SiteMetaData, PageContext } from '../site'
+import { SiteMetaData, Page } from '../site'
 import PageTemplate from '../templates/page'
 import { Title } from '../design/Title'
 import { graphql } from 'gatsby'
@@ -27,7 +27,11 @@ const DefaultPage = ({
 			siteMetadata: SiteMetaData
 		}
 	}
-	pageContext: PageContext
+	pageContext: {
+		page: Page
+		pagePath: string
+		Footer: Page
+	}
 }) => (
 	<PageTemplate siteMetadata={data.site.siteMetadata} pageContext={pageContext}>
 		{pageContext.page.remark.frontmatter.noheadline !== true && (

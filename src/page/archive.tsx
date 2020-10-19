@@ -1,5 +1,5 @@
 import React from 'react'
-import { SiteMetaData, PageContext, Page } from '../site'
+import { SiteMetaData, Page } from '../site'
 import PageTemplate from '../templates/page'
 import { Title } from '../design/Title'
 import { graphql, Link } from 'gatsby'
@@ -38,7 +38,12 @@ const Archive = ({
 			siteMetadata: SiteMetaData
 		}
 	}
-	pageContext: PageContext
+	pageContext: {
+		page: Page
+		pages: Page[]
+		pagePath: string
+		Footer: Page
+	}
 }) => (
 	<PageTemplate siteMetadata={data.site.siteMetadata} pageContext={pageContext}>
 		{pageContext.page.remark.frontmatter.noheadline !== true && (
