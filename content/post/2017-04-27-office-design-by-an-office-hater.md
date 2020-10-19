@@ -120,13 +120,13 @@ in office space design and let me know, how your ideal workplace looks like!
 
 Here are some reactions (from other developers):
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/coderbyheart">@coderbyheart</a> Oh my god, that is such a cool post! Must be fun to draft your own office 😲</p>&mdash; Patrick Stapfer (@ryyppy) <a href="https://twitter.com/ryyppy/status/857537165944913920">April 27, 2017</a></blockquote>
+<https://twitter.com/ryyppy/status/857537165944913920?embed>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I came to hate open plan offices, this looks as nice as an office can get. <a href="https://t.co/RVOXySq29I">https://t.co/RVOXySq29I</a></p>&mdash; Florian Hopf (@fhopf) <a href="https://twitter.com/fhopf/status/857548445510361088">April 27, 2017</a></blockquote>
+<https://twitter.com/fhopf/status/857548445510361088?embed>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">almost like all the open plan offices... not! Just bring this next time you go to a job interview to suggest &#39;minor&#39; corrections :-) <a href="https://t.co/nfEJXfZIoF">https://t.co/nfEJXfZIoF</a></p>&mdash; Alexander Reelsen (@spinscale) <a href="https://twitter.com/spinscale/status/857568366357360642">April 27, 2017</a></blockquote>
+<https://twitter.com/spinscale/status/857568366357360642?embed>
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/coderbyheart">@coderbyheart</a> &lt;3 a dream</p>&mdash; Silvia Hundegger 🦄 (@SilviaHundegger) <a href="https://twitter.com/SilviaHundegger/status/857575027511898112">April 27, 2017</a></blockquote>
+<https://twitter.com/SilviaHundegger/status/857575027511898112?embed>
 
 ## Links
 

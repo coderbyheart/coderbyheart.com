@@ -15,9 +15,9 @@ The SoCraTes conferences are dear to my heart, and
 important conference date every year. This year some of us shared that we were
 attending and happy to be a [ConferenceBuddy](https://www.conferencebuddy.io/):
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Anybody going to <a href="https://twitter.com/SoCraTes_Conf?ref_src=twsrc%5Etfw">@SoCraTes_Conf</a> who‘d like to have a <a href="https://twitter.com/ConfBuddy?ref_src=twsrc%5Etfw">@ConfBuddy</a>? <br><br>🙋‍♂️ I’m here for you!<br><br>(and I expect many others would love to be your buddy too, just in case 🙂)</p>&mdash; Benjamin Reitzammer (@benjamin) <a href="https://twitter.com/benjamin/status/1029742801767067648?ref_src=twsrc%5Etfw">August 15, 2018</a></blockquote>
+<https://twitter.com/benjamin/status/1029742801767067648?embed>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Going to <a href="https://twitter.com/SoCraTes_Conf?ref_src=twsrc%5Etfw">@SoCraTes_Conf</a> and don&#39;t know anyone? Feel intimidated by all the strangers? I&#39;m happy to be your <a href="https://twitter.com/ConfBuddy?ref_src=twsrc%5Etfw">@ConfBuddy</a> to help you have a fantastic experience at  <a href="https://twitter.com/hashtag/socrates2018?src=hash&amp;ref_src=twsrc%5Etfw">#socrates2018</a> and make new friends!<br><br>Join the <a href="https://twitter.com/hashtag/buddies?src=hash&amp;ref_src=twsrc%5Etfw">#buddies</a> channel in our Slack! <a href="https://t.co/IOHblVy0oB">pic.twitter.com/IOHblVy0oB</a></p>&mdash; Markus Tacker 🇳🇴 (@coderbyheart) <a href="https://twitter.com/coderbyheart/status/1030010907840192513?ref_src=twsrc%5Etfw">August 16, 2018</a></blockquote>
+<https://twitter.com/coderbyheart/status/1030010907840192513?embed>
 
 I also created a public **#buddies** channel in the
 [conference Slack](https://socrates-conference.slack.com/), where I posted
@@ -47,6 +47,6 @@ nobody calls.
 
 And here is how a participant put it:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Being myself very shy, timid and introvert and having been quite a lot to conferences alone, I know that feeling.<br>This is a very interesting initiative. 👏<a href="https://twitter.com/ConfBuddy?ref_src=twsrc%5Etfw">@ConfBuddy</a> is for everyone who wants to attend a tech conference but is afraid to go alone.<a href="https://t.co/boofp7gqYE">https://t.co/boofp7gqYE</a></p>&mdash; Thierry de Pauw (@tdpauw) <a href="https://twitter.com/tdpauw/status/1030076022153199616?ref_src=twsrc%5Etfw">August 16, 2018</a></blockquote>
+<https://twitter.com/tdpauw/status/1030076022153199616?embed>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">All of the <a href="https://twitter.com/SoCraTes_Conf?ref_src=twsrc%5Etfw">@SoCraTes_Conf</a> conferences are very shy and introvert people friendly ! All the attendees seem to be naturally <a href="https://twitter.com/hashtag/ConfBuddy?src=hash&amp;ref_src=twsrc%5Etfw">#ConfBuddy</a> !! <a href="https://twitter.com/hashtag/socrates2018?src=hash&amp;ref_src=twsrc%5Etfw">#socrates2018</a> <a href="https://t.co/Kjo0FITPvH">https://t.co/Kjo0FITPvH</a></p>&mdash; Thierry de Pauw (@tdpauw) <a href="https://twitter.com/tdpauw/status/1033731158918475776?ref_src=twsrc%5Etfw">August 26, 2018</a></blockquote>
+<https://twitter.com/tdpauw/status/1033731158918475776?embed>
