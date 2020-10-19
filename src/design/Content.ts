@@ -52,6 +52,9 @@ export const Content = styled.div`
 	div.twitter-tweet-rendered {
 		margin: 2rem auto !important;
 	}
+	img:not([src]) {
+		visibility: hidden;
+	}
 	img[data-large-source='1'] {
 		width: 100vw;
 		margin-left: -1rem;
@@ -70,6 +73,61 @@ export const Content = styled.div`
 	@media (min-width: ${breakpoints.content}) {
 		li + li {
 			padding-top: 0;
+		}
+	}
+
+	pre[class*='language-'] > code {
+		border-color: var(--highlight-color);
+		background-image: none;
+	}
+	pre[class*='language-'] {
+		:before,
+		:after {
+			box-shadow: none;
+		}
+		.token {
+			&.constant {
+				color: var(--highlight-color);
+			}
+			&.keyword {
+				color: var(--highlight-color);
+			}
+			&.boolean {
+				color: inherit;
+			}
+			&.function {
+				color: var(--color-syntax-ChelseaGem);
+			}
+			&.number {
+				color: inherit;
+			}
+			&.operator {
+				color: inherit;
+			}
+			&.punctuation {
+				color: var(--color-syntax-Emperor);
+			}
+			&.parameter {
+				color: inherit;
+			}
+			&.regex {
+				color: inherit;
+			}
+			&.string {
+				color: var(--color-syntax-JapaneseLaurel);
+			}
+			&.class-name {
+				color: inherit;
+			}
+			&.comment {
+				color: var(--color-syntax-DoveGray);
+			}
+			&.template-string {
+				color: inherit;
+			}
+			&.inserted {
+				color: var(--color-syntax-JapaneseLaurel);
+			}
 		}
 	}
 `

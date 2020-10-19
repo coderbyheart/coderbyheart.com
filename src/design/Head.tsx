@@ -25,6 +25,12 @@ const GlobalStyle = createGlobalStyle`
 		--heart-color-on-note: #d8006f;
 		--small-font-size: 12px;
 		--max-width: ${breakpoints.content};
+		--color-syntax-ChelseaGem:	#aa5d00;
+		--color-syntax-DeepCerulean:	#007faa;
+		--color-syntax-DoveGray:	#696969;
+		--color-syntax-Emperor:	#545454;
+		--color-syntax-JapaneseLaurel:	#008000;
+		--color-syntax-Thunderbird:	#d91e18;
 	}
 	html,
 	body {
@@ -44,9 +50,6 @@ const GlobalStyle = createGlobalStyle`
 	}
 	body {
 		overflow-x: hidden;
-	}
-	img:not([src]) {
-		visibility: hidden;
 	}
 `
 
