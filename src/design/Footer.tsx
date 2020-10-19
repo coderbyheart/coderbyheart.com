@@ -5,6 +5,7 @@ import { Page, SiteMetaData } from '../site'
 import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
 import { Content } from './Content'
 import { breakpoints } from './settings'
+import { useInView } from 'react-intersection-observer'
 
 import Heart from './heart.svg'
 
@@ -116,27 +117,26 @@ export const Footer = ({
 	content: Page
 	className?: string
 	siteMetaData: Pick<SiteMetaData, 'title'>
-}>) => (
-	<StyledFooter className={className}>
-		<Wrapper>
-			<h1>
-				<Link to={'/'}>
-					coder.by(
-					<Heart />)
-				</Link>
-			</h1>
-			<Photo
-				className="lazyload"
-				alt={title}
-				data-src={avatarUrl}
-				width="150"
-				height="150"
-			/>
-			<Content>{renderHtmlAstToReact(content.remark.htmlAst)}</Content>
-			<Copyright>
-				© 2015-{new Date().getFullYear()}{' '}
-				<a href="https://coderbyheart.com/">{title}</a>. All rights reserved.
-			</Copyright>
-		</Wrapper>
-	</StyledFooter>
-)
+}>) => {
+	const { ref, inView } = useInView({ triggerOnce: true })
+	return (
+		<StyledFooter className={className} ref={ref}>
+			<Wrapper>
+				<h1>
+					<Link to={'/'}>
+						coder.by(
+						<Heart />)
+					</Link>
+				</h1>
+				{inView && (
+					<Photo alt={title} src={avatarUrl} width="150" height="150" />
+				)}
+				<Content>{renderHtmlAstToReact(content.remark.htmlAst)}</Content>
+				<Copyright>
+					© 2015-{new Date().getFullYear()}{' '}
+					<a href="https://coderbyheart.com/">{title}</a>. All rights reserved.
+				</Copyright>
+			</Wrapper>
+		</StyledFooter>
+	)
+}

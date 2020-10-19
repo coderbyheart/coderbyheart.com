@@ -45,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		overflow-x: hidden;
 	}
-	img.lazyload:not([src]) {
+	img:not([src]) {
 		visibility: hidden;
 	}
 `
