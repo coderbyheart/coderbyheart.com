@@ -15,7 +15,13 @@ const loadScriptAsync = async (uri: string) =>
 		firstScriptTag?.parentNode?.insertBefore(tag, firstScriptTag)
 	})
 
-export const EmbedTweet = ({ status }: { status: string }) => {
+export const EmbedTweet = ({
+	status,
+	params,
+}: {
+	status: string
+	params: URLSearchParams
+}) => {
 	if (isSSR) return null
 	const { ref, inView, entry } = useInView({ triggerOnce: true })
 	useEffect(() => {
@@ -24,7 +30,9 @@ export const EmbedTweet = ({ status }: { status: string }) => {
 		if (!inView) return
 		void loadScriptAsync('https://platform.twitter.com/widgets.js').then(() => {
 			if (!isMounted) return
-			twttr.widgets.createTweet(status, entry?.target, {})
+			twttr.widgets.createTweet(status, entry?.target, {
+				conversation: params.get('conversation'),
+			})
 		})
 		return () => {
 			isMounted = false
