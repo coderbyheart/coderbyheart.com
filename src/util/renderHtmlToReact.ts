@@ -30,7 +30,15 @@ export const renderHtmlAstToReact = (tree: unknown): any =>
 				)
 				const status = twitterStatusMatch?.[1]
 				if (status !== undefined) {
-					return React.createElement(EmbedTweet, { status, ...attrs }, children)
+					return React.createElement(
+						EmbedTweet,
+						{
+							status,
+							params: new URLSearchParams(attrs.href?.split('?')[1]),
+							...attrs,
+						},
+						children,
+					)
 				}
 			}
 			return React.createElement(name, attrs, children)
