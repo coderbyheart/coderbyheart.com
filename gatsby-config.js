@@ -49,6 +49,15 @@ const cfg = {
 							rel: 'nofollow noreferrer',
 						},
 					},
+					{
+						resolve: `gatsby-remark-prismjs`,
+						options: {
+							classPrefix: 'language-',
+							inlineCodeMarker: '›',
+							showLineNumbers: false,
+							noInlineHighlight: true,
+						},
+					},
 				],
 			},
 		},
