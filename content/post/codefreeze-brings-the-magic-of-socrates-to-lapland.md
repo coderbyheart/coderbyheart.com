@@ -3,8 +3,9 @@ title: >-
   codefreeze brings the magic of SoCraTes to Lapland
 subtitle: >-
   A conference about Software Craft like no other
-abstract: |
-  About codefreeze, the software craft and testing conference in the arctic circle
+abstract: >-
+  About codefreeze, the software craft and testing conference in the arctic
+  circle
 date: 2017-01-21T10:00+02:00
 ---
 

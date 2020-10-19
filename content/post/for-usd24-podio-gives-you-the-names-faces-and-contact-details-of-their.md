@@ -4,8 +4,9 @@ title: >-
   users
 subtitle: >-
   Privacy
-abstract: |
-  Podio discloses extensive user information and claims its users have agreed to it.
+abstract: >-
+  Podio discloses extensive user information and claims its users have agreed to
+  it.
 date: 2019-07-03T10:00+02:00
 ---
 

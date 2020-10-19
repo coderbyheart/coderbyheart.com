@@ -3,7 +3,7 @@ title: >-
   ❤️.of(code) // 011
 subtitle: >-
   Week 43 of 2017
-abstract: |
+abstract: >-
   Week 43 of 2017 in review
 date: 2017-10-29T14:00+01:00
 ---

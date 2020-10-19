@@ -3,8 +3,12 @@ title: >-
   MVPs in Production
 subtitle: >-
   Reflections on being a CTO for 5 years
-abstract: |
-  In this post series I'll reflect on the technical principles that I've employed in the last 5 years working as a CTO to achieve something that would have been seen as futile and insane a decade ago, but is the norm today: running software in production that is neither complete nor well-designed and needs to evolve every day.
+abstract: >-
+  In this post series I'll reflect on the technical principles that I've
+  employed in the last 5 years working as a CTO to achieve something that would
+  have been seen as futile and insane a decade ago, but is the norm today:
+  running software in production that is neither complete nor well-designed and
+  needs to evolve every day.
 date: 2017-06-10T13:45+02:00
 ---
 

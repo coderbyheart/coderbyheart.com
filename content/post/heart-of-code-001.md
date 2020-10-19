@@ -3,7 +3,7 @@ title: >-
   ❤️.of(code) // 001
 subtitle: >-
   Week 33 of 2017
-abstract: |
+abstract: >-
   Week 33 of 2017 in review
 date: 2017-08-20T14:00+02:00
 ---

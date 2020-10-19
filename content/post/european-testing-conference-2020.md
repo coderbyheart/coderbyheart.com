@@ -1,10 +1,9 @@
 ---
-title: >-
-  European Testing Conference 2020
-subtitle: >-
-  The pioneering tech event is no more
-abstract: |
-  What happens at European Testing Conference must __not__ stay at European Testing Conference.
+title: European Testing Conference 2020
+subtitle: The pioneering tech event is no more
+abstract: >-
+  What happens at European Testing Conference must not stay at European Testing
+  Conference.
 date: 2020-02-08T12:00+01:00
 ---
 

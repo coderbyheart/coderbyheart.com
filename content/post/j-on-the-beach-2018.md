@@ -3,8 +3,9 @@ title: >-
   J On The Beach 2018
 subtitle: >-
   A tech conference in Malaga
-abstract: |
-  End of May I had the opportunity to fly to Malaga in Spain and speak at J on the Beach.
+abstract: >-
+  End of May I had the opportunity to fly to Malaga in Spain and speak at J on
+  the Beach.
 date: 2018-06-15T19:00+02:00
 ---
 

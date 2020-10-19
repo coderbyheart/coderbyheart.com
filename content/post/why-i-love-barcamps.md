@@ -3,7 +3,7 @@ title: >-
   Why I love BarCamps
 subtitle: >-
   Interview
-abstract: |
+abstract: >-
   I was interviewed during the DeveloperCamp 2017 about BarCamps.
 date: 2017-07-11T11:00+02:00
 ---

@@ -3,7 +3,7 @@ title: >-
   ❤️.of(code) // 003
 subtitle: >-
   Week 35 of 2017
-abstract: |
+abstract: >-
   Week 35 of 2017 in review
 date: 2017-09-04T14:00+02:00
 ---

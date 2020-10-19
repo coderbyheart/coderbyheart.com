@@ -3,8 +3,9 @@ title: >-
   Your agile practice is a Dementor
 subtitle: >-
   interaction-free space is required
-abstract: |
-  Can we have space for people whose energy is drained by all the interaction that is promoted in all agile methods?
+abstract: >-
+  Can we have space for people whose energy is drained by all the interaction
+  that is promoted in all agile methods?
 date: 2017-12-30T18:58+01:00
 ---
 

@@ -3,7 +3,7 @@ title: >-
   First Principles
 subtitle: >-
   How to share gut feeling
-abstract: |
+abstract: >-
   How can we share the gut feeling we use when writing software?
 date: 2018-09-01T17:00+02:00
 ---

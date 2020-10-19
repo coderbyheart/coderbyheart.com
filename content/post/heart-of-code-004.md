@@ -3,7 +3,7 @@ title: >-
   ❤️.of(code) // 004
 subtitle: >-
   Week 36 of 2017
-abstract: |
+abstract: >-
   Week 36 of 2017 in review
 date: 2017-09-10T22:00+02:00
 ---

@@ -1,8 +1,11 @@
 ---
 title: >-
   The Great Web Framework Shootout: Bottle vs. Silex
-abstract: |
-  Frameworks zu vergleichen ist immer eine schlechte Idee, zu viele Faktoren spielen bei der Wahl eines Frameworks eine Rolle, als dass man sich rein auf quantitative Aussagen wie Anfragen pro Sekunde, Zeilen Quellcode oder die geschlossenen Bugs pro Monat verlassen darf.
+abstract: >-
+  Frameworks zu vergleichen ist immer eine schlechte Idee, zu viele Faktoren
+  spielen bei der Wahl eines Frameworks eine Rolle, als dass man sich rein auf
+  quantitative Aussagen wie Anfragen pro Sekunde, Zeilen Quellcode oder die
+  geschlossenen Bugs pro Monat verlassen darf.
 date: 2012-02-20T00:00:00.000Z
 ---
 

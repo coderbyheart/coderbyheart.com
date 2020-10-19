@@ -1,8 +1,11 @@
 ---
 title: >-
   Entwickler und Projektmanager
-abstract: |
-  Diese zwei Kollegen stehen immer auf meinem Schreibtisch bei meinem aktuellen Arbeitgeber. Vor ein paar Monaten standen sie bei Scholz&amp;Volkmer und als ich mit einem Kollegen darüber sprach, ist ein interessantes Bildnis entstanden.
+abstract: >-
+  Diese zwei Kollegen stehen immer auf meinem Schreibtisch bei meinem aktuellen
+  Arbeitgeber. Vor ein paar Monaten standen sie bei Scholz&amp;Volkmer und als
+  ich mit einem Kollegen darüber sprach, ist ein interessantes Bildnis
+  entstanden.
 date: 2011-11-24T00:00:00.000Z
 ---
 
@@ -13,7 +16,7 @@ Arbeitgeber. Vor ein paar Monaten standen sie bei
 als ich mit einem Kollegen darüber sprach, ist ein interessantes Bildnis
 entstanden.
 
-Der Große (der Marine aus dem Computerspiel &#8220;Quake II&#8221;) ist ein
+Der Große (der Marine aus dem Computerspiel “Quake II&#8221;) ist ein
 **Entwickler**: ziemlich grobschlächtig mit dem Hang zu schnellen einfachen
 Lösungen, aber halt für die dreckige Aufgabe des codens bestens geeignet — die
 Waffe benutzt er um _Bugs_ zu töten.

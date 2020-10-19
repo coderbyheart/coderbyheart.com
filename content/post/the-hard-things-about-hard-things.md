@@ -3,7 +3,7 @@ title: >-
   The Hard Things About Hard Things
 subtitle: >-
   Book review
-abstract: |
+abstract: >-
   Book review of The Hard Things About Hard Things by Ben Horowitz
 date: 2016-06-12T16:00:00.000Z
 ---

@@ -3,7 +3,7 @@ title: >-
   ❤️.of(code) // 012
 subtitle: >-
   Week 44 of 2017
-abstract: |
+abstract: >-
   Week 44 of 2017 in review
 date: 2017-11-05T17:00+01:00
 ---

@@ -3,8 +3,9 @@ title: >-
   How I package TypeScript lambdas for AWS
 subtitle: >-
   Serverless
-abstract: |
-  The latest (and greatest?) way I could come up to publish AWS Lambdas written in TypeScript.
+abstract: >-
+  The latest (and greatest?) way I could come up to publish AWS Lambdas written
+  in TypeScript.
 date: 2019-04-25T17:00+02:00
 ---
 

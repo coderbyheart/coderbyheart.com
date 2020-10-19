@@ -3,8 +3,10 @@ title: >-
   Setting up a product management process
 subtitle: >-
   MVPs in Production
-abstract: |
-  In this post I will explain the way I design the process that supports one key operation in every startup: improving the technology which delivers value to customers—or should, if you are working towards signing your first customer.
+abstract: >-
+  In this post I will explain the way I design the process that supports one key
+  operation in every startup: improving the technology which delivers value to
+  customers—or should, if you are working towards signing your first customer.
 date: 2017-06-22T17:00+02:00
 ---
 

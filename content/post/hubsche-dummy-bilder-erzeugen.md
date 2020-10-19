@@ -1,8 +1,11 @@
 ---
 title: >-
   Hübsche Dummy-Bilder erzeugen
-abstract: |
-  Der Dummy-Image-Generator erzeugt auf Wunsch die passenden Bilder. Wenn man aber auch mal lokal ein paar Dateien braucht, um z.B. einen Uploader oder eine Galerie zu testen, kann man sich mit ein paar Zeilen Python schnell ein paar Testbilder erzeugen:
+abstract: >-
+  Der Dummy-Image-Generator erzeugt auf Wunsch die passenden Bilder. Wenn man
+  aber auch mal lokal ein paar Dateien braucht, um z.B. einen Uploader oder eine
+  Galerie zu testen, kann man sich mit ein paar Zeilen Python schnell ein paar
+  Testbilder erzeugen:
 date: 2011-07-11T00:00:00.000Z
 ---
 

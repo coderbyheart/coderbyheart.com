@@ -3,8 +3,10 @@ title: >-
   Quality together-time
 subtitle: >-
   Working in distributed teams
-abstract: |
-  The second most important challenge is ensure that the few occasions you will spend face-to-face with your colleagues  is quality time. Here is how to achieve this.
+abstract: >-
+  The second most important challenge is ensure that the few occasions you will
+  spend face-to-face with your colleagues  is quality time. Here is how to
+  achieve this.
 date: 2016-02-02T11:42:00.000Z
 ---
 

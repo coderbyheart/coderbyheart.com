@@ -3,8 +3,11 @@ title: >-
   It does not run on my machine
 subtitle: >-
   Integration testing a cloud-native application
-abstract: |
-  In this talk I will take you through the challenge of testing a cloud-native application. I will cover the challenges when developing solutions on top of serverless components which you cannot run on your own machine and how I designed a BDD driven approach to run the integration tests.
+abstract: >-
+  In this talk I will take you through the challenge of testing a cloud-native
+  application. I will cover the challenges when developing solutions on top of
+  serverless components which you cannot run on your own machine and how I
+  designed a BDD driven approach to run the integration tests.
 date: 2019-06-30T00:00+02:00
 ---
 

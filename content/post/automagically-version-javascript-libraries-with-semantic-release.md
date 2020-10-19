@@ -3,8 +3,9 @@ title: >-
   Versioning JavaScript libraries with semantic-release
 subtitle: >-
   Automation
-abstract: |
-  In this post I will explain how you can automate releasing of your JavaScript libraries to npm.
+abstract: >-
+  In this post I will explain how you can automate releasing of your JavaScript
+  libraries to npm.
 date: 2018-08-07T16:00+02:00
 ---
 

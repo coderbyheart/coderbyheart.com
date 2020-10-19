@@ -3,8 +3,9 @@ title: >-
   Humans are Liars
 subtitle: >-
   3 Goals for a great Workplace Culture
-abstract: |
-  As Scott Adams put it very well: Humans are liars. How do we create an environment where they don't?
+abstract: >-
+  As Scott Adams put it very well: Humans are liars. How do we create an
+  environment where they don't?
 date: 2017-12-30T16:35+01:00
 ---
 

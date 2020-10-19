@@ -3,8 +3,9 @@ title: >-
   Prototyping products for the Internet of Things using JavaScript
 subtitle: >-
   Talk
-abstract: |
-  This is a recording of my 2018 talk on prototyping products for the Internet of Things using JavaScript
+abstract: >-
+  This is a recording of my 2018 talk on prototyping products for the Internet
+  of Things using JavaScript
 date: 2018-11-17T18:00+01:00
 ---
 

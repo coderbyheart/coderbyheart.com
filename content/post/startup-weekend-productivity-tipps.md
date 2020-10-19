@@ -1,8 +1,10 @@
 ---
 title: >-
   Productivity Tips for a Startup Weekend
-abstract: |
-  So, you are attending a startup weekend? You will be crammed in a room with strangers to collaborate on an idea-maybe even yours? I have some advice for you to improve your output during this 54 hours.
+abstract: >-
+  So, you are attending a startup weekend? You will be crammed in a room with
+  strangers to collaborate on an idea-maybe even yours? I have some advice for
+  you to improve your output during this 54 hours.
 date: 2014-10-26T00:00:00.000Z
 ---
 

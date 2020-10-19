@@ -1,8 +1,11 @@
 ---
 title: >-
   Ant Build Commons von qafoo
-abstract: |
-  Die qafoo GmbH aus Gelsenkirchen, ein Zusammenschluss von vier deutschen PHP-Experten liefert mit den Ant Build Commons einen Standard-Satz an Build-Task für Ant, die alle wichtigen Aufgaben zum Prüfen, Testen und Veröffentlichen in PHP-basierten Projekten abdecken.
+abstract: >-
+  Die qafoo GmbH aus Gelsenkirchen, ein Zusammenschluss von vier deutschen
+  PHP-Experten liefert mit den Ant Build Commons einen Standard-Satz an
+  Build-Task für Ant, die alle wichtigen Aufgaben zum Prüfen, Testen und
+  Veröffentlichen in PHP-basierten Projekten abdecken.
 date: 2012-09-14T00:00:00.000Z
 ---
 

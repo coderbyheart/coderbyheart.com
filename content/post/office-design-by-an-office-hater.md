@@ -3,8 +3,9 @@ title: >-
   Office design by an office hater
 subtitle: >-
   A walk through my dream office
-abstract: |
-  I hate offices. But how many interior designers have I heard of, that are coders, too? Let me take you through my dream office!
+abstract: >-
+  I hate offices. But how many interior designers have I heard of, that are
+  coders, too? Let me take you through my dream office!
 date: 2017-04-27T10:00+02:00
 ---
 

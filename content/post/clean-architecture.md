@@ -1,10 +1,11 @@
 ---
-title: >-
-  Clean Architecture
-subtitle: >-
-  Book Review
-abstract: |
-  Despite its excess *Uncle Bob Grandeur* and idiotic and pointless cartoons I would recommend this book to experienced architects and software developers since it reinforces and clarifies proven concepts, which I am using on a daily basis.
+title: Clean Architecture
+subtitle: Book Review
+abstract: >-
+  Despite its excess Uncle Bob Grandeur and idiotic and pointless cartoons I
+  would recommend this book to experienced architects and software developers
+  since it reinforces and clarifies proven concepts, which I am using on a daily
+  basis.
 date: 2018-01-03T06:00+01:00
 ---
 

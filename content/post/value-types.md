@@ -1,10 +1,11 @@
 ---
-title: >-
-  Value Types
-subtitle: >-
-  TypeScript
-abstract: |
-  *Value Types* are are used to enable _runtime validation_ of parameters. This provides a simple and expressive way to ensure their validity and convey their semantic meaning in code at the same time while making this transparent for the caller.
+title: Value Types
+subtitle: TypeScript
+abstract: >-
+  Value Types are are used to enable runtime validation of parameters. This
+  provides a simple and expressive way to ensure their validity and convey their
+  semantic meaning in code at the same time while making this transparent for
+  the caller.
 date: 2018-06-27T10:00+02:00
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: >-
   Autoload environment variables
-abstract: |
-  When developing stateless microservices it can be tedious to set up the correct environment variables.
-  You can teach your bash/zsh to load them on a per directory basis.
+abstract: >-
+  When developing stateless microservices it can be tedious to set up the
+  correct environment variables. You can teach your bash/zsh to load them on a
+  per directory basis.
 date: 2016-04-07T00:00:00.000Z
 ---
 

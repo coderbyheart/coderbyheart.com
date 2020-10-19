@@ -3,7 +3,7 @@ title: >-
   JavaScript Dependency Management with Greenkeeper on AWS CodeBuild
 subtitle: >-
   Continuous Integration of JavaScript projects
-abstract: |
+abstract: >-
   You can now run Greenkeeper with lockfile support on AWS CodeBuild.
 date: 2018-05-21T14:00+02:00
 ---

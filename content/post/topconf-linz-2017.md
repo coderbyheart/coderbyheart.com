@@ -1,7 +1,7 @@
 ---
 title: >-
   TopConf Linz 2017 Notes
-abstract: |
+abstract: >-
   These are the notes I took for my company Slack during TopConf Linz 2017.
 date: 2017-03-06T23:00+02:00
 ---

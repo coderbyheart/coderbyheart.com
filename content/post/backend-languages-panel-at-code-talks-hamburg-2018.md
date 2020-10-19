@@ -3,7 +3,7 @@ title: >-
   Backend languages panel at code.talks Hamburg 2018
 subtitle: >-
   Panel
-abstract: |
+abstract: >-
   Extracts of a panel on backend languages at code.talks Hamburg 2018.
 date: 2018-11-18T13:00+01:00
 ---

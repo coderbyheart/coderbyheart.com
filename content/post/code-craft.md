@@ -1,10 +1,7 @@
 ---
-title: >-
-  Code Craft
-subtitle: >-
-  Book Review
-abstract: |
-  A critique of the book *Code Craft* by Pete Goodliffe
+title: Code Craft
+subtitle: Book Review
+abstract: A critique of the book Code Craft by Pete Goodliffe
 date: 2018-07-16T20:00+02:00
 ---
 
