@@ -3,8 +3,10 @@ title: >-
   Prototyping IoT products with the IoT Tiles Toolkit cards
 subtitle: >-
   Design Thinking
-abstract: |
-  When building connected products, it will never be only the hardware which makes for a successful product. The IoT Tiles Toolkit cards are a fantastic support tool for generating ideas and even possible solutions.
+abstract: >-
+  When building connected products, it will never be only the hardware which
+  makes for a successful product. The IoT Tiles Toolkit cards are a fantastic
+  support tool for generating ideas and even possible solutions.
 date: 2018-08-28T09:00+02:00
 ---
 

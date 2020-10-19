@@ -1,8 +1,9 @@
 ---
 title: >-
   There is no working time flexibility during vacation
-abstract: |
-  If not for yourself, you owe it to your peers to be a good example by not executing  your working time flexibility during your vacation.
+abstract: >-
+  If not for yourself, you owe it to your peers to be a good example by not
+  executing  your working time flexibility during your vacation.
 date: 2015-12-03T08:48:00.000Z
 ---
 

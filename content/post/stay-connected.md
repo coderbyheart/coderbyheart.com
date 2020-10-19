@@ -3,8 +3,9 @@ title: >-
   Stay connected
 subtitle: >-
   Working From Home
-abstract: |
-  It's now even more important to keep in touch in these times of crisis and uncertainties.
+abstract: >-
+  It's now even more important to keep in touch in these times of crisis and
+  uncertainties.
 date: 2020-03-26T13:00+01:00
 ---
 

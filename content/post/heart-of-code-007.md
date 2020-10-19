@@ -3,7 +3,7 @@ title: >-
   ❤️.of(code) // 007
 subtitle: >-
   Week 39 of 2017
-abstract: |
+abstract: >-
   Week 39 of 2017 in review
 date: 2017-10-03T01:00+01:00
 ---

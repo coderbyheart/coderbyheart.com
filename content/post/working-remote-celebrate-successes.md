@@ -3,8 +3,10 @@ title: >-
   Celebrate successes
 subtitle: >-
   Working in distributed teams
-abstract: |
-  This is not so easy as it sounds: because we are pushing out updates to our products every day, a natural date to  celebrate does no longer manifest itself. As a manager we have to take care of this, too.
+abstract: >-
+  This is not so easy as it sounds: because we are pushing out updates to our
+  products every day, a natural date to  celebrate does no longer manifest
+  itself. As a manager we have to take care of this, too.
 date: 2016-02-02T11:43:00.000Z
 ---
 

@@ -3,7 +3,7 @@ title: >-
   Introduction to TDD in JavaScript
 subtitle: >-
   CodeDoor Challenges for 2018
-abstract: |
+abstract: >-
   Introducing Beginners to Test-Driven-Development in JavaScript
 date: 2018-01-01T18:00+01:00
 ---

@@ -1,7 +1,7 @@
 ---
 title: >-
   Bash: Absoluten Pfad des aktuellen Scripts auslesen
-abstract: |
+abstract: >-
   Oft ruft man Bash-Scripte ja mit relativen Pfaden auf:
 date: 2010-06-18T00:00:00.000Z
 ---

@@ -3,7 +3,7 @@ title: >-
   ConferenceBuddy at SoCraTes 2018
 subtitle: >-
   No one needed a ConfBuddy, and why this is a good thing
-abstract: |
+abstract: >-
   I was a Conference Buddy at SoCraTes 2018—but nobody needed one.
 date: 2018-09-01T16:00+02:00
 ---

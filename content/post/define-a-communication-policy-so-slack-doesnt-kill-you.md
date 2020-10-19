@@ -3,8 +3,9 @@ title: >-
   Define a communication policy so Slack doesn't kill you
 subtitle: >-
   Distributed Teams
-abstract: |
-  Not matter which tool you use to communicate, one of the most important actions to tackle communication chaos is defining a communication policy.
+abstract: >-
+  Not matter which tool you use to communicate, one of the most important
+  actions to tackle communication chaos is defining a communication policy.
 date: 2017-06-20T10:00+02:00
 ---
 

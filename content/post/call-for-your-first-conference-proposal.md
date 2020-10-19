@@ -4,8 +4,9 @@ title: >-
 subtitle: >-
   My segment on why YOU should propose a talk to a conference NOW! from J On The
   Beach 2018
-abstract: |
-  My segment on why YOU should propose a talk to a conference NOW! from J On The Beach 2018
+abstract: >-
+  My segment on why YOU should propose a talk to a conference NOW! from J On The
+  Beach 2018
 date: 2018-09-16T21:00+02:00
 ---
 

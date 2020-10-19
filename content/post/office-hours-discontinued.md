@@ -1,8 +1,9 @@
 ---
 title: >-
   Office hours discontinued–feel free to ask your question anyway
-abstract: |
-  I started mentoring and I will not offer any more office hours on a fixed schedule.
+abstract: >-
+  I started mentoring and I will not offer any more office hours on a fixed
+  schedule.
 date: 2015-03-22T14:00:00.000Z
 ---
 

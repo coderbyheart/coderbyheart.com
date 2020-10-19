@@ -1,10 +1,9 @@
 ---
-title: >-
-  JOTB2018 Interview
-subtitle: >-
-  JavaScript and IoT
-abstract: |
-  I was interviewed after my talk about *Prototyping products for the Internet of Things using JavaScript*
+title: JOTB2018 Interview
+subtitle: JavaScript and IoT
+abstract: >-
+  I was interviewed after my talk about Prototyping products for the Internet of
+  Things using JavaScript
 date: 2018-09-09T16:30+02:00
 ---
 

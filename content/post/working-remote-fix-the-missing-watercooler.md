@@ -3,8 +3,9 @@ title: >-
   Fix the missing watercooler
 subtitle: >-
   Working in distributed teams
-abstract: |
-  The most important challenge when working in distributed teams is the missing watercooler. Here is how to fix it.
+abstract: >-
+  The most important challenge when working in distributed teams is the missing
+  watercooler. Here is how to fix it.
 date: 2016-02-02T11:41:00.000Z
 ---
 

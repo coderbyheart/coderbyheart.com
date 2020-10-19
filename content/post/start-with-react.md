@@ -3,7 +3,7 @@ title: >-
   Start with React
 subtitle: >-
   Markus, how do I ...
-abstract: |
+abstract: >-
   Some resources to get you started with React.
 date: 2017-10-22T20:00+02:00
 ---

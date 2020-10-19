@@ -3,8 +3,9 @@ title: >-
   About: Call for Proposals
 subtitle: >-
   Lightning Talk
-abstract: |
-  At this year's Global Diversity CFP Day I gave a lightning talk about Call for Proposals.
+abstract: >-
+  At this year's Global Diversity CFP Day I gave a lightning talk about Call for
+  Proposals.
 date: 2019-03-02T11:00+01:00
 ---
 

@@ -1,9 +1,12 @@
 ---
 title: >-
-  duplicity Fehler &#8220;IOError: GnuPG exited non-zero, with code 2&#8243;
-  unter Ubuntu beheben
-abstract: |
-  Zum Sichern von Daten auf FTP-Server bietet sich duplicity. Es bietet, ähnlich wie rdiff-backup, die Möglichkeit, volle und inkrementelle Backups zu erzeugen, aber im Gegensatz zu rdiff-Backup eben auf FTP-Server und noch dazu verschlüsselt.
+  duplicity Fehler “IOError: GnuPG exited non-zero, with code 2” unter Ubuntu
+  beheben
+abstract: >-
+  Zum Sichern von Daten auf FTP-Server bietet sich duplicity. Es bietet, ähnlich
+  wie rdiff-backup, die Möglichkeit, volle und inkrementelle Backups zu
+  erzeugen, aber im Gegensatz zu rdiff-Backup eben auf FTP-Server und noch dazu
+  verschlüsselt.
 date: 2010-05-09T00:00:00.000Z
 ---
 
@@ -21,7 +24,7 @@ Das lässt sich relativ einfach beheben: duplicity manuell installieren.
 
 Dazu geht man wie folgt vor:
 
-Ubuntu&#8217;s duplicity entfernen:
+Ubuntu's duplicity entfernen:
 
     aptitude purge duplicity
 

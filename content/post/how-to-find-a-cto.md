@@ -1,8 +1,10 @@
 ---
 title: >-
   How to find a CTO
-abstract: |
-  A fews weeks ago I announced that I am holding free bi-monthly CTO office hours and the first one I did revolved  around the question “How to find a CTO?”. In this post I aim to summarize the advice I gave.
+abstract: >-
+  A fews weeks ago I announced that I am holding free bi-monthly CTO office
+  hours and the first one I did revolved  around the question “How to find a
+  CTO?”. In this post I aim to summarize the advice I gave.
 date: 2015-01-25T18:00:00.000Z
 ---
 

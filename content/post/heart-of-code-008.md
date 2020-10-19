@@ -3,7 +3,7 @@ title: >-
   ❤️.of(code) // 008
 subtitle: >-
   Week 40 of 2017
-abstract: |
+abstract: >-
   Week 40 of 2017 in review
 date: 2017-10-08T21:00+01:00
 ---

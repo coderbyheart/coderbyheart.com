@@ -3,8 +3,9 @@ title: >-
   The three most important challenges
 subtitle: >-
   Working in distributed teams
-abstract: |
-  This post series is a summary of my talk about the challenges working in remote teams and how I dealt with them.
+abstract: >-
+  This post series is a summary of my talk about the challenges working in
+  remote teams and how I dealt with them.
 date: 2016-02-02T11:40:00.000Z
 ---
 

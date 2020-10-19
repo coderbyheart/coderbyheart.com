@@ -1,7 +1,7 @@
 ---
 title: >-
   Intro to the Frankfurt Tech scene
-abstract: |
+abstract: >-
   This post tries to provide an entry point for newcomers to Frankfurt
 date: 2016-08-01T08:00:00.000Z
 ---

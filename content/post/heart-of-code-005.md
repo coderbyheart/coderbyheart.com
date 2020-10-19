@@ -3,7 +3,7 @@ title: >-
   ❤️.of(code) // 005
 subtitle: >-
   Week 38 of 2017
-abstract: |
+abstract: >-
   Week 38 of 2017 in review
 date: 2017-09-24T12:00-07:00
 ---

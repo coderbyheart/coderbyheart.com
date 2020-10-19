@@ -3,8 +3,9 @@ title: >-
   Build a professional network
 subtitle: >-
   Markus, How do I ...
-abstract: |
-  My recommendations on how to build a professional network if you are early in your career.
+abstract: >-
+  My recommendations on how to build a professional network if you are early in
+  your career.
 date: 2017-11-05T14:00+01:00
 ---
 

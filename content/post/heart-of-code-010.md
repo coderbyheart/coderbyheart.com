@@ -3,7 +3,7 @@ title: >-
   ❤️.of(code) // 010
 subtitle: >-
   Week 42 of 2017
-abstract: |
+abstract: >-
   Week 42 of 2017 in review
 date: 2017-10-22T18:00+01:00
 ---

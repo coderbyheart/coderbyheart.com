@@ -3,7 +3,7 @@ title: >-
   Become a Certified Software Craftsperson
 subtitle: >-
   One weird trick
-abstract: |
+abstract: >-
   Follow this one weird trick to become a Certified Software Crafter
 date: 2018-04-28T20:30+02:00
 ---

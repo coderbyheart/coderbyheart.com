@@ -1,8 +1,9 @@
 ---
 title: >-
   Passwörter für SSH-Keys in der Konsole merken
-abstract: |
-  Um sich die wiederkehrende Passwort-Abfragen für SSH-Keys auf der Konsole zu sparen, führt man folgende Kommandos aus:
+abstract: >-
+  Um sich die wiederkehrende Passwort-Abfragen für SSH-Keys auf der Konsole zu
+  sparen, führt man folgende Kommandos aus:
 date: 2010-05-15T00:00:00.000Z
 ---
 

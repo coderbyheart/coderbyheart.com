@@ -1,8 +1,9 @@
 ---
 title: >-
   One month into my new job as the CTO at Fintura
-abstract: |
-  I joined a #fintech startup which aims to change the way SME finance their investments and it also changed the way I look at managers
+abstract: >-
+  I joined a #fintech startup which aims to change the way SME finance their
+  investments and it also changed the way I look at managers
 date: 2015-05-30T19:00:00.000Z
 ---
 

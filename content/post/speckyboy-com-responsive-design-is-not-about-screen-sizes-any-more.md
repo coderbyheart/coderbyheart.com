@@ -1,8 +1,9 @@
 ---
 title: >-
   speckyboy.com: Responsive Design is Not About Screen Sizes Any More
-abstract: |
-  Sehr guter Artikel darüber, das die Entwicklung einer guten mobilen Website nicht nur mit CSS-Media-Queries erreicht werden kann.
+abstract: >-
+  Sehr guter Artikel darüber, das die Entwicklung einer guten mobilen Website
+  nicht nur mit CSS-Media-Queries erreicht werden kann.
 date: 2013-09-11T00:00:00.000Z
 ---
 

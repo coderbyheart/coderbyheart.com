@@ -3,8 +3,9 @@ title: >-
   Have a local folder to put your crap in which won't get accidentally committed
 subtitle: >-
   Devhacks
-abstract: |
-  Do you always have temp / scratch files lying around in your Git repo and sometimes accidentally commit them (like I do)? Here is a simple fix!
+abstract: >-
+  Do you always have temp / scratch files lying around in your Git repo and
+  sometimes accidentally commit them (like I do)? Here is a simple fix!
 date: 2019-01-02T11:00+01:00
 ---
 

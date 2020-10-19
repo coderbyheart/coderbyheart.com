@@ -1,8 +1,9 @@
 ---
 title: >-
   Speed up your meetings with pre-written meeting minutes
-abstract: |
-  How to make your meetings fun again, productive and produce a well-made protocol afterwards.
+abstract: >-
+  How to make your meetings fun again, productive and produce a well-made
+  protocol afterwards.
 date: 2015-03-09T09:00:00.000Z
 ---
 

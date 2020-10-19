@@ -1,7 +1,7 @@
 ---
 title: >-
   PHPUGFFM als animiertes GIF
-abstract: |
+abstract: >-
   PHPUGFFM als animiertes GIF
 date: 2013-01-18T00:00:00.000Z
 ---

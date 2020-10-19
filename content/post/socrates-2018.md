@@ -3,8 +3,10 @@ title: >-
   SoCraTes 2018
 subtitle: >-
   Magic, Diversified
-abstract: |
-  After a year of absence, I went back to Soltau for SoCraTes 2018 and discovered that the best conference ever got even better—thanks to fantastic diversity efforts.
+abstract: >-
+  After a year of absence, I went back to Soltau for SoCraTes 2018 and
+  discovered that the best conference ever got even better—thanks to fantastic
+  diversity efforts.
 date: 2018-09-01T15:00+02:00
 ---
 

@@ -1,8 +1,10 @@
 ---
 title: >-
   Give your dots to dotHIV
-abstract: |
-  December 1st is World AIDS Day and we have prepared something for your homepage which will support our cause in an unobtrusive and witty way: turn the fullstops of your page into pink dots.
+abstract: >-
+  December 1st is World AIDS Day and we have prepared something for your
+  homepage which will support our cause in an unobtrusive and witty way: turn
+  the fullstops of your page into pink dots.
 date: 2014-11-28T10:01:00.000Z
 ---
 

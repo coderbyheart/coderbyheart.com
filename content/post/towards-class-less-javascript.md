@@ -3,8 +3,9 @@ title: >-
   Towards class-less JavaScript
 subtitle: >-
   Ongoing Exploration
-abstract: |
-  I am getting more and more convinced that classes in JavaScript or TypeScript are an anti-pattern. At least in the way I use them.
+abstract: >-
+  I am getting more and more convinced that classes in JavaScript or TypeScript
+  are an anti-pattern. At least in the way I use them.
 date: 2019-03-18T12:00+01:00
 ---
 

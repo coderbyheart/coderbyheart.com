@@ -3,7 +3,7 @@ title: >-
   expect.toBeWithin(number, number)
 subtitle: >-
   A matcher for Jest's expect
-abstract: |
+abstract: >-
   Use .toBeWithin() when you want to check that a number is within a range.
 date: 2017-10-29T18:00+02:00
 ---

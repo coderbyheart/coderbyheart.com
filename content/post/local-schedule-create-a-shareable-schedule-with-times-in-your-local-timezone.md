@@ -3,7 +3,7 @@ title: >-
   Local Schedule: Create a shareable schedule with times in your local timezone
 subtitle: >-
   Project
-abstract: |
+abstract: >-
   Great for remote conferences!
 date: 2020-05-10T15:00+02:00
 ---

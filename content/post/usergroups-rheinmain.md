@@ -1,8 +1,11 @@
 ---
-title: >-
-  Usergroups RheinMain
-abstract: |
-  Unter [usergroups.rheinmainrocks.de][1] habe ich ein Projekt gestartet, dessen Ziel es ist, einen umfangreichen Überblick über das Angebot der Technologie-Usergroups im Rhein-Main-Gebiet zu geben. Der konkrete Mehrwert besteht darin, dass die Daten zu den Usergroups von jedem selber gepflegt werden können. Es wird lediglich ein GitHub-Account benötigt.
+title: Usergroups RheinMain
+abstract: >-
+  Unter usergroups.rheinmainrocks.de habe ich ein Projekt gestartet, dessen Ziel
+  es ist, einen umfangreichen Überblick über das Angebot der
+  Technologie-Usergroups im Rhein-Main-Gebiet zu geben. Der konkrete Mehrwert
+  besteht darin, dass die Daten zu den Usergroups von jedem selber gepflegt
+  werden können. Es wird lediglich ein GitHub-Account benötigt.
 date: 2013-01-29T00:00:00.000Z
 ---
 

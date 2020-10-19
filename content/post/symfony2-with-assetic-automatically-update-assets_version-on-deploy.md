@@ -1,14 +1,16 @@
 ---
 title: >-
   Symfony2 with Assetic: Automatically update assets_version on deploy
-abstract: |
-  If you're using <a href="http://symfony.com/doc/current/reference/configuration/framework.html#assets-version">assetic</a> to manage your assets in your Symfony2 project you have probably already wondered if there is a way to update the <code>assets_version</code> parameter automatically with every deploy.
+abstract: >-
+  If you're using assetic to manage your assets in your Symfony2 project you
+  have probably already wondered if there is a way to update the assets_version
+  parameter automatically with every deploy.
 date: 2013-10-03T00:00:00.000Z
 ---
 
-If you&#8217;re using [assetic][1] to manage your assets in your Symfony2
-project you have probably already wondered if there is a way to update the
-`assets_version` parameter automatically with every deploy.
+If you're using [assetic][1] to manage your assets in your Symfony2 project you
+have probably already wondered if there is a way to update the `assets_version`
+parameter automatically with every deploy.
 
 On my boxes I use this little command to update the `assets_version` to the
 latest unix timestamp:

@@ -1,8 +1,10 @@
 ---
 title: >-
   Niedrigen Speicherplatz mit Bash überprüfen und per Mail warnen
-abstract: |
-  Dieses kleine Bash-Script, versendet als Cronjob eingetragen, E-Mails an den root-User, wenn der Plattenplatz auf allen gemounteten /dev/hd*-Platten weniger als 1 GB beträgt.
+abstract: >-
+  Dieses kleine Bash-Script, versendet als Cronjob eingetragen, E-Mails an den
+  root-User, wenn der Plattenplatz auf allen gemounteten /dev/hd*-Platten
+  weniger als 1 GB beträgt.
 date: 2010-05-12T00:00:00.000Z
 ---
 

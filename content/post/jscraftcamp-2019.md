@@ -3,7 +3,7 @@ title: >-
   JSCraftCamp 2019
 subtitle: >-
   Conference Retrospective
-abstract: |
+abstract: >-
   How I experienced JSCraftCamp and my key take-a-aways.
 date: 2019-07-22T18:00+02:00
 ---

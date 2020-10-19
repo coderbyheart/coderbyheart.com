@@ -4,7 +4,7 @@ title: >-
   happened
 subtitle: >-
   SoCraTes 2019
-abstract: |
+abstract: >-
   A subtle way to hack your community.
 date: 2019-10-13T08:00+02:00
 ---

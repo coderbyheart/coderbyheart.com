@@ -1,8 +1,10 @@
 ---
 title: >-
   Die Browserkompatibilitätsklausel
-abstract: |
-  Wenn man in der glücklichen Situation ist, ein Angebot zu schreiben, ist dessen Basis in der Regel auch eine möglichst genaue Beschreibung über den Umfang des Auftrags, im Allgemeinen Pflichtenheft genannt.
+abstract: >-
+  Wenn man in der glücklichen Situation ist, ein Angebot zu schreiben, ist
+  dessen Basis in der Regel auch eine möglichst genaue Beschreibung über den
+  Umfang des Auftrags, im Allgemeinen Pflichtenheft genannt.
 date: 2011-10-09T00:00:00.000Z
 ---
 
@@ -22,7 +24,7 @@ exakte Darstellung in verschiedenen Browsern **zu garantieren**. Dieser Umstand
 ist allgemein akzeptiert und inzwischen existiert das Bewußtsein dafür auch auf
 Kundenseite.
 
-Wie aber formuliert man solche &#8220;Ungenauigkeiten&#8221; möglichst _genau_?
+Wie aber formuliert man solche “Ungenauigkeiten&#8221; möglichst _genau_?
 
 Den folgenden Absatz verwende ich in Pflichtenheften.
 
@@ -50,6 +52,6 @@ für diesen Browser sollte in der Aufwandsschätzung für die Umsetzung in HTML 
 JS mit einem Aufschlag von 30% berücksichtigt werden.
 
 Wichtig ist noch, dass man auf keinen Fall eine Aufwärtskompatibilität
-garantieren darf, z.B. mit Formulierungen wie &#8220;IE 9+&#8221;, dies führt zu
+garantieren darf, z.B. mit Formulierungen wie “IE 9+&#8221;, dies führt zu
 unkalkulierbaren Aufwänden, und der Kunde hat den Eindruck, dass seine Website
 auch noch in 10 Jahren einwandfrei funktionieren wird.

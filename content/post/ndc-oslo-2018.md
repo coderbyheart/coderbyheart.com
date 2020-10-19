@@ -3,8 +3,9 @@ title: >-
   NDC { Oslo } 2018
 subtitle: >-
   Visting one of the biggest tech events in Scandinavia
-abstract: |
-  This week I flew to one of the biggest developer conference in Scandinavia: NDC { Oslo }.
+abstract: >-
+  This week I flew to one of the biggest developer conference in Scandinavia:
+  NDC { Oslo }.
 date: 2018-06-15T19:00+02:00
 ---
 

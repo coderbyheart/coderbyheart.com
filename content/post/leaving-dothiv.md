@@ -1,8 +1,10 @@
 ---
 title: >-
   Leaving dotHIV and looking for a new team
-abstract: |
-  From April 1st 2015 I'm available to join a new team where I can craft software, my leadership skills to the organization and my wit to the daily stand-up.
+abstract: >-
+  From April 1st 2015 I'm available to join a new team where I can craft
+  software, my leadership skills to the organization and my wit to the daily
+  stand-up.
 date: 2015-03-03T17:00:00.000Z
 ---
 

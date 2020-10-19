@@ -3,8 +3,9 @@ title: >-
   Juniors in remote teams?
 subtitle: >-
   Some ideas how to make it work
-abstract: |
-  Having juniors in a remote team is a challenge, but you still can make it work.
+abstract: >-
+  Having juniors in a remote team is a challenge, but you still can make it
+  work.
 date: 2017-07-24T14:30+02:00
 ---
 

@@ -3,7 +3,7 @@ title: >-
   Moving to Trondheim? Hire expat Mid-Norway!
 subtitle: >-
   Relocation to Norway
-abstract: |
+abstract: >-
   About my experience relocating to Trondheim, Norway.
 date: 2018-08-19T14:00+02:00
 ---
