@@ -260,7 +260,7 @@ const cacheDirPromise = (async () => {
 	try {
 		await fs.stat(cacheDir)
 	} catch {
-		await fs.mkdir(cacheDir)
+		await fs.mkdir(cacheDir, { recursive: true })
 	}
 })()
 
