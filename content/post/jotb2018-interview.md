@@ -16,8 +16,9 @@ the questions were asked by the audience. I really loved how they added this Q&A
 segment to every talk and that attendees could post questions and get them
 answered even if they could not make it to a session.
 
-You can watch the full video on
-[YouTube](https://www.youtube.com/watch?v=6rBHje_ciGM).
+You can watch the full video on YouTube:
+
+<https://www.youtube.com/embed/6rBHje_ciGM>
 
 I have selected some interesting questions on #JavaScript:
 

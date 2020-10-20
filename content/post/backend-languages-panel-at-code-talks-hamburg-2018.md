@@ -1,10 +1,7 @@
 ---
-title: >-
-  Backend languages panel at code.talks Hamburg 2018
-subtitle: >-
-  Panel
-abstract: >-
-  Extracts of a panel on backend languages at code.talks Hamburg 2018.
+title: Backend languages panel at code.talks Hamburg 2018
+subtitle: Panel
+abstract: Extracts of a panel on backend languages at code.talks Hamburg 2018.
 date: 2018-11-18T13:00+01:00
 ---
 
@@ -15,8 +12,9 @@ backend languages.
 
 <https://twitter.com/coderbyheart/status/1053254437026914304?embed>
 
-You can see the whole session
-[on YouTube](https://www.youtube.com/watch?v=7n3ROn3yABY) …
+You can see the whole session on YouTube:
+
+<https://www.youtube.com/embed/7n3ROn3yABY>
 
 Here are the sections where I speak on behalf of the language that I love:
 **JavaScript**!

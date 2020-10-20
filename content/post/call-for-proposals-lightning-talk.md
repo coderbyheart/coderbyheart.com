@@ -1,8 +1,6 @@
 ---
-title: >-
-  About: Call for Proposals
-subtitle: >-
-  Lightning Talk
+title: "About: Call for Proposals"
+subtitle: Lightning Talk
 abstract: >-
   At this year's Global Diversity CFP Day I gave a lightning talk about Call for
   Proposals.
@@ -14,7 +12,7 @@ date: 2019-03-02T11:00+01:00
 At this year's
 [Global Diversity CFP Day](https://www.globaldiversitycfpday.com/) I gave a
 lightning talk about Call for Proposals. You can watch the recording
-[here](https://www.youtube.com/embed/jzqCzGXT7hw). The slides are available
+[here](https://www.youtube.com/watch?v=jzqCzGXT7hw). The slides are available
 [here](https://docs.google.com/presentation/d/1Jmsf7aU2saJBzrWMCFrtxfiofWOSvS62BKKMRLDhb_Q/edit?usp=sharing).
 
 Below is are the main talking points I cover

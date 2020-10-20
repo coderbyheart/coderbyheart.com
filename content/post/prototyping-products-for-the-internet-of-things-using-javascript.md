@@ -33,8 +33,11 @@ starting to look into this topic.
 
 ![Screenshot 20181117 182752](../media/prototyping-products-for-the-internet-of-things-using-javascript/Screenshot_20181117_182752.png)
 
-[Here is the recording](https://www.youtube.com/watch?v=HpNv8Ahb2MU) and here
-are
+Here is the recording:
+
+<https://www.youtube.com/embed/HpNv8Ahb2MU>
+
+And here are
 [the Slides](https://docs.google.com/presentation/d/1E1PcSo463K_1uQTKYZ6IDgOwEwaxrirpTYMvgiL0as4/edit?usp=sharing).
 I brought a demo application to the conferences which I have
 [published on GitHub](https://github.com/coderbyheart/iot-proto-js) and it runs
