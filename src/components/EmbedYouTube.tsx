@@ -13,6 +13,7 @@ export const EmbedYouTube = ({ id }: { id: string }) => {
 	if (inView)
 		return (
 			<iframe
+				title={'Watch on YouTube'}
 				ref={ref}
 				width={entry?.target.parentElement?.clientWidth}
 				height={Math.floor(entry?.target.parentElement?.clientWidth / 1.75)}
