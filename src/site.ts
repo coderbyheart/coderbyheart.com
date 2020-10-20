@@ -4,6 +4,8 @@ export type SiteMetaData = {
 	description: string
 	gitHubUrl: string
 	siteUrl: string
+	twitter: string
+	defaultCard: string
 }
 
 export type Page = {
@@ -28,11 +30,12 @@ export type Page = {
 			value: string
 		}[]
 		frontmatter: {
-			title: string
+			title: string | null
 			subtitle: string | null
 			abstract: string | null
 			noheadline: boolean | null
 			date: string | null
+			card: string | null
 		}
 	}
 }

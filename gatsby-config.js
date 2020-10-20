@@ -15,11 +15,13 @@ const cfg = {
 		title: `Markus Tacker`,
 		tagLine: `Software Crafter`,
 		siteUrl,
-		description: `As a Software Crafter
-		I am using my 20+ years of experience working as a software developer,
-		consultant, coach, mentor, and founder to build cloud-based solutions for the
-		Internet of Things using JavaScript at Nordic Semiconductor.`,
+		// has a zero-width space (​) to mark line-breaks.
+		description: `Software Crafter building 🌩️ cloud-based cellular IoT solutions at Nordic Semiconductor.​
+		Mentor. Speaker. ​Conference & Community builder. Camper. 🏕️ 🚐`,
 		gitHubUrl,
+		twitter: '@coderbyheart',
+		defaultCard:
+			'https://images.ctfassets.net/bncv3c2gt878/3Jk4P6nFPNzaz1gsguktk8/350b7e4ddb2c7d86416243d9902920e2/social-card-default-2020.png',
 	},
 	plugins: [
 		`gatsby-plugin-typescript`,

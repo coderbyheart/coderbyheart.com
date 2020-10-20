@@ -13,6 +13,8 @@ export const query = graphql`
 				tagLine
 				description
 				gitHubUrl
+				twitter
+				defaultCard
 			}
 		}
 	}

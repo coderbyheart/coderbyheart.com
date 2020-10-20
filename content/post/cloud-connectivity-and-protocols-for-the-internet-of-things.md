@@ -5,6 +5,7 @@ abstract: >-
   This is a webinar for everyone who wants to get an introduction to protocols
   to consider when developing a cellular IoT product.
 date: 2020-10-21
+card: https://webinars.nordicsemi.com/60650860/64311747/957cd4b4fcdc7aebf637ffbe16e10720/large/download-5-thumbnail.jpg
 ---
 
 This is a webinar I did for [Nordic Semiconductor](https://nordicsemi.com) but

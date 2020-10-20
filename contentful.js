@@ -212,6 +212,16 @@ const getMediaUrl = async ({ env, src }) => {
 	return mediaUrls[src]
 }
 
+const replaceImage = ({ env, relativeDirectory }) => async (src) => {
+	const isFile = !/^http/.test(src)
+	const imageSrc = isFile
+		? path.normalize(
+				path.join(process.cwd(), 'content', relativeDirectory, src),
+		  )
+		: src
+	return await getMediaUrl({ env, src: imageSrc })
+}
+
 const replaceImageTags = ({ env, relativeDirectory }) => async ({
 	children,
 	tagName,
@@ -219,25 +229,17 @@ const replaceImageTags = ({ env, relativeDirectory }) => async ({
 	...rest
 }) => {
 	if (tagName === 'img') {
-		const isFile = !/^http/.test(properties.src)
-		const src = isFile
-			? path.normalize(
-					path.join(
-						process.cwd(),
-						'content',
-						relativeDirectory,
-						properties.src,
-					),
-			  )
-			: properties.src
 		return {
-			children:
-				children?.map(replaceImageTags({ env, relativeDirectory })) ?? [],
-			tagName,
 			properties: {
 				...properties,
-				src: await getMediaUrl({ env, src }),
+				src: await replaceImage({ env, relativeDirectory })(properties.src),
 			},
+			children:
+				(await Promise.all(
+					children?.map(replaceImageTags({ env, relativeDirectory })),
+				)) ?? [],
+			tagName,
+
 			...rest,
 		}
 	}
@@ -274,4 +276,10 @@ exports.cacheImages = async ({ children, ...rest }, relativeDirectory) => {
 		),
 		...rest,
 	}
+}
+
+exports.cacheImage = async (src, relativeDirectory) => {
+	await cacheDirPromise
+	const env = await envPromise
+	return replaceImage({ env, relativeDirectory })(src)
 }

@@ -1,6 +1,6 @@
 require('ts-node').register({ files: true })
 const path = require('path')
-const { cacheImages } = require('./contentful')
+const { cacheImages, cacheImage } = require('./contentful')
 const chalk = require('chalk')
 
 const renderContentPage = async (
@@ -24,6 +24,9 @@ const renderContentPage = async (
 	})
 }
 
+const blankToUndefined = (s) =>
+	s === null || (typeof s === 'string' && s.length === 0) ? undefined : s
+
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
 	const pages = await graphql(`
 		query PagesQuery {
@@ -44,6 +47,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 								noheadline
 								date
 								abstract
+								card
 							}
 							headings {
 								id
@@ -76,6 +80,19 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 			...rest,
 			remark: {
 				...childMarkdownRemark,
+				frontmatter: {
+					...childMarkdownRemark.frontmatter,
+					// Cache twitter cards
+					card:
+						blankToUndefined(childMarkdownRemark.frontmatter.card) !== undefined
+							? (
+									await cacheImage(
+										childMarkdownRemark.frontmatter.card,
+										rest.relativeDirectory,
+									)
+							  ).replace(/^\/\//, 'https://')
+							: undefined,
+				},
 				htmlAst: await cacheImages(
 					childMarkdownRemark.htmlAst,
 					rest.relativeDirectory,
@@ -140,4 +157,9 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 			),
 		},
 	)
+	// Special page: social card default
+	await createPage({
+		path: '/social-card',
+		component: path.join(process.cwd(), 'src', 'page', `social.tsx`),
+	})
 }

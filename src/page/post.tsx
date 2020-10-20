@@ -17,6 +17,8 @@ export const query = graphql`
 				description
 				gitHubUrl
 				siteUrl
+				twitter
+				defaultCard
 			}
 		}
 	}

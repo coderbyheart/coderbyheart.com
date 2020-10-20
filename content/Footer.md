@@ -1,6 +1,5 @@
 Software Crafter building 🌩️ cloud-based cellular IoT solutions at
 [Nordic Semiconductor](https://nordicsemi.com/).  
-Code contributor at [Distribute Aid](https://distributeaid.org/).  
 Mentor. Speaker. Conference & Community builder. Camper. 🏕️ 🚐
 
 ## Markus Tacker

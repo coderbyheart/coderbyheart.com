@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import { breakpoints } from '../design/settings'
 import classNames from 'classnames'
 import { pagePathToClass } from './utils/pagePathToClass'
+import { blankToUndefined } from './utils/blankToUndefined'
 
 const Main = styled.main`
 	padding: 1rem;
@@ -21,7 +22,7 @@ const Main = styled.main`
 		:before {
 			display: inline-block;
 			content: '';
-			background-image: url('${avatarUrl}');
+			background-image: url('${avatarUrl()}');
 			background-size: cover;
 			width: 150px;
 			height: 150px;
@@ -54,7 +55,11 @@ const PageTemplate = ({
 	<>
 		<Head
 			siteMetaData={siteMetadata}
-			pageTitle={pageContext.page.remark.frontmatter.title}
+			pageTitle={blankToUndefined(pageContext.page.remark.frontmatter.title)}
+			pageDescription={blankToUndefined(
+				pageContext.page.remark.frontmatter.abstract,
+			)}
+			card={blankToUndefined(pageContext.page.remark.frontmatter.card)}
 		/>
 		<Header siteMetaData={siteMetadata} />
 		<Main className={classNames([pagePathToClass(pageContext.pagePath)])}>

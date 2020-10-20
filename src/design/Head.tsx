@@ -5,7 +5,7 @@ import { withPrefix } from 'gatsby'
 import { SiteMetaData } from '../site'
 import { fonts, breakpoints } from './settings'
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 	:root {
 		--text-font-family: ${fonts.text.name}, sans-serif;
 		--text-font-weigth: ${fonts.text.weights.regular};
@@ -73,24 +73,36 @@ const googleFontsArgs = Object.values(fonts)
 const isSSR = typeof window === 'undefined'
 
 export const Head = ({
-	siteMetaData: { title: siteTitle, description },
+	siteMetaData: {
+		title: siteTitle,
+		tagLine,
+		description,
+		twitter,
+		defaultCard,
+	},
 	pageTitle,
+	pageDescription,
+	card,
 }: {
-	siteMetaData: Pick<SiteMetaData, 'title' | 'description'>
-	pageTitle: string
+	siteMetaData: Pick<
+		SiteMetaData,
+		'title' | 'description' | 'twitter' | 'defaultCard' | 'tagLine'
+	>
+	pageTitle?: string
+	pageDescription?: string
+	card?: string
 }) => {
 	const version = isSSR
 		? process.env.VERSION ?? Date.now()
 		: document.head.querySelector<HTMLMetaElement>("meta[name='version']")
 				?.content ?? Date.now()
-	console.debug('Version:', version)
 	return (
 		<>
 			<Helmet>
 				<title>
-					{siteTitle} · {pageTitle}
+					{siteTitle} · {pageTitle ?? tagLine}
 				</title>
-				<meta name="description" content={description} />
+				<meta name="description" content={pageDescription ?? description} />
 				<html lang="en" />
 				<link rel="icon" type="image/x-icon" href={withPrefix('favicon.ico')} />
 				<link rel="preconnect" href="https://fonts.gstatic.com"></link>
@@ -106,6 +118,14 @@ export const Head = ({
 					href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
 				/>
 				<script async src={withPrefix(`main.js?v=${version}`)}></script>
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:site" content={twitter} />
+				<meta name="twitter:title" content={pageTitle ?? siteTitle} />
+				<meta
+					name="twitter:description"
+					content={pageDescription ?? description}
+				/>
+				<meta name="twitter:image" content={card ?? defaultCard} />
 			</Helmet>
 			<GlobalStyle />
 		</>
