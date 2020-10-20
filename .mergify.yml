@@ -7,12 +7,12 @@ pull_request_rules:
       merge:
         method: rebase
         rebase_fallback: squash
-        bot_account: coderbyheart-ci
+        bot_account: coderbyheart
       label:
         add:
           - mergify
       rebase:
-        bot_account: coderbyheart-ci
+        bot_account: coderbyheart
   - name: Automatically approve trusted service PRs
     conditions:
       - author~=^(snyk-bot|dependabot\[bot\]|renovate\[bot\])$
