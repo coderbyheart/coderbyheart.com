@@ -15,7 +15,7 @@ It provides an overview over the important factors that need to be considered
 when it comes to picking the right solution for sending your products' data to
 the cloud.
 
-<https://www.youtube.com/embed/Ufis2Bwmuuc>
+<https://www.youtube.com/embed/KokzomInd0w>
 
 You can find the interactive, browser-based slides
 [here](https://coderbyheart.github.io/nordicwebinar2020/index.html), and a PDF

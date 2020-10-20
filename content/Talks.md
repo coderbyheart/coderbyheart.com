@@ -20,7 +20,7 @@ the cloud.
 Slides:
 [PDF](https://github.com/coderbyheart/nordicwebinar2020/releases/download/1.0.0/PowerPoint.Slides.with.Notes.pdf),
 [Interactive](https://coderbyheart.github.io/nordicwebinar2020/index.html) ·
-[Video](https://youtu.be/Ufis2Bwmuuc)
+[Video](https://youtu.be/KokzomInd0w)
 
 ## It does not run on my machine: Integration testing a cloud-native application
 
