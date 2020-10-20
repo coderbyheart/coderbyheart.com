@@ -13,6 +13,7 @@ const cf = contentful.createClient({
 
 const postsCache = path.join(
 	process.cwd(),
+	'.cache',
 	'.contentful-media',
 	`posts-cache.json`,
 )

@@ -11,7 +11,7 @@ const limiter = new Bottleneck({
 	maxConcurrent: 5,
 })
 
-const cacheDir = path.join(process.cwd(), '.contentful-media')
+const cacheDir = path.join(process.cwd(), '.cache', '.contentful-media')
 
 const cf = contentful.createClient({
 	space: process.env.CONTENTFUL_SPACE,
