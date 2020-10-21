@@ -50,7 +50,7 @@ export const ResponsiveImage = ({
 		if (w > window.innerWidth) {
 			largeSource = '1'
 		}
-		const notFullHeight = step(window.innerHeight * 0.8)
+		const notFullHeight = step(Math.min(window.innerHeight * 0.8, imgHeight))
 		if (h > notFullHeight) {
 			height = notFullHeight
 			params.set('h', notFullHeight.toFixed())
