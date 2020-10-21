@@ -22,6 +22,9 @@ Slides:
 [Interactive](https://coderbyheart.github.io/nordicwebinar2020/index.html) ·
 [Video](https://youtu.be/KokzomInd0w)
 
+- [Nordic Tech Webinar](https://webinars.nordicsemi.com/cloud-connectivity-and-protocols)
+  📅 21. October 2020 🌐 Online
+
 ## It does not run on my machine: Integration testing a cloud-native application
 
 In this talk I will take you through the challenge of testing a cloud-native
