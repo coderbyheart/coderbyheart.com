@@ -1,10 +1,16 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
 import classNames from 'classnames'
+import styled from 'styled-components'
+import { withPrefix } from 'gatsby'
 
 const isSSR = typeof window === 'undefined'
 
 const step = (n: number): number => Math.floor(n / 50) * 50
+
+const Image = styled.img`
+	background-color: #eee;
+`
 
 export const ResponsiveImage = ({
 	src,
@@ -51,13 +57,13 @@ export const ResponsiveImage = ({
 		}
 	}
 	return (
-		<img
+		<Image
 			src={
 				inView
 					? `${src
 							.split('?')[0]
 							.replace(/^\/\//, 'https://')}?${params.toString()}`
-					: undefined
+					: withPrefix('transparent.png')
 			}
 			ref={ref}
 			alt={alt}
@@ -66,6 +72,7 @@ export const ResponsiveImage = ({
 			data-aspectratio={aspectratio}
 			data-large-source={largeSource}
 			className={classNames(className, extraClasses)}
+			style={{ height: `${height}px` }}
 		/>
 	)
 }
