@@ -43,17 +43,24 @@ export const ResponsiveImage = ({
 		height = h.toString()
 		extraClasses.responsive = true
 		const maxSize = Math.min(window.innerWidth, w) // Do not upscale images
-		const imgWidth = Math.min(Math.max(maxSize, 1000), w)
+		const imgWidth = Math.min(Math.min(maxSize, 1000), w)
 		const imgHeight = imgWidth * ratio
 		params.set('w', step(imgWidth).toFixed(0))
 		params.set('h', step(imgHeight).toFixed(0))
 		if (w > window.innerWidth) {
 			largeSource = '1'
 		}
-		const notFullHeight = step(Math.min(window.innerHeight * 0.8, imgHeight))
+		const notFullHeight = Math.min(
+			window.innerHeight * 0.8,
+			Math.min(window.innerWidth * ratio, h),
+		)
+		console.log({ h, notFullHeight, imgWidth })
 		if (h > notFullHeight) {
 			height = notFullHeight
-			params.set('h', notFullHeight.toFixed())
+			params.set(
+				'h',
+				step((notFullHeight / window.innerWidth) * imgWidth).toFixed(0),
+			)
 		}
 	}
 	return (
