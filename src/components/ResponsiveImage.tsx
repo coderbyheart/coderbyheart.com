@@ -27,7 +27,7 @@ export const ResponsiveImage = ({
 	let aspectratio
 	let width
 	let height
-	let largeSource
+	let largeSource = false
 
 	const params = new URLSearchParams(src?.split('?')[1])
 	const extraClasses = {} as Record<string, boolean>
@@ -45,22 +45,25 @@ export const ResponsiveImage = ({
 		const maxSize = Math.min(window.innerWidth, w) // Do not upscale images
 		const imgWidth = Math.min(Math.min(maxSize, 1000), w)
 		const imgHeight = imgWidth * ratio
-		params.set('w', step(imgWidth).toFixed(0))
-		params.set('h', step(imgHeight).toFixed(0))
 		if (w > window.innerWidth) {
-			largeSource = '1'
-		}
-		const notFullHeight = Math.min(
-			window.innerHeight * 0.8,
-			Math.min(window.innerWidth * ratio, h),
-		)
-		console.log({ h, notFullHeight, imgWidth })
-		if (h > notFullHeight) {
-			height = notFullHeight
-			params.set(
-				'h',
-				step((notFullHeight / window.innerWidth) * imgWidth).toFixed(0),
+			largeSource = true
+			params.set('w', step(imgWidth).toFixed(0))
+			params.set('h', step(imgHeight).toFixed(0))
+			const notFullHeight = Math.min(
+				window.innerHeight * 0.8,
+				Math.min(window.innerWidth * ratio, h),
 			)
+			console.log({ h, notFullHeight, imgWidth })
+			if (h > notFullHeight) {
+				height = notFullHeight
+				params.set(
+					'h',
+					step((notFullHeight / window.innerWidth) * imgWidth).toFixed(0),
+				)
+			}
+		} else {
+			params.set('w', imgWidth.toFixed(0))
+			params.set('h', imgHeight.toFixed(0))
 		}
 	}
 	return (
@@ -77,9 +80,9 @@ export const ResponsiveImage = ({
 			width={width}
 			height={height}
 			data-aspectratio={aspectratio}
-			data-large-source={largeSource}
+			data-large-source={largeSource ? '1' : '0'}
 			className={classNames(className, extraClasses)}
-			style={{ height: `${height}px` }}
+			style={{ height: largeSource ? `${height}px` : 'auto' }}
 		/>
 	)
 }

@@ -10,8 +10,6 @@ abstract: >-
 date: 2018-09-16T21:00+02:00
 ---
 
-![JOTB2018](../media/call-for-your-first-conference-proposal.jpg)
-
 <https://twitter.com/coderbyheart/status/1041408149276774400?embed>
 
 If you think you want to talk about something you are _passionate_ about you are
