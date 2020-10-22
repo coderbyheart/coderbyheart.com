@@ -7,6 +7,7 @@ abstract: >-
   besteht darin, dass die Daten zu den Usergroups von jedem selber gepflegt
   werden können. Es wird lediglich ein GitHub-Account benötigt.
 date: 2013-01-29T00:00:00.000Z
+lang: de
 ---
 
 [![Usergroups RheinMain](../media/usergroups-rheinmain/visual.jpg)][1]
@@ -16,8 +17,6 @@ Ziel es ist, einen umfangreichen Überblick über das Angebot der
 Technologie-Usergroups im Rhein-Main-Gebiet zu geben. Der konkrete Mehrwert
 besteht darin, dass die Daten zu den Usergroups von jedem selber gepflegt werden
 können. Es wird lediglich ein GitHub-Account benötigt.
-
-<!--more-->
 
 Auf dem Webmontag #47 am 8. April 2013 werde ich einen [Ignite-Vortrag][2] zum
 Thema Usergroups halten. Darin werde ich versuchen, ein möglichst komplettes

@@ -6,6 +6,7 @@ abstract: >-
   dessen Basis in der Regel auch eine möglichst genaue Beschreibung über den
   Umfang des Auftrags, im Allgemeinen Pflichtenheft genannt.
 date: 2011-10-09T00:00:00.000Z
+lang: de
 ---
 
 Wenn man in der glücklichen Situation ist, ein Angebot zu schreiben, ist dessen

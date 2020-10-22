@@ -2,9 +2,10 @@
 title: >-
   WordPress-Quellcode als Store-Dekoration
 date: 2011-12-28T00:00:00.000Z
+lang: de
 ---
 
-[<img class="alignnone" src="http://farm8.staticflickr.com/7164/6583562615_f3495a6ae5_b.jpg" alt="WordPress Code Sankthorst" width="480" />][1]
+[![WordPress Code Sankthorst](http://farm8.staticflickr.com/7164/6583562615_f3495a6ae5_b.jpg)][1]
 
 Der [Sankthorst][2]-Concept-Store in der Zeilgalerie in Frankfurt verwendet als
 Dekoration an seinen Schaufenstern und Aufzügen Auszüge aus dem Quellcode von

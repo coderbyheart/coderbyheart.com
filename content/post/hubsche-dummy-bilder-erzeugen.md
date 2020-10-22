@@ -7,6 +7,7 @@ abstract: >-
   Galerie zu testen, kann man sich mit ein paar Zeilen Python schnell ein paar
   Testbilder erzeugen:
 date: 2011-07-11T00:00:00.000Z
+lang: de
 ---
 
 Der [Dummy-Image-Generator][1] erzeugt auf Wunsch die passenden Bilder. Wenn man

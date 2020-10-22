@@ -8,6 +8,7 @@ abstract: >-
   erzeugen, aber im Gegensatz zu rdiff-Backup eben auf FTP-Server und noch dazu
   verschlüsselt.
 date: 2010-05-09T00:00:00.000Z
+lang: de
 ---
 
 Zum Sichern von Daten auf FTP-Server bietet sich [duplicity][1]. Es bietet,

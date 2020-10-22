@@ -6,6 +6,7 @@ abstract: >-
   vernünftiges Error-Reporting gibt. Und wenn dann die Seite weiß bleibt, hilft
   dieses Kommando, um heraus zur finden, welche der Dateien man zerschossen hat:
 date: 2011-01-20T00:00:00.000Z
+lang: de
 ---
 
 Ja, manchmal muss man halt via SSH auf Maschinen rumhacken, auf denen es kein

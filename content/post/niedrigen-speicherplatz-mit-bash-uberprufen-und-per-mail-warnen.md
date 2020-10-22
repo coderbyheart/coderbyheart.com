@@ -6,6 +6,7 @@ abstract: >-
   root-User, wenn der Plattenplatz auf allen gemounteten /dev/hd*-Platten
   weniger als 1 GB beträgt.
 date: 2010-05-12T00:00:00.000Z
+lang: de
 ---
 
 Dieses kleine Bash-Script, versendet als Cronjob eingetragen, E-Mails an den

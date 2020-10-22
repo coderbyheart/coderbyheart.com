@@ -36,6 +36,7 @@ export type Page = {
 			noheadline: boolean | null
 			date: string | null
 			card: string | null
+			lang: string | null
 		}
 	}
 }

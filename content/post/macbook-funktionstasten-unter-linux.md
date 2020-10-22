@@ -5,6 +5,7 @@ abstract: >-
   Diese sind, zumindest unter Arch Linux, standardmäßig nur mittels FN+F zum
   auslösen zu bewegen.
 date: 2011-04-13T00:00:00.000Z
+lang: de
 ---
 
 Diese sind, zumindest unter Arch Linux, standardmäßig nur mittels

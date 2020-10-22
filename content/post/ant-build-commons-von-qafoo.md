@@ -7,6 +7,7 @@ abstract: >-
   Build-Task für Ant, die alle wichtigen Aufgaben zum Prüfen, Testen und
   Veröffentlichen in PHP-basierten Projekten abdecken.
 date: 2012-09-14T00:00:00.000Z
+lang: de
 ---
 
 Die [qafoo GmbH][1] aus Gelsenkirchen, ein Zusammenschluss von [vier deutschen

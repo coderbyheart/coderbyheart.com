@@ -1,11 +1,12 @@
 import React from 'react'
 import { SiteMetaData } from '../site'
 import { graphql } from 'gatsby'
-import { Head } from '../design/Head'
+import { Head } from '../components/Head'
 import { avatarUrl } from '../design/Footer'
 import styled from 'styled-components'
 
 import Heart from '../design/heart.svg'
+import { GlobalStyle } from '../design/style'
 
 export const query = graphql`
 	query SocialPageQuery {
@@ -89,6 +90,7 @@ const SocialPage = ({
 }) => (
 	<>
 		<Head siteMetaData={siteMetadata} pageTitle={'Social Card Default'} />
+		<GlobalStyle />
 		<Main>
 			<section>
 				<h1>

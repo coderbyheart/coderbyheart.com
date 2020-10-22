@@ -4,6 +4,7 @@ title: >-
 abstract: >-
   Manchmal, also eigentlich regelmäßig, hängt Eclipse.
 date: 2010-12-21T00:00:00.000Z
+lang: de
 ---
 
 Manchmal, also eigentlich regelmäßig, hängt Eclipse.

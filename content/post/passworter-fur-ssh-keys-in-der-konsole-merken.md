@@ -5,6 +5,7 @@ abstract: >-
   Um sich die wiederkehrende Passwort-Abfragen für SSH-Keys auf der Konsole zu
   sparen, führt man folgende Kommandos aus:
 date: 2010-05-15T00:00:00.000Z
+lang: de
 ---
 
 Um sich die wiederkehrende Passwort-Abfragen für SSH-Keys auf der Konsole zu

@@ -2,6 +2,7 @@
 title: >-
   Softwerkskammer RheinMain
 date: 2012-02-28T00:00:00.000Z
+lang: de
 ---
 
 Die Softwerkskammer ist eine UserGroup, die sich mit dem Thema *Software Craft*

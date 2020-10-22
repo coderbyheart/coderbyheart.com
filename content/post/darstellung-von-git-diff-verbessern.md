@@ -5,6 +5,7 @@ abstract: >-
   Hier sind ein paar Einstellungen die die Darstellung der Ausgabe von git diff
   und weiteren git-Kommandos lesbarer machen:
 date: 2012-06-27T00:00:00.000Z
+lang: de
 ---
 
 Hier sind ein paar Einstellungen die die Darstellung der Ausgabe von `git diff`

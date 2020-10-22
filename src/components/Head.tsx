@@ -1,57 +1,8 @@
 import React from 'react'
-import { createGlobalStyle } from 'styled-components'
 import { Helmet } from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import { SiteMetaData } from '../site'
-import { fonts, breakpoints } from './settings'
-
-export const GlobalStyle = createGlobalStyle`
-	:root {
-		--text-font-family: ${fonts.text.name}, sans-serif;
-		--text-font-weigth: ${fonts.text.weights.regular};
-		--text-font-weigth-bold: ${fonts.text.weights.bold};
-		--headline-font-family: ${fonts.headline.name}, sans-serif;
-		--headline-font-weight: ${fonts.headline.weights.regular};
-		--headline-font-weight-light: ${fonts.headline.weights.light};
-		--headline-font-weight-thin: ${fonts.headline.weights.thin};
-		--background-color: #ffffff;
-		--background-color-dark: #191919;
-		--highlight-color: #007da7;
-		--highlight-color-on-dark: #00b4ef;
-		--note-bg-color: #e7f9ff;
-		--text-color: #3f3f3f;
-		--text-color-light: #ffffffd9;
-		--heart-color: #e00073;
-		--heart-color-on-note: #d8006f;
-		--small-font-size: 12px;
-		--max-width: ${breakpoints.content};
-		--color-syntax-ChelseaGem:	#aa5d00;
-		--color-syntax-DeepCerulean:	#007faa;
-		--color-syntax-DoveGray:	#696969;
-		--color-syntax-Emperor:	#545454;
-		--color-syntax-JapaneseLaurel:	#008000;
-		--color-syntax-Thunderbird:	#d91e18;
-	}
-	html,
-	body {
-		font-family: var(--text-font-family);
-		font-weight: var(--text-font-weigth);
-		height: 100%;
-		background-color: var(--background-color);
-		color: var(--text-color);
-		h1, h2, h3, h4, h5, h6 {
-			font-family: var(--headline-font-family);
-			font-weight: var(--headline-font-weight);
-			line-height: 115%;
-		}
-	}
-	#___gatsby, #gatsby-focus-wrapper {
-		height: 100%;
-	}
-	body {
-		overflow-x: hidden;
-	}
-`
+import { fonts } from '../design/settings'
 
 const loadAsync = (src: string): string => `(function(d){
 	var x = d.createElement("link");
@@ -80,16 +31,18 @@ export const Head = ({
 		twitter,
 		defaultCard,
 	},
-	pageTitle,
-	pageDescription,
+	page,
 	card,
 }: {
 	siteMetaData: Pick<
 		SiteMetaData,
 		'title' | 'description' | 'twitter' | 'defaultCard' | 'tagLine'
 	>
-	pageTitle?: string
-	pageDescription?: string
+	page: {
+		title?: string | null
+		description?: string | null
+		lang?: string | null
+	}
 	card?: string
 }) => {
 	const version = isSSR
@@ -100,10 +53,10 @@ export const Head = ({
 		<>
 			<Helmet>
 				<title>
-					{siteTitle} · {pageTitle ?? tagLine}
+					{siteTitle} · {page.title ?? tagLine}
 				</title>
-				<meta name="description" content={pageDescription ?? description} />
-				<html lang="en" />
+				<meta name="description" content={page.description ?? description} />
+				<html lang={page.lang ?? 'en'} />
 				<link rel="icon" type="image/x-icon" href={withPrefix('favicon.ico')} />
 				<link rel="preconnect" href="https://fonts.gstatic.com"></link>
 				<link rel="preconnect" href="https://cdn.jsdelivr.net"></link>
@@ -120,14 +73,13 @@ export const Head = ({
 				<script async src={withPrefix(`main.js?v=${version}`)}></script>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:site" content={twitter} />
-				<meta name="twitter:title" content={pageTitle ?? siteTitle} />
+				<meta name="twitter:title" content={page.title ?? siteTitle} />
 				<meta
 					name="twitter:description"
-					content={pageDescription ?? description}
+					content={page.description ?? description}
 				/>
 				<meta name="twitter:image" content={card ?? defaultCard} />
 			</Helmet>
-			<GlobalStyle />
 		</>
 	)
 }

@@ -1,6 +1,7 @@
 ---
 title: Meine .subversion/config
 date: 2010-10-14T00:00:00.000Z
+lang: de
 ---
 
     [helpers]

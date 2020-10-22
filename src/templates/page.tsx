@@ -1,6 +1,6 @@
 import React from 'react'
 import { SiteMetaData, Page } from '../site'
-import { Head } from '../design/Head'
+import { Head } from '../components/Head'
 import { Header } from '../design/Header'
 import { Content } from '../design/Content'
 import { Footer, avatarUrl } from '../design/Footer'
@@ -9,6 +9,7 @@ import { breakpoints } from '../design/settings'
 import classNames from 'classnames'
 import { pagePathToClass } from './utils/pagePathToClass'
 import { blankToUndefined } from './utils/blankToUndefined'
+import { GlobalStyle } from '../design/style'
 
 const Main = styled.main`
 	padding: 1rem;
@@ -55,12 +56,14 @@ const PageTemplate = ({
 	<>
 		<Head
 			siteMetaData={siteMetadata}
-			pageTitle={blankToUndefined(pageContext.page.remark.frontmatter.title)}
-			pageDescription={blankToUndefined(
-				pageContext.page.remark.frontmatter.abstract,
-			)}
+			page={{
+				description: pageContext.page.remark.frontmatter.abstract,
+				title: pageContext.page.remark.frontmatter.title,
+				lang: pageContext.page.remark.frontmatter.lang,
+			}}
 			card={blankToUndefined(pageContext.page.remark.frontmatter.card)}
 		/>
+		<GlobalStyle />
 		<Header siteMetaData={siteMetadata} />
 		<Main className={classNames([pagePathToClass(pageContext.pagePath)])}>
 			<Content>{children}</Content>

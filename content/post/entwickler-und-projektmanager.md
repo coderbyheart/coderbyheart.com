@@ -7,6 +7,7 @@ abstract: >-
   ich mit einem Kollegen darüber sprach, ist ein interessantes Bildnis
   entstanden.
 date: 2011-11-24T00:00:00.000Z
+lang: de
 ---
 
 [<img src="http://farm8.staticflickr.com/7031/6391475553_f4ba79e367_b.jpg" alt="Entwickler und Projektmanager" width="475" />][1]Diese

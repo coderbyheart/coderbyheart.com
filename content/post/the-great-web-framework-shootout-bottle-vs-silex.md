@@ -7,6 +7,7 @@ abstract: >-
   quantitative Aussagen wie Anfragen pro Sekunde, Zeilen Quellcode oder die
   geschlossenen Bugs pro Monat verlassen darf.
 date: 2012-02-20T00:00:00.000Z
+lang: de
 ---
 
 Frameworks zu vergleichen ist immer eine schlechte Idee, zu viele Faktoren

@@ -5,6 +5,7 @@ abstract: >-
   Der Standard-Werte für den @author-Tag in JavaDoc ist der Username des
   Accounts, der Eclipse gestartet hat.
 date: 2010-06-13T00:00:00.000Z
+lang: de
 ---
 
 Der Standard-Werte für den `@author`-Tag in JavaDoc ist der Username des

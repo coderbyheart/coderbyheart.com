@@ -6,6 +6,7 @@ abstract: >-
   have probably already wondered if there is a way to update the assets_version
   parameter automatically with every deploy.
 date: 2013-10-03T00:00:00.000Z
+lang: de
 ---
 
 If you're using [assetic][1] to manage your assets in your Symfony2 project you
