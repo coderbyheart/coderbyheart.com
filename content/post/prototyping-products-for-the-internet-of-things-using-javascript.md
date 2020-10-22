@@ -14,7 +14,7 @@ date: 2018-11-17T18:00+01:00
 My 2018 conference talk focused on how to prototype for the Internet of Things
 using the language we all love: JavaScript.
 
-![Screenshot 20181117 181345](../media/prototyping-products-for-the-internet-of-things-using-javascript/Screenshot_20181117_181345.jpg)
+![Disclaimer](../media/prototyping-products-for-the-internet-of-things-using-javascript/Screenshot_20181117_181345.jpg){class="notresponsive"}
 
 In this talk I explain why the Internet of Things, or in short _IoT_, is a very
 exciting field how we as engineers can start to explore this space with its very
@@ -23,7 +23,7 @@ technical solutions but need to be able to develop _connected experiences_ for
 our clients&mdash;they are not able to innovate on their own any more and depend
 on the expertise of consultancies and contractors.
 
-![Screenshot 20181117 182100](../media/prototyping-products-for-the-internet-of-things-using-javascript/Screenshot_20181117_182100.jpg)
+![Prototype Products](../media/prototyping-products-for-the-internet-of-things-using-javascript/Screenshot_20181117_182100.jpg){class="notresponsive"}
 
 A part that did not make it into the 45 minutes I had at code.talks was a look
 at the protocol that will power the next generation of connected devices: MQTT a
@@ -31,7 +31,7 @@ lightweight pub/sub protocol which has some significant improvements over HTTP.
 You will find the slides in the talk and it is am important part to explore when
 starting to look into this topic.
 
-![Screenshot 20181117 182752](../media/prototyping-products-for-the-internet-of-things-using-javascript/Screenshot_20181117_182752.png)
+![MQTT vs HTTPs](../media/prototyping-products-for-the-internet-of-things-using-javascript/Screenshot_20181117_182752.png){class="notresponsive"}
 
 Here is the recording:
 

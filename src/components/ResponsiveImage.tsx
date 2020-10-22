@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer'
 import classNames from 'classnames'
 import styled from 'styled-components'
 import { withPrefix } from 'gatsby'
+import { breakpoints } from '../design/settings'
 
 const isSSR = typeof window === 'undefined'
 
@@ -22,16 +23,19 @@ export const ResponsiveImage = ({
 	className?: string
 }) => {
 	if (isSSR) return null
-	const { ref, inView } = useInView({ triggerOnce: true })
+	const { ref, inView, entry } = useInView({ triggerOnce: true })
 
 	let aspectratio
 	let width
 	let height
 	let largeSource = false
+	let imgWidth
+	let imgHeight
 
 	const params = new URLSearchParams(src?.split('?')[1])
 	const extraClasses = {} as Record<string, boolean>
 	params.set('fm', 'webp')
+	params.set('q', '90')
 	params.set('fit', 'thumb')
 	const [w, h] = [params.get('w'), params.get('h')].map((s) =>
 		parseInt(s ?? '0', 10),
@@ -41,19 +45,27 @@ export const ResponsiveImage = ({
 		aspectratio = ratio.toFixed(3)
 		width = w.toString()
 		height = h.toString()
-		extraClasses.responsive = true
-		const maxSize = Math.min(window.innerWidth, w) // Do not upscale images
-		const imgWidth = Math.min(Math.min(maxSize, 1000), w)
-		const imgHeight = imgWidth * ratio
-		if (w > window.innerWidth) {
+		if (w < window.innerWidth || className?.includes('notresponsive')) {
+			const maxSize = Math.min(
+				entry?.target?.parentElement?.clientWidth ?? breakpoints.contentNumeric,
+				w,
+			) // Do not upscale images
+			imgWidth = Math.min(Math.min(maxSize, 2000), w)
+			imgHeight = imgWidth * ratio
+			params.set('w', imgWidth.toFixed(0))
+			params.set('h', imgHeight.toFixed(0))
+		} else {
+			extraClasses.responsive = true
+			const maxSize = Math.min(window.innerWidth, w) // Do not upscale images
 			largeSource = true
+			imgWidth = Math.min(Math.min(maxSize, 2000), w)
+			imgHeight = imgWidth * ratio
 			params.set('w', step(imgWidth).toFixed(0))
 			params.set('h', step(imgHeight).toFixed(0))
 			const notFullHeight = Math.min(
 				window.innerHeight * 0.8,
 				Math.min(window.innerWidth * ratio, h),
 			)
-			console.log({ h, notFullHeight, imgWidth })
 			if (h > notFullHeight) {
 				height = notFullHeight
 				params.set(
@@ -61,9 +73,6 @@ export const ResponsiveImage = ({
 					step((notFullHeight / window.innerWidth) * imgWidth).toFixed(0),
 				)
 			}
-		} else {
-			params.set('w', imgWidth.toFixed(0))
-			params.set('h', imgHeight.toFixed(0))
 		}
 	}
 	return (
@@ -82,7 +91,7 @@ export const ResponsiveImage = ({
 			data-aspectratio={aspectratio}
 			data-large-source={largeSource ? '1' : '0'}
 			className={classNames(className, extraClasses)}
-			style={{ height: largeSource ? `${height}px` : 'auto' }}
+			style={{ height: largeSource ? `${height}px` : `${imgHeight}px` }}
 		/>
 	)
 }

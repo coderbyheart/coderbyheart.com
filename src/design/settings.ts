@@ -18,4 +18,5 @@ export const fonts = {
 
 export const breakpoints = {
 	content: '700px',
+	contentNumeric: 700,
 } as const

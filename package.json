@@ -36,6 +36,7 @@
     "classnames": "^2.2.6",
     "date-fns": "^2.16.1",
     "gatsby-plugin-disqus": "^1.2.2",
+    "gatsby-remark-attr": "^0.1.0",
     "gatsby-remark-prismjs": "^3.5.16",
     "hast-to-hyperscript": "9.0.0",
     "polished": "4.0.3",

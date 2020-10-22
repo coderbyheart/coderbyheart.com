@@ -33,7 +33,11 @@ export const renderHtmlAstToReact = (tree: unknown): any =>
 				)
 				const youTubeId = youTubeEmbedMatch?.[1]
 				if (youTubeId !== undefined)
-					return React.createElement(EmbedYouTube, { id: youTubeId }, children)
+					return React.createElement(
+						EmbedYouTube,
+						{ id: youTubeId, ...attrs },
+						children,
+					)
 			}
 			return React.createElement(name, attrs, children)
 		},

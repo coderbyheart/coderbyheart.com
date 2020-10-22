@@ -60,6 +60,7 @@ const cfg = {
 							noInlineHighlight: true,
 						},
 					},
+					'gatsby-remark-attr',
 				],
 			},
 		},
