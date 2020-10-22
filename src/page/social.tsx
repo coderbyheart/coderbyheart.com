@@ -89,7 +89,7 @@ const SocialPage = ({
 	}
 }) => (
 	<>
-		<Head siteMetaData={siteMetadata} pageTitle={'Social Card Default'} />
+		<Head siteMetaData={siteMetadata} page={{ title: 'Social Card Default' }} />
 		<GlobalStyle />
 		<Main>
 			<section>
