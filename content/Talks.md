@@ -36,6 +36,7 @@ designed a BDD driven approach to run the integration tests.
 
 Lightning talk about how conference call for papers work.
 
+[Blog post](/call-for-proposals-lightning-talk) ·
 [Slides](https://docs.google.com/presentation/d/1Jmsf7aU2saJBzrWMCFrtxfiofWOSvS62BKKMRLDhb_Q/edit?usp=sharing)
 · [Video](https://www.youtube.com/watch?v=jzqCzGXT7hw)
 
