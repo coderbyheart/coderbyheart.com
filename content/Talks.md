@@ -6,6 +6,27 @@ subtitle: A list of my talks
 I am available for speaking engagements! Just contact me if you feel I can
 contribute to your event or conference.
 
+## Cloud connectivity and protocols for the Internet of Things
+
+This is a webinar I did for
+[Nordic Semiconductor Tech Webinars](https://www.nordicsemi.com/Events/Webinars)
+together with my colleague Carl Richard Fosse, but it applies to everyone who
+wants to get an introduction to protocols to consider when developing a cellular
+IoT product.
+
+It provides an overview over the important factors that need to be considered
+when it comes to picking the right solution for sending your products' data to
+the cloud.
+
+[Blog post](/cloud-connectivity-and-protocols-for-the-internet-of-things) ·
+Slides:
+[PDF](https://devzone.nordicsemi.com/cfs-file/__key/support-attachments/beef5d1b77644c448dabff31668f3a47-cfd384f9b1874d3caf1df02c9677eca4/2870.PowerPoint.Slides.with.Notes.pdf),
+[Interactive](https://coderbyheart.github.io/nordicwebinar2020/index.html) ·
+[Video](https://www.youtube.com/watch?v=pNaBB_OFbgg)
+
+- [Nordic Tech Webinar](https://webinars.nordicsemi.com/cloud-connectivity-and-protocols-5)
+  📅 21. October 2020 🌐 Online
+
 ## It does not run on my machine: Integration testing a cloud-native application
 
 In this talk I will take you through the challenge of testing a cloud-native

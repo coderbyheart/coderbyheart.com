@@ -47,6 +47,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 								noheadline
 								date
 								abstract
+								card
 							}
 							headings {
 								id
