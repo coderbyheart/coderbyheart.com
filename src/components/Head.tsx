@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import { SiteMetaData } from '../site'
 import { fonts } from '../design/settings'
-import { blankToUndefined } from '../templates/utils/blankToUndefined'
+import { blankToUndefined } from '../util/blankToUndefined'
 
 const loadAsync = (src: string): string => `(function(d){
 	var x = d.createElement("link");
@@ -44,7 +44,7 @@ export const Head = ({
 		description?: string | null
 		lang?: string | null
 	}
-	card?: string
+	card?: string | null
 }) => {
 	const version = isSSR
 		? process.env.VERSION ?? Date.now()

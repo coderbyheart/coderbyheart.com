@@ -8,7 +8,6 @@ import styled from 'styled-components'
 import { breakpoints } from '../design/settings'
 import classNames from 'classnames'
 import { pagePathToClass } from './utils/pagePathToClass'
-import { blankToUndefined } from './utils/blankToUndefined'
 import { GlobalStyle } from '../design/style'
 
 const Main = styled.main`
@@ -61,7 +60,7 @@ const PageTemplate = ({
 				title: pageContext.page.remark.frontmatter.title,
 				lang: pageContext.page.remark.frontmatter.lang,
 			}}
-			card={blankToUndefined(pageContext.page.remark.frontmatter.card)}
+			card={pageContext.page.remark.frontmatter.card}
 		/>
 		<GlobalStyle />
 		<Header siteMetaData={siteMetadata} />
