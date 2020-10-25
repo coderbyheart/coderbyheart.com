@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import { SiteMetaData } from '../site'
 import { fonts } from '../design/settings'
+import { blankToUndefined } from '../templates/utils/blankToUndefined'
 
 const loadAsync = (src: string): string => `(function(d){
 	var x = d.createElement("link");
@@ -53,9 +54,12 @@ export const Head = ({
 		<>
 			<Helmet>
 				<title>
-					{siteTitle} · {page.title ?? tagLine}
+					{siteTitle} · {blankToUndefined(page.title) ?? tagLine}
 				</title>
-				<meta name="description" content={page.description ?? description} />
+				<meta
+					name="description"
+					content={blankToUndefined(page.description) ?? description}
+				/>
 				<html lang={page.lang ?? 'en'} />
 				<link rel="icon" type="image/x-icon" href={withPrefix('favicon.ico')} />
 				<link rel="preconnect" href="https://fonts.gstatic.com"></link>
@@ -73,12 +77,18 @@ export const Head = ({
 				<script async src={withPrefix(`main.js?v=${version}`)}></script>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:site" content={twitter} />
-				<meta name="twitter:title" content={page.title ?? siteTitle} />
+				<meta
+					name="twitter:title"
+					content={blankToUndefined(page.title) ?? siteTitle}
+				/>
 				<meta
 					name="twitter:description"
-					content={page.description ?? description}
+					content={blankToUndefined(page.description) ?? description}
 				/>
-				<meta name="twitter:image" content={card ?? defaultCard} />
+				<meta
+					name="twitter:image"
+					content={blankToUndefined(card) ?? defaultCard}
+				/>
 			</Helmet>
 		</>
 	)
