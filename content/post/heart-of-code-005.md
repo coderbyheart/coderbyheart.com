@@ -78,8 +78,6 @@ Get 25% off ETC2018 tickets:
 
 <https://twitter.com/coderbyheart/status/908348254890455040?embed>
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)

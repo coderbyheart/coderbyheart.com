@@ -83,8 +83,6 @@ But the
 [Foo Fighters Car Pool Karaoke Episode](https://www.youtube.com/watch?v=5Xe0Qd6bUFo)
 just came out.
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)

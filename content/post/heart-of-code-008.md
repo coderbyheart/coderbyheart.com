@@ -111,8 +111,6 @@ to share:
   Marylin Manson's new album
 - [Boris Brejcha FCKNG Serious Europe Bus Tour Prague](https://www.youtube.com/watch?v=EoFN3AqsGbI)
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)

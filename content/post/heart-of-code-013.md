@@ -101,8 +101,6 @@ If you don't have time to try things out at work, you might ask to run a _Kata_:
   by Darude
 - The [Hurry Slow Podcast](http://hurryslowly.co/)
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/929317763067383808)

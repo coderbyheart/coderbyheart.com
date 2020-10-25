@@ -112,8 +112,6 @@ There is a new unconference in Düsseldorf:
 
 <https://twitter.com/coderbyheart/status/926120118786064389?embed>
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)

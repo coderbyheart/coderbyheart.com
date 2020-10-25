@@ -57,8 +57,6 @@ or payed tools like [Applitools](https://applitools.com/) which i learned about
 from another participant during the networking session are greatly simplifying
 visual testing.
 
----
-
 [Lanette Creamer](https://twitter.com/lanettecream) spoke about the importance
 of communication and how to better understand and improve the skills as a
 tester. Although this talk was mainly geared towards testers, I still enjoyed
@@ -66,8 +64,6 @@ her insights into what it means to be a tester and improved my understanding of
 this role.
 
 <https://twitter.com/coderbyheart/status/965622543557283843?embed&conversation=none>
-
----
 
 [Zeger van Hese](https://twitter.com/TestSideStory) held a great keynote on
 being a sceptic. He stressed the point that it is important to (constantly)
@@ -79,8 +75,6 @@ decisions.
 He recommended
 [a set of context-free questions](//assets.contentful.com/bncv3c2gt878/4mvcQWNWhWQ0sgiKWCakEU/cce06a8bdc4d3e274ca47eb72d60fbe0/Gause_-_Context-Free_Questions.pdf)
 to identify important aspects about a project in an unbiased way.
-
----
 
 The closing keynote by [Pamela Gay](https://twitter.com/starstryder) was
 meticulously executed and fascinating from beginning to end. It provided a great
@@ -118,8 +112,6 @@ individual components. Matthew did a good job in illustrating this. You can find
 his slides
 [here](https://blog.matthewbutt.com/2018/02/20/european-testing-conference-unit-testing-the-hard-stuff-slides/).
 
----
-
 <https://twitter.com/coderbyheart/status/965590736669413378?embed&conversation=none>
 
 The talk was a tester's perspective of working with microservices, which
@@ -129,8 +121,6 @@ architecture. Most important takeaway from her talk: version your microservices
 so other teams or individuals can run integration tests and teams are
 responsible to run the integration tests with their latest code, otherwise there
 will be pain.
-
----
 
 <https://twitter.com/coderbyheart/status/965517620396134400?embed>
 
@@ -179,8 +169,6 @@ it relies on testers understanding the domain and a lot of details about the
 test subject in order to execute tests. Which in the end will be to the benefit
 of the project.
 
----
-
 The second workshop by [Seb Rose](https://twitter.com/sebrose) and
 [Gáspár Nagy](https://twitter.com/gasparnagy) gave us a very well executed
 tutorial on how to write better BDD scenarios. Working in groups on suboptimal
@@ -217,8 +205,6 @@ veteran I could add some insights.
 
 <https://twitter.com/coderbyheart/status/965954967256358914?embed&conversation=none>
 
----
-
 <https://twitter.com/RidingWolf/status/965954663924322304?embed>
 
 In the session on Continuous Deployment we talked about the do's and don'ts.
@@ -227,8 +213,6 @@ Basically: you want your CI runners to be
 [Chris Dräger](https://twitter.com/_chris_draeger_) who hosted this session
 found [LambdaCD](http://www.lambda.cd/) to be his tool of choice. I would
 recommend [Travis](https://travis-ci.org/) + Makefiles to solve this.
-
----
 
 <https://twitter.com/coderbyheart/status/965962746415206401?embed&conversation=none>
 

@@ -95,9 +95,7 @@ closer together.
 
 <https://twitter.com/coderbyheart/status/1225859527255392256?embed>
 
----
-
-I thank my employer [Nordic Semiconductor](https://www.nordicsemi.com/) for
-enabling me to attend this event on company time and cost under our competence
-improvement program.
-[We are hiring!](https://www.nordicsemi.com/About-us/Vacant-Positions)
+> I thank my employer [Nordic Semiconductor](https://www.nordicsemi.com/) for
+> enabling me to attend this event on company time and cost under our competence
+> improvement program.
+> [We are hiring!](https://www.nordicsemi.com/About-us/Vacant-Positions)

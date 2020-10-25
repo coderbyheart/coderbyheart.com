@@ -10,7 +10,7 @@ hero: ../media/call-for-proposals-lightning-talk.png
 
 At this year's
 [Global Diversity CFP Day](https://www.globaldiversitycfpday.com/) I gave a
-lightning talk about Call for Proposals. 
+lightning talk about Call for Proposals.
 
 <https://www.youtube.com/embed/jzqCzGXT7hw>
 
@@ -18,8 +18,6 @@ The slides are available
 [here](https://docs.google.com/presentation/d/1Jmsf7aU2saJBzrWMCFrtxfiofWOSvS62BKKMRLDhb_Q/edit?usp=sharing).
 
 Below is are the main talking points I cover
-
----
 
 ## Structure of a Proposal
 

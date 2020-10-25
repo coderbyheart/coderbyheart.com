@@ -14,8 +14,6 @@ This post tries to explain the rationale behind one of
 > async communication: **Phone is bad, Chat is good.** >
 > [#futureofwork](https://twitter.com/hashtag/futureofwork?src=hash)
 
----
-
 You can maximize your work output if you can use your work time in a way the
 suits your habits best. The more your work requires your undivided attention,
 which is true especially for creative and innovative work, the more your mind

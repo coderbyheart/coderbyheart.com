@@ -188,8 +188,6 @@ import {
 }
 ```
 
----
-
 If you would like to see a working example with AWS CDK,
 [ping me](https://twitter.com/coderbyheart) or leave a comment below. As always,
 I'd love to get your feedback on how _you_ solve this in your project, too!

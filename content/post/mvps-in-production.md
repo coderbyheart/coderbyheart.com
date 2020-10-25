@@ -62,8 +62,6 @@ Coming up next:
 - Building an architecture that supports feature creep, Building features in
   verticals
 
----
-
 I'll also want cover these topics in later installements of this series:
 
 - Going serverless

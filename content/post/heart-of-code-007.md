@@ -86,8 +86,6 @@ I booked my tickets for ETC2018:
 - [Boris Brejcha live at Bevip](https://www.youtube.com/watch?v=pEMOSjkz7xQ)
 - [deadmau5 - BBC Radio 1 Residency Episode 8](https://www.youtube.com/watch?v=RxIAoPGi7h8)
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)

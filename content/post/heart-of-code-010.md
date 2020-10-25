@@ -131,8 +131,6 @@ No time to go to a conference?
   [Porcelain Audiobook](https://open.spotify.com/album/7Da3KqWuu38bY8i2iD0pu4)
   by Moby
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)

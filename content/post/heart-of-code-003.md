@@ -106,8 +106,6 @@ A reminder:
 - [Every Country's Sun](https://open.spotify.com/album/5dICNeVi2fhMSPylzSvG6J),
   Mogwai's new album
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)

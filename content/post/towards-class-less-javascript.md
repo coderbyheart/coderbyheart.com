@@ -219,8 +219,6 @@ This approach solves the issues I listed, but feels a little clunky. Especially
 passing dependencies to methods is, at least for me, a thing I would need to get
 used to.
 
----
-
 I'd love to hear your feedback and thoughts on this topic, this is an ongoing
 exploration of mine, so keep checking back here or on
 [my Twitter](https://twitter.com/coderbyheart) for updates.

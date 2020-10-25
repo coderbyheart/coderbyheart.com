@@ -91,8 +91,6 @@ I'm sponsoring a diversity ticket here, so please apply also to RuhrJS (October
 - QOTSA's new album
   [Villains](https://open.spotify.com/album/6JdX9MGiEMypqYLMKyIE8a)
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)

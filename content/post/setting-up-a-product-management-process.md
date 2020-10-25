@@ -279,8 +279,6 @@ up too much time. It’s flexible and fosters a strong degree of self-organizati
 within the whole team. Having one source of truth for everyone is a key factor
 in keeping everyone in the loop.
 
----
-
 <small>This was part one of the [MVPs in Production](/mvps-in-production/) post
 series. A big thank you goes out to
 [Sebastian Nell](https://www.linkedin.com/in/sebastiannell/),

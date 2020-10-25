@@ -132,8 +132,6 @@ And RuhrJS as well:
 - [Holy Books](https://open.spotify.com/album/5zbkY5tpYHzcZguAb2Ybfy) by Death
   From Above 1979
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)

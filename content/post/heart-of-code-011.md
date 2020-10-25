@@ -122,8 +122,6 @@ These are the conferences where you will be able to meet me:
 - [A 12 hour State of Trance episode](https://www.youtube.com/watch?v=6v_IAryejG8)
 - [Opus](https://www.youtube.com/watch?v=vNvZzUvZnsA) by Eric Prydz
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)

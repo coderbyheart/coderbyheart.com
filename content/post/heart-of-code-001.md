@@ -91,8 +91,6 @@ I made a list of women in civic tech:
 - [Solomun x Âme x Moderat - Ketamine Kettle](https://www.youtube.com/watch?v=dfIZErx14Sg)
 - [22 by Boris Brejcha](https://open.spotify.com/album/0Ts0QWACHsn0onfGwsHSWr)
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)

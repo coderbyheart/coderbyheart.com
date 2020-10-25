@@ -31,8 +31,6 @@ If they don’t, ask why!
 Find conferences who are calling for proposals on: [SeeCFP](http://seecfp.com/)
 or [Papercall](https://www.papercall.io/).
 
----
-
 More resources on public speaking:
 
 - [Speak Easy](https://twitter.com/spkeazee) mentors speakers to encourage

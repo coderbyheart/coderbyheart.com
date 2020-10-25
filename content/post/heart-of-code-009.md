@@ -95,8 +95,6 @@ A little reminder, why you should come to
 and [Long Ambient](https://open.spotify.com/album/136AocmGvmUjqNsvAhtfU5) by
 Moby.
 
----
-
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
 > [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)
