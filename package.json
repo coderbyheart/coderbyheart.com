@@ -42,7 +42,7 @@
     "polished": "4.0.3",
     "prismjs": "^1.22.0",
     "react-intersection-observer": "8.29.1",
-    "styled-components": "5.2.0"
+    "styled-components": "5.2.1"
   },
   "snyk": true,
   "engines": {
