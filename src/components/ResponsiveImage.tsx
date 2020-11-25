@@ -46,14 +46,15 @@ export const ResponsiveImage = ({
 		width = w.toString()
 		height = h.toString()
 		if (w < window.innerWidth || className?.includes('notresponsive')) {
-			const maxSize = Math.min(
-				entry?.target?.parentElement?.clientWidth ?? breakpoints.contentNumeric,
-				w,
-			) // Do not upscale images
+			const parentSize =
+				entry?.target?.parentElement?.parentElement?.clientWidth ??
+				breakpoints.contentNumeric
+			const maxSize = Math.min(parentSize, w) // Do not upscale images
 			imgWidth = Math.min(Math.min(maxSize, 2000), w)
-			imgHeight = imgWidth * ratio
 			params.set('w', imgWidth.toFixed(0))
-			params.set('h', imgHeight.toFixed(0))
+			params.set('h', (imgWidth * ratio).toFixed(0))
+			// Image will be scale up to 100% width
+			imgHeight = parentSize * ratio
 		} else {
 			extraClasses.responsive = true
 			const maxSize = Math.min(window.innerWidth, w) // Do not upscale images
@@ -76,17 +77,21 @@ export const ResponsiveImage = ({
 		}
 	}
 
+	const base = src.split('?')[0]
+
 	const fallbackParams = new URLSearchParams(params.toString())
-	fallbackParams.set('fm', 'jpg')
+	if (/\.jpe?g$/i.test(base)) {
+		fallbackParams.set('fm', 'jpg')
+	} else if (/\.png$/i.test(base)) {
+		fallbackParams.set('fm', 'png')
+	}
 
 	return (
 		<picture>
 			<source
 				srcSet={
 					inView
-						? `${src
-								.split('?')[0]
-								.replace(/^\/\//, 'https://')}?${params.toString()}`
+						? `${base.replace(/^\/\//, 'https://')}?${params.toString()}`
 						: withPrefix('transparent.png')
 				}
 				type="image/webp"
@@ -94,9 +99,10 @@ export const ResponsiveImage = ({
 			<Image
 				src={
 					inView
-						? `${src
-								.split('?')[0]
-								.replace(/^\/\//, 'https://')}?${fallbackParams.toString()}`
+						? `${base.replace(
+								/^\/\//,
+								'https://',
+						  )}?${fallbackParams.toString()}`
 						: withPrefix('transparent.png')
 				}
 				ref={ref}
@@ -106,7 +112,9 @@ export const ResponsiveImage = ({
 				data-aspectratio={aspectratio}
 				data-large-source={largeSource ? '1' : '0'}
 				className={classNames(className, extraClasses)}
-				style={{ height: largeSource ? `${height}px` : `${imgHeight}px` }}
+				style={{
+					height: largeSource ? `${height}px` : `${imgHeight}px`,
+				}}
 			/>
 		</picture>
 	)
