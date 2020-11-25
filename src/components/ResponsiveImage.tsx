@@ -75,23 +75,39 @@ export const ResponsiveImage = ({
 			}
 		}
 	}
+
+	const fallbackParams = new URLSearchParams(params.toString())
+	fallbackParams.set('fm', 'jpg')
+
 	return (
-		<Image
-			src={
-				inView
-					? `${src
-							.split('?')[0]
-							.replace(/^\/\//, 'https://')}?${params.toString()}`
-					: withPrefix('transparent.png')
-			}
-			ref={ref}
-			alt={alt}
-			width={width}
-			height={height}
-			data-aspectratio={aspectratio}
-			data-large-source={largeSource ? '1' : '0'}
-			className={classNames(className, extraClasses)}
-			style={{ height: largeSource ? `${height}px` : `${imgHeight}px` }}
-		/>
+		<picture>
+			<source
+				srcSet={
+					inView
+						? `${src
+								.split('?')[0]
+								.replace(/^\/\//, 'https://')}?${params.toString()}`
+						: withPrefix('transparent.png')
+				}
+				type="image/webp"
+			></source>
+			<Image
+				src={
+					inView
+						? `${src
+								.split('?')[0]
+								.replace(/^\/\//, 'https://')}?${fallbackParams.toString()}`
+						: withPrefix('transparent.png')
+				}
+				ref={ref}
+				alt={alt}
+				width={width}
+				height={height}
+				data-aspectratio={aspectratio}
+				data-large-source={largeSource ? '1' : '0'}
+				className={classNames(className, extraClasses)}
+				style={{ height: largeSource ? `${height}px` : `${imgHeight}px` }}
+			/>
+		</picture>
 	)
 }
