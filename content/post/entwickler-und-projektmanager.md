@@ -17,10 +17,10 @@ Arbeitgeber. Vor ein paar Monaten standen sie bei
 als ich mit einem Kollegen darüber sprach, ist ein interessantes Bildnis
 entstanden.
 
-Der Große (der Marine aus dem Computerspiel “Quake II&#8221;) ist ein
-**Entwickler**: ziemlich grobschlächtig mit dem Hang zu schnellen einfachen
-Lösungen, aber halt für die dreckige Aufgabe des codens bestens geeignet — die
-Waffe benutzt er um _Bugs_ zu töten.
+Der Große (der Marine aus dem Computerspiel “Quake II”) ist ein **Entwickler**:
+ziemlich grobschlächtig mit dem Hang zu schnellen einfachen Lösungen, aber halt
+für die dreckige Aufgabe des codens bestens geeignet — die Waffe benutzt er um
+_Bugs_ zu töten.
 
 Aber ohne den **Projektmanager** davor ist der Entwickler aufgeschmissen. Mit
 seiner Lampe sucht und findet der Projektmanager Bugs und weißt dem Entwickler
