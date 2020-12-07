@@ -1,4 +1,5 @@
 ---
+subtitle: End-of-year code katas
 title: Advent of Code 2020
 abstract: I am participating in AOC again
 date: 2020-12-07T08:00:00.000Z
