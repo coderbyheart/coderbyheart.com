@@ -7,7 +7,7 @@ date: 2020-12-11T18:00:00.000Z
 ---
 
 [I am mentoring students](https://twitter.com/coderbyheart/status/1334426175565934592)
-and I gave them a README for my weekly office hour every.
+and I gave them a README for my weekly office hour.
 
 I ask them for 4 things every week, because I think these are very important
 _for them_:
