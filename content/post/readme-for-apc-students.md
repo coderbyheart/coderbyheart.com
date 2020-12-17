@@ -79,7 +79,8 @@ Thursday** in Teams:
 ```
 For:   <Name of your team member>
 From:  <Your Name>
-For:   Thank you for <description of what they did>
+
+       Thank you for <description of what they did>
        because it <description of how it helped you>
 ```
 
