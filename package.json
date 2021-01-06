@@ -37,7 +37,7 @@
     "date-fns": "^2.16.1",
     "gatsby-plugin-disqus": "^1.2.2",
     "gatsby-remark-attr": "^0.1.0",
-    "gatsby-remark-prismjs": "3.9.0",
+    "gatsby-remark-prismjs": "3.10.0",
     "hast-to-hyperscript": "9.0.1",
     "polished": "4.0.5",
     "prismjs": "^1.22.0",
