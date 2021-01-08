@@ -101,6 +101,32 @@ The `IotData` client from v2 is now located in
 [`@aws-sdk/client-iot-data-plane`](https://www.npmjs.com/package/@aws-sdk/client-iot-data-plane)
 and called `IoTDataPlaneClient`.
 
+## IoT: Payload is now `Uint8Array`
+
+Some operations, like `DescribeThingShadowCommand`
+[return a JSON string now as `Uint8Array`](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-iot-data-plane/modules/getthingshadowresponse.html#payload).
+These need to be decoded using the TextEncoder util in Node.js:
+
+```diff
++ import { TextDecoder } from 'util'
+
+- const { statusCode, body } = JSON.parse(Payload?.toString() ?? '')
++ const { statusCode, body } = JSON.parse(
++   new TextDecoder('utf-8').decode(Payload),
++ )
+```
+
+or the
+[`@aws-sdk/util-utf8-browser`](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/modules/_aws_sdk_util_utf8_browser.html)
+helpers for browser applications:
+
+```diff
++ import { toUtf8 } from '@aws-sdk/util-utf8-browser'
+
+- const { statusCode, body } = JSON.parse(Payload?.toString() ?? '')
++ const { statusCode, body } = JSON.parse(toUtf8(Payload?.toString() ?? ''))
+```
+
 ## Not in v3: StepFunctions
 
 The StepFunctions client has not been ported to v3 because the service
