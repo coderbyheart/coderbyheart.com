@@ -45,6 +45,12 @@ const cfg = {
 			options: {
 				plugins: [
 					{
+						resolve: `gatsby-remark-autolink-headers`,
+						options: {
+							offsetY: 80,
+						},
+					},
+					{
 						resolve: 'gatsby-remark-external-links',
 						options: {
 							target: '_blank',
