@@ -40,7 +40,7 @@
     "gatsby-remark-prismjs": "3.10.0",
     "hast-to-hyperscript": "9.0.1",
     "polished": "4.0.5",
-    "prismjs": "^1.22.0",
+    "prismjs": "^1.23.0",
     "react": "^17.0.1",
     "react-intersection-observer": "8.31.0",
     "styled-components": "5.2.1"
