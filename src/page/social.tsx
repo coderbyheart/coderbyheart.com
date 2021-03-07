@@ -4,9 +4,9 @@ import { graphql } from 'gatsby'
 import { Head } from '../components/Head'
 import { avatarUrl } from '../design/Footer'
 import styled from 'styled-components'
+import { GlobalStyle } from '../design/style'
 
 import Heart from '../design/heart.svg'
-import { GlobalStyle } from '../design/style'
 
 export const query = graphql`
 	query SocialPageQuery {
