@@ -1,9 +1,9 @@
 ---
 subtitle: Cloud Native
 title:
-  Handling NPM v7's unneccessary inclusion of peer dependencies with AWS SDK v3
+  Handling NPM v7's unnecessary inclusion of peer dependencies with AWS SDK v3
 abstract:
-  When using NPM v7 to package lambdas using AWS SKD v3 it leads to unneccessary
+  When using NPM v7 to package lambdas using AWS SKD v3 it leads to unnecessary
   large deployment pacakges.
 date: 2021-03-07T16:00:00.000Z
 ---
@@ -18,7 +18,7 @@ changes required more than simply replacing some API calls.
 This week I decided to migrate a bigger codebase to NPM version 7, which is now
 [general available](https://github.blog/2021-02-02-npm-7-is-now-generally-available/).
 However this surfaced an issue in AWS SDK v3 that leads to lambdas becoming
-unneccessary large, when the AWS SDK v3 clients are installed with NPM v7.
+unnecessary large, when the AWS SDK v3 clients are installed with NPM v7.
 
 ![MSC Preziosa polluting the air at Geirangerfjord](https://live.staticflickr.com/1840/42051140850_483af349da_o_d.jpg)
 
