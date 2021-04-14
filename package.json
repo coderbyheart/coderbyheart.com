@@ -41,7 +41,7 @@
     "hast-to-hyperscript": "9.0.1",
     "polished": "4.1.1",
     "prismjs": "1.23.0",
-    "react": "17.0.1",
+    "react": "17.0.2",
     "react-intersection-observer": "8.31.0",
     "styled-components": "5.2.1"
   },
