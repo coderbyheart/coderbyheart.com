@@ -13,7 +13,7 @@ Let me start by stating something most of you most likely know, I am a big fan
 of Behavioural Driven Design (BDD),
 [I have spoken about it at multiple conferences](./it-does-not-run-on-my-machine)
 and I use it on a daily basis. Therefore I was really excited to learn from
-[Caspar](https://twitter.com/gasparnagy) and [Seb](https://twitter.com/sebrose)
+[Gáspár](https://twitter.com/gasparnagy) and [Seb](https://twitter.com/sebrose)
 who are without a doubt some of the most knowledgeable people to write about
 this topic ... which they are not shy to tell you directly in the beginning of
 the book:
