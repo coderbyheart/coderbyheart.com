@@ -84,7 +84,9 @@ source to revisit again and again.
 [The BDD Books: Formulation](http://bddbooks.com/) is
 [available on LeanPub](https://leanpub.com/bddbooks-formulation).
 
-I've read the Kindle version of the book which I would not recommend, even the
-smallest font size would not fit the feature listings on my screen; and the
-images were unreadable small. I would recommend to read the PDF version which
-has a better layout, or get the printed version (from the PDF).
+I've read the Kindle version of the book which I would not fully recommend
+because even the smallest font size would not fit the feature listings on my
+screen (a 10th generation Kindle Paperwhite). This is fine if you are familier
+with the Gherkin syntax and can skim the feature definitions. I would recommend
+to read the PDF version which has a better layout, or get the printed version
+(from the PDF).
