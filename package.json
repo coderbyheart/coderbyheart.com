@@ -33,7 +33,7 @@
     "url": "https://github.com/coderbyheart/coderbyheart.com.git"
   },
   "dependencies": {
-    "classnames": "2.3.0",
+    "classnames": "2.3.1",
     "date-fns": "2.19.0",
     "gatsby-plugin-disqus": "1.2.2",
     "gatsby-remark-attr": "0.1.0",
