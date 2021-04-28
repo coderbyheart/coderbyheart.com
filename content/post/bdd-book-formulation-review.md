@@ -81,8 +81,9 @@ and don't overstretch their topic. Throughout the book the authors provide their
 personal view which helps to underline important aspects. It will be a good
 source to revisit again and again.
 
-[The BDD Books: Formulation](http://bddbooks.com/) is
-[available on LeanPub](https://leanpub.com/bddbooks-formulation).
+[The BDD Books: Formulation](http://bddbooks.com/) is available
+[on LeanPub](https://leanpub.com/bddbooks-formulation) and
+[on Amazon](https://www.amazon.com/-/en/dp/B093NCN3FZ).
 
 I've read the Kindle version of the book which I would not fully recommend
 because even the smallest font size would not fit the feature listings on my
