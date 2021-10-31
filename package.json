@@ -73,6 +73,7 @@
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-source-filesystem": "4.0.0",
     "gatsby-transformer-remark": "5.0.0",
+    "husky": "7.0.4",
     "jsdom": "18.0.0",
     "minimalcss": "0.11.2",
     "node-fetch": "3.0.0",
