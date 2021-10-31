@@ -6,7 +6,11 @@ abstract: |
 date: 2011-08-04T00:00:00.000Z
 ---
 
-![Markus Tacker, Gewinner beim Top Coder Gewinnspiel der Mayflower GmbH](https://live.staticflickr.com/6133/6004948638_a58a4c94d8_o_d.jpg){class="notresponsive"}
+<div class="notresponsive">
+
+![Markus Tacker, Gewinner beim Top Coder Gewinnspiel der Mayflower GmbH](https://live.staticflickr.com/6133/6004948638_a58a4c94d8_o_d.jpg)
+
+</div>
 
 [Top Coder Gewinnspiel der Mayflower GmbH][2] habe ich mit meiner Einreichung
 [den ersten Preis gewonnen][3]: ein iPad 2.

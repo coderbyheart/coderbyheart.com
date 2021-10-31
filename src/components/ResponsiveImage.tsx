@@ -34,6 +34,10 @@ export const ResponsiveImage = ({
 
 	const params = new URLSearchParams(src?.split('?')[1])
 	const extraClasses = {} as Record<string, boolean>
+	const notResponsive =
+		entry?.target?.parentElement?.parentElement?.parentElement?.className.includes(
+			'notresponsive',
+		)
 	params.set('fm', 'webp')
 	params.set('q', '90')
 	params.set('fit', 'thumb')
@@ -45,7 +49,7 @@ export const ResponsiveImage = ({
 		aspectratio = ratio.toFixed(3)
 		width = w.toString()
 		height = h.toString()
-		if (w < window.innerWidth || className?.includes('notresponsive')) {
+		if (w < window.innerWidth || notResponsive) {
 			const parentSize =
 				entry?.target?.parentElement?.parentElement?.clientWidth ??
 				breakpoints.contentNumeric

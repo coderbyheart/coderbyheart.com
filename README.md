@@ -5,7 +5,6 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)
 [![Mergify Status](https://img.shields.io/endpoint.svg?url=https://dashboard.mergify.io/badges/coderbyheart/coderbyheart.com&style=flat)](https://mergify.io)
-[![Known Vulnerabilities](https://snyk.io/test/github/coderbyheart/coderbyheart.com/badge.svg)](https://snyk.io/test/github/coderbyheart/coderbyheart.com)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
@@ -14,7 +13,7 @@ Source code for <coderbyheart.com>.
 ## Start Gatsby
 
       npm ci
-      npx gatsby develop
+      npm start
 
 ## How this project works
 
