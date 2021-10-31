@@ -19,5 +19,4 @@ personally._
 - [Twitter](https://twitter.com/coderbyheart "Markus Tacker on Twitter")
 - [LinkedIn](https://www.linkedin.com/in/markustacker "Markus Tacker on LinkedIn")
 - [GitHub](https://github.com/coderbyheart "Markus Tacker on GitHub")
-- [flickr](https://www.flickr.com/people/tacker/ "Markus Tacker on flickr")
 - [Instagram](https://www.instagram.com/coderbyheart/ "Markus Tacker on Instagram")
