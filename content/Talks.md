@@ -6,7 +6,24 @@ subtitle: A list of my talks
 I am available for speaking engagements! Just contact me if you feel I can
 contribute to your event or conference.
 
-## I am a coder, help me learn to collaborate!
+## Upcoming & In Preparation
+
+I haven't given these talks, yet, but happy to try. Let me know if this sounds
+like a good addition to your conference.
+
+### Real world serverless IoT
+
+Let's have a look how a temperature reading travels an IoT solution on AWS and
+Azure from the device to the web application.
+
+This talk will provide an introduction to serverless in general, and how it is
+implemented at the different cloud vendors (looking at AWS and Azure, where I
+have implemented the same application using the respective cloud's idiomatic
+way), and why it is especially relevant for IoT deployments.
+
+---
+
+### I am a coder, help me learn to collaborate!
 
 [Blog post](./i-am-a-coder-help-me-learn-to-collaborate) &middot;
 [Twitter Thread](https://twitter.com/coderbyheart/status/1119970835014529024)
@@ -16,7 +33,7 @@ start looking into improving their communication and collaboration skills. I
 want to show the fallacy of aiming to be a fantastic coder and provide concrete
 examples and resources on how to start.
 
-### Abstract
+#### Abstract
 
 In order to truly build great products we always depend on collaboration with
 others. However, as engineers we spend a lot of resources on becoming better at
@@ -29,7 +46,7 @@ people problems is what I have to deal with. And in the past I invested very few
 time in educating myself on collaboration and communication. I want us to change
 this.
 
-### Main takeaways
+#### Main takeaways
 
 You will always lack important skills to realize the best work you have ever
 done. It’s impossible to achieve greatness solely on your own. You will always
@@ -37,7 +54,9 @@ depend on other to work with you and the more experienced you are the more other
 depend on you enabling them to achieve their best. Therefore we must invest
 equally in our collaboration and communication skills.
 
-## Firmware test automation using real embedded devices
+---
+
+### Firmware test automation using real embedded devices
 
 In this talk I am going to present my approach on testing embedded firmware that
 using real hardware, because testing firmware in emulators drastically limits
@@ -52,7 +71,9 @@ Here is how it looks like:
 
 <https://twitter.com/coderbyheart/status/1321394949007560704?embed>
 
-## Cloud connectivity and protocols for the Internet of Things
+## Delivered talks
+
+### Cloud connectivity and protocols for the Internet of Things
 
 This is a webinar I did for
 [Nordic Semiconductor Tech Webinars](https://www.nordicsemi.com/Events/Webinars)
@@ -73,7 +94,7 @@ Slides:
 - [Nordic Tech Webinar](https://webinars.nordicsemi.com/cloud-connectivity-and-protocols-5)
   📅 21. October 2020 🌐 Online
 
-## It does not run on my machine: Integration testing a cloud-native application
+### It does not run on my machine: Integration testing a cloud-native application
 
 In this talk I will take you through the challenge of testing a cloud-native
 application. I will cover the challenges when developing solutions on top of
@@ -99,7 +120,7 @@ designed a BDD driven approach to run the integration tests.
   January 2020 🇸🇪 Stockholm
 - [Heisenbug 2020](https://heisenbug.ru/en/) 📅 April 2020 🇷🇺 St. Petersburg
 
-## About: Call for Papers
+### About: Call for Papers
 
 Lightning talk about how conference call for papers work.
 
@@ -110,7 +131,7 @@ Lightning talk about how conference call for papers work.
 - [Global Diversity CFP Day](https://www.globaldiversitycfpday.com/events/169)
   📅 2. March 2019 🇩🇪 Frankfurt
 
-## Prototyping products for the Internet of Things using JavaScript
+### Prototyping products for the Internet of Things using JavaScript
 
 In 2018 we will see a big change in the IoT landscape: based on LTE-m devices
 can connect to the internet over long distances and will be running off
@@ -135,7 +156,7 @@ to leverage JavaScript down to the hardware to build your own solution.
   [Slides](https://docs.google.com/presentation/d/1E1PcSo463K_1uQTKYZ6IDgOwEwaxrirpTYMvgiL0as4/edit?usp=sharing),
   [Video](https://www.youtube.com/watch?v=HpNv8Ahb2MU)
 
-## What is the best backend language
+### What is the best backend language
 
 Panel at code.talks Hamburg.
 
@@ -145,7 +166,7 @@ Panel at code.talks Hamburg.
 - [code.talks](https://www.codetalks.de/#talk-181) 📅 October 19th 2018 🇩🇪
   Hamburg
 
-## Motivating developers with purposeful work
+### Motivating developers with purposeful work
 
 I work at a company where we decide on our own, when how and on what we work; I
 have full control over my life. We believe that working in a so-called network
@@ -161,7 +182,7 @@ build a joyful workplace for team.
 - [Topconf Linz 2017](http://topconf.com/linz-2017/trackevent/motivating-developers-with-purposeful-work/ "Topconf Software Conferences are premier international software conference designed for Developers, Product owners / managers, Architects, Project Managers, Methods- and Process-Experts.")
   📅 2. March 2017 🇦🇹 Linz
 
-## TDD vs. Velocity: Testing for start-ups and other organizations with fast innovation cycles
+### TDD vs. Velocity: Testing for start-ups and other organizations with fast innovation cycles
 
 These days, when every new project is a start-up, we need to run software that
 is both robust (because there are customers already using it) and open for
@@ -174,7 +195,7 @@ challenge for applying TDD.
   📅 May 16th 2017 🇩🇪 Ansbach -[Developer Camp 2017](https://developercamp.io/)
   📅 17. May 2017 🇩🇪 Nürnberg
 
-## 5 years CTOing: sharing the good and the bad
+### 5 years CTOing: sharing the good and the bad
 
 Sharing my experiences working for 5 years as the CTO for DeinBus.de, dotHIV,
 Fintura, and Resourceful Humans.
@@ -183,12 +204,12 @@ Fintura, and Resourceful Humans.
 
 - [Developer Camp 2017](https://developercamp.io/) 📅 17. May 2017 🇩🇪 Nürnberg
 
-## Tools + Tipps für Freelancer und Selbständige
+### Tools + Tipps für Freelancer und Selbständige
 
 - [Donnerstalk im Heimathafen](https://www.facebook.com/events/628000664046095)
   📅 February 2nd 2017 🇩🇪 Wiesbaden
 
-## There is no half-remote team
+### There is no half-remote team
 
 Having remotes on the team enables you to hire for talent and not for
 availability. From my recent positions I learned that it is critical to encode
@@ -208,7 +229,7 @@ German version:
 - [WJ Frankfurt](http://www.wj-frankfurt.de/?module=*termin&id=10210 "Wirtschaftsjunioren bei der IHK Frankfurt am Main e.V.")
   📅 10. May 2017 📅 Frankfurt
 
-## Automating library releases and dependency management in JavaScript
+### Automating library releases and dependency management in JavaScript
 
 This talk will walk through all the packages and services necessary to automate
 dependency management in your JavaScript project. Added bonus: you will lear how
@@ -227,7 +248,7 @@ to automate the release of your libraries, too!
 - [Entwicklertag Frankfurt](https://entwicklertag.de/frankfurt/2016/bdd-end-end-browser-testing-mit-nodejs)
   📅 10. March 2016 🇩🇪 Frankfurt
 
-## Keynote: Wie man ein Top-Down Unternehmen in eine Netzwerk-Organisation wandelt (German)
+### Keynote: Wie man ein Top-Down Unternehmen in eine Netzwerk-Organisation wandelt (German)
 
 This talk dives into the Resourceful Human way of transforming a hierarchical
 organization of followers into a network of entrepreneurs.
@@ -237,7 +258,7 @@ organization of followers into a network of entrepreneurs.
 - [HR Inside Summit 2016](http://hrsummit.at/ "Der größte HR Event Österreichs. HR-Fachkongress und Messe in einem Event. Wissenstransfer - Networking – Entertainment")
   📅 13. October 2016 🇦🇹 Vienna
 
-## Introducing: Prototype Fund
+### Introducing: Prototype Fund
 
 This talk introduces the [Prototype Fund](http://prototypefund.de/), the
 incubator for open source and civic hacking projects by
@@ -250,7 +271,7 @@ incubator for open source and civic hacking projects by
   [#80: „Classic”](https://www.xing.com/events/webmontag-frankfurt-80-classic-1684249 "Der Webmontag Frankfurt ist eine Veranstaltungsreihe zu Gesellschaft und Technik mit spannenden Vorträgen aus IT, Marketing/PR, Wissenschaft und Kultur. Angetrieben von den Möglichkeiten des Internets findet sich die Rhein-Main-Netzgemeinde rund um das Themenfeld der digitalen Transformation zusammen.")
   📅 11. July 2016 🇩🇪 Frankfurt
 
-## Was Startups von Konzernen lernen können (German)
+### Was Startups von Konzernen lernen können (German)
 
 This talk summarizes some of the aspects that big corporations can learn from
 startups.
@@ -261,7 +282,7 @@ startups.
 [Webmontag Frankfurt](https://www.xing.com/events/webmontag-frankfurt-79-startup-1675857)
 📅 2. May 2016 🇩🇪 Frankfurt
 
-## ART Expert Talk: Agil Arbeiten in verteilten Teams (German)
+### ART Expert Talk: Agil Arbeiten in verteilten Teams (German)
 
 Insights into how distributed teams can work effectively.
 
@@ -270,14 +291,14 @@ Insights into how distributed teams can work effectively.
 - [DB Systel Agile Round Table](http://digitalspirit.dbsystel.de/mit-agilitaet-gemeinsam-zu-besserer-software/)
   📅 28. May 2016 🇩🇪 Frankfurt
 
-## Node.js / CQRS / ES / Redis app architecture showcase
+### Node.js / CQRS / ES / Redis app architecture showcase
 
 Session at [unKonf Mannheim](https://www.unkonf.de/) about an architecture built
 on top of event-source (ES/CQRS) using Node.js and Redis.
 
 - [unKonf Mannheim](https://www.unkonf.de/) 📅 16. April 2016 🇩🇪 Mannheim
 
-## Using make in frontend projects
+### Using make in frontend projects
 
 Session at [unKonf Mannheim](https://www.unkonf.de/) about why you don't need
 Gulp or Grunt.
@@ -286,7 +307,7 @@ Gulp or Grunt.
 
 - [unKonf Mannheim](https://www.unkonf.de/) 📅 16. April 2016 🇩🇪 Mannheim
 
-## Code is not poetry
+### Code is not poetry
 
 A (very opinionated) talk about why software developers are merely glorified
 plumbers.
@@ -300,7 +321,7 @@ German version:
 - [Technical Summit 2016](https://www.microsoft.com/germany/technical-summit/default.aspx "The larges German Microsoft Conference for developers and IT professionals.")
   📅 6. December 2016 🇩🇪 Darmstadt
 
-## Software Development Process at Fintura
+### Software Development Process at Fintura
 
 How we build software at Fintura.
 
@@ -309,7 +330,7 @@ How we build software at Fintura.
 - [Coding Night Frankfurt](http://www.meetup.com/de-DE/Coding-Night-Frankfurt/)
   📅 17. July 2015 🇩🇪 Frankfurt
 
-## Tech Stack at Fintura
+### Tech Stack at Fintura
 
 How we run software at Fintura.
 
@@ -318,7 +339,7 @@ How we run software at Fintura.
 - [Coding Night Frankfurt](http://www.meetup.com/de-DE/Coding-Night-Frankfurt/)
   📅 17. June 2015 🇩🇪 Frankfurt
 
-## Trello (German)
+### Trello (German)
 
 A talk about the best project management software on the planet.
 
@@ -327,7 +348,7 @@ A talk about the best project management software on the planet.
 
 - [Webmontag Offenbach](http://wemoof.de/) 📅 27. February 2014 🇩🇪 Offenbach
 
-## #futureofwork in the wild (German)
+### #futureofwork in the wild (German)
 
 A talk about great examples of non-traditional organization concepts.
 
@@ -336,7 +357,7 @@ A talk about great examples of non-traditional organization concepts.
 - [Agiler Stammtisch FFM](http://asffm.blogspot.de/) 📅 2. April 2014 🇩🇪
   Frankfurt
 
-## dotHIV (German)
+### dotHIV (German)
 
 Introducing the dotHIV initiative.
 
@@ -353,7 +374,7 @@ Wie der @dotHIV e.V. den #newgTLDs ihre Daseinsberechtigung gibt
 
 - [Webmontag Offenbach](http://wemoof.de/) 📅 24. August 2014 🇩🇪 Frankfurt
 
-## Cloud Worker (German)
+### Cloud Worker (German)
 
 [Slides](https://docs.google.com/presentation/d/1BI_3-ua0IVl4P4dakHB4hXzn9h3wmVJHw0hZ5SO_hMo/edit)
 
@@ -363,26 +384,26 @@ Wie der @dotHIV e.V. den #newgTLDs ihre Daseinsberechtigung gibt
 **Update January 2020:** I've revisisted this talk
 [here](https://twitter.com/coderbyheart/status/1212874457964064768).
 
-## Mein Traum - Mein Startup (German)
+### Mein Traum - Mein Startup (German)
 
 [Slides](https://docs.google.com/presentation/d/1PEo6dQbTyloN_v-XxxOLK1j4pHjE8n8eDAqI36Prlqw/edit)
 
 - [Hochschule RheinMain](https://www.hs-rm.de/) 📅 15. May 2013 🇩🇪Wiesbaden
 
-## Warum Offenbach einen Webmontag braucht (German)
+### Warum Offenbach einen Webmontag braucht (German)
 
 [Slides](https://docs.google.com/presentation/d/1uYe0LAyZ5ujMCvMv0PyM090KE6ubz7Jz2lF_pXXguPQ/edit)
 · [Video](https://www.youtube.com/watch?v=fHV7ur7JUxQ)
 
 - [Webmontag Offenbach](http://wemoof.de/) 📅 13. May 2013 🇩🇪 Offenbach
 
-## #ugrm – UserGroups RheinMain. Ein Überblick über die Szene (German)
+### #ugrm – UserGroups RheinMain. Ein Überblick über die Szene (German)
 
 An overview over tech tech meetup scene in the RheinMain region.
 
 - [Webmontag Frankfurt](http://wmfra.de/) 📅 8. April 2013 🇩🇪 Frankfurt
 
-## Coworking Szene RheinMain (German)
+### Coworking Szene RheinMain (German)
 
 Highlighting the coworking initiatives in the region.
 
@@ -390,7 +411,7 @@ Highlighting the coworking initiatives in the region.
 
 - [Webmontag Frankfurt](http://wmfra.de/) 📅 12. November 2012 🇩🇪 Frankfurt
 
-## RESTful APIs mit Django (German)
+### RESTful APIs mit Django (German)
 
 How to build RESTful APIs using the Python-based Django framework.
 
