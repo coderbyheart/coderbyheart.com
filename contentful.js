@@ -130,6 +130,7 @@ const cacheMedia = async ({ src, env }) => {
 				let contentType = 'image/jpeg'
 				if (/\.png$/i.test(src)) contentType = 'image/png'
 				if (/\.gif$/i.test(src)) contentType = 'image/gif'
+				if (/\.svg$/i.test(src)) contentType = 'image/svg+xml'
 				const assetDraft = await (isFile
 					? limiter.schedule(() =>
 							env.createAssetFromFiles({
@@ -212,46 +213,45 @@ const getMediaUrl = async ({ env, src }) => {
 	return mediaUrls[src]
 }
 
-const replaceImage = ({ env, relativeDirectory }) => async (src) => {
-	const isFile = !/^http/.test(src)
-	const imageSrc = isFile
-		? path.normalize(
-				path.join(process.cwd(), 'content', relativeDirectory, src),
-		  )
-		: src
-	return await getMediaUrl({ env, src: imageSrc })
-}
+const replaceImage =
+	({ env, relativeDirectory }) =>
+	async (src) => {
+		const isFile = !/^http/.test(src)
+		const imageSrc = isFile
+			? path.normalize(
+					path.join(process.cwd(), 'content', relativeDirectory, src),
+			  )
+			: src
+		return await getMediaUrl({ env, src: imageSrc })
+	}
 
-const replaceImageTags = ({ env, relativeDirectory }) => async ({
-	children,
-	tagName,
-	properties,
-	...rest
-}) => {
-	if (tagName === 'img') {
+const replaceImageTags =
+	({ env, relativeDirectory }) =>
+	async ({ children, tagName, properties, ...rest }) => {
+		if (tagName === 'img') {
+			return {
+				properties: {
+					...properties,
+					src: await replaceImage({ env, relativeDirectory })(properties.src),
+				},
+				children:
+					(await Promise.all(
+						children?.map(replaceImageTags({ env, relativeDirectory })),
+					)) ?? [],
+				tagName,
+
+				...rest,
+			}
+		}
 		return {
-			properties: {
-				...properties,
-				src: await replaceImage({ env, relativeDirectory })(properties.src),
-			},
-			children:
-				(await Promise.all(
-					children?.map(replaceImageTags({ env, relativeDirectory })),
-				)) ?? [],
+			children: await Promise.all(
+				children?.map(replaceImageTags({ env, relativeDirectory })) ?? [],
+			),
 			tagName,
-
+			properties,
 			...rest,
 		}
 	}
-	return {
-		children: await Promise.all(
-			children?.map(replaceImageTags({ env, relativeDirectory })) ?? [],
-		),
-		tagName,
-		properties,
-		...rest,
-	}
-}
 
 const envPromise = limiter
 	.schedule(() => cfM.getSpace(process.env.CONTENTFUL_SPACE))

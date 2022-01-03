@@ -1,8 +1,8 @@
+import classNames from 'classnames'
+import { withPrefix } from 'gatsby'
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
-import classNames from 'classnames'
 import styled from 'styled-components'
-import { withPrefix } from 'gatsby'
 import { breakpoints } from '../design/settings'
 
 const isSSR = typeof window === 'undefined'
@@ -10,6 +10,17 @@ const isSSR = typeof window === 'undefined'
 const step = (n: number): number => Math.floor(n / 50) * 50
 
 const Image = styled.img`
+	background-color: #eee;
+`
+
+const SVGImage = styled.img`
+	max-width: 250px;
+	margin: 2rem;
+`
+
+const SVGWrapper = styled.div`
+	display: flex;
+	justify-content: center;
 	background-color: #eee;
 `
 
@@ -31,6 +42,16 @@ export const ResponsiveImage = ({
 	let largeSource = false
 	let imgWidth
 	let imgHeight
+
+	const base = src.split('?')[0]
+	const isSVG = base.endsWith('.svg') ?? false
+
+	if (isSVG)
+		return (
+			<SVGWrapper>
+				<SVGImage src={base} />
+			</SVGWrapper>
+		)
 
 	const params = new URLSearchParams(src?.split('?')[1])
 	const extraClasses = {} as Record<string, boolean>
@@ -80,8 +101,6 @@ export const ResponsiveImage = ({
 			}
 		}
 	}
-
-	const base = src.split('?')[0]
 
 	const fallbackParams = new URLSearchParams(params.toString())
 	if (/\.jpe?g$/i.test(base)) {
