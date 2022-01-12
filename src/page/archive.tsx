@@ -1,9 +1,9 @@
-import React from 'react'
-import { SiteMetaData, Page } from '../site'
-import PageTemplate from '../templates/page'
-import { Title } from '../design/Title'
 import { graphql, Link } from 'gatsby'
+import React from 'react'
 import styled from 'styled-components'
+import { Title } from '../design/Title'
+import { Page, SiteMetaData } from '../site'
+import PageTemplate from '../templates/page'
 
 export const query = graphql`
 	query ArchiveQuery {
@@ -37,7 +37,11 @@ const Entry = ({
 	return (
 		<>
 			{showYear && <h2>{entryYear}</h2>}
-			<Link to={`/${page.name}`}>{page.remark.frontmatter.title}</Link>
+			<Link
+				to={`/${page.relativePath.replace(/^post\//, '').replace(/\.md$/, '')}`}
+			>
+				{page.remark.frontmatter.title}
+			</Link>
 			<P>{page.remark.frontmatter.abstract}</P>
 		</>
 	)
@@ -71,7 +75,7 @@ const Archive = ({
 				<Title page={pageContext.page} />
 			)}
 			{pageContext.pages
-				.filter(({ relativeDirectory }) => relativeDirectory === 'post')
+				.filter(({ relativeDirectory }) => relativeDirectory.startsWith('post'))
 				.sort((a, b) =>
 					b.remark.frontmatter.date?.localeCompare(a.remark.frontmatter.date),
 				)

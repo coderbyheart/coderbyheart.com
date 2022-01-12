@@ -130,11 +130,13 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 	// Render blog posts
 	await Promise.all(
 		pages.data.allFile.edges
-			.filter(({ node: { relativeDirectory } }) => relativeDirectory === 'post')
+			.filter(({ node: { relativeDirectory } }) =>
+				relativeDirectory.startsWith('post'),
+			)
 			.map(async ({ node: page }) =>
 				renderContentPage(
 					await parsePageMarkdown(page),
-					`/${page.name}`,
+					`/${page.relativePath.replace(/^post\//, '').replace('.md', '')}`,
 					'post',
 					createPage,
 					{
