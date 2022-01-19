@@ -2,7 +2,8 @@
 subtitle: A New Year's resolution
 title: 42 first principles
 abstract:
-  In 2022 I am turning 42 and therefore I am writing down my 42 first principles
+  In 2022 I am turning 42 and therefore I am writing down my 42 first
+  principles.
 date: 2022-01-04T00:00:00.000Z
 ---
 
@@ -29,3 +30,4 @@ prefer to receive an email,
 ## First Principles
 
 0. [Privilege](/principle/privilege)
+1. [Push to deploy](/principle/push-to-deploy)

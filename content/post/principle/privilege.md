@@ -3,7 +3,7 @@ subtitle: "42 first principles"
 title: "Privilege"
 abstract:
   A reflection on my principles is not possible without acknowledging my
-  privileges
+  privileges.
 date: 2022-01-12T00:00:00.000Z
 ---
 
