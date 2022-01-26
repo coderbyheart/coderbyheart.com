@@ -8,8 +8,6 @@ abstract: >-
 date: 2018-09-01T17:00+02:00
 ---
 
-![How to convey First Principles](../media/first-principles/hero.jpg)
-
 A question I brought to [SoCraTes 2018](https://coderbyheart.com/socrates-2018)
 was one that formed in the recent months when I was onboarding a new developer
 to a greenfield project. The project they going to work on is developed as a
@@ -29,7 +27,11 @@ decisions.
 
 But what _are_ First Principles?
 
+<div class="notresponsive">
+
 ![IMG 20180824 114145297](../media/first-principles/IMG_20180824_114145297.jpg)
+
+</div>
 
 In this session I listed mine and we collected some more:
 
@@ -65,7 +67,11 @@ system. It provides an easy way to regularly revisit these decisions after a
 certain amount of time has passed and decide again whether to keep it or get rid
 of it.
 
+<div class="notresponsive">
+
 ![IMG 20180824 114154631](../media/first-principles/IMG_20180824_114154631.jpg)
+
+</div>
 
 I was also looking for a way to provide documentation about _First Principles_
 before code is written, especially to reduce frustration during code-reviews
@@ -88,3 +94,6 @@ good indicator!).
 I for myself have now started to collect first principles
 [in a public repository](https://github.com/coderbyheart/first-principles/issues),
 which will serve as a base for our internal collection.
+
+> **Update January 2022:** I am now compiling my first principles in a series of
+> [42 posts](/42-first-principles).
