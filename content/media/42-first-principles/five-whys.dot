@@ -1,0 +1,20 @@
+digraph G {
+    
+    node [ shape=rect ]
+    
+    start [ shape=none ]
+
+    why [ label="Why did this happen?" ]
+    identifyProblem [ label="Identify the problem" ]
+    identifyCause [ label="Identify the cause" ]
+    rootCause [ shape=none label="root cause" ]
+
+	start -> identifyProblem
+	identifyProblem -> why -> identifyCause
+	identifyCause -> askedWhyFiveTimes
+	askedWhyFiveTimes:s -> rootCause:n [ label=" yes " ]
+	askedWhyFiveTimes:e -> identifyProblem:e [ label=" no " ]
+	
+	askedWhyFiveTimes [ shape=diamond label="asked 'why'\nfive times?" ]
+
+}
