@@ -73,6 +73,18 @@ Here is how it looks like:
 
 ## Delivered talks
 
+### Serverless Architecture for IoT on AWS
+
+This is a talk that explains the benefits of serverless in general in why it is
+especially suitable for IoT applications. It also shows a concrete, open-source
+example.
+
+Slides:
+[Interactive](https://coderbyheart.github.io/aws-iot-serverless-architecture/)
+
+- [Høyskolen Kristiania, Oslo](https://www.kristiania.no/), Guest lecture, 9.
+  November 2021
+
 ### Cloud connectivity and protocols for the Internet of Things
 
 This is a webinar I did for
