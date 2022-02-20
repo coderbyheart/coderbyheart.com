@@ -38,7 +38,7 @@
     "gatsby-remark-prismjs": "6.6.0",
     "hast-to-hyperscript": "10.0.1",
     "polished": "4.1.4",
-    "prismjs": "1.26.0",
+    "prismjs": "1.27.0",
     "react": "17.0.2",
     "react-intersection-observer": "8.33.1",
     "styled-components": "5.3.3"
