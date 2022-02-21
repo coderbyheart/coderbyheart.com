@@ -11,16 +11,6 @@ contribute to your event or conference.
 I haven't given these talks, yet, but happy to try. Let me know if this sounds
 like a good addition to your conference.
 
-### Real world serverless IoT
-
-Let's have a look how a temperature reading travels an IoT solution on AWS and
-Azure from the device to the web application.
-
-This talk will provide an introduction to serverless in general, and how it is
-implemented at the different cloud vendors (looking at AWS and Azure, where I
-have implemented the same application using the respective cloud's idiomatic
-way), and why it is especially relevant for IoT deployments.
-
 ---
 
 ### I am a coder, help me learn to collaborate!
@@ -75,15 +65,24 @@ Here is how it looks like:
 
 ### Serverless Architecture for IoT on AWS
 
+Let's have a look how a temperature reading travels an IoT solution on AWS and
+Azure from the device to the web application.
+
 This is a talk that explains the benefits of serverless in general in why it is
 especially suitable for IoT applications. It also shows a concrete, open-source
 example.
 
-Slides:
-[Interactive](https://coderbyheart.github.io/m2m-tek03-guestlecture-2021/)
+It will provide an introduction to serverless in general, and how it is
+implemented at the different cloud vendors (looking at AWS and Azure, where I
+have implemented the same application using the respective cloud's idiomatic
+way), and why it is especially relevant for IoT deployments.
 
-- [Høyskolen Kristiania, Oslo](https://www.kristiania.no/), Guest lecture, 9.
-  November 2021
+Slides: [Interactive](https://bit.ly/awsiotarch)
+
+- [Høyskolen Kristiania, TEK303, Machine-to-Machine Communication](https://www.kristiania.no/en/syllabus/school-of-economics-innovation-and-technology/first-cycle-degree/tek303/machine-to-machine-communication/),
+  Guest lecture 📅 9. November 2021 🇳🇴 Oslo
+- [NTNU, IDG2001, Cloud Technologies](https://www.ntnu.edu/studies/courses/IDG2001),
+  Guest lecture 📅 23. Februar 2022 🌐 Online
 
 ### Cloud connectivity and protocols for the Internet of Things
 
