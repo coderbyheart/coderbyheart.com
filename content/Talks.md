@@ -80,7 +80,7 @@ especially suitable for IoT applications. It also shows a concrete, open-source
 example.
 
 Slides:
-[Interactive](https://coderbyheart.github.io/aws-iot-serverless-architecture/)
+[Interactive](https://coderbyheart.github.io/m2m-tek03-guestlecture-2021/)
 
 - [Høyskolen Kristiania, Oslo](https://www.kristiania.no/), Guest lecture, 9.
   November 2021
