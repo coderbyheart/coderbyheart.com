@@ -129,7 +129,7 @@ designed a BDD driven approach to run the integration tests.
   📅 November 2022019 🇳🇴 Trondheim
 - [AWS Community Days Nordics](https://awscommunitynordics.org/communityday/) 📅
   January 2020 🇸🇪 Stockholm
-- [Heisenbug 2020](https://heisenbug.ru/en/) 📅 April 2020 🇷🇺 St. Petersburg
+- ~~[Heisenbug 2020](https://heisenbug.ru/en/) 📅 April 2020 🇷🇺 St. Petersburg~~
 
 ### About: Call for Papers
 
