@@ -77,7 +77,8 @@ implemented at the different cloud vendors (looking at AWS and Azure, where I
 have implemented the same application using the respective cloud's idiomatic
 way), and why it is especially relevant for IoT deployments.
 
-Slides: [Interactive](https://bit.ly/awsiotarch)
+Slides: [Interactive](https://bit.ly/awsiotarch) ·
+[Video](https://youtu.be/E7t6BXGIZHk)
 
 - [Høyskolen Kristiania, TEK303, Machine-to-Machine Communication](https://www.kristiania.no/en/syllabus/school-of-economics-innovation-and-technology/first-cycle-degree/tek303/machine-to-machine-communication/),
   Guest lecture 📅 9. November 2021 🇳🇴 Oslo
