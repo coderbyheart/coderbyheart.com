@@ -11,6 +11,9 @@ date: 2021-11-03T20:00:00.000Z
 > [LeadDev](https://leaddev.com/):
 > [Using communication frameworks to become a better engineering leader](https://leaddev.com/communication-relationships/using-communication-frameworks-become-better-engineering-leader)_.
 
+<div style="padding:56.25% 0 0 0;position:relative; margin-top: 2rem;"><iframe src="https://player.vimeo.com/video/691826440?h=9c9dd25a36" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
 Having had the opportunity to earn my living as a software developer since 1997,
 I have lost count of the number of meetups and conferences I’ve attended as a
 participant or speaker, the number of YouTube videos I’ve watched, blog posts

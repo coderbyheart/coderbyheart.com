@@ -13,39 +13,6 @@ like a good addition to your conference.
 
 ---
 
-### I am a coder, help me learn to collaborate!
-
-[Blog post](./i-am-a-coder-help-me-learn-to-collaborate) &middot;
-[Twitter Thread](https://twitter.com/coderbyheart/status/1119970835014529024)
-
-This talk is a wake up call and should inspire other developers like me, to
-start looking into improving their communication and collaboration skills. I
-want to show the fallacy of aiming to be a fantastic coder and provide concrete
-examples and resources on how to start.
-
-#### Abstract
-
-In order to truly build great products we always depend on collaboration with
-others. However, as engineers we spend a lot of resources on becoming better at
-tech. We book courses, go to conferences, etc. I rarely see engineers applying
-the same discipline to learn how to collaborate. But collaboration is the only
-way we can make up for our own limitations. Collaboration between humans however
-comes with a cost, communication is messy, cultures are different. I always say
-that I’d love to have more software problems, because they are easy to fix. But
-people problems is what I have to deal with. And in the past I invested very few
-time in educating myself on collaboration and communication. I want us to change
-this.
-
-#### Main takeaways
-
-You will always lack important skills to realize the best work you have ever
-done. It’s impossible to achieve greatness solely on your own. You will always
-depend on other to work with you and the more experienced you are the more other
-depend on you enabling them to achieve their best. Therefore we must invest
-equally in our collaboration and communication skills.
-
----
-
 ### Firmware test automation using real embedded devices
 
 In this talk I am going to present my approach on testing embedded firmware that
@@ -62,6 +29,20 @@ Here is how it looks like:
 <https://twitter.com/coderbyheart/status/1321394949007560704?embed>
 
 ## Delivered talks
+
+### I am a coder, help me learn to collaborate!
+
+[Video](https://vimeo.com/691826440) ·
+[Blog post](./i-am-a-coder-help-me-learn-to-collaborate) ·
+[Twitter Thread](https://twitter.com/coderbyheart/status/1119970835014529024)
+
+This talk is a wake up call and should inspire other developers like me, to
+start looking into improving their communication and collaboration skills. I
+want to show the fallacy of aiming to be a fantastic coder and provide concrete
+examples and resources on how to start.
+
+- [BoosterConf 2022](https://2022.boosterconf.no/talk/2-using-communication-frameworks-to-become-a-better-engineering-leader/),
+  📅 24. March 2022 🇳🇴 Bergen
 
 ### Serverless Architecture for IoT on AWS
 
