@@ -64,7 +64,9 @@ Slides: [Interactive](https://bit.ly/awsiotarch) ·
 - [Høyskolen Kristiania, TEK303, Machine-to-Machine Communication](https://www.kristiania.no/en/syllabus/school-of-economics-innovation-and-technology/first-cycle-degree/tek303/machine-to-machine-communication/),
   Guest lecture 📅 9. November 2021 🇳🇴 Oslo
 - [NTNU, IDG2001, Cloud Technologies](https://www.ntnu.edu/studies/courses/IDG2001),
-  Guest lecture 📅 23. Februar 2022 🌐 Online
+  Guest lecture 📅 23. February 2022 🌐 Online
+- [NTNU, PROG2005, Cloud Technologies](https://www.ntnu.edu/studies/courses/PROG2005),
+  Guest lecture 📅 30. March 2022 🌐 Online
 
 ### Cloud connectivity and protocols for the Internet of Things
 
