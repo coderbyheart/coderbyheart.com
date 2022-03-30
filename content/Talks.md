@@ -67,6 +67,8 @@ Slides: [Interactive](https://bit.ly/awsiotarch) ·
   Guest lecture 📅 23. February 2022 🌐 Online
 - [NTNU, PROG2005, Cloud Technologies](https://www.ntnu.edu/studies/courses/PROG2005),
   Guest lecture 📅 30. March 2022 🌐 Online
+- [AWS UserGroup](https://www.meetup.com/AWS-User-Group-Trondheim/events/283260963/)
+  Talk 📅 30. March 2022 🇳🇴 Trondheim
 
 ### Cloud connectivity and protocols for the Internet of Things
 
