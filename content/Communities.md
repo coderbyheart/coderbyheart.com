@@ -17,6 +17,7 @@ of newcomers.
 
 Here are some posts about my work there:
 
+- [Why I contribute to DistributeAid](/distributeaid-contributor-spotlight)
 - [Volunteer Impact: Distribute Aid Refugees Care](https://www.designtocombatcovid19.com/blog/distribute-aid)
 - [COVID-19 guide for Aid Workers built with GatsbyJS from a Google Drive folder](https://coderbyheart.com/covid-19-guide-for-aid-workers-built-with-gatsbyjs-from-a-google-drive/)
 
