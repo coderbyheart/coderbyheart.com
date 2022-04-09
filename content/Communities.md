@@ -30,35 +30,6 @@ Since 2019 there is also a summer-version:
 
 ![Codefreeze](https://pbs.twimg.com/media/DTkIPMnXUAAkFGu?format=jpg&name=4096x4096)
 
-## Coworking
-
-In 2013 I've initiated the first Coworking Space in my hometown Offenbach, near
-Frankfurt, to provide the backbone for developing creative and tech scene in the
-city. It was called [OFfenraum](https://twitter.com/offenraum) and you can read
-more about it in German
-[here](https://www.gruenderstadt-offenbach.de/highlights/highlights-details/article/offenraum-coworking-space.html),
-[here](https://www.fr.de/rhein-main/offenbach/erste-buero-wg-oeffnet-11283522.html)
-and
-[here](https://www.op-online.de/offenbach/taeglich-neue-mieter-2592144.html).
-
-![OFfenraum](https://live.staticflickr.com/8192/8356365591_a5035a6dd6_o_d.jpg)
-
-## BarCamps
-
-**[BarCamp RheinMain](https://barcamp-rheinmain.de)**
-
-From 2013 to 2016 I was in charge of the homepage and ran the registration and
-the check-in during the event and developed a custom event management software
-which enables participants to complete the check-in within a few seconds.
-
-**[Leancamp Frankfurt](http://www.leancamp.net/frankfurt.html)**
-
-In 2016 I helped to organize two LeanCamp events in Frankfurt.
-
-**[Augenhöhe Camp](http://augenhoehe-camp.de/)**
-
-In 2016 I helped organize the Augenhöhe Camp Frankfurt.
-
 ## Meetups
 
 **#techleadsffm**
@@ -90,6 +61,22 @@ events.
 
 I initated the Python Usergroup RheinMain (PyUGRM) in 2012 and organized 7
 events until 2013. It is still active until today.
+
+## BarCamps
+
+**[BarCamp RheinMain](https://barcamp-rheinmain.de)**
+
+From 2013 to 2016 I was in charge of the homepage and ran the registration and
+the check-in during the event and developed a custom event management software
+which enables participants to complete the check-in within a few seconds.
+
+**[Leancamp Frankfurt](http://www.leancamp.net/frankfurt.html)**
+
+In 2016 I helped to organize two LeanCamp events in Frankfurt.
+
+**[Augenhöhe Camp](http://augenhoehe-camp.de/)**
+
+In 2016 I helped organize the Augenhöhe Camp Frankfurt.
 
 ## Events
 
@@ -139,3 +126,16 @@ A website that collected information and events of technology usergroups in
 RheinMain. The data was managed through pull-requests by the community itself.
 The project was discontinued in 2017 since Meetup has become the defacto
 standard for usergroups.
+
+## Coworking
+
+In 2013 I've initiated the first Coworking Space in my hometown Offenbach, near
+Frankfurt, to provide the backbone for developing creative and tech scene in the
+city. It was called [OFfenraum](https://twitter.com/offenraum) and you can read
+more about it in German
+[here](https://www.gruenderstadt-offenbach.de/highlights/highlights-details/article/offenraum-coworking-space.html),
+[here](https://www.fr.de/rhein-main/offenbach/erste-buero-wg-oeffnet-11283522.html)
+and
+[here](https://www.op-online.de/offenbach/taeglich-neue-mieter-2592144.html).
+
+![OFfenraum](https://live.staticflickr.com/8192/8356365591_a5035a6dd6_o_d.jpg)
