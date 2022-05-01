@@ -13,7 +13,7 @@ help build the software that helps aid workers across Europe improve the lives
 of newcomers.
 
 > We are always looking for new contributors and maintain an up-to-date
-> [Getting Started Guide](https://www.notion.so/CONTRIBUTING-4ba5060441e44925b5e22aa674d4729e).
+> [Getting Started Guide](https://github.com/distributeaid).
 
 Here are some posts about my work there:
 
