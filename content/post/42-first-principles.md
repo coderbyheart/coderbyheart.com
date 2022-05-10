@@ -32,3 +32,4 @@ prefer to receive an email,
 0. [Privilege](/principle/privilege)
 1. [Push to deploy](/principle/push-to-deploy)
 2. [5 whys](/principle/five-whys)
+3. [The 20 percent trick to continuously keep learning](/principle/the-20-percent-trick-to-continuously-keep-learn)
