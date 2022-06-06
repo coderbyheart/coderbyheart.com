@@ -6,7 +6,7 @@ subtitle: A list of my talks
 I am available for speaking engagements! Just contact me if you feel I can
 contribute to your event or conference.
 
-## Delivered talks
+## Delivered talks (32)
 
 ### Firmware test automation using real embedded devices
 
@@ -27,7 +27,7 @@ I show how I implemented these tests using Zephyr, AWS, and GitHub Actions.
 However, this solution can be applied in any environment which cannot be run
 inside a test runner.
 
-- [Nordic Testing Day 2022 in Tallinn](./ntd2022.md), 📅 3. Juni 2022 🇪🇪 Tallinn
+- [Nordic Testing Day 2022 in Tallinn](./ntd2022), 📅 3. Juni 2022 🇪🇪 Tallinn
 
 ### I am a coder, help me learn to collaborate!
 
