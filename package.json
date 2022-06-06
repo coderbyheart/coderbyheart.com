@@ -7,8 +7,8 @@
     "prepare": "husky install",
     "postinstall": "check-node-version --package",
     "lint": "eslint --ext .js,.ts,.tsx src",
-    "build": "gatsby build --prefix-paths && node critical-css.js",
-    "start": "gatsby develop"
+    "build": "NODE_OPTIONS=--no-experimental-fetch gatsby build --prefix-paths && node critical-css.js",
+    "start": "NODE_OPTIONS=--no-experimental-fetch gatsby develop"
   },
   "keywords": [
     "Markus Tacker",

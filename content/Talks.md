@@ -6,29 +6,28 @@ subtitle: A list of my talks
 I am available for speaking engagements! Just contact me if you feel I can
 contribute to your event or conference.
 
-## Upcoming & In Preparation
-
-I haven't given these talks, yet, but happy to try. Let me know if this sounds
-like a good addition to your conference.
-
----
+## Delivered talks
 
 ### Firmware test automation using real embedded devices
 
-In this talk I am going to present my approach on testing embedded firmware that
-using real hardware, because testing firmware in emulators drastically limits
-what actually gets tested and it can quickly become very tedious to mock, fake
-and set up environments for embedded firmware that needs to connect to cloud
-services. The approach I am showing is going a different route: let the firmware
-run on real hardware, and test its behavior. I will show how I implemented these
-tests using Zephyr, and AWS but this solution can be applied in any environment
-which cannot be run inside a test runner.
+[Blog post](./firmware-test-automation-using-real-embedded-devices) ·
+[Slides](https://bit.ly/fwtesting)
 
-Here is how it looks like:
+In this talk I am presenting my approach on testing embedded firmware using real
+hardware.
 
-<https://twitter.com/coderbyheart/status/1321394949007560704?embed>
+Testing firmware in emulators drastically limits what actually gets tested and
+it can quickly become very tedious to mock, fake and set up environments for
+embedded firmware that needs to connect to cloud services.
 
-## Delivered talks
+I am taking a different route: let the firmware run on real hardware, and test
+its behavior.
+
+I show how I implemented these tests using Zephyr, AWS, and GitHub Actions.
+However, this solution can be applied in any environment which cannot be run
+inside a test runner.
+
+- [Nordic Testing Day 2022 in Tallinn](./ntd2022.md), 📅 3. Juni 2022 🇪🇪 Tallinn
 
 ### I am a coder, help me learn to collaborate!
 
