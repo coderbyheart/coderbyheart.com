@@ -8,7 +8,7 @@ noheadline: true
 
 As a
 [Software Crafter](https://coderbyheart.com/become-a-certified-software-craftsperson/)
-I am using my 20+ years of experience working as a software developer,
+I am using my 25+ years of experience working as a software developer,
 consultant, coach, mentor, and founder to build cloud-based solutions for the
 Internet of Things using JavaScript at
 [Nordic Semiconductor](https://www.nordicsemi.com/).
