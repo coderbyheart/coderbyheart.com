@@ -5,7 +5,7 @@ abstract:
   While the book was published in 2010 and some of its contents have not aged
   well, it still provides a lot of things to learn. In this post I will give my
   recommendations on which sections are a must read, and which ones can be
-  skipped in case you are-like me-not very fond of Java adn XML.
+  skipped in case you are-like me-not very fond of Java and XML.
 date: 2022-07-16T16:00:00.000Z
 ---
 
@@ -29,8 +29,8 @@ ordered.
 This is a good opportunity to give it a second read, and review it from the
 point of view of a team that develops software using serverless technologies, in
 TypeScript on Node.js and provide a reading guide for them that helps to
-navigate the book some of the outdated sections. I will also highlight
-especially important chapters.
+navigate some of the outdated sections. I will also highlight especially
+important chapters.
 
 > By the way: I am also looking for a
 > [Senior Cloud Engineer](https://candidate.hr-manager.net/ApplicationInit.aspx?cid=278&ProjectId=177136&DepartmentId=7414&MediaId=5&SkipAdvertisement=False)!
@@ -41,7 +41,7 @@ Overall, the sentiment of the book still holds very true today. We need to build
 resilient, decoupled systems that can handle unpredictable load patterns. The
 book does a very good job of showing how all of this can be achieved with a
 ubiquitous communication protocol: HTTP. This principle is truly language- and
-platform-neutral which makes it so unversally applicable.
+platform-neutral which makes it so universally applicable.
 
 ## Reading guide
 
@@ -55,7 +55,7 @@ This is my recommended reading guide for the book:
 1. Chapter 2 - Introducing Restbucks: How to GET a Coffee, Web Style:  
    read fully
 1. Chapter 3 - Basic Web Integration:  
-   skip URI tunnelling and POX (p. 37-55)
+   skip URI tunneling and POX (p. 37-55)
 1. Chapter 4 - CRUD Web Services:  
    read fully, important chapter on how to properly employ HTTP for building
    APIs
@@ -66,7 +66,7 @@ This is my recommended reading guide for the book:
    idea. After this chapter we could have a look at
    [JSON-LD](https://json-ld.org/).
 1. Chapter 6 - Scaling Out:  
-   ready fully, important chapter on the usefullness of caching and how to use
+   ready fully, important chapter on the usefulness of caching and how to use
    cached response to reduce latency and infrastructure costs.
 1. Chapter 7 - The Atom Syndication Format:  
    good explanation of how to decouple microservices and allow consuming
@@ -95,4 +95,4 @@ This is my recommended reading guide for the book:
    haven't seen this to be really relevant in my day to day job.
 1. Chapter 11 - The Web and and WS-\*:  
    Skip. This is a discussion around specific technologies which is only
-   relevent to people who use them; which we are not.
+   relevant to people who use them; which we are not.
