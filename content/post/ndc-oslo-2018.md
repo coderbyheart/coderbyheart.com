@@ -24,7 +24,7 @@ next to the venue.
 
 Since speakers where not required to self-fund their travel costs (hint:
 #paytospeak) there was a very international line-up and a noticable amount of
-female speakers (out of 183 speakers, 30 were women) which resultet in a quite
+women speakers (out of 183 speakers, 30 were women) which resultet in a quite
 diverse panel, at least for a scandinavian location.
 
 During the conference there was access to food and drinks all-day, and free

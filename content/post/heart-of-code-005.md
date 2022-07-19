@@ -54,7 +54,7 @@ Kudos to this leading the lawsuite:
 
 <https://twitter.com/fox/status/908399808699928576?embed>
 
-Nikon thinks there are no female photographers:
+Nikon thinks there are no women photographers:
 
 <https://twitter.com/KristenMcTighe/status/908239912775929861?embed>
 
