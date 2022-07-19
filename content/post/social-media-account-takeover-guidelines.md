@@ -9,11 +9,11 @@ date: 2022-07-19T10:00:00.000Z
 ---
 
 A female student from my team did an Instagram takeover last week and shared an
-insight into her working day as a student in my team. Of course there were dudes
-who had to send her inappropriate comments. While she had done Instagram
+insight into her working day as a student in my team. Of course, there were
+dudes who had to send her inappropriate comments. While she had done Instagram
 takeovers previously on other accounts, they all were positive, but, no
 surprise, these accounts are focusing on inspiring girls and women about a
-career in tech, so the audience on those accounts is much different then on a
+career in tech, so the audience on those accounts is much different than on a
 tech companies social media account. It's my fault that I didn't foresee this
 and that she was exposed to inappropriate comments that made her feel
 uncomfortable. To not repeat the same mistake twice, I wrote down my
