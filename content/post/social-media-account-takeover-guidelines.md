@@ -8,15 +8,29 @@ abstract:
 date: 2022-07-19T10:00:00.000Z
 ---
 
-This is a gray area because here the individual employee becomes part of a
-corporate communication strategy and the company on the one hand is much more
-resilient to negative experiences compared to the individual. Therefore it is
-the responsibility of the company to ensure that the employee is protected
-against negative experiences as much as possible.
+A female student from my team did a Instagram takeover last week and shared an
+insight into her working day as a student in my team. Of course there were dudes
+who had to sent her inappropriate comments. While she had done Instagram
+takeovers previously on other accounts, they all were positive, but, no
+surprise, these accounts are focusing on inspiring girls and women about a
+career in tech, so the audience on those accounts is much different then on a
+tech companies social media account. It's my fault that I didn't foresee this
+and that she was exposed to inappropriate comments that made her feel
+uncomfortable. To not repeat the same mistake twice, I wrote down my
+recommendations for running Social Media account Takeovers in a way that ensures
+a safe experience for the employee below.
+
+## Individuals as company advocates
+
+Social Media account Takeovers are a gray area because here the individual
+employee becomes part of a corporate communication strategy and the company on
+the one hand is much more resilient to negative experiences compared to the
+individual. Therefore it is the responsibility of the company to ensure that the
+employee is protected against negative experiences as much as possible.
 
 This document provides a code of conduct for these account Takeovers in order to
 enable the employee, the social media team, and the followers to have meaningful
-and positive interactions during and after a Takeover
+and positive interactions during and after a Takeover.
 
 ## What are Account Takeovers?
 
