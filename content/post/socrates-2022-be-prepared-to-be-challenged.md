@@ -36,7 +36,7 @@ _From top left to bottom right:_ Lena Kråkevik Haraldseid,
 
 The previous years had shown that since the "introduction" of the lottery system
 a large portion of the attendees was first-timers.
-[I have written previously](http://localhost:8000/bring-your-inexperience-to-a-conference),
+[I have written previously](/bring-your-inexperience-to-a-conference),
 why I think this is a necessary and fantastic feat of this unconference. This
 year, around 40% of the attendees checked the diversity box when applying for
 the ticket, and for me it felt even more diverse compared to the previous years.
