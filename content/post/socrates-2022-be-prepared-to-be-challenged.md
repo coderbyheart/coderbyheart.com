@@ -35,13 +35,21 @@ _From top left to bottom right:_ Lena Kråkevik Haraldseid,
 ## The unconference, re-invented for inclusiveness
 
 The previous years had shown that since the "introduction" of the lottery system
-a large portion of the attendees was first-timers.
-[I have written previously](/bring-your-inexperience-to-a-conference),
-why I think this is a necessary and fantastic feat of this unconference. This
-year, around 40% of the attendees checked the diversity box when applying for
-the ticket, and for me it felt even more diverse compared to the previous years.
+a large portion of the attendees were first-timers and attendees who haven't
+been part of the community as long as people like me.
+[I have written previously](/bring-your-inexperience-to-a-conference), why I
+think this is a necessary and fantastic feat of this unconference. SoCraTes has
+shown year after year to be an inclusive and welcoming space to for sharing and
+learning, and it is by word of mouth and through the many interactions on
+Twitter and via Software Craft user groups that keeps the circle of software
+crafters growing in Europe and beyond.
 
-And this can in part be attributed to another big change this year brought: the
+This year, around 138 of the 197 attendees checked the diversity box when
+applying for the ticket, and while this number includes people who are traveling
+to SoCraTes from outside of Germany, it felt even more diverse compared to the
+previous years.
+
+This can in part be attributed to another big change this year brought: the
 [Foundations Day](https://www.socrates-conference.de/foundations) offers short
 and intense introduction workshops one day before the open-space. In two tracks
 on Thursday before the open-space, world-class coaches held one or two hour long
