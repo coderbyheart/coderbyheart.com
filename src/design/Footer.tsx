@@ -1,11 +1,11 @@
 import { Link } from 'gatsby'
 import React from 'react'
+import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
 import { Page, SiteMetaData } from '../site'
 import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
 import { Content } from './Content'
 import { breakpoints } from './settings'
-import { useInView } from 'react-intersection-observer'
 
 import Heart from './heart.svg'
 
@@ -107,7 +107,7 @@ const Photo = styled.img`
 `
 
 export const avatarUrl = (width = 300) =>
-	`https://images.contentful.com/bncv3c2gt878/6CWMgqeZdCmkk6KkIUksgQ/50922090bc6566c6624c12b82a4bf78c/36671282034_427eace68d_o.jpg?w=${width}&fm=webp`
+	`//images.ctfassets.net/bncv3c2gt878/18M7LZPr4Dah1nSJagy6bk/09d2f6f4f373d983d0214ecd896bd89f/Me_2022-08?w=${width}&fm=webp`
 
 export const Footer = ({
 	siteMetaData: { title },
