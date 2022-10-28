@@ -1,6 +1,6 @@
 ---
 title: I am leaving Twitter for Mastodon
-subtitle: \#LeavingTwitter
+subtitle: "#LeavingTwitter"
 abstract: >-
   Elon Musk is now in full control of a powerful network, that I am part of; but
   that is not the biggest issue.
@@ -27,8 +27,10 @@ have honest connections and conversations.
 
 That's why I am leaving Twitter and will stop posting content there.
 
-You can follow me on #Mastodon, where I joined the chaos.social instance: I am
-[@coderbyheart@chaos.social](https://chaos.social/@coderbyheart) there.
+You can follow me on [Mastodon](https://mastodon.social/) (a
+[distributed social network](https://en.wikipedia.org/wiki/Distributed_social_network)),
+where I joined the [chaos.social](https://chaos.social/about/more) instance: I
+am [@coderbyheart@chaos.social](https://chaos.social/@coderbyheart) there.
 
 I plan to publish my Twitter archive on my homepage, so it's not lost and can be
 accessed anonymously.
