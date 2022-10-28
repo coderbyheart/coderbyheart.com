@@ -16,8 +16,8 @@ Internet of Things using JavaScript at
 I was previously active as
 <a href="https://twitter.com/coderbyheart" rel="me" title="I am no longer active on Twitter" style="text-decoration: line-through">@coderbyheart</a>
 on Twitter. Now I am on Mastodon, and you can follow
-<a href="https://chaos.social/@coderbyheart" title="Markus Tacker on Mastodon" rel="me">@coderbyheart@chaos.social</a>
-there for my daily ramblings about the challenges of writing software.
+[@coderbyheart@chaos.social](https://chaos.social/@coderbyheart) there for my
+daily ramblings about the challenges of writing software.
 
 [`{"pronoun":"he"}`](http://pronoun.is/he)
 
