@@ -16,7 +16,7 @@ You can find me on these sites.
 _Please note that I will reject connection requests from people I've never met
 personally._
 
-- [Twitter](https://twitter.com/coderbyheart "Markus Tacker on Twitter")
-- [LinkedIn](https://www.linkedin.com/in/markustacker "Markus Tacker on LinkedIn")
-- [GitHub](https://github.com/coderbyheart "Markus Tacker on GitHub")
-- [Instagram](https://www.instagram.com/coderbyheart/ "Markus Tacker on Instagram")
+- <a rel="me" href="https://chaos.social/@coderbyheart" title="Markus Tacker on Mastodon">Mastodon</a>
+- <a rel="me" href="https://www.linkedin.com/in/markustacker" title="Markus Tacker on LinkedIn">LinkedIn</a>
+- <a rel="me" href="https://github.com/coderbyheart" title="Markus Tacker on GitHub">GitHub</a>
+- <a rel="me" href="https://www.instagram.com/coderbyheart/" title="Markus Tacker on Instagram">Instagram</a>

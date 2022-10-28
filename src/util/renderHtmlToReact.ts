@@ -1,8 +1,9 @@
-import React from 'react'
-import { EmbedTweet } from '../components/EmbedTweet'
-import { ResponsiveImage } from '../components/ResponsiveImage'
 import { toH } from 'hast-to-hyperscript'
+import React from 'react'
+import { EmbedToot } from '../components/EmbedToot'
+import { EmbedTweet } from '../components/EmbedTweet'
 import { EmbedYouTube } from '../components/EmbedYouTube'
+import { ResponsiveImage } from '../components/ResponsiveImage'
 
 export const renderHtmlAstToReact = (tree: unknown): any =>
 	toH((name: string, attrs: Record<string, string | null>, children: any) => {
@@ -37,6 +38,14 @@ export const renderHtmlAstToReact = (tree: unknown): any =>
 					{ id: youTubeId, ...attrs },
 					children,
 				)
+			// Embed Toots
+			const tootMatch = attrs.href?.match(
+				/^https:\/\/[^/]+\/@[^/]+\/([0-9]+)\/embed$/,
+			)
+			const tootlURL = tootMatch?.[0]
+			if (tootlURL !== undefined) {
+				return React.createElement(EmbedToot, { url: tootlURL }, children)
+			}
 		}
 		return React.createElement(name, attrs, children)
 	}, tree).props.children

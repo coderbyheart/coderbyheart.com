@@ -13,8 +13,11 @@ consultant, coach, mentor, and founder to build cloud-based solutions for the
 Internet of Things using JavaScript at
 [Nordic Semiconductor](https://www.nordicsemi.com/).
 
-I am [@coderbyheart](https://twitter.com/coderbyheart) on Twitter, you can
-follow me there for my daily ramblings about the challenges of writing software.
+I was previously active as
+<a href="https://twitter.com/coderbyheart" rel="me" title="I am no longer active on Twitter" style="text-decoration: line-through">@coderbyheart</a>
+on Twitter. Now I am on Mastodon, and you can follow
+<a href="https://chaos.social/@coderbyheart" title="Markus Tacker on Mastodon" rel="me">@coderbyheart@chaos.social</a>
+there for my daily ramblings about the challenges of writing software.
 
 [`{"pronoun":"he"}`](http://pronoun.is/he)
 
@@ -32,6 +35,6 @@ I especially enjoys the diverse and deep discussion of the
 [Software Craft Community](https://softwerkskammer.org/).
 
 Don't hesitate to contact me, if you need advice,
-[I'm happy to help](https://twitter.com/coderbyheart/status/940636875794067456).
+[I'm happy to help](https://chaos.social/@coderbyheart/109245002857233532).
 
-<https://twitter.com/coderbyheart/status/940636875794067456?embed>
+<https://chaos.social/@coderbyheart/109245002857233532/embed>
