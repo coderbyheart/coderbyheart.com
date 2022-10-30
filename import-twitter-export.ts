@@ -75,7 +75,7 @@ type Tweet = {
 
 const exportsDir = process.argv[process.argv.length - 1]
 
-const main = async () => {
+const main = () => {
 	const exportsDirInfo = statSync(exportsDir)
 
 	if (!exportsDirInfo.isDirectory())
@@ -100,9 +100,9 @@ const main = async () => {
 	const int = (s: string): number => parseInt(s, 10)
 
 	for (const tweets of Object.values(window.YTD.tweets)) {
-		// For now only use the 100 most favorited tweets
+		// For now only use tweets with 50 or more likes
 		const topTweets = tweets
-			.filter(({ tweet: { favorite_count } }) => int(favorite_count) >= 100)
+			.filter(({ tweet: { favorite_count } }) => int(favorite_count) >= 50)
 			.sort(
 				(
 					{ tweet: { favorite_count: f1 } },
@@ -111,7 +111,6 @@ const main = async () => {
 			)
 
 		for (const { tweet } of topTweets) {
-			console.log(tweet.id_str)
 			const frontmatter = {
 				favorite_count: int(tweet.favorite_count),
 				retweet_count: int(tweet.retweet_count),
@@ -136,8 +135,6 @@ const main = async () => {
 			)
 
 			writeFileSync(mdFile, markdown, 'utf-8')
-
-			console.log(mdFile, `written`)
 		}
 	}
 }
@@ -153,8 +150,8 @@ const replaceEntities = ({
 			`[@${screen_name}](https://twitter.com/${screen_name})`,
 		)
 	}
-	for (const { url, display_url, expanded_url } of urls ?? []) {
-		replaced = replaced.replace(url, `[${display_url}](${expanded_url})`)
+	for (const { url, expanded_url } of urls ?? []) {
+		replaced = replaced.replace(url, `<${expanded_url}>`)
 	}
 	for (const { media_url_https, url, display_url } of media ?? []) {
 		replaced = replaced.replace(url, `![${display_url}](${media_url_https})`)

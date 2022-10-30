@@ -37,8 +37,10 @@ const Main = styled.main`
 			}
 		}
 	}
-	&.twitter-status article ${Wrapper} h1 {
-		margin-top: 0.5rem;
+	&.twitter-status article ${Wrapper}, &.twitter-archive article ${Wrapper} {
+		h1 {
+			margin-top: 0.5rem;
+		}
 	}
 `
 

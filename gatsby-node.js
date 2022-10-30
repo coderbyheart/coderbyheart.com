@@ -185,6 +185,19 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 			),
 		),
 	)
+	// Post archive
+	await renderContentPage(
+		await parsePageMarkdown(findPage('Archive.md')),
+		'/archive',
+		'archive',
+		createPage,
+		{
+			Footer,
+			pages: await Promise.all(
+				posts.edges.map(async ({ node: page }) => parsePageMarkdown(page)),
+			),
+		},
+	)
 
 	// Render Tweets
 	const {
@@ -218,6 +231,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 			}
 		}
 	`)
+	const tweetCount = tweets.edges.length
 	await Promise.all(
 		tweets.edges.map(async ({ node: status }) =>
 			renderContentPage(
@@ -228,23 +242,55 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 				{
 					status,
 					Footer,
+					tweetCount,
 				},
 			),
 		),
 	)
-
+	// Twitter archive
+	const {
+		data: { status },
+	} = await graphql(`
+		query TweetsQuery {
+			status: allFile(
+				filter: {
+					sourceInstanceName: { eq: "pages" }
+					extension: { eq: "md" }
+					relativeDirectory: { eq: "twitter" }
+				}
+			) {
+				edges {
+					node {
+						name
+						remark: childMarkdownRemark {
+							frontmatter {
+								created_at
+								full_text
+								favorite_count
+							}
+						}
+					}
+				}
+			}
+		}
+	`)
 	await renderContentPage(
-		await parsePageMarkdown(findPage('Archive.md')),
-		'/archive',
-		'archive',
+		undefined,
+		'/twitter/archive',
+		'twitter-archive',
 		createPage,
 		{
 			Footer,
-			pages: await Promise.all(
-				posts.edges.map(async ({ node: page }) => parsePageMarkdown(page)),
-			),
+			status: status.edges.map(({ node }) => ({
+				name: node.name,
+				created_at: node.remark.frontmatter.created_at,
+				full_text: node.remark.frontmatter.full_text,
+				favorite_count: parseInt(node.remark.frontmatter.favorite_count, 10),
+			})),
+			tweetCount,
 		},
 	)
+
 	// Special page: social card default
 	await createPage({
 		path: '/social-card',

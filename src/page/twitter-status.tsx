@@ -2,7 +2,6 @@ import { format } from 'date-fns'
 import { graphql } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-import { Title } from '../design/Title'
 import { Page, SiteMetaData, TwitterStatus } from '../site'
 import PageTemplate from '../templates/page'
 import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
@@ -24,9 +23,9 @@ export const query = graphql`
 `
 
 const Card = styled.section`
-	margin-top: 2rem;
+	margin: 4rem 0;
 	box-shadow: 0 4px 10px 1px rgb(0 0 0 / 10%);
-	padding: 2.5rem 2rem;
+	padding: 2.5rem 2rem 1.5rem 2rem;
 	dl {
 		display: flex;
 		font-size: 80%;
@@ -38,12 +37,16 @@ const Card = styled.section`
 		margin-inline-start: 0;
 		margin-right: 1rem;
 	}
+	hr {
+		border: 0;
+		border-top: 1px solid #ccc;
+	}
 `
 
 const Footer = styled.footer`
-	opacity: 0.8;
 	font-size: 80%;
 	margin-top: 2rem;
+	color: #666;
 	p {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -63,48 +66,53 @@ const TwitterStatusPage = ({
 		status: TwitterStatus
 		Footer: Page
 		pagePath: string
+		tweetCount: number
 	}
 	location: {
 		href?: string
 	}
 }) => {
-	const date = pageContext.status.remark.frontmatter.created_at
+	const { created_at, lang, favorite_count, retweet_count } =
+		pageContext.status.remark.frontmatter
+	const date = created_at
 	return (
 		<PageTemplate
 			siteMetadata={data.site.siteMetadata}
 			Footer={pageContext.Footer}
 			description={`Archived version of Tweet ${pageContext.status.name}`}
-			title={`Twitter status #${pageContext.status.name} by @coderbyheart`}
-			lang={pageContext.status.remark.frontmatter.lang}
+			title={`Twitter status ${pageContext.status.name} from ${format(
+				new Date(date),
+				'd. MMMM yyyy',
+			)}`}
+			lang={lang}
 			mainClass="twitter-status"
 		>
 			<article>
-				<Title
-					date={date}
-					title={`Status #${pageContext.status.name}`}
-					subtitle={'From my Twitter archive'}
-				/>
 				<Card>
 					{pageContext.status.remark?.htmlAst !== undefined &&
 						renderHtmlAstToReact(pageContext.status.remark.htmlAst)}
 					<hr />
 					<dl>
 						<dt>
-							<abbr
-								title={`${pageContext.status.remark.frontmatter.favorite_count} favorites`}
-							>
-								⭐
-							</abbr>
+							<abbr title={`${favorite_count} favorites`}>⭐</abbr>
 						</dt>
-						<dd>{pageContext.status.remark.frontmatter.favorite_count}</dd>
+						<dd>{favorite_count}</dd>
 						<dt>
-							<abbr
-								title={`${pageContext.status.remark.frontmatter.retweet_count} retweets`}
-							>
-								🔁
-							</abbr>
+							<abbr title={`${retweet_count} retweets`}>🔁</abbr>
 						</dt>
-						<dd>{pageContext.status.remark.frontmatter.retweet_count}</dd>
+						<dd>{retweet_count}</dd>
+						<dt>
+							<abbr title="Date posted">🗓</abbr>
+						</dt>
+						<dd>
+							<time dateTime={date}>
+								{format(new Date(date), 'd. MMMM yyyy, HH:MM:SS')}
+							</time>
+						</dd>
+						<dt>
+							<abbr title="Tweet ID">#</abbr>
+						</dt>
+						<dd>{pageContext.status.name}</dd>
 					</dl>
 				</Card>
 				<Footer>
@@ -122,11 +130,15 @@ const TwitterStatusPage = ({
 					</p>
 					<p>
 						Above status is an archived version of the status{' '}
-						<code>{pageContext.status.name}</code>, tweeted on{' '}
+						{pageContext.status.name}, I&apos;ve tweeted on{' '}
 						<time dateTime={date}>
 							{format(new Date(date), 'd. MMMM yyyy')}
 						</time>
 						.
+					</p>
+					<p>
+						Find the rest of my {pageContext.tweetCount} tweets in my{' '}
+						<a href="/twitter/archive">Twitter Archive</a>.
 					</p>
 				</Footer>
 			</article>

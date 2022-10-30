@@ -1,6 +1,6 @@
 {
   "extends": "@nordicsemiconductor/asset-tracker-cloud-code-style/tsconfig.json",
-  "include": ["src/**/*.tsx", "src/**/*.ts"],
+  "include": ["src/**/*.tsx", "src/**/*.ts", "*.ts"],
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",

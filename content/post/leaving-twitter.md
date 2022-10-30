@@ -32,8 +32,8 @@ You can follow me on [Mastodon](https://mastodon.social/) (a
 where I joined the [chaos.social](https://chaos.social/about/more) instance: I
 am [@coderbyheart@chaos.social](https://chaos.social/@coderbyheart) there.
 
-I plan to publish my Twitter archive on my homepage, so it's not lost and can be
-accessed anonymously.
+I [have published](/twitter/archive) my Twitter archive on this site, so it's
+not lost and can be accessed anonymously.
 
 Leaving Twitter will suck, I am noticing it already while going through my
 private Twitter list I call "tribe" which has 225 members and which I use as

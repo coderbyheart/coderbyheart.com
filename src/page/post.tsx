@@ -2,7 +2,6 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import { Comments } from '../components/Comments'
-import { breakpoints } from '../design/settings'
 import { Title } from '../design/Title'
 import { Page, SiteMetaData } from '../site'
 import PageTemplate from '../templates/page'
@@ -24,24 +23,6 @@ export const query = graphql`
 	}
 `
 
-const ShareButton = styled.a`
-	background-color: var(--highlight-color);
-	color: var(--background-color) !important;
-	padding: 0.5rem 1rem;
-	border-radius: 5px;
-	text-decoration: none;
-	& + & {
-		margin-left: 1rem;
-	}
-`
-
-const Share = styled.section`
-	display: none;
-	@media (min-width: ${breakpoints.content}) {
-		display: block;
-	}
-`
-
 const Footer = styled.footer`
 	margin: 4rem 0;
 	section {
@@ -52,7 +33,6 @@ const Footer = styled.footer`
 const PostPage = ({
 	data,
 	pageContext,
-	location,
 }: {
 	data: {
 		site: {
@@ -63,9 +43,6 @@ const PostPage = ({
 		page: Page
 		Footer: Page
 		pagePath: string
-	}
-	location: {
-		href?: string
 	}
 }) => {
 	const { card, abstract, lang, title } = pageContext.page.remark.frontmatter
@@ -84,34 +61,6 @@ const PostPage = ({
 				{pageContext.page.remark?.htmlAst !== undefined &&
 					renderHtmlAstToReact(pageContext.page.remark.htmlAst)}
 				<Footer>
-					<Share>
-						<h2>Share</h2>
-						<ShareButton
-							href={`https://twitter.com/intent/tweet/?text=${encodeURIComponent(
-								pageContext.page.remark.frontmatter.title,
-							)}&url=${encodeURIComponent(location.href ?? '')}`}
-							target="_blank"
-							rel="noreferrer noopener"
-							aria-label="Share on Twitter"
-						>
-							Twitter
-						</ShareButton>
-
-						<ShareButton
-							href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-								location.href ?? '',
-							)}&title=${encodeURIComponent(
-								pageContext.page.remark.frontmatter.title,
-							)}&summary=${encodeURIComponent(
-								pageContext.page.remark.frontmatter.abstract,
-							)}&source=${encodeURIComponent(location.href ?? '')}`}
-							target="_blank"
-							rel="noreferrer noopener"
-							aria-label="Share on LinkedIn"
-						>
-							LinkedIn
-						</ShareButton>
-					</Share>
 					<Comments
 						page={pageContext.page}
 						siteUrl={data.site.siteMetadata.siteUrl}
