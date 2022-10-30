@@ -1,7 +1,6 @@
-import React from 'react'
-import { Page } from '../site'
-import styled from 'styled-components'
 import { format } from 'date-fns'
+import React from 'react'
+import styled from 'styled-components'
 
 const Subtitle = styled.div`
 	font-family: var(--headline-font-family);
@@ -13,7 +12,7 @@ const Time = styled.time`
 	font-weight: var(--headline-font-weight-thin);
 `
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	h1 {
@@ -21,16 +20,25 @@ const Wrapper = styled.div`
 	}
 `
 
-export const Title = ({ page }: { page: Page }) => (
-	<Wrapper>
-		{page.remark.frontmatter.subtitle && (
-			<Subtitle>{page.remark.frontmatter.subtitle}</Subtitle>
-		)}
-		<h1>{page.remark.frontmatter.title}</h1>
-		{page.remark.frontmatter.date && (
-			<Time dateTime={page.remark.frontmatter.date}>
-				{format(new Date(page.remark.frontmatter.date), 'd. MMMM yyyy')}
-			</Time>
-		)}
-	</Wrapper>
-)
+export const Title = ({
+	title,
+	subtitle,
+	date,
+}: {
+	title?: string | null
+	subtitle?: string | null
+	date?: string | null
+}) => {
+	if (title === null) return null
+	return (
+		<Wrapper>
+			{subtitle !== null && subtitle !== undefined && (
+				<Subtitle>{subtitle}</Subtitle>
+			)}
+			<h1>{title}</h1>
+			{date !== null && date !== undefined && (
+				<Time dateTime={date}>{format(new Date(date), 'd. MMMM yyyy')}</Time>
+			)}
+		</Wrapper>
+	)
+}

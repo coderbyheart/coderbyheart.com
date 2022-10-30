@@ -1,5 +1,5 @@
-import { dump } from 'js-yaml'
-import { readFile, stat, writeFile } from 'node:fs/promises'
+import jsYaml from 'js-yaml'
+import { readFileSync, statSync, writeFileSync } from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 
@@ -76,12 +76,12 @@ type Tweet = {
 const exportsDir = process.argv[process.argv.length - 1]
 
 const main = async () => {
-	const exportsDirInfo = await stat(exportsDir)
+	const exportsDirInfo = statSync(exportsDir)
 
 	if (!exportsDirInfo.isDirectory())
 		throw new Error(`${exportsDir} is not a directory!`)
 
-	const tweetsJS = await readFile(
+	const tweetsJS = readFileSync(
 		path.join(exportsDir, 'data', 'tweets.js'),
 		'utf-8',
 	)
@@ -97,86 +97,69 @@ const main = async () => {
 
 	eval(tweetsJS)
 
+	const int = (s: string): number => parseInt(s, 10)
+
 	for (const tweets of Object.values(window.YTD.tweets)) {
-		for (const { tweet } of tweets) {
+		// For now only use the 100 most favorited tweets
+		const topTweets = tweets
+			.filter(({ tweet: { favorite_count } }) => int(favorite_count) >= 100)
+			.sort(
+				(
+					{ tweet: { favorite_count: f1 } },
+					{ tweet: { favorite_count: f2 } },
+				) => int(f2) - int(f1),
+			)
+
+		for (const { tweet } of topTweets) {
+			console.log(tweet.id_str)
+			const frontmatter = {
+				favorite_count: int(tweet.favorite_count),
+				retweet_count: int(tweet.retweet_count),
+				created_at: new Date(tweet.created_at).toISOString(),
+				lang: tweet.lang,
+				full_text: tweet.full_text,
+			}
+			const replaced = replaceEntities(tweet)
+			const markdown = [
+				`---`,
+				jsYaml.dump(frontmatter).trim(),
+				`---`,
+				'',
+				replaced,
+			].join(os.EOL)
+
 			const mdFile = path.join(
 				process.cwd(),
 				'content',
 				'twitter',
 				`${tweet.id_str}.md`,
 			)
-			const { full_text } = tweet
-			const replaced = replaceEntities(full_text, tweet)
-			if (tweet.id_str === '1586030135265972226') console.log(replaced)
-			await writeFile(
-				mdFile,
-				[`---`, dump(tweet).trim(), `---`, '', replaced].join(os.EOL),
-				'utf-8',
-			)
+
+			writeFileSync(mdFile, markdown, 'utf-8')
+
+			console.log(mdFile, `written`)
 		}
 	}
 }
 
-const replaceEntities = (
-	text: string,
-	{ id_str, entities: { user_mentions } }: Tweet['tweet'],
-): string => {
-	const entities = [...user_mentions]
-		.map(({ indices, ...rest }) => ({
-			...rest,
-			indices: indices.map((s) => parseInt(s, 10)) as [number, number],
-		}))
-		.sort(({ indices: [start1] }, { indices: [start2] }) => start1 - start2)
-	const tokens: (
-		| {
-				plain: {
-					text: string
-					indices: [number, number]
-				}
-		  }
-		| {
-				mention: {
-					name: string // Guna
-					screen_name: string //guna_lv
-					id: string //, '16647326'
-					indices: [number, number]
-				}
-		  }
-	)[] = []
-	let previousEnd = 0
-	for (let i = 0; i < text.length; i++) {
-		const hasEntity = entities.find(({ indices: [start] }) => start === i)
-		if (hasEntity) {
-			if (i > 0)
-				tokens.push({
-					plain: {
-						text: text.substring(previousEnd, i),
-						indices: [previousEnd, i],
-					},
-				})
-			i = hasEntity.indices[1]
-			previousEnd = i
-			tokens.push({
-				mention: hasEntity,
-			})
-		}
+const replaceEntities = ({
+	full_text,
+	entities: { user_mentions, urls, media },
+}: Tweet['tweet']): string => {
+	let replaced = full_text
+	for (const { screen_name } of user_mentions ?? []) {
+		replaced = replaced.replace(
+			`@${screen_name}`,
+			`[@${screen_name}](https://twitter.com/${screen_name})`,
+		)
 	}
-	if (previousEnd < text.length) {
-		tokens.push({
-			plain: {
-				text: text.substring(previousEnd, text.length),
-				indices: [previousEnd, text.length],
-			},
-		})
+	for (const { url, display_url, expanded_url } of urls ?? []) {
+		replaced = replaced.replace(url, `[${display_url}](${expanded_url})`)
 	}
-
-	return tokens
-		.map((token) => {
-			if ('plain' in token) return token.plain.text
-			if ('mention' in token)
-				return `[@${token.mention.screen_name}](https://twitter.com/${token.mention.screen_name})`
-		})
-		.join('')
+	for (const { media_url_https, url, display_url } of media ?? []) {
+		replaced = replaced.replace(url, `![${display_url}](${media_url_https})`)
+	}
+	return replaced
 }
 
 main()

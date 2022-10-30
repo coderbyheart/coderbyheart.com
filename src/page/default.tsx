@@ -1,9 +1,10 @@
-import React from 'react'
-import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
-import { SiteMetaData, Page } from '../site'
-import PageTemplate from '../templates/page'
-import { Title } from '../design/Title'
 import { graphql } from 'gatsby'
+import React from 'react'
+import { Title } from '../design/Title'
+import { Page, SiteMetaData } from '../site'
+import PageTemplate from '../templates/page'
+import { pagePathToClass } from '../templates/utils/pagePathToClass'
+import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
 
 export const query = graphql`
 	query DefaultPageQuery {
@@ -34,14 +35,25 @@ const DefaultPage = ({
 		pagePath: string
 		Footer: Page
 	}
-}) => (
-	<PageTemplate siteMetadata={data.site.siteMetadata} pageContext={pageContext}>
-		{pageContext.page.remark.frontmatter.noheadline !== true && (
-			<Title page={pageContext.page} />
-		)}
-		{pageContext.page.remark?.htmlAst !== undefined &&
-			renderHtmlAstToReact(pageContext.page.remark.htmlAst)}
-	</PageTemplate>
-)
+}) => {
+	const { card, abstract, lang, title } = pageContext.page.remark.frontmatter
+	return (
+		<PageTemplate
+			siteMetadata={data.site.siteMetadata}
+			Footer={pageContext.Footer}
+			card={card}
+			description={abstract}
+			lang={lang}
+			title={title}
+			mainClass={pagePathToClass(pageContext.pagePath)}
+		>
+			{pageContext.page.remark.frontmatter.noheadline !== true && (
+				<Title {...pageContext.page.remark.frontmatter} />
+			)}
+			{pageContext.page.remark?.htmlAst !== undefined &&
+				renderHtmlAstToReact(pageContext.page.remark.htmlAst)}
+		</PageTemplate>
+	)
+}
 
 export default DefaultPage

@@ -1,14 +1,13 @@
 import React from 'react'
-import { SiteMetaData, Page } from '../site'
-import { Head } from '../components/Head'
-import { Header } from '../design/Header'
-import { Content } from '../design/Content'
-import { Footer, avatarUrl } from '../design/Footer'
 import styled from 'styled-components'
+import { Head } from '../components/Head'
+import { Content } from '../design/Content'
+import { avatarUrl, Footer } from '../design/Footer'
+import { Header } from '../design/Header'
 import { breakpoints } from '../design/settings'
-import classNames from 'classnames'
-import { pagePathToClass } from './utils/pagePathToClass'
 import { GlobalStyle } from '../design/style'
+import { Wrapper } from '../design/Title'
+import { Page, SiteMetaData } from '../site'
 
 const Main = styled.main`
 	padding: 1rem;
@@ -38,36 +37,45 @@ const Main = styled.main`
 			}
 		}
 	}
+	&.twitter-status article ${Wrapper} h1 {
+		margin-top: 0.5rem;
+	}
 `
 
 const PageTemplate = ({
 	siteMetadata,
-	pageContext,
 	children,
+	description,
+	title,
+	lang,
+	card,
+	mainClass,
+	Footer: FooterContent,
 }: React.PropsWithChildren<{
 	siteMetadata: SiteMetaData
-	pageContext: {
-		pagePath: string
-		page: Page
-		Footer: Page
-	}
+	Footer: Page
+	description?: string | null
+	title?: string | null
+	lang?: string | null
+	card?: string | null
+	mainClass?: string
 }>) => (
 	<>
 		<Head
 			siteMetaData={siteMetadata}
 			page={{
-				description: pageContext.page.remark.frontmatter.abstract,
-				title: pageContext.page.remark.frontmatter.title,
-				lang: pageContext.page.remark.frontmatter.lang,
+				description,
+				title,
+				lang,
 			}}
-			card={pageContext.page.remark.frontmatter.card}
+			card={card}
 		/>
 		<GlobalStyle />
 		<Header siteMetaData={siteMetadata} />
-		<Main className={classNames([pagePathToClass(pageContext.pagePath)])}>
+		<Main className={mainClass}>
 			<Content>{children}</Content>
 		</Main>
-		<Footer siteMetaData={siteMetadata} content={pageContext.Footer} />
+		<Footer siteMetaData={siteMetadata} content={FooterContent} />
 	</>
 )
 

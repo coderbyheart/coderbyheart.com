@@ -28,10 +28,17 @@ const blankToUndefined = (s) =>
 	s === null || (typeof s === 'string' && s.length === 0) ? undefined : s
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
-	const pages = await graphql(`
+	const {
+		data: { pages },
+		errors,
+	} = await graphql(`
 		query PagesQuery {
-			allFile(
-				filter: { sourceInstanceName: { eq: "pages" }, extension: { eq: "md" } }
+			pages: allFile(
+				filter: {
+					sourceInstanceName: { eq: "pages" }
+					extension: { eq: "md" }
+					relativeDirectory: { eq: "" }
+				}
 			) {
 				edges {
 					node {
@@ -39,7 +46,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 						name
 						relativeDirectory
 						relativePath
-						childMarkdownRemark {
+						remark: childMarkdownRemark {
 							htmlAst
 							frontmatter {
 								title
@@ -61,12 +68,12 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 			}
 		}
 	`)
-	if (pages.errors) {
-		throw pages.errors
+	if (errors) {
+		throw errors
 	}
 
 	const findPage = (name) => {
-		const { node: Page } = pages.data.allFile.edges.find(
+		const { node: Page } = pages.edges.find(
 			({ node: { relativePath } }) => relativePath === name,
 		)
 		if (Page === undefined) {
@@ -76,28 +83,25 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 	}
 
 	const parsePageMarkdown = async (page) => {
-		const { childMarkdownRemark, ...rest } = page
+		const { remark, ...rest } = page
 		return {
 			...rest,
 			remark: {
-				...childMarkdownRemark,
+				...remark,
 				frontmatter: {
-					...childMarkdownRemark.frontmatter,
+					...remark.frontmatter,
 					// Cache twitter cards
 					card:
-						blankToUndefined(childMarkdownRemark.frontmatter.card) !== undefined
+						blankToUndefined(remark.frontmatter.card) !== undefined
 							? (
 									await cacheImage(
-										childMarkdownRemark.frontmatter.card,
+										remark.frontmatter.card,
 										rest.relativeDirectory,
 									)
 							  ).replace(/^\/\//, 'https://')
 							: undefined,
 				},
-				htmlAst: await cacheImages(
-					childMarkdownRemark.htmlAst,
-					rest.relativeDirectory,
-				),
+				htmlAst: await cacheImages(remark.htmlAst, rest.relativeDirectory),
 			},
 		}
 	}
@@ -128,24 +132,107 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 		{ Footer },
 	)
 	// Render blog posts
+	const {
+		data: { posts },
+	} = await graphql(`
+		query PagesQuery {
+			posts: allFile(
+				filter: {
+					sourceInstanceName: { eq: "pages" }
+					extension: { eq: "md" }
+					relativeDirectory: { eq: "post" }
+				}
+			) {
+				edges {
+					node {
+						id
+						name
+						relativeDirectory
+						relativePath
+						remark: childMarkdownRemark {
+							htmlAst
+							frontmatter {
+								title
+								subtitle
+								noheadline
+								date
+								abstract
+								card
+								lang
+							}
+							headings {
+								id
+								depth
+								value
+							}
+						}
+					}
+				}
+			}
+		}
+	`)
 	await Promise.all(
-		pages.data.allFile.edges
-			.filter(({ node: { relativeDirectory } }) =>
-				relativeDirectory.startsWith('post'),
-			)
-			.map(async ({ node: page }) =>
-				renderContentPage(
-					await parsePageMarkdown(page),
-					`/${page.relativePath.replace(/^post\//, '').replace('.md', '')}`,
-					'post',
-					createPage,
-					{
-						page,
-						Footer,
-					},
-				),
+		posts.edges.map(async ({ node: page }) =>
+			renderContentPage(
+				await parsePageMarkdown(page),
+				`/${page.relativePath.replace(/^post\//, '').replace('.md', '')}`,
+				'post',
+				createPage,
+				{
+					page,
+					Footer,
+				},
 			),
+		),
 	)
+
+	// Render Tweets
+	const {
+		data: { tweets },
+	} = await graphql(`
+		query TweetsQuery {
+			tweets: allFile(
+				filter: {
+					sourceInstanceName: { eq: "pages" }
+					extension: { eq: "md" }
+					relativeDirectory: { eq: "twitter" }
+				}
+			) {
+				edges {
+					node {
+						id
+						name
+						relativeDirectory
+						relativePath
+						remark: childMarkdownRemark {
+							htmlAst
+							frontmatter {
+								favorite_count
+								retweet_count
+								created_at
+								lang
+							}
+						}
+					}
+				}
+			}
+		}
+	`)
+	await Promise.all(
+		tweets.edges.map(async ({ node: status }) =>
+			renderContentPage(
+				await parsePageMarkdown(status),
+				`/twitter/status/${status.name}`,
+				'twitter-status',
+				createPage,
+				{
+					status,
+					Footer,
+				},
+			),
+		),
+	)
+
 	await renderContentPage(
 		await parsePageMarkdown(findPage('Archive.md')),
 		'/archive',
@@ -154,9 +241,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 		{
 			Footer,
 			pages: await Promise.all(
-				pages.data.allFile.edges.map(async ({ node: page }) =>
-					parsePageMarkdown(page),
-				),
+				posts.edges.map(async ({ node: page }) => parsePageMarkdown(page)),
 			),
 		},
 	)
