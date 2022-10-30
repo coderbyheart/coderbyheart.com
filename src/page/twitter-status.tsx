@@ -37,9 +37,13 @@ const Card = styled.section`
 		margin-inline-start: 0;
 		margin-right: 1rem;
 	}
-	hr {
-		border: 0;
-		border-top: 1px solid #ccc;
+`
+
+const Tweet = styled.div`
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 1rem;
+	picture img {
+		margin-top: 2rem;
 	}
 `
 
@@ -89,9 +93,12 @@ const TwitterStatusPage = ({
 		>
 			<article>
 				<Card>
-					{pageContext.status.remark?.htmlAst !== undefined &&
-						renderHtmlAstToReact(pageContext.status.remark.htmlAst)}
-					<hr />
+					<Tweet>
+						{renderHtmlAstToReact(
+							pageContext.status.remark.htmlAst,
+							() => pageContext.status.remark.frontmatter.video_aspect_ratio,
+						)}
+					</Tweet>
 					<dl>
 						<dt>
 							<abbr title={`${favorite_count} favorites`}>⭐</abbr>

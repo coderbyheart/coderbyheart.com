@@ -1,5 +1,5 @@
 import jsYaml from 'js-yaml'
-import { readFileSync, statSync, writeFileSync } from 'node:fs'
+import { copyFileSync, readFileSync, statSync, writeFileSync } from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 
@@ -66,8 +66,17 @@ type Tweet = {
 						resize: 'fit' | 'crop'
 					}
 				>
-				type: 'photo'
+				type: 'photo' | 'animated_gif' | 'video'
 				display_url: string //'pic.twitter.com/5HVIhrj9cZ'
+				video_info?: {
+					aspect_ratio: string[] // ['11', '8']
+					duration_millis?: string //'53284'
+					variants: {
+						bitrate: string // '0'
+						content_type: 'video/mp4'
+						url: string //'https://video.twimg.com/tweet_video/E5pWOd1XIAAvEMv.mp4'
+					}[]
+				}
 			}[]
 		}
 	}
@@ -100,9 +109,9 @@ const main = () => {
 	const int = (s: string): number => parseInt(s, 10)
 
 	for (const tweets of Object.values(window.YTD.tweets)) {
-		// For now only use tweets with 50 or more likes
+		// For now only use popular tweets
 		const topTweets = tweets
-			.filter(({ tweet: { favorite_count } }) => int(favorite_count) >= 50)
+			.filter(({ tweet: { favorite_count } }) => int(favorite_count) >= 100)
 			.sort(
 				(
 					{ tweet: { favorite_count: f1 } },
@@ -111,12 +120,19 @@ const main = () => {
 			)
 
 		for (const { tweet } of topTweets) {
+			const aspect_ratio = tweet.extended_entities?.media.find(
+				({ type }) => type === 'video',
+			)?.video_info?.aspect_ratio
 			const frontmatter = {
 				favorite_count: int(tweet.favorite_count),
 				retweet_count: int(tweet.retweet_count),
 				created_at: new Date(tweet.created_at).toISOString(),
 				lang: tweet.lang,
 				full_text: tweet.full_text,
+				video_aspect_ratio:
+					aspect_ratio !== undefined
+						? parseInt(aspect_ratio[0], 10) / parseInt(aspect_ratio[1], 10)
+						: undefined,
 			}
 			const replaced = replaceEntities(tweet)
 			const markdown = [
@@ -140,9 +156,13 @@ const main = () => {
 }
 
 const replaceEntities = ({
+	id_str,
 	full_text,
-	entities: { user_mentions, urls, media },
+	entities,
+	extended_entities,
 }: Tweet['tweet']): string => {
+	const { user_mentions, urls, media } = entities
+	const { media: extended_media } = extended_entities ?? {}
 	let replaced = full_text
 	for (const { screen_name } of user_mentions ?? []) {
 		replaced = replaced.replace(
@@ -153,8 +173,41 @@ const replaceEntities = ({
 	for (const { url, expanded_url } of urls ?? []) {
 		replaced = replaced.replace(url, `<${expanded_url}>`)
 	}
-	for (const { media_url_https, url, display_url } of media ?? []) {
-		replaced = replaced.replace(url, `![${display_url}](${media_url_https})`)
+	for (const { type, url, media_url_https, video_info } of extended_media ??
+		[]) {
+		if (type === 'video') {
+			const variantFiles =
+				video_info?.variants
+					.sort(
+						({ bitrate: b1 }, { bitrate: b2 }) =>
+							parseInt(b2 ?? '0', 10) - parseInt(b1 ?? '0', 10),
+					)
+					.map((variant) => variant.url) ?? []
+
+			const highestBitRate = variantFiles[0]
+			const mediaFile = path.parse(new URL(highestBitRate).pathname).base
+			copyFileSync(
+				path.join(exportsDir, 'data', 'tweets_media', `${id_str}-${mediaFile}`),
+				path.join(
+					process.cwd(),
+					'content',
+					'media',
+					'twitter',
+					`${id_str}-${mediaFile}`,
+				),
+			)
+			replaced = replaced.replace(
+				url,
+				`![Embedded Video](../media/twitter/${id_str}-${mediaFile})`,
+			)
+		} else if (type === 'animated_gif') {
+			replaced = replaced.replace(url, `![Embedded GIF](${media_url_https})`)
+		} else {
+			replaced = replaced.replace(url, `![Embedded Media](${media_url_https})`)
+		}
+	}
+	for (const { media_url_https, url } of media ?? []) {
+		replaced = replaced.replace(url, `![Embedded Media](${media_url_https})`)
 	}
 	return replaced
 }

@@ -224,6 +224,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 								retweet_count
 								created_at
 								lang
+								video_aspect_ratio
 							}
 						}
 					}

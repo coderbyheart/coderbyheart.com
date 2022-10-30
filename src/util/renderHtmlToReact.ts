@@ -4,10 +4,24 @@ import { EmbedToot } from '../components/EmbedToot'
 import { EmbedTweet } from '../components/EmbedTweet'
 import { EmbedYouTube } from '../components/EmbedYouTube'
 import { ResponsiveImage } from '../components/ResponsiveImage'
+import { Video } from '../components/Video'
 
-export const renderHtmlAstToReact = (tree: unknown): any =>
+export const renderHtmlAstToReact = (
+	tree: unknown,
+	mediaAspectRatio?: (url: string) => number,
+): any =>
 	toH((name: string, attrs: Record<string, string | null>, children: any) => {
 		if (name === 'img' && attrs.src !== null) {
+			if (attrs.src.endsWith('.mp4'))
+				return React.createElement(
+					Video,
+					{
+						src: attrs.src,
+						aspectRatio: mediaAspectRatio?.(attrs.src),
+						key: attrs.key,
+					},
+					children,
+				)
 			return React.createElement(ResponsiveImage, attrs, children)
 		}
 		if (name === 'a') {

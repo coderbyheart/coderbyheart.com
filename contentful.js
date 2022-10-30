@@ -47,12 +47,13 @@ const getUrl = (asset) => {
 		fields: {
 			file: {
 				url,
-				details: {
-					image: { width, height },
-				},
+				details: { image },
+				contentType,
 			},
 		},
 	} = asset
+	if (contentType === 'video/mp4') return url
+	const { width, height } = image
 	return `${url}?w=${width}&h=${height}`
 }
 
@@ -131,6 +132,7 @@ const cacheMedia = async ({ src, env }) => {
 				if (/\.png$/i.test(src)) contentType = 'image/png'
 				if (/\.gif$/i.test(src)) contentType = 'image/gif'
 				if (/\.svg$/i.test(src)) contentType = 'image/svg+xml'
+				if (/\.mp4$/i.test(src)) contentType = 'video/mp4'
 				const assetDraft = await (isFile
 					? limiter.schedule(() =>
 							env.createAssetFromFiles({
@@ -167,7 +169,7 @@ const cacheMedia = async ({ src, env }) => {
 				// Create new Media
 				console.log(
 					chalk.yellow('contentful'),
-					chalk.gray('creating image entry'),
+					chalk.gray('creating media entry'),
 					chalk.blue(src),
 				)
 				const mediaDraft = await limiter.schedule(() =>
@@ -239,7 +241,6 @@ const replaceImageTags =
 						children?.map(replaceImageTags({ env, relativeDirectory })),
 					)) ?? [],
 				tagName,
-
 				...rest,
 			}
 		}
