@@ -40,3 +40,28 @@ export type Page = {
 		}
 	}
 }
+
+export type TwitterStatus = {
+	id: string
+	/**
+	 * @example "1070252678004072448"
+	 */
+	name: string
+	/**
+	 * @example "twitter/1070252678004072448.md"
+	 */
+	relativeDirectory: string
+	/**
+	 * @example "1070252678004072448"
+	 */
+	relativePath: string
+	remark: {
+		htmlAst: any
+		frontmatter: {
+			favorite_count: number // e.g. 156
+			retweet_count: number // e.g. 207
+			created_at: string // e.g. "2015-12-13T21:43:08.000Z"
+			lang: string // e.g. "en"
+		}
+	}
+}

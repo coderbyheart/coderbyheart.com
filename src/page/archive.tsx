@@ -66,13 +66,20 @@ const Archive = ({
 	const c = {
 		lastYear: -1,
 	}
+	const { card, abstract, lang, title, noheadline } =
+		pageContext.page.remark.frontmatter
 	return (
 		<PageTemplate
 			siteMetadata={data.site.siteMetadata}
-			pageContext={pageContext}
+			Footer={pageContext.Footer}
+			card={card}
+			description={abstract}
+			lang={lang}
+			title={title}
+			mainClass="archive"
 		>
-			{pageContext.page.remark.frontmatter.noheadline !== true && (
-				<Title page={pageContext.page} />
+			{noheadline !== true && (
+				<Title {...pageContext.page.remark.frontmatter} />
 			)}
 			{pageContext.pages
 				.filter(({ relativeDirectory }) => relativeDirectory.startsWith('post'))

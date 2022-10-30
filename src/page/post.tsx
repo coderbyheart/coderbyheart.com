@@ -1,12 +1,12 @@
-import React from 'react'
-import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
-import { Page, SiteMetaData } from '../site'
-import PageTemplate from '../templates/page'
-import { Title } from '../design/Title'
 import { graphql } from 'gatsby'
+import React from 'react'
 import styled from 'styled-components'
 import { Comments } from '../components/Comments'
 import { breakpoints } from '../design/settings'
+import { Title } from '../design/Title'
+import { Page, SiteMetaData } from '../site'
+import PageTemplate from '../templates/page'
+import { renderHtmlAstToReact } from '../util/renderHtmlToReact'
 
 export const query = graphql`
 	query PostPageQuery {
@@ -68,13 +68,19 @@ const PostPage = ({
 		href?: string
 	}
 }) => {
+	const { card, abstract, lang, title } = pageContext.page.remark.frontmatter
 	return (
 		<PageTemplate
 			siteMetadata={data.site.siteMetadata}
-			pageContext={pageContext}
+			Footer={pageContext.Footer}
+			card={card}
+			description={abstract}
+			lang={lang}
+			title={title}
+			mainClass="post"
 		>
 			<article>
-				<Title page={pageContext.page} />
+				<Title {...pageContext.page.remark.frontmatter} />
 				{pageContext.page.remark?.htmlAst !== undefined &&
 					renderHtmlAstToReact(pageContext.page.remark.htmlAst)}
 				<Footer>
