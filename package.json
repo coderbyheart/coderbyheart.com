@@ -49,8 +49,8 @@
     "npm": ">=8"
   },
   "devDependencies": {
-    "@commitlint/config-angular": "17.1.0",
-    "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.134",
+    "@commitlint/config-angular": "17.2.0",
+    "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.135",
     "@nordicsemiconductor/eslint-config-asset-tracker-cloud-typescript": "10.0.47",
     "@types/classnames": "2.3.1",
     "@types/js-yaml": "4.0.5",
