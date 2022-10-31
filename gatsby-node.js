@@ -234,19 +234,26 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 	`)
 	const tweetCount = tweets.edges.length
 	await Promise.all(
-		tweets.edges.map(async ({ node: status }) =>
-			renderContentPage(
-				await parsePageMarkdown(status),
-				`/twitter/status/${status.name}`,
-				'twitter-status',
-				createPage,
-				{
+		tweets.edges.map(async ({ node: status }) => {
+			const statusPath = `/twitter/status/${status.name}`
+			console.log(chalk.yellow('renderStatus'), statusPath)
+			const { remark, ...rest } = status
+			await createPage({
+				path: statusPath,
+				component: path.join(
+					process.cwd(),
+					'src',
+					'page',
+					`twitter-status.tsx`,
+				),
+				context: {
+					markdown: await cacheImages(remark.htmlAst, rest.relativeDirectory),
 					status,
 					Footer,
 					tweetCount,
 				},
-			),
-		),
+			})
+		}),
 	)
 	// Twitter archive
 	const {

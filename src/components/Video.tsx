@@ -18,19 +18,22 @@ export const Video = ({
 	if (isSSR) return null
 	const videoRef = useRef<HTMLVideoElement>(null)
 
-	const defaultWidth = 250
 	const ar = aspectRatio ?? 1.5
 
-	const [height, setHeight] = useState<number>(defaultWidth * ar)
+	const [width, setWidth] = useState<number>(250)
+	const [height, setHeight] = useState<number>(width * ar)
 
 	useLayoutEffect(() => {
-		setHeight((videoRef.current?.clientWidth ?? defaultWidth) / ar)
+		console.log(videoRef.current?.clientWidth)
+		setWidth(videoRef.current?.clientWidth ?? 250)
+		setHeight((videoRef.current?.clientWidth ?? width) / ar)
 	}, [videoRef])
 
 	return (
 		<StyledVideo
-			controls
-			width="250"
+			autoPlay
+			loop
+			width={width}
 			height={height}
 			style={{
 				aspectRatio: `${ar} / 1`,

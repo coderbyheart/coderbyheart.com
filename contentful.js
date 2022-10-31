@@ -231,10 +231,13 @@ const replaceImageTags =
 	({ env, relativeDirectory }) =>
 	async ({ children, tagName, properties, ...rest }) => {
 		if (tagName === 'img') {
+			const replaced = await replaceImage({ env, relativeDirectory })(
+				properties.src,
+			)
 			return {
 				properties: {
 					...properties,
-					src: await replaceImage({ env, relativeDirectory })(properties.src),
+					src: replaced,
 				},
 				children:
 					(await Promise.all(

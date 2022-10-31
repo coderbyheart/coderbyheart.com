@@ -120,8 +120,8 @@ const main = () => {
 			)
 
 		for (const { tweet } of topTweets) {
-			const aspect_ratio = tweet.extended_entities?.media.find(
-				({ type }) => type === 'video',
+			const aspect_ratio = tweet.extended_entities?.media.find(({ type }) =>
+				['video', 'animated_gif'].includes(type),
 			)?.video_info?.aspect_ratio
 			const frontmatter = {
 				favorite_count: int(tweet.favorite_count),
@@ -175,7 +175,7 @@ const replaceEntities = ({
 	}
 	for (const { type, url, media_url_https, video_info } of extended_media ??
 		[]) {
-		if (type === 'video') {
+		if (['video', 'animated_gif'].includes(type)) {
 			const variantFiles =
 				video_info?.variants
 					.sort(
@@ -200,8 +200,6 @@ const replaceEntities = ({
 				url,
 				`![Embedded Video](../media/twitter/${id_str}-${mediaFile})`,
 			)
-		} else if (type === 'animated_gif') {
-			replaced = replaced.replace(url, `![Embedded GIF](${media_url_https})`)
 		} else {
 			replaced = replaced.replace(url, `![Embedded Media](${media_url_https})`)
 		}
