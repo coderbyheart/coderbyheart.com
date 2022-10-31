@@ -140,7 +140,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 				filter: {
 					sourceInstanceName: { eq: "pages" }
 					extension: { eq: "md" }
-					relativeDirectory: { eq: "post" }
+					relativeDirectory: { regex: "/^post/" }
 				}
 			) {
 				edges {
