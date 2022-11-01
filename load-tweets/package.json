@@ -1,0 +1,4 @@
+{
+  "name": "@coderbyheart/gastby-plugin-load-tweets",
+  "main": "gatsby-node.js"
+}

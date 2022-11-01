@@ -31,13 +31,23 @@ const cfg = {
 				name: `pages`,
 				path: path.join(process.cwd(), 'content'),
 				ignore: [
-					'**/.*',
 					// ignore files starting with a dot
+					'**/.*',
+					// ignore images
 					'**/*.gif',
 					'**/*.png',
 					'**/*.jpeg',
 					'**/*.jpg',
+					// ignore twitter status
+					'**/content/twitter/*',
 				],
+			},
+		},
+		{
+			resolve: require.resolve(`./load-tweets`),
+			options: {
+				development: process.env.NODE_ENV === `development`,
+				path: path.join(process.cwd(), 'content', 'twitter'),
 			},
 		},
 		{
