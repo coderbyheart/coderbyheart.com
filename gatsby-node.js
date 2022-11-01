@@ -247,7 +247,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 					`twitter-status.tsx`,
 				),
 				context: {
-					markdown: await cacheImages(remark.htmlAst, rest.relativeDirectory),
+					markdown: remark.htmlAst,
 					status,
 					Footer,
 					tweetCount,

@@ -12,7 +12,7 @@ export const renderHtmlAstToReact = (
 ): any =>
 	toH((name: string, attrs: Record<string, string | null>, children: any) => {
 		if (name === 'img' && attrs.src !== null) {
-			if (attrs.src.endsWith('.mp4'))
+			if (attrs.src.endsWith('.mp4') || attrs.src.endsWith('.webm'))
 				return React.createElement(
 					Video,
 					{
@@ -22,6 +22,8 @@ export const renderHtmlAstToReact = (
 					},
 					children,
 				)
+			if (attrs.src.startsWith('/media/twitter'))
+				return React.createElement('img', attrs, children)
 			return React.createElement(ResponsiveImage, attrs, children)
 		}
 		if (name === 'a') {

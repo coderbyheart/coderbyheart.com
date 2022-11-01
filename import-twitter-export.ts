@@ -1,5 +1,5 @@
 import jsYaml from 'js-yaml'
-import { copyFileSync, readFileSync, statSync, writeFileSync } from 'node:fs'
+import { readFileSync, statSync, writeFileSync } from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 
@@ -107,11 +107,15 @@ const main = () => {
 	eval(tweetsJS)
 
 	const int = (s: string): number => parseInt(s, 10)
+	const interestingPosts = ['998271886671917056']
 
 	for (const tweets of Object.values(window.YTD.tweets)) {
 		// For now only use popular tweets
 		const topTweets = tweets
-			.filter(({ tweet: { favorite_count } }) => int(favorite_count) >= 100)
+			.filter(
+				({ tweet: { favorite_count, id_str } }) =>
+					int(favorite_count) >= 100 || interestingPosts.includes(id_str),
+			)
 			.sort(
 				(
 					{ tweet: { favorite_count: f1 } },
@@ -163,17 +167,21 @@ const replaceEntities = ({
 }: Tweet['tweet']): string => {
 	const { user_mentions, urls, media } = entities
 	const { media: extended_media } = extended_entities ?? {}
-	let replaced = full_text
+
+	// Galleries can have multiple photos, they all replace the same string in the Tweet
+	const replacements: Record<string, string[]> = {}
+
 	for (const { screen_name } of user_mentions ?? []) {
-		replaced = replaced.replace(
-			`@${screen_name}`,
+		replacements[`@${screen_name}`] = [
+			...(replacements[`@${screen_name}`] ?? []),
 			`[@${screen_name}](https://twitter.com/${screen_name})`,
-		)
+		]
 	}
 	for (const { url, expanded_url } of urls ?? []) {
-		replaced = replaced.replace(url, `<${expanded_url}>`)
+		replacements[url] = [...(replacements[url] ?? []), `<${expanded_url}>`]
 	}
 	for (const { type, url, media_url_https, video_info } of extended_media ??
+		media ??
 		[]) {
 		if (['video', 'animated_gif'].includes(type)) {
 			const variantFiles =
@@ -185,28 +193,32 @@ const replaceEntities = ({
 					.map((variant) => variant.url) ?? []
 
 			const highestBitRate = variantFiles[0]
-			const mediaFile = path.parse(new URL(highestBitRate).pathname).base
-			copyFileSync(
-				path.join(exportsDir, 'data', 'tweets_media', `${id_str}-${mediaFile}`),
-				path.join(
-					process.cwd(),
-					'content',
-					'media',
-					'twitter',
-					`${id_str}-${mediaFile}`,
-				),
-			)
-			replaced = replaced.replace(
-				url,
-				`![Embedded Video](../media/twitter/${id_str}-${mediaFile})`,
-			)
+			const mediaFile = `${
+				path.parse(new URL(highestBitRate).pathname).base
+			}.webm`
+			replacements[url] = [
+				...(replacements[url] ?? []),
+				`![Embedded Video](/media/twitter/${id_str}-${mediaFile})`,
+			]
+		} else if (type === 'photo') {
+			// Galleries can have multiple photos
+			const mediaFile = `${
+				path.parse(new URL(media_url_https).pathname).base
+			}.webp`
+			replacements[url] = [
+				...(replacements[url] ?? []),
+				`![Embedded Photo](/media/twitter/${id_str}-${mediaFile})`,
+			]
 		} else {
-			replaced = replaced.replace(url, `![Embedded Media](${media_url_https})`)
+			throw new Error(`Unknown extended media type: ${type} in ${id_str}!`)
 		}
 	}
-	for (const { media_url_https, url } of media ?? []) {
-		replaced = replaced.replace(url, `![Embedded Media](${media_url_https})`)
+
+	let replaced = full_text
+	for (const [search, replace] of Object.entries(replacements)) {
+		replaced = replaced.replace(search, [...new Set(replace)].join('\n\n'))
 	}
+
 	return replaced
 }
 
