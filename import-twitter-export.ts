@@ -107,23 +107,9 @@ const main = () => {
 	eval(tweetsJS)
 
 	const int = (s: string): number => parseInt(s, 10)
-	const interestingPosts = ['998271886671917056']
 
 	for (const tweets of Object.values(window.YTD.tweets)) {
-		// For now only use popular tweets
-		const topTweets = tweets
-			.filter(
-				({ tweet: { favorite_count, id_str } }) =>
-					int(favorite_count) >= 100 || interestingPosts.includes(id_str),
-			)
-			.sort(
-				(
-					{ tweet: { favorite_count: f1 } },
-					{ tweet: { favorite_count: f2 } },
-				) => int(f2) - int(f1),
-			)
-
-		for (const { tweet } of topTweets) {
+		for (const { tweet } of tweets) {
 			const aspect_ratio = tweet.extended_entities?.media.find(({ type }) =>
 				['video', 'animated_gif'].includes(type),
 			)?.video_info?.aspect_ratio
