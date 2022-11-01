@@ -8,7 +8,7 @@ env:
     ${{ secrets.CONTENTFUL_MANAGEMENT_API_TOKEN }}
   CONTENTFUL_CONTENT_API_TOKEN: ${{ secrets.CONTENTFUL_CONTENT_API_TOKEN }}
   CONTENTFUL_SPACE: ${{ secrets.CONTENTFUL_SPACE }}
-  # CNAME: coderbyheart.com
+  CNAME: coderbyheart.com
 
 jobs:
   main:
@@ -57,7 +57,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global init.defaultBranch gh-pages
           touch .nojekyll
-          # echo ${{ env.CNAME }} > CNAME
+          echo ${{ env.CNAME }} > CNAME
           git init
           git add -A
           git commit -m "update website"
