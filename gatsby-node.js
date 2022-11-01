@@ -204,19 +204,10 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 		data: { tweets },
 	} = await graphql(`
 		query TweetsQuery {
-			tweets: allFile(
-				filter: {
-					sourceInstanceName: { eq: "pages" }
-					extension: { eq: "md" }
-					relativeDirectory: { eq: "twitter" }
-				}
-			) {
+			tweets: allTweet {
 				edges {
 					node {
 						id
-						name
-						relativeDirectory
-						relativePath
 						remark: childMarkdownRemark {
 							htmlAst
 							frontmatter {
@@ -225,6 +216,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 								created_at
 								lang
 								video_aspect_ratio
+								full_text
 							}
 						}
 					}
@@ -235,7 +227,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 	const tweetCount = tweets.edges.length
 	await Promise.all(
 		tweets.edges.map(async ({ node: status }) => {
-			const statusPath = `/twitter/status/${status.name}`
+			const statusPath = `/twitter/status/${status.id}`
 			console.log(chalk.yellow('renderStatus'), statusPath)
 			const { remark, ...rest } = status
 			await createPage({
@@ -256,32 +248,12 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 		}),
 	)
 	// Twitter archive
-	const {
-		data: { status },
-	} = await graphql(`
-		query TweetsQuery {
-			status: allFile(
-				filter: {
-					sourceInstanceName: { eq: "pages" }
-					extension: { eq: "md" }
-					relativeDirectory: { eq: "twitter" }
-				}
-			) {
-				edges {
-					node {
-						name
-						remark: childMarkdownRemark {
-							frontmatter {
-								created_at
-								full_text
-								favorite_count
-							}
-						}
-					}
-				}
-			}
-		}
-	`)
+	const tweetArchive = tweets.edges.map(({ node }) => ({
+		id: node.id,
+		created_at: node.remark.frontmatter.created_at,
+		full_text: node.remark.frontmatter.full_text,
+		favorite_count: parseInt(node.remark.frontmatter.favorite_count, 10),
+	}))
 	await renderContentPage(
 		undefined,
 		'/twitter/archive',
@@ -289,15 +261,53 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 		createPage,
 		{
 			Footer,
-			status: status.edges.map(({ node }) => ({
-				name: node.name,
-				created_at: node.remark.frontmatter.created_at,
-				full_text: node.remark.frontmatter.full_text,
-				favorite_count: parseInt(node.remark.frontmatter.favorite_count, 10),
-			})),
-			tweetCount,
+			status: tweetArchive,
 		},
 	)
+	for (const year of Object.keys(
+		tweetArchive.reduce((years, { created_at }) => {
+			const year = created_at.slice(0, 4)
+			return {
+				...years,
+				[year]: true,
+			}
+		}, {}),
+	)) {
+		await renderContentPage(
+			undefined,
+			`/twitter/archive/${year}`,
+			'twitter-archive-year',
+			createPage,
+			{
+				Footer,
+				status: tweetArchive,
+				year,
+			},
+		)
+		for (const month of Object.keys(
+			tweetArchive
+				.filter(({ created_at }) => created_at.startsWith(`${year}`))
+				.reduce((months, { created_at }) => {
+					const month = created_at.slice(0, 7)
+					return {
+						...months,
+						[month]: true,
+					}
+				}, {}),
+		)) {
+			await renderContentPage(
+				undefined,
+				`/twitter/archive/${month.replace('-', '/')}`,
+				'twitter-archive-year-month',
+				createPage,
+				{
+					Footer,
+					status: tweetArchive,
+					month,
+				},
+			)
+		}
+	}
 
 	// Special page: social card default
 	await createPage({

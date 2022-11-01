@@ -1,4 +1,4 @@
 {
-  "name": "@coderbyheart/gastby-plugin-load-tweets",
-  "main": "gatsby-node.js"
+  "name": "@coderbyheart/gatsby-plugin-load-tweets",
+  "main": "index.js"
 }

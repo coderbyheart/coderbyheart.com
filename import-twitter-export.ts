@@ -108,13 +108,17 @@ const main = () => {
 
 	const int = (s: string): number => parseInt(s, 10)
 
+	const mostPopular: string[] = []
+
 	for (const tweets of Object.values(window.YTD.tweets)) {
 		for (const { tweet } of tweets) {
 			const aspect_ratio = tweet.extended_entities?.media.find(({ type }) =>
 				['video', 'animated_gif'].includes(type),
 			)?.video_info?.aspect_ratio
+			const favorite_count = int(tweet.favorite_count)
+			if (favorite_count > 50) mostPopular.push(tweet.id_str)
 			const frontmatter = {
-				favorite_count: int(tweet.favorite_count),
+				favorite_count,
 				retweet_count: int(tweet.retweet_count),
 				created_at: new Date(tweet.created_at).toISOString(),
 				lang: tweet.lang,
@@ -143,6 +147,9 @@ const main = () => {
 			writeFileSync(mdFile, markdown, 'utf-8')
 		}
 	}
+
+	console.log('Most popular')
+	console.log(JSON.stringify(mostPopular))
 }
 
 const replaceEntities = ({

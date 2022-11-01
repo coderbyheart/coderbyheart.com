@@ -42,19 +42,10 @@ export type Page = {
 }
 
 export type TwitterStatus = {
+	/**
+	 * @example "1070252678004072448"
+	 */
 	id: string
-	/**
-	 * @example "1070252678004072448"
-	 */
-	name: string
-	/**
-	 * @example "twitter/1070252678004072448.md"
-	 */
-	relativeDirectory: string
-	/**
-	 * @example "1070252678004072448"
-	 */
-	relativePath: string
 	remark: {
 		htmlAst: any
 		frontmatter: {

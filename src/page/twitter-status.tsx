@@ -75,7 +75,6 @@ const TwitterStatusPage = ({
 	pageContext: {
 		status: TwitterStatus
 		Footer: Page
-		pagePath: string
 		tweetCount: number
 		markdown: any
 	}
@@ -89,8 +88,8 @@ const TwitterStatusPage = ({
 		<PageTemplate
 			siteMetadata={data.site.siteMetadata}
 			Footer={pageContext.Footer}
-			description={`Archived version of Tweet ${pageContext.status.name}`}
-			title={`Twitter status ${pageContext.status.name} from ${format(
+			description={`Archived version of Tweet ${pageContext.status.id}`}
+			title={`Twitter status ${pageContext.status.id} from ${format(
 				new Date(created_at),
 				'd. MMMM yyyy',
 			)}`}
@@ -114,7 +113,7 @@ const TwitterStatusPage = ({
 							{format(new Date(created_at), 'd. MMMM yyyy, HH:MM:SS')}
 						</time>
 					</abbr>
-					<abbr title="Tweet ID">#{pageContext.status.name}</abbr>
+					<abbr title="Tweet ID">#{pageContext.status.id}</abbr>
 				</Info>
 				<Footer>
 					<p>
@@ -131,7 +130,7 @@ const TwitterStatusPage = ({
 					</p>
 					<p>
 						Above status is an archived version of the status{' '}
-						{pageContext.status.name}, I&apos;ve tweeted on{' '}
+						{pageContext.status.id}, I&apos;ve tweeted on{' '}
 						<time dateTime={created_at}>
 							{format(new Date(created_at), 'd. MMMM yyyy')}
 						</time>
@@ -139,7 +138,7 @@ const TwitterStatusPage = ({
 					</p>
 					<p>
 						Find the rest of my {pageContext.tweetCount} tweets in my{' '}
-						<a href="/twitter/archive">Twitter Archive</a>.
+						<a href="/twitter/archive">Twitter archive</a>.
 					</p>
 				</Footer>
 			</article>

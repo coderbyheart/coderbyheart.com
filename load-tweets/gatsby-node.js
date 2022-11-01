@@ -1,85 +1,70 @@
-const { readdir } = require('node:fs/promises')
-const fs = require(`fs-extra`)
-const mime = require(`mime`)
-const prettyBytes = require(`pretty-bytes`)
-const md5File = require(`md5-file`)
-const { slash } = require(`gatsby-core-utils`)
+const { readdir, readFile } = require('node:fs/promises')
 const path = require('node:path')
+const fs = require('node:fs')
 
-const createAndProcessNode = async (
-	pathToFile,
-	createNode,
-	createNodeId,
-	pluginOptions,
-) => {
-	const slashed = slash(pathToFile)
-	const parsedSlashed = path.parse(slashed)
-	const slashedFile = {
-		...parsedSlashed,
-		absolutePath: slashed,
-		// Useful for limiting graphql query with certain parent directory
-		relativeDirectory: slash(
-			path.relative(pluginOptions.path || process.cwd(), parsedSlashed.dir),
-		),
-	}
-	const contentDigest = await md5File(slashedFile.absolutePath)
-	const mediaType = mime.getType(slashedFile.ext)
-	const stats = await fs.stat(slashedFile.absolutePath)
-
-	const fileNode = {
-		// Don't actually make the File id the absolute path as otherwise
-		// people will use the id for that and ids shouldn't be treated as
-		// useful information.
-		id: createNodeId(pathToFile),
-		children: [],
-		parent: null,
-		internal: {
-			contentDigest,
-			type: `Tweet`,
-			mediaType: mediaType ? mediaType : `application/octet-stream`,
-			description: `Tweet "${path.relative(process.cwd(), slashed)}"`,
-		},
-		sourceInstanceName: pluginOptions.name || `__PROGRAMMATIC__`,
-		relativePath: slash(
-			path.relative(
-				pluginOptions.path || process.cwd(),
-				slashedFile.absolutePath,
-			),
-		),
-		extension: slashedFile.ext.slice(1).toLowerCase(),
-		prettySize: prettyBytes(stats.size),
-		modifiedTime: stats.mtime.toJSON(),
-		accessTime: stats.atime.toJSON(),
-		changeTime: stats.ctime.toJSON(),
-		birthTime: stats.birthtime.toJSON(),
-		// Note: deprecate splatting the slashedFile object
-		// Note: the object may contain different properties depending on File or Dir
-		...slashedFile,
-		// TODO: deprecate copying the entire object
-		// Note: not splatting for perf reasons (make sure Date objects are serialized)
-		dev: stats.dev,
-		mode: stats.mode,
-		nlink: stats.nlink,
-		uid: stats.uid,
-		rdev: stats.rdev,
-		blksize: stats.blksize,
-		ino: stats.ino,
-		size: stats.size,
-		blocks: stats.blocks,
-		atimeMs: stats.atimeMs,
-		mtimeMs: stats.mtimeMs,
-		ctimeMs: stats.ctimeMs,
-		birthtimeMs: stats.birthtimeMs,
-		atime: stats.atime.toJSON(),
-		mtime: stats.mtime.toJSON(),
-		ctime: stats.ctime.toJSON(),
-		birthtime: stats.birthtime.toJSON(),
-	}
-	await createNode(fileNode)
-}
+const mostPopular = [
+	'1119970835014529024',
+	'1094671850246995969',
+	'1070252678004072448',
+	'1069176992564682752',
+	'1540812534772629505',
+	'1031812485538557953',
+	'1018901853986328576',
+	'994982356279812098',
+	'974011968075059200',
+	'970959569781448705',
+	'947614418099101696',
+	'940636875794067456',
+	'1579742177738969088',
+	'1528344380280606721',
+	'890879242619277312',
+	'861150376782856192',
+	'857535331096305664',
+	'825669823921319937',
+	'1519790994354495489',
+	'1514596881258749954',
+	'676155415223255041',
+	'1501116191095595011',
+	'1500794055625748484',
+	'1475871112806510592',
+	'1474349369214312454',
+	'1459174125096902660',
+	'1571444686363009025',
+	'1571266231960834049',
+	'1443999700449890306',
+	'1443678982705238019',
+	'1442809096671989764',
+	'1417467043079667717',
+	'1414856691787632642',
+	'1414489800304902144',
+	'1412540547990962178',
+	'1412537304489529344',
+	'1412536247004848134',
+	'1412535313931673602',
+	'1412534968341909515',
+	'1412534739727171587',
+	'1406947490973241344',
+	'1565764423519797249',
+	'1370389316652965891',
+	'1563808551172177921',
+	'1342099298939510784',
+	'1323339394036731905',
+	'1312689222176976896',
+	'1308710318252740608',
+	'1279545892010446848',
+	'1267091757868683265',
+	'1239476222452813825',
+	'1238415032087728128',
+	'1220729694909292547',
+	'1212980450861420544',
+	'1190691557185392641',
+	'1183296618776453121',
+	'1547088013523668998',
+	'1124623718192504833',
+]
 
 exports.sourceNodes = async (
-	{ actions: { createNode }, createNodeId, reporter },
+	{ actions: { createNode }, createNodeId, createContentDigest, reporter },
 	{ development, path: tweetsFolder },
 ) => {
 	reporter.info(
@@ -91,16 +76,25 @@ exports.sourceNodes = async (
 	const tweets = await readdir(tweetsFolder)
 	reporter.info(`[load-tweets] Found ${tweets.length} tweets`)
 	for (const tweet of tweets) {
-		// Only use 1% of all tweets for development
-		if (development && Math.random() > 0.01) continue
-		await createAndProcessNode(
-			path.join(tweetsFolder, tweet),
-			createNode,
-			createNodeId,
-			{ path: tweetsFolder },
-		)
+		const id = path.parse(tweet).name
+		// Only use 1% of all tweets for development, and most popular
+		if (development && !mostPopular.includes(id) && Math.random() > 0.01)
+			continue
+		const pathToFile = path.join(tweetsFolder, tweet)
+
+		const markdown = await readFile(pathToFile, 'utf-8')
+		await createNode({
+			id,
+			children: [],
+			parent: null,
+			internal: {
+				contentDigest: createContentDigest(markdown),
+				type: `Tweet`,
+				description: `Tweet "${tweet}"`,
+				mediaType: 'text/markdown',
+				content: markdown,
+			},
+			absolutePath: pathToFile,
+		})
 	}
 }
-
-exports.loadNodeContent = (fileNode) =>
-	fs.readFile(fileNode.absolutePath, `utf-8`)

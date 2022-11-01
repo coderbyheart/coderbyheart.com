@@ -1,16 +1,16 @@
 import { format } from 'date-fns'
 import { graphql } from 'gatsby'
-import React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import { Title } from '../design/Title'
 import { Page, SiteMetaData } from '../site'
 import PageTemplate from '../templates/page'
 
-const Ul = styled.ul`
+export const Ul = styled.ul`
 	padding-left: 1rem;
 `
 
-const Li = styled.li`
+export const Li = styled.li`
 	margin-bottom: 0.25rem;
 	display: flex;
 `
@@ -23,7 +23,7 @@ const Star = styled(Li)`
 	}
 `
 
-const Link = styled.a`
+export const Link = styled.a`
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -45,7 +45,12 @@ export const query = graphql`
 	}
 `
 
-const popLikeLimit = 50
+export type Status = {
+	id: string
+	created_at: string
+	full_text: string
+	favorite_count: number
+}
 
 const TwitterArchive = ({
 	data,
@@ -57,34 +62,25 @@ const TwitterArchive = ({
 		}
 	}
 	pageContext: {
-		status: {
-			name: string
-			created_at: string
-			full_text: string
-			favorite_count: number
-		}[]
+		status: Status[]
 		pagePath: string
 		Footer: Page
-		tweetCount: number
 	}
 }) => {
-	const subtitle = `My entire Twitter timeline of ${pageContext.tweetCount} tweets, archived`
-	const popular = pageContext.status.filter(
-		({ favorite_count }) => favorite_count > popLikeLimit,
-	)
-	let lastMonth: string | undefined = undefined
+	const subtitle = `My entire Twitter timeline of ${pageContext.status.length} tweets, archived`
+
 	return (
 		<PageTemplate
 			siteMetadata={data.site.siteMetadata}
 			Footer={pageContext.Footer}
 			description={subtitle}
 			lang={'en'}
-			title={'Twitter Archive'}
+			title={'Twitter archive'}
 			mainClass="twitter-archive"
 		>
 			<article>
 				<Title
-					title={'Twitter Archive'}
+					title={'Twitter archive'}
 					subtitle={subtitle}
 					date={'2022-10-28T00:00:00Z'}
 				/>
@@ -92,58 +88,70 @@ const TwitterArchive = ({
 					In October 2022 <a href="/leaving-twitter">I left Twitter</a>. This is
 					my entire tweet archive.
 				</p>
-				<h2>The {popular.length} most popular Tweets</h2>
-				<p>These tweets have received {popLikeLimit} or more likes.</p>
-				<Ul>
-					{popular
-						.sort(({ favorite_count: c1 }, { favorite_count: c2 }) => c2 - c1)
-						.map(({ name, favorite_count, created_at, full_text }) => (
-							<Star key={name}>
-								{favorite_count}{' '}
-								<Link
-									href={`/twitter/status/${name}`}
-									title={`Twitter status ${name} from ${format(
-										new Date(created_at),
-										'd. MMMM yyyy',
-									)}`}
-								>
-									{full_text}
-								</Link>
-							</Star>
-						))}
-				</Ul>
-				<h2>Tweets by months</h2>
-				{pageContext.status
-					.sort(({ created_at: t1 }, { created_at: t2 }) =>
-						t2.localeCompare(t1),
-					)
-					.map(({ name, created_at }) => {
-						const month = format(new Date(created_at), 'MMMM yyyy')
-						const els = []
-						if (lastMonth !== month) {
-							els.push(<h3 key={month}>{month}</h3>)
-						}
-						lastMonth = month
-						els.push(
-							<React.Fragment key={name}>
-								<a
-									key={name}
-									href={`/twitter/status/${name}`}
-									title={`Twitter status ${name} from ${format(
-										new Date(created_at),
-										'd. MMMM yyyy',
-									)}`}
-								>
-									{name}
-								</a>
-								<br />
-							</React.Fragment>,
-						)
-						return els
-					})}
+				<PopularTweets tweets={pageContext.status} />
+				<h2>Tweets by year</h2>
+				<TweetYears tweets={pageContext.status} />
 			</article>
 		</PageTemplate>
 	)
 }
+
+const popLikeLimit = 50
+
+const PopularTweets: FC<{ tweets: Status[] }> = ({ tweets }) => {
+	const popular = tweets.filter(
+		({ favorite_count }) => favorite_count > popLikeLimit,
+	)
+	return (
+		<>
+			<h2>The {popular.length} most popular Tweets</h2>
+			<p>These tweets have received {popLikeLimit} or more likes.</p>
+			<Ul>
+				{popular
+					.sort(({ favorite_count: c1 }, { favorite_count: c2 }) => c2 - c1)
+					.map(({ id, favorite_count, created_at, full_text }) => (
+						<Star key={id}>
+							{favorite_count}{' '}
+							<Link
+								href={`/twitter/status/${id}`}
+								title={`Twitter status ${id} from ${format(
+									new Date(created_at),
+									'd. MMMM yyyy',
+								)}`}
+							>
+								{full_text}
+							</Link>
+						</Star>
+					))}
+			</Ul>
+		</>
+	)
+}
+
+const TweetYears: FC<{ tweets: Status[] }> = ({ tweets }) => (
+	<Ul>
+		{Object.entries(tweetYears(tweets))
+			.sort(([year1], [year2]) => year2.localeCompare(year1))
+			.map(([year, count]) => (
+				<Li key={year}>
+					<a
+						href={`/twitter/archive/${year}`}
+						title={`Tweets in the year ${year}`}
+					>
+						{year}: {count} Tweets
+					</a>
+				</Li>
+			))}
+	</Ul>
+)
+
+const tweetYears = (tweets: Status[]): Record<string, number> =>
+	tweets.reduce((years, { created_at }) => {
+		const year = created_at.slice(0, 4)
+		return {
+			...years,
+			[year]: (years[year] ?? 0) + 1,
+		}
+	}, {} as Record<string, number>)
 
 export default TwitterArchive
