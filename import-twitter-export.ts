@@ -193,21 +193,17 @@ const replaceEntities = ({
 					.map((variant) => variant.url) ?? []
 
 			const highestBitRate = variantFiles[0]
-			const mediaFile = `${
-				path.parse(new URL(highestBitRate).pathname).base
-			}.webm`
+			const mediaFile = path.parse(new URL(highestBitRate).pathname).base
 			replacements[url] = [
 				...(replacements[url] ?? []),
-				`![Embedded Video](/media/twitter/${id_str}-${mediaFile})`,
+				`![Embedded Video](https://twitter-media-coderbyheart.s3.eu-north-1.amazonaws.com/${id_str}-${mediaFile})`,
 			]
 		} else if (type === 'photo') {
 			// Galleries can have multiple photos
-			const mediaFile = `${
-				path.parse(new URL(media_url_https).pathname).base
-			}.webp`
+			const mediaFile = path.parse(new URL(media_url_https).pathname).base
 			replacements[url] = [
 				...(replacements[url] ?? []),
-				`![Embedded Photo](/media/twitter/${id_str}-${mediaFile})`,
+				`![Embedded Photo](https://twitter-media-coderbyheart.s3.eu-north-1.amazonaws.com/${id_str}-${mediaFile})`,
 			]
 		} else {
 			throw new Error(`Unknown extended media type: ${type} in ${id_str}!`)

@@ -22,7 +22,7 @@ export const renderHtmlAstToReact = (
 					},
 					children,
 				)
-			if (attrs.src.startsWith('/media/twitter'))
+			if (attrs.src.includes('twitter-media-coderbyheart'))
 				return React.createElement('img', attrs, children)
 			return React.createElement(ResponsiveImage, attrs, children)
 		}
