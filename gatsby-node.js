@@ -254,6 +254,15 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 		full_text: node.remark.frontmatter.full_text,
 		favorite_count: parseInt(node.remark.frontmatter.favorite_count, 10),
 	}))
+	const minStars = 50
+	const years = tweetArchive.reduce((years, { created_at }) => {
+		const year = created_at.slice(0, 4)
+		return {
+			...years,
+			[year]: (years[year] ?? 0) + 1,
+		}
+	}, {})
+
 	await renderContentPage(
 		undefined,
 		'/twitter/archive',
@@ -262,17 +271,15 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 		{
 			Footer,
 			status: tweetArchive,
+			numTweets: tweetArchive.length,
+			minStars,
+			popularTweets: tweetArchive
+				.filter(({ favorite_count }) => favorite_count > minStars)
+				.sort(({ favorite_count: c1 }, { favorite_count: c2 }) => c2 - c1),
+			years,
 		},
 	)
-	for (const year of Object.keys(
-		tweetArchive.reduce((years, { created_at }) => {
-			const year = created_at.slice(0, 4)
-			return {
-				...years,
-				[year]: true,
-			}
-		}, {}),
-	)) {
+	for (const year of Object.keys(years)) {
 		await renderContentPage(
 			undefined,
 			`/twitter/archive/${year}`,
