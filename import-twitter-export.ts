@@ -127,6 +127,7 @@ const main = () => {
 					aspect_ratio !== undefined
 						? parseInt(aspect_ratio[0], 10) / parseInt(aspect_ratio[1], 10)
 						: undefined,
+				in_reply_to_status_id: tweet.in_reply_to_status_id,
 			}
 			const replaced = replaceEntities(tweet)
 			const markdown = [
@@ -205,7 +206,18 @@ const replaceEntities = ({
 
 	let replaced = full_text
 	for (const [search, replace] of Object.entries(replacements)) {
-		replaced = replaced.replace(search, [...new Set(replace)].join('\n\n'))
+		const replacements = [...new Set(replace)]
+		if (replacements.length > 1) {
+			// Gallery
+			replaced = replaced.replace(
+				search,
+				`\n\n<div class="gallery gallery-${
+					replacements.length
+				}">\n\n${replacements.join('\n\n')}\n\n</div>`,
+			)
+		} else {
+			replaced = replaced.replace(search, replacements.join('\n\n'))
+		}
 	}
 
 	return replaced

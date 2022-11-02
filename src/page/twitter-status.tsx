@@ -48,8 +48,47 @@ const Tweet = styled.section`
 		box-shadow: 0 4px 10px 1px rgb(0 0 0 / 10%);
 		padding: 2.5rem 2rem;
 	}
-	picture img {
+	> img {
 		margin-top: 2rem;
+	}
+	div.gallery {
+		margin-top: 2rem;
+		display: grid;
+		grid-gap: 1px;
+		aspect-ratio: 2/1;
+		p {
+			margin: 0;
+			height: 100%;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+		}
+		&.gallery-2 {
+			grid-template-rows: 1fr;
+			grid-template-columns: 1fr 1fr;
+		}
+		&.gallery-3 {
+			p:first-child {
+				grid-column-start: 1;
+				grid-column-end: 2;
+				grid-row-start: 1;
+				grid-row-end: 3;
+			}
+			p:nth-child(2) {
+				grid-column-start: 2;
+				grid-column-end: 3;
+			}
+
+			p:last-child {
+				grid-row-start: 2;
+				grid-row-end: 3;
+			}
+		}
+		&.gallery-4 {
+			aspect-ratio: 1/1;
+			grid-template-rows: 1fr 1fr;
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 `
 

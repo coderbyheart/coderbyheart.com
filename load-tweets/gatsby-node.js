@@ -64,7 +64,7 @@ const mostPopular = [
 ]
 
 exports.sourceNodes = async (
-	{ actions: { createNode }, createNodeId, createContentDigest, reporter },
+	{ actions: { createNode }, createContentDigest, reporter },
 	{ development, path: tweetsFolder },
 ) => {
 	reporter.info(
@@ -78,7 +78,7 @@ exports.sourceNodes = async (
 	for (const tweet of tweets) {
 		const id = path.parse(tweet).name
 		// Only use 1% of all tweets for development, and most popular
-		if (development && !mostPopular.includes(id) && Math.random() > 0.01)
+		if (development && !mostPopular.includes(id) && Math.random() > 0.005)
 			continue
 		const pathToFile = path.join(tweetsFolder, tweet)
 
