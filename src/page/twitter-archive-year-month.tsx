@@ -64,7 +64,7 @@ const TwitterArchiveMonth = ({
 					my tweet archive for {monthFormatted}.
 				</p>
 				<h2>Tweets</h2>
-				<Tweets tweets={pageContext.status} month={pageContext.month} />
+				<Tweets tweets={pageContext.status} />
 				<nav>
 					<a href="/twitter/archive">Twitter Archive</a> &middot;{' '}
 					<a href={`/twitter/archive/${year}`}>{year}</a>
@@ -74,23 +74,21 @@ const TwitterArchiveMonth = ({
 	)
 }
 
-const Tweets: FC<{ tweets: Status[]; month: string }> = ({ tweets, month }) => (
+const Tweets: FC<{ tweets: Status[] }> = ({ tweets }) => (
 	<Ul>
-		{tweets
-			.filter(({ created_at }) => created_at.startsWith(month))
-			.map(({ id, created_at, full_text }) => (
-				<Li key={id}>
-					<Link
-						href={`/twitter/status/${id}`}
-						title={`Twitter status ${id} from ${format(
-							new Date(created_at),
-							'd. MMMM yyyy',
-						)}`}
-					>
-						{full_text}
-					</Link>
-				</Li>
-			))}
+		{tweets.map(({ id, created_at, full_text }) => (
+			<Li key={id}>
+				<Link
+					href={`/twitter/status/${id}`}
+					title={`Twitter status ${id} from ${format(
+						new Date(created_at),
+						'd. MMMM yyyy',
+					)}`}
+				>
+					{full_text}
+				</Link>
+			</Li>
+		))}
 	</Ul>
 )
 

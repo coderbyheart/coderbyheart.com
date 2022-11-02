@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import { Title } from '../design/Title'
 import { Page, SiteMetaData } from '../site'
 import PageTemplate from '../templates/page'
-import { Li, Status, Ul } from './twitter-archive'
+import { Li, Ul } from './twitter-archive'
 
 export const query = graphql`
 	query TwitterArchiveYearQuery {
@@ -30,13 +30,14 @@ const TwitterArchiveYear = ({
 		}
 	}
 	pageContext: {
-		status: Status[]
 		Footer: Page
 		year: number
+		numTweetsYear: number
+		tweetsPerMonth: Record<string, number>
 	}
 }) => {
 	const title = `My Twitter archive of ${pageContext.year}`
-	const subtitle = `In ${pageContext.year} I've tweeted ${pageContext.status.length} times`
+	const subtitle = `In ${pageContext.year} I've tweeted ${pageContext.numTweetsYear} times`
 
 	return (
 		<PageTemplate
@@ -58,7 +59,7 @@ const TwitterArchiveYear = ({
 					my tweet archive for {pageContext.year}.
 				</p>
 				<h2>Tweets by month for {`${pageContext.year}`}</h2>
-				<TweetMonths tweets={pageContext.status} year={pageContext.year} />
+				<TweetMonths tweetsPerMonth={pageContext.tweetsPerMonth} />
 				<nav>
 					<a href="/twitter/archive">Twitter Archive</a>
 				</nav>
@@ -67,12 +68,11 @@ const TwitterArchiveYear = ({
 	)
 }
 
-const TweetMonths: FC<{ tweets: Status[]; year: number }> = ({
-	tweets,
-	year,
-}) => (
+const TweetMonths: FC<{
+	tweetsPerMonth: Record<string, number>
+}> = ({ tweetsPerMonth }) => (
 	<Ul>
-		{Object.entries(tweetMonths(tweets, year))
+		{Object.entries(tweetsPerMonth)
 			.sort(([month1], [month2]) => month2.localeCompare(month1))
 			.map(([month, count]) => (
 				<Li key={month}>
@@ -86,16 +86,5 @@ const TweetMonths: FC<{ tweets: Status[]; year: number }> = ({
 			))}
 	</Ul>
 )
-
-const tweetMonths = (tweets: Status[], year: number): Record<string, number> =>
-	tweets
-		.filter(({ created_at }) => created_at.startsWith(`${year}`))
-		.reduce((months, { created_at }) => {
-			const month = created_at.slice(0, 7)
-			return {
-				...months,
-				[month]: (months[month] ?? 0) + 1,
-			}
-		}, {} as Record<string, number>)
 
 export default TwitterArchiveYear

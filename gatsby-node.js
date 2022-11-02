@@ -287,8 +287,21 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 			createPage,
 			{
 				Footer,
-				status: tweetArchive,
 				year,
+				numTweetsYear: tweetArchive.reduce(
+					(tweetsPerYear, { created_at }) =>
+						created_at.startsWith(year) ? tweetsPerYear + 1 : tweetsPerYear,
+					0,
+				),
+				tweetsPerMonth: tweetArchive
+					.filter(({ created_at }) => created_at.startsWith(`${year}`))
+					.reduce((months, { created_at }) => {
+						const month = created_at.slice(0, 7)
+						return {
+							...months,
+							[month]: (months[month] ?? 0) + 1,
+						}
+					}, {}),
 			},
 		)
 		for (const month of Object.keys(
@@ -309,7 +322,9 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 				createPage,
 				{
 					Footer,
-					status: tweetArchive,
+					status: tweetArchive.filter(({ created_at }) =>
+						created_at.startsWith(month),
+					),
 					month,
 				},
 			)
