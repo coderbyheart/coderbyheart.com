@@ -54,6 +54,9 @@ export type TwitterStatus = {
 			created_at: string // e.g. "2015-12-13T21:43:08.000Z"
 			lang: string // e.g. "en"
 			video_aspect_ratio?: number
+			retweeted?: true
+			in_reply_to_screen_name?: string
+			in_reply_to_status_id_str?: string
 		}
 	}
 }

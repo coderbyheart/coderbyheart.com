@@ -24,7 +24,6 @@ export const Video = ({
 	const [height, setHeight] = useState<number>(width * ar)
 
 	useLayoutEffect(() => {
-		console.log(videoRef.current?.clientWidth)
 		setWidth(videoRef.current?.clientWidth ?? 250)
 		setHeight((videoRef.current?.clientWidth ?? width) / ar)
 	}, [videoRef])

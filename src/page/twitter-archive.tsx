@@ -13,6 +13,13 @@ export const Ul = styled.ul`
 export const Li = styled.li`
 	margin-bottom: 0.25rem;
 	display: flex;
+	align-items: center;
+	svg {
+		height: 16px;
+		width: 16px;
+		margin-right: 0.5rem;
+		flex-shrink: 0;
+	}
 `
 
 const Star = styled(Li)`
@@ -23,11 +30,14 @@ const Star = styled(Li)`
 	}
 `
 
+const RetweetCount = styled.span`
+	margin-right: 0.5rem;
+`
+
 export const Link = styled.a`
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	margin-left: 1rem;
 `
 
 export const query = graphql`
@@ -50,6 +60,7 @@ export type Status = {
 	created_at: string
 	full_text: string
 	favorite_count: number
+	retweeted: boolean
 }
 
 const TwitterArchive = ({
@@ -112,7 +123,7 @@ const PopularTweets: FC<{ tweets: Status[]; minStars: number }> = ({
 		<Ul>
 			{tweets.map(({ id, favorite_count, created_at, full_text }) => (
 				<Star key={id}>
-					{favorite_count}{' '}
+					<RetweetCount>{favorite_count}</RetweetCount>
 					<Link
 						href={`/twitter/status/${id}`}
 						title={`Twitter status ${id} from ${format(

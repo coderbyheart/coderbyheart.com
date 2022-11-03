@@ -2,6 +2,8 @@ import { format } from 'date-fns'
 import { graphql } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import ReplyIcon from '../design/corner-down-right.svg'
+import RetweetIcon from '../design/repeat.svg'
 import { breakpoints } from '../design/settings'
 import { Page, SiteMetaData, TwitterStatus } from '../site'
 import PageTemplate from '../templates/page'
@@ -85,7 +87,6 @@ const Tweet = styled.section`
 			}
 		}
 		&.gallery-4 {
-			aspect-ratio: 1/1;
 			grid-template-rows: 1fr 1fr;
 			grid-template-columns: 1fr 1fr;
 		}
@@ -99,6 +100,17 @@ const Footer = styled.footer`
 	p {
 		margin-top: 0;
 		margin-bottom: 0;
+	}
+`
+
+const ActionInfo = styled.p`
+	display: flex;
+	align-items: center;
+	svg {
+		margin-right: 0.5rem;
+	}
+	a {
+		margin-left: 0.25rem;
 	}
 `
 
@@ -121,8 +133,16 @@ const TwitterStatusPage = ({
 		href?: string
 	}
 }) => {
-	const { created_at, lang, favorite_count, retweet_count } =
-		pageContext.status.remark.frontmatter
+	const {
+		created_at,
+		lang,
+		favorite_count,
+		retweet_count,
+		retweeted,
+		in_reply_to_status_id_str,
+		in_reply_to_screen_name,
+	} = pageContext.status.remark.frontmatter
+
 	return (
 		<PageTemplate
 			siteMetadata={data.site.siteMetadata}
@@ -137,6 +157,26 @@ const TwitterStatusPage = ({
 		>
 			<article>
 				<Tweet>
+					{retweeted && (
+						<ActionInfo>
+							<RetweetIcon className="retweet-icon" />
+						</ActionInfo>
+					)}
+					{in_reply_to_status_id_str && (
+						<ActionInfo>
+							<ReplyIcon />
+							Reply to{' '}
+							<a
+								href={
+									in_reply_to_screen_name === 'coderbyheart'
+										? `/twitter/status/${in_reply_to_status_id_str}`
+										: `https://twitter.com/${in_reply_to_screen_name}/status/${in_reply_to_status_id_str}`
+								}
+							>
+								{in_reply_to_status_id_str}
+							</a>
+						</ActionInfo>
+					)}
 					{renderHtmlAstToReact(
 						pageContext.markdown,
 						() =>

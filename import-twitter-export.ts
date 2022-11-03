@@ -10,6 +10,7 @@ type Tweet = {
 		in_reply_to_status_id: string //'1585990297963536384'
 		in_reply_to_screen_name: string //guna_lv
 		in_reply_to_user_id_str: string //'16647326'
+		// Not true for some newer tweets, that are retweets
 		retweeted: boolean
 		entities: {
 			user_mentions: {
@@ -117,19 +118,27 @@ const main = () => {
 			)?.video_info?.aspect_ratio
 			const favorite_count = int(tweet.favorite_count)
 			if (favorite_count > 50) mostPopular.push(tweet.id_str)
-			const frontmatter = {
+			let full_text = tweet.full_text
+			const retweeted = /^RT /.test(full_text)
+			if (retweeted) full_text = full_text.replace(/^RT /, '')
+			const frontmatter: Record<string, any> = {
 				favorite_count,
 				retweet_count: int(tweet.retweet_count),
 				created_at: new Date(tweet.created_at).toISOString(),
 				lang: tweet.lang,
-				full_text: tweet.full_text,
+				full_text,
 				video_aspect_ratio:
 					aspect_ratio !== undefined
 						? parseInt(aspect_ratio[0], 10) / parseInt(aspect_ratio[1], 10)
 						: undefined,
-				in_reply_to_status_id: tweet.in_reply_to_status_id,
+				in_reply_to_screen_name: tweet.in_reply_to_screen_name,
+				in_reply_to_status_id_str: tweet.in_reply_to_status_id_str,
 			}
-			const replaced = replaceEntities(tweet)
+			if (retweeted) frontmatter.retweeted = true
+			const replaced = replaceEntities({
+				...tweet,
+				full_text,
+			})
 			const markdown = [
 				`---`,
 				jsYaml.dump(frontmatter).trim(),
@@ -149,8 +158,11 @@ const main = () => {
 		}
 	}
 
-	console.log('Most popular')
-	console.log(JSON.stringify(mostPopular))
+	writeFileSync(
+		path.join(process.cwd(), 'load-tweets', 'most-popular.json'),
+		JSON.stringify(mostPopular, null, 2),
+		'utf-8',
+	)
 }
 
 const replaceEntities = ({
