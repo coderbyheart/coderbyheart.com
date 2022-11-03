@@ -1,7 +1,6 @@
 import { format } from 'date-fns'
 import { graphql } from 'gatsby'
 import React, { FC } from 'react'
-import RetweetIcon from '../design/repeat.svg'
 import { Title } from '../design/Title'
 import { Page, SiteMetaData } from '../site'
 import PageTemplate from '../templates/page'
@@ -77,9 +76,8 @@ const TwitterArchiveMonth = ({
 
 const Tweets: FC<{ tweets: Status[] }> = ({ tweets }) => (
 	<Ul>
-		{tweets.map(({ id, created_at, full_text, retweeted }) => (
+		{tweets.map(({ id, created_at, full_text }) => (
 			<Li key={id}>
-				{retweeted && <RetweetIcon />}
 				<Link
 					href={`/twitter/status/${id}`}
 					title={`Twitter status ${id} from ${format(

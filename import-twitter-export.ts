@@ -118,15 +118,14 @@ const main = () => {
 			)?.video_info?.aspect_ratio
 			const favorite_count = int(tweet.favorite_count)
 			if (favorite_count > 50) mostPopular.push(tweet.id_str)
-			let full_text = tweet.full_text
-			const retweeted = /^RT /.test(full_text)
-			if (retweeted) full_text = full_text.replace(/^RT /, '')
+			const retweeted = tweet.full_text.startsWith('RT ')
+			if (retweeted) continue
 			const frontmatter: Record<string, any> = {
 				favorite_count,
 				retweet_count: int(tweet.retweet_count),
 				created_at: new Date(tweet.created_at).toISOString(),
 				lang: tweet.lang,
-				full_text,
+				full_text: tweet.full_text,
 				video_aspect_ratio:
 					aspect_ratio !== undefined
 						? parseInt(aspect_ratio[0], 10) / parseInt(aspect_ratio[1], 10)
@@ -134,11 +133,7 @@ const main = () => {
 				in_reply_to_screen_name: tweet.in_reply_to_screen_name,
 				in_reply_to_status_id_str: tweet.in_reply_to_status_id_str,
 			}
-			if (retweeted) frontmatter.retweeted = true
-			const replaced = replaceEntities({
-				...tweet,
-				full_text,
-			})
+			const replaced = replaceEntities(tweet)
 			const markdown = [
 				`---`,
 				jsYaml.dump(frontmatter).trim(),

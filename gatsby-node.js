@@ -219,7 +219,6 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 								full_text
 								in_reply_to_screen_name
 								in_reply_to_status_id_str
-								retweeted
 							}
 						}
 					}
@@ -256,7 +255,6 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 		created_at: node.remark.frontmatter.created_at,
 		full_text: node.remark.frontmatter.full_text,
 		favorite_count: parseInt(node.remark.frontmatter.favorite_count, 10),
-		retweeted: node.remark.frontmatter.retweeted,
 	}))
 	const minStars = 50
 	const years = tweetArchive.reduce((years, { created_at }) => {

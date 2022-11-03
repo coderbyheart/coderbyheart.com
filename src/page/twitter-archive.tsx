@@ -60,7 +60,6 @@ export type Status = {
 	created_at: string
 	full_text: string
 	favorite_count: number
-	retweeted: boolean
 }
 
 const TwitterArchive = ({
@@ -100,7 +99,7 @@ const TwitterArchive = ({
 				/>
 				<p>
 					In October 2022 <a href="/leaving-twitter">I left Twitter</a>. This is
-					my entire tweet archive.
+					my entire tweet archive (excluding retweets).
 				</p>
 				<PopularTweets
 					tweets={pageContext.popularTweets}

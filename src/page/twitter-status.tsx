@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import ReplyIcon from '../design/corner-down-right.svg'
-import RetweetIcon from '../design/repeat.svg'
 import { breakpoints } from '../design/settings'
 import { Page, SiteMetaData, TwitterStatus } from '../site'
 import PageTemplate from '../templates/page'
@@ -138,7 +137,6 @@ const TwitterStatusPage = ({
 		lang,
 		favorite_count,
 		retweet_count,
-		retweeted,
 		in_reply_to_status_id_str,
 		in_reply_to_screen_name,
 	} = pageContext.status.remark.frontmatter
@@ -157,11 +155,6 @@ const TwitterStatusPage = ({
 		>
 			<article>
 				<Tweet>
-					{retweeted && (
-						<ActionInfo>
-							<RetweetIcon className="retweet-icon" />
-						</ActionInfo>
-					)}
 					{in_reply_to_status_id_str && (
 						<ActionInfo>
 							<ReplyIcon />
