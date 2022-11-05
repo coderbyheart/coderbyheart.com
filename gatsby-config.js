@@ -94,6 +94,7 @@ const cfg = {
 				shortname: `coderbyheart`,
 			},
 		},
+		`gatsby-plugin-sitemap`,
 	],
 }
 
