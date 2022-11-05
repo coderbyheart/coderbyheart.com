@@ -94,7 +94,25 @@ const cfg = {
 				shortname: `coderbyheart`,
 			},
 		},
-		`gatsby-plugin-sitemap`,
+		{
+			resolve: 'gatsby-plugin-sitemap',
+			options: {
+				query: `
+			  {
+				allSitePage {
+				  nodes {
+					path
+				  }
+				}
+			  }
+			`,
+				resolveSiteUrl: () => siteUrl,
+				resolvePages: ({ allSitePage: { nodes: allPages } }) => allPages,
+				serialize: ({ path }) => ({
+					url: path,
+				}),
+			},
+		},
 	],
 }
 
