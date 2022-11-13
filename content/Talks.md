@@ -6,6 +6,41 @@ subtitle: A list of my talks
 I am available for speaking engagements! Just contact me if you feel I can
 contribute to your event or conference.
 
+## \[Draft\] Exploring better ways to write tests
+
+Very often we focus on improving the way we write tests within our test
+frameworks. I on the other hand invest time into building new test frameworks.
+Over the last years I have worked on
+[end-to-end testing cloud native applications](#it-does-not-run-on-my-machine-integration-testing-a-cloud-native-application),
+which lead to the development of a BDD feature runner. This year I took the idea
+even further with a focus on coming closer to the goal of living documentation:
+the test files are now written in Markdown. In addition I started to work on
+fixing another big issue that we encounter often:
+[our inability to provide good architecture documentation](/twitter/status/1381512195612246018)
+... what we need is not big, huge architecture diagrams for entire systems (like
+we get when we use C4, Arc42), but diagrams that are context-sensitive. BDD is
+actually a great source for these kinds of diagrams and this is what I want to
+share in this talk.
+
+### Key take-aways
+
+- that testing, developing and documentation go hand in hand
+- that we as people working on these system need to look at our tools and find
+  ways to improve them
+- ideas on how to build living, understandable, up-date architecture diagrams
+- new ideas about the features of GitHub Actions, traceability and automated
+  diagram generation
+
+## \[Draft\] Architecture Archaeology: what 14 years of Twitter data can tell us
+
+In this talk we are going to have a look at the data export Twitter offers to
+its users (from my accounts with 50,000+ tweets dating back to 2008). The way
+the data is structured in the archive will tell us an interesting story about
+how an simple API (a text message) needs to be kept working over decades, while
+at the same time more and more features are added and how that is visible in the
+export. This will also give attendees a lot to think about for their own project
+and how they deal with feature creep, API design, and backwards compatibility.
+
 ## Firmware test automation using real embedded devices
 
 [Blog post](./firmware-test-automation-using-real-embedded-devices) ·
