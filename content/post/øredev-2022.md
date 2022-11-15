@@ -510,6 +510,11 @@ Subscribe to
 [Øredev's YouTube channel](https://www.youtube.com/c/%C3%98redevConference)
 where the talk recordings will be published soon.
 
+## Photos
+
+All my photos from Øredev 2022 can be found in
+[this album](https://photos.coderbyheart.com/album/oredev-2022).
+
 ## Acknowledgements
 
 My employer [Nordic Semiconductor](https://www.nordicsemi.com/) covered the
