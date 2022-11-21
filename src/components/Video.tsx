@@ -32,6 +32,7 @@ export const Video = ({
 		<StyledVideo
 			autoPlay
 			loop
+			muted
 			width={width}
 			height={height}
 			style={{
