@@ -44,9 +44,6 @@ jobs:
           NODE_OPTIONS: --max-old-space-size=6144 --no-experimental-fetch
         run: npx gatsby build --prefix-paths
 
-      - name: Extract critical styles
-        run: node critical-css.js
-
       - name: Semantic release
         continue-on-error: true
         run: |

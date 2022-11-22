@@ -7,7 +7,7 @@
     "prepare": "husky install",
     "postinstall": "check-node-version --package",
     "lint": "eslint --ext .js,.ts,.tsx src",
-    "build": "NODE_OPTIONS=--no-experimental-fetch gatsby build --prefix-paths && node critical-css.js",
+    "build": "NODE_OPTIONS=--no-experimental-fetch gatsby build --prefix-paths",
     "start": "NODE_OPTIONS=--no-experimental-fetch gatsby develop"
   },
   "keywords": [
