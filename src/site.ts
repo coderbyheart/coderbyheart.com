@@ -56,6 +56,7 @@ export type TwitterStatus = {
 			video_aspect_ratio?: number
 			in_reply_to_screen_name?: string
 			in_reply_to_status_id_str?: string
+			replies: string[]
 		}
 	}
 }

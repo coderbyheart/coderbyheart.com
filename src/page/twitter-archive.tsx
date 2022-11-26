@@ -60,6 +60,7 @@ export type Status = {
 	created_at: string
 	full_text: string
 	favorite_count: number
+	replies: string[]
 }
 
 const TwitterArchive = ({

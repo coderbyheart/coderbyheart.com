@@ -139,6 +139,7 @@ const TwitterStatusPage = ({
 		retweet_count,
 		in_reply_to_status_id_str,
 		in_reply_to_screen_name,
+		replies,
 	} = pageContext.status.remark.frontmatter
 
 	return (
@@ -175,6 +176,13 @@ const TwitterStatusPage = ({
 						() =>
 							pageContext.status.remark.frontmatter.video_aspect_ratio ?? 1.5,
 					)}
+					{replies.length > 0 &&
+						replies.map((statusId) => (
+							<ActionInfo key={statusId}>
+								<ReplyIcon />
+								Response: <a href={`/twitter/status/${statusId}`}>{statusId}</a>
+							</ActionInfo>
+						))}
 				</Tweet>
 				<Info>
 					<abbr title={`${favorite_count} favorites`}>⭐ {favorite_count}</abbr>

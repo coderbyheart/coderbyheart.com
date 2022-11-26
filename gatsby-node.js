@@ -219,6 +219,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 								full_text
 								in_reply_to_screen_name
 								in_reply_to_status_id_str
+								replies
 							}
 						}
 					}

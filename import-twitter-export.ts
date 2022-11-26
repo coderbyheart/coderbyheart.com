@@ -118,8 +118,19 @@ const main = () => {
 			)?.video_info?.aspect_ratio
 			const favorite_count = int(tweet.favorite_count)
 			if (favorite_count > 50) mostPopular.push(tweet.id_str)
+
+			// Ignore retweets
 			const retweeted = tweet.full_text.startsWith('RT ')
 			if (retweeted) continue
+
+			// Find replies
+			const replies = tweets
+				.filter(
+					({ tweet: { in_reply_to_status_id_str } }) =>
+						in_reply_to_status_id_str === tweet.id_str,
+				)
+				.map(({ tweet: { id_str } }) => id_str)
+
 			const frontmatter: Record<string, any> = {
 				favorite_count,
 				retweet_count: int(tweet.retweet_count),
@@ -132,6 +143,7 @@ const main = () => {
 						: undefined,
 				in_reply_to_screen_name: tweet.in_reply_to_screen_name,
 				in_reply_to_status_id_str: tweet.in_reply_to_status_id_str,
+				replies,
 			}
 			const replaced = replaceEntities(tweet)
 			const markdown = [
