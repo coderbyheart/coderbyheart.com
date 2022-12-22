@@ -7,7 +7,6 @@ Mentor. Speaker. Conference & Community builder. Camper. 🏕️ 🚐
 **Media Computer Scientist (B.Sc.)**
 
 - 📨 [m@coderbyheart.com](mailto:m@coderbyheart.com)
-- 📱 [464 42 649](tel:+4746442649)
 
 ## Connect
 
