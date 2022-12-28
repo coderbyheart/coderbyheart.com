@@ -27,7 +27,10 @@ const renderContentPage = async (
 const blankToUndefined = (s) =>
 	s === null || (typeof s === 'string' && s.length === 0) ? undefined : s
 
-exports.createPages = async ({ graphql, actions: { createPage } }) => {
+exports.createPages = async ({
+	graphql,
+	actions: { createPage, createRedirect },
+}) => {
 	const {
 		data: { pages },
 		errors,
@@ -117,6 +120,11 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 			Footer,
 		},
 	)
+	await createRedirect({
+		fromPath: `/about`,
+		toPath: `/`,
+		isPermanent: true,
+	})
 	await renderContentPage(
 		await parsePageMarkdown(findPage('Communities.md')),
 		'/communities',

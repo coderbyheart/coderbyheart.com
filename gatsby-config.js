@@ -113,6 +113,7 @@ const cfg = {
 				}),
 			},
 		},
+		`gatsby-plugin-meta-redirect`,
 	],
 }
 
