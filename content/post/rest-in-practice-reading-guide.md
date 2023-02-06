@@ -32,9 +32,6 @@ TypeScript on Node.js and provide a reading guide for them that helps to
 navigate some of the outdated sections. I will also highlight especially
 important chapters.
 
-> By the way: I am also looking for a
-> [Senior Cloud Engineer](https://candidate.hr-manager.net/ApplicationInit.aspx?cid=278&ProjectId=177136&DepartmentId=7414&MediaId=5&SkipAdvertisement=False)!
-
 ## Still highly relevant
 
 Overall, the sentiment of the book still holds very true today. We need to build
