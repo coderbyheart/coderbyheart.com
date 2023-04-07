@@ -12,23 +12,20 @@ const IFrame = styled.iframe`
 	}
 `
 
-export const EmbedYouTube = ({ id }: { id: string }) => {
-	if (isSSR)
-		return (
-			<a href={`https://www.youtube.com/watch?v=${id}`}>Watch on YouTube</a>
-		)
+export const EmbedVimeo = ({ id }: { id: string }) => {
+	if (isSSR) return <a href={`https://vimeo.com/${id}`}>Watch on Vimeo</a>
 	const { ref, inView, entry } = useInView({ triggerOnce: true })
 
 	if (inView)
 		return (
 			<IFrame
-				title={'Watch on YouTube'}
+				title={'Watch on Vimeo'}
 				ref={ref}
 				width={entry?.target.parentElement?.clientWidth ?? 640}
 				height={Math.floor(
 					(entry?.target.parentElement?.clientWidth ?? 640) / 1.75,
 				)}
-				src={`https://www.youtube-nocookie.com/embed/${id}`}
+				src={`https://player.vimeo.com/video/${id}`}
 				frameBorder={0}
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 				allowFullScreen

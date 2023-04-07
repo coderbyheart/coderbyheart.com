@@ -81,6 +81,8 @@ find the user's pain points.
 But make sure that does not influence them too much. Because users that are
 aware that they are watched, often behave differently.
 
+<https://vimeo.com/812976108/embed>
+
 ### Lightning talks
 
 <https://chaos.social/@coderbyheart/110105689011221411/embed>
@@ -94,6 +96,8 @@ influence the business.
 
 <https://chaos.social/@coderbyheart/110105729764807207/embed>
 
+<https://vimeo.com/812979855/embed>
+
 The second talk is by
 [Daria Kostiuk](https://www.linkedin.com/in/daria-kostiuk-23944b64) who speaks
 about the dangers of scope creep.
@@ -102,6 +106,8 @@ Don't forget that any new feature you accept has a tendency to cause unintended
 side-effects and cause other things to take longer than expected.
 
 <https://chaos.social/@coderbyheart/110105773885756845/embed>
+
+<https://vimeo.com/812979950/embed>
 
 The third talk is by [Kjersti Berg](https://ohai.social/@kjerstibb), who talks
 about reviving a code base from a state where it was practically unmaintainable.
@@ -113,6 +119,8 @@ knowledge sharing and decision making; both are key to make confident decision.
 After a year this improved code quality, ability to fix bugs and overall team
 happiness!
 
+<https://vimeo.com/812980074/embed>
+
 <https://chaos.social/@coderbyheart/110105819627330976/embed>
 
 Finally in this slot of Lightning Talks at #BoosterConf
@@ -122,6 +130,8 @@ sometimes it is not avoidable).
 
 <https://chaos.social/@coderbyheart/110105991859742366/embed>
 
+<https://vimeo.com/812980178/embed>
+
 Now in the second slot of Lightning Talks at #BoosterConf
 [Nora Gjøen-Gjøsæter](https://www.linkedin.com/in/kanteganora) gives us a very
 important reminder how biased AI models are.
@@ -130,6 +140,8 @@ They all are, but some are more than others and effort is needed to not
 reinforce and proliferate the biases the models get from their source data.
 
 <https://chaos.social/@coderbyheart/110106029163172924/embed>
+
+<https://vimeo.com/812978922/embed>
 
 [Karianne Berg](https://www.linkedin.com/in/kberg) shares her best practices for
 making awesome database indexes. Some strong language included 🤣.
@@ -142,9 +154,13 @@ problem only becomes apparent with production data).
 
 <https://chaos.social/@coderbyheart/110106317749585353/embed>
 
+<https://vimeo.com/812979000/embed>
+
 Very cool lightning talk by [Embla Flatlandsmo](https://emblaflatlandsmo.com/)
 explaining how keyboards just™️ work when you plug them into your computer. Love
 the hand-drawn slides!
+
+<https://vimeo.com/812979094/embed>
 
 ### Architecture Workshop with Oliver Zeigermann
 
@@ -229,6 +245,8 @@ it doesn't feel like work.
 
 Make it fun, and don't replicate the same constraints that you have for work!
 
+<https://vimeo.com/814008986/embed>
+
 ## Day 3
 
 ### Talk by Hege Dreiem about API Design
@@ -264,6 +282,8 @@ They used Facebook Prophet because it can account very good for seasonal and
 holiday events (and it's open source).
 
 Unfortunately he did not share how successful this project was in the end.
+
+<https://vimeo.com/814014896/embed>
 
 ### Talk about GraphQL by Pål Thomassen
 
@@ -301,6 +321,8 @@ So it turned out that it a traditional REST API would have been a better choice,
 both it would be easier to maintain with a smaller team, and it's a more
 established technology that would scale better for this specific project.
 
+<https://vimeo.com/814015103/embed>
+
 ### Talk by Andrew Harmel-Law about Architecture
 
 <https://chaos.social/@coderbyheart/110117723882154948/embed>
@@ -336,6 +358,8 @@ Finally he points out to watch out for potential causes this approach can fail:
 
 This is the detailed blog post for this talk:
 <https://martinfowler.com/articles/scaling-architecture-conversationally.html>
+
+<https://vimeo.com/814014311/embed>
 
 ### Closing
 

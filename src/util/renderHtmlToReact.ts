@@ -2,6 +2,7 @@ import { toH } from 'hast-to-hyperscript'
 import React from 'react'
 import { EmbedToot } from '../components/EmbedToot'
 import { EmbedTweet } from '../components/EmbedTweet'
+import { EmbedVimeo } from '../components/EmbedVimeo'
 import { EmbedYouTube } from '../components/EmbedYouTube'
 import { ResponsiveImage } from '../components/ResponsiveImage'
 import { Video } from '../components/Video'
@@ -61,6 +62,18 @@ export const renderHtmlAstToReact = (
 			const tootlURL = tootMatch?.[0]
 			if (tootlURL !== undefined) {
 				return React.createElement(EmbedToot, { url: tootlURL }, children)
+			}
+			// Embed Vimeo videos
+			const vimeoEmbedMatch = attrs.href?.match(
+				/^https:\/\/vimeo.com\/([0-9]+)\/embed/,
+			)
+			const vimeoId = vimeoEmbedMatch?.[1]
+			if (vimeoId !== undefined) {
+				return React.createElement(
+					EmbedVimeo,
+					{ id: vimeoId, ...attrs },
+					children,
+				)
 			}
 		}
 		return React.createElement(name, attrs, children)
