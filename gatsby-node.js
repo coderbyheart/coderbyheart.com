@@ -139,6 +139,13 @@ exports.createPages = async ({
 		createPage,
 		{ Footer },
 	)
+	await renderContentPage(
+		await parsePageMarkdown(findPage('Socials.md')),
+		'/socials',
+		'default',
+		createPage,
+		{ Footer },
+	)
 	// Render blog posts
 	const {
 		data: { posts },
