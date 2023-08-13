@@ -6,7 +6,11 @@ subtitle: A list of my talks
 I am available for speaking engagements! Just contact me if you feel I can
 contribute to your event or conference.
 
-## \[Draft\] Exploring better ways to write tests
+## Exploring better ways to write tests
+
+[Video](https://www.youtube.com/watch?v=dZX7SbGOGn4) ·
+[Blog post](./exploring-better-ways-to-write-tests) ·
+[Slides](https://bit.ly/better-test-tools)
 
 Very often we focus on improving the way we write tests within our test
 frameworks. I on the other hand invest time into building new test frameworks.
@@ -30,16 +34,6 @@ share in this talk.
 - ideas on how to build living, understandable, up-date architecture diagrams
 - new ideas about the features of GitHub Actions, traceability and automated
   diagram generation
-
-## \[Draft\] Architecture Archaeology: what 14 years of Twitter data can tell us
-
-In this talk we are going to have a look at the data export Twitter offers to
-its users (from my accounts with 50,000+ tweets dating back to 2008). The way
-the data is structured in the archive will tell us an interesting story about
-how an simple API (a text message) needs to be kept working over decades, while
-at the same time more and more features are added and how that is visible in the
-export. This will also give attendees a lot to think about for their own project
-and how they deal with feature creep, API design, and backwards compatibility.
 
 ## Firmware test automation using real embedded devices
 
