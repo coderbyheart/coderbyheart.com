@@ -6,21 +6,6 @@ I'm constantly trying to improve the community I am part of. Since 2012 I've
 volunteered and initiated conferences, barcamps, meetups, events and platforms
 that support them:
 
-## Distribute Aid
-
-I am a code contributor at [Distribute Aid](https://distributeaid.org) where I
-help build the software that helps aid workers across Europe improve the lives
-of newcomers.
-
-> We are always looking for new contributors and maintain an up-to-date
-> [Getting Started Guide](https://github.com/distributeaid).
-
-Here are some posts about my work there:
-
-- [Why I contribute to DistributeAid](/distributeaid-contributor-spotlight)
-- [Volunteer Impact: Distribute Aid Refugees Care](https://www.designtocombatcovid19.com/blog/distribute-aid)
-- [COVID-19 guide for Aid Workers built with GatsbyJS from a Google Drive folder](https://coderbyheart.com/covid-19-guide-for-aid-workers-built-with-gatsbyjs-from-a-google-drive/)
-
 ## Codefreeze
 
 Since 2017 I am helping to make [Codefreeze](https://codefreeze.fi/) the
@@ -79,6 +64,11 @@ In 2016 I helped to organize two LeanCamp events in Frankfurt.
 In 2016 I helped organize the Augenhöhe Camp Frankfurt.
 
 ## Events
+
+**[AdaCon Norway](https://adacon.no/)**
+
+In 2023 I am again helping with the organization of AdaCon Norway in Oslo (which
+was previously _Ada Lovelace mini-conference_).
 
 **[TechWomen Norway](https://techwomen.no/ada-lovelace-day-2019.html)**
 
@@ -139,3 +129,16 @@ and
 [here](https://www.op-online.de/offenbach/taeglich-neue-mieter-2592144.html).
 
 ![OFfenraum](https://live.staticflickr.com/8192/8356365591_a5035a6dd6_o_d.jpg)
+
+## Distribute Aid
+
+I was a code contributor at [Distribute Aid](https://distributeaid.org) for
+three years where I help build the software that helps aid workers across Europe
+improve the lives of newcomers.
+
+Here are some posts about my work there:
+
+- [Why I contribute to DistributeAid](/distributeaid-contributor-spotlight)
+- [Volunteer Impact: Distribute Aid Refugees Care](https://www.designtocombatcovid19.com/blog/distribute-aid)
+- [COVID-19 guide for Aid Workers built with GatsbyJS from a Google Drive folder](https://coderbyheart.com/covid-19-guide-for-aid-workers-built-with-gatsbyjs-from-a-google-drive/)
+- [I've left DistributeAid](/leaving-distributeaid)
