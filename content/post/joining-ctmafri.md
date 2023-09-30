@@ -7,6 +7,9 @@ abstract:
 date: 2023-01-01T18:00+01:00
 ---
 
+> Update: End of September 2023 I have decided to step down from the advisory
+> board.
+
 I've joined the Advisory Board of
 [CreaTech Motives Afrika](https://www.ctmafri.com/) as a technical advisor.
 
