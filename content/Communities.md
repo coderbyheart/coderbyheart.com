@@ -6,7 +6,9 @@ I'm constantly trying to improve the community I am part of. Since 2012 I've
 volunteered and initiated conferences, barcamps, meetups, events and platforms
 that support them:
 
-## Codefreeze
+## Conferences
+
+### Codefreeze
 
 Since 2017 I am helping to make [Codefreeze](https://codefreeze.fi/) the
 [most amazing software conference in the world](https://coderbyheart.com/codefreeze-brings-the-magic-of-socrates-to-lapland/).
@@ -14,6 +16,16 @@ Since 2019 there is also a summer-version:
 [Codebreeze](https://codebreeze.netlify.com/).
 
 ![Codefreeze](https://pbs.twimg.com/media/DTkIPMnXUAAkFGu?format=jpg&name=4096x4096)
+
+**[AdaCon Norway](https://adacon.no/)**
+
+In 2023 I am again helping with the organization of AdaCon Norway in Oslo (which
+was previously _Ada Lovelace mini-conference_).
+
+**[TechWomen Norway](https://techwomen.no/ada-lovelace-day-2019.html)**
+
+In 2019 I helped to organize the _Ada Lovelace mini-conference_ and the
+presentation of the 2019 Tech Role Models, which took place in Oslo.
 
 ## Meetups
 
@@ -64,16 +76,6 @@ In 2016 I helped to organize two LeanCamp events in Frankfurt.
 In 2016 I helped organize the Augenhöhe Camp Frankfurt.
 
 ## Events
-
-**[AdaCon Norway](https://adacon.no/)**
-
-In 2023 I am again helping with the organization of AdaCon Norway in Oslo (which
-was previously _Ada Lovelace mini-conference_).
-
-**[TechWomen Norway](https://techwomen.no/ada-lovelace-day-2019.html)**
-
-In 2019 I helped to organize the _Ada Lovelace mini-conference_ and the
-presentation of the 2019 Tech Role Models, which took place in Oslo.
 
 **[RheinMain Tech Cabal](https://github.com/coderbyheart/blog/blob/gh-pages/rheinmain-tech-cabal.md)**
 
@@ -142,3 +144,9 @@ Here are some posts about my work there:
 - [Volunteer Impact: Distribute Aid Refugees Care](https://www.designtocombatcovid19.com/blog/distribute-aid)
 - [COVID-19 guide for Aid Workers built with GatsbyJS from a Google Drive folder](https://coderbyheart.com/covid-19-guide-for-aid-workers-built-with-gatsbyjs-from-a-google-drive/)
 - [I've left DistributeAid](/leaving-distributeaid)
+
+## Algo Peers / CreaTech Motives Afrika
+
+In 2023 [I volunteered](/joining-ctmafri) as a technical advisor for the
+Ghana-based social learning initiative, which is also supported by Nordic
+Semiconductor and the micro:bit foundation.
