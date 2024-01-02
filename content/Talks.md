@@ -6,9 +6,26 @@ subtitle: A list of my talks
 I am available for speaking engagements! Just contact me if you feel I can
 contribute to your event or conference.
 
+## Draft: Making your prototype the center of the discussion
+
+As a developer I have been able through using a walking skeleton, continuous
+deployment and outside-in-TDD to deliver working minimal products. This way
+developers like me can make sure to be involved in the discussion with product
+people and customers early on in a projects' life-cycle. And in my experience
+only the real product (and not even a click dummy) will truly create shared
+understanding with all stakeholders. Because time is always short and we know
+that every prototype ends up in production we have to make sure that even our
+prototypes are of high quality; which is where test-driven-development (TDD) and
+continuous delivery (CD) really shine. This talk would be an encouragement for
+developers to trust their skills and tools, but also invest in mastering them.
+On the other hand we as developers who often strive for the perfect, beautiful
+solution; for this approach to succeed we need to embrace imperfect solutions
+because they provide valuable insight much earlier than most often believe.
+
 ## Exploring better ways to write tests
 
-[Video](https://www.youtube.com/watch?v=dZX7SbGOGn4) ·
+Video: [Updated version](https://vimeo.com/showcase/10739959/video/887919689),
+[First version](https://www.youtube.com/watch?v=dZX7SbGOGn4) ·
 [Blog post](./exploring-better-ways-to-write-tests) ·
 [Slides](https://bit.ly/better-test-tools)
 
