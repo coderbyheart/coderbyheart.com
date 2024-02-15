@@ -52,6 +52,11 @@ share in this talk.
 - new ideas about the features of GitHub Actions, traceability and automated
   diagram generation
 
+- [Nordic Testing Day 2023 in Tallinn](https://nordictestingdays.eu/), 📅 7-9.
+  Juni 2023 🇪🇪 Tallinn
+- [Trondheim Developer Conference 2023](https://2023.trondheimdc.no/speakers/markus-tacker/),
+  📅 23. October 2023 🇳🇴 Trondheim
+
 ## Firmware test automation using real embedded devices
 
 [Blog post](./firmware-test-automation-using-real-embedded-devices) ·
