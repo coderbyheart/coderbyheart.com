@@ -9,6 +9,11 @@ abstract: >
 date: 2024-05-16T13:30:00.000Z
 ---
 
+[Video](https://vimeopro.com/newcrafts/newcrafts/video/949429939)
+
+<div style="padding:56.25% 0 0 0;position:relative; margin-top: 2rem;"><iframe src="https://player.vimeo.com/video/949429939?h=3f1f414cca" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
 I was first paid to write software in 1997, now 27 years ago, and if there is
 one skill that had the biggest impact on my career then it’s the ability to
 deliver working software that doesn’t break. This allows me to take vacation,
