@@ -8,7 +8,7 @@ contribute to your event or conference.
 
 ## Software Quality made this talk happen: push-to-deploy as the means to deal with uncertainty
 
-[Video](https://vimeopro.com/newcrafts/newcrafts/video/949429939) ·
+[Video](https://www.youtube.com/watch?v=2KeBxWAdndo) ·
 [Blog post](./push-to-deploy-as-the-means-to-deal-with-uncertainty) ·
 [Slides](https://drive.google.com/file/d/1ZrrTc4YdN0C23C1GOXilOaD4eCfsplYO/view?usp=sharing)
 
