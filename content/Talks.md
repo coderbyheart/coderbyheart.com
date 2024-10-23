@@ -6,6 +6,37 @@ subtitle: A list of my talks
 I am available for speaking engagements! Just contact me if you feel I can
 contribute to your event or conference.
 
+## Upcoming: Strongly typed third-party integrations with TypeScript
+
+> Many of us have to integrate third-party APIs, and we cannot trust their
+> documentation. We also need to track when their data format changes. The same
+> is true for integrating our own (or other teams’) microservices. I will show
+> how we do this in an effective and flexible way using TypeScript.
+
+In this talk, I will present my approach to doing this safely with TypeScript
+and how this enables end-to-end contract testing which I have been using for
+many years and consider one of the robust best practices we apply basically in
+all of our web application projects.
+
+This is a very practical, hands-on talk with many concrete examples that will
+give the audience a clear guide on how to build robust, well documented system
+integrations.
+
+We leverage NPM modules to version our API definition and create a clear source
+of truth for all your integrations, be it a REST API, WebSocket or CoAP
+messages-the same principle applies.
+
+The three key-takeaways are:
+
+- learn about [TypeBox](https://github.com/sinclairzx81/typebox) and how I use
+  it to make integrations of third-party APIs type-safe
+- see a code-example where a frontend-application runs against a mock-API using
+  these types
+- get to know techniques to discover breaking API changes through monitoring
+
+🇳🇴 [Bart.js](https://www.meetup.com/bartjs/), (Trondheim, Norway) 📅 20.
+November 2024
+
 ## Software Quality made this talk happen: push-to-deploy as the means to deal with uncertainty
 
 [Video](https://www.youtube.com/watch?v=2KeBxWAdndo) ·
