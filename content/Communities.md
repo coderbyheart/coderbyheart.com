@@ -12,15 +12,18 @@ that support them:
 
 Since 2017 I am helping to make [Codefreeze](https://codefreeze.fi/) the
 [most amazing software conference in the world](https://coderbyheart.com/codefreeze-brings-the-magic-of-socrates-to-lapland/).
-Since 2019 there is also a summer-version:
+In 2019 there was also a summer-version:
 [Codebreeze](https://codebreeze.netlify.com/).
 
 ![Codefreeze](https://pbs.twimg.com/media/DTkIPMnXUAAkFGu?format=jpg&name=4096x4096)
 
+### AdaCon Norway
+
 **[AdaCon Norway](https://adacon.no/)**
 
-In 2023 I am again helping with the organization of AdaCon Norway in Oslo (which
-was previously _Ada Lovelace mini-conference_).
+Since 2023 I am helping with the organization of AdaCon Norway in Oslo (which
+was previously _Ada Lovelace mini-conference_). In 2024 I took over as the
+moderator and host.
 
 **[TechWomen Norway](https://techwomen.no/ada-lovelace-day-2019.html)**
 
