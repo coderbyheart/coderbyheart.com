@@ -1,0 +1,360 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.25.6"/><meta data-react-helmet="true" name="description" content="Notes on migrating Bifravst to the completely rewritten AWS SDK for JavaScript/TypeScript"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:site" content="@coderbyheart"/><meta data-react-helmet="true" name="twitter:title" content="Migrating to AWS SDK v3 for JavaScript"/><meta data-react-helmet="true" name="twitter:description" content="Notes on migrating Bifravst to the completely rewritten AWS SDK for JavaScript/TypeScript"/><meta data-react-helmet="true" name="twitter:image" content="https://images.ctfassets.net/bncv3c2gt878/3Jk4P6nFPNzaz1gsguktk8/350b7e4ddb2c7d86416243d9902920e2/social-card-default-2020.png"/><style data-href="/styles.d3b292d3c2962f779862.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:visible;padding:1px;position:relative}pre[class*=language-]>code{background-attachment:local;background-color:#fdfdfd;background-image:linear-gradient(transparent 50%,rgba(69,142,209,.04) 0);background-origin:content-box;background-size:3em 3em;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;position:relative;z-index:1}code[class*=language-]{display:block;height:inherit;max-height:inherit;overflow:auto;padding:0 1em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdfdfd;box-sizing:border-box;margin-bottom:1em}:not(pre)>code[class*=language-]{border:1px solid rgba(0,0,0,.1);border-radius:.3em;color:#c92c2c;display:inline;padding:.2em;position:relative;white-space:normal}pre[class*=language-]:after,pre[class*=language-]:before{bottom:.75em;box-shadow:0 13px 8px #979797;content:"";display:block;height:20%;left:.18em;max-height:13em;position:absolute;transform:rotate(-2deg);width:40%}pre[class*=language-]:after{left:auto;right:.75em;transform:rotate(2deg)}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{background:hsla(0,0%,100%,.5);color:#a67f59}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{background:hsla(0,0%,100%,.5);color:#a67f59}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.namespace{opacity:.7}@media screen and (max-width:767px){pre[class*=language-]:after,pre[class*=language-]:before{bottom:14px;box-shadow:none}}pre[class*=language-].line-numbers.line-numbers{padding-left:0}pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-bottom:0;padding-left:0;padding-top:0}pre[data-line] code{padding-left:4em;position:relative}pre .line-highlight{margin-top:0}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 80)
+          }), 0)
+        }
+      }
+    })
+  </script><style data-styled="" data-styled-version="5.3.9">.kSKgwx{font-family:var(--headline-font-family);font-weight:var(--headline-font-weight-thin);}/*!sc*/
+data-styled.g1[id="Title__Subtitle-sc-13td2sy-0"]{content:"kSKgwx,"}/*!sc*/
+.HYxvl{font-family:var(--headline-font-family);font-weight:var(--headline-font-weight-thin);}/*!sc*/
+data-styled.g2[id="Title__Time-sc-13td2sy-1"]{content:"HYxvl,"}/*!sc*/
+.fhFGup{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}/*!sc*/
+.fhFGup h1{margin-top:0.5rem;}/*!sc*/
+data-styled.g3[id="Title__Wrapper-sc-13td2sy-2"]{content:"fhFGup,"}/*!sc*/
+.bscNff{line-height:150%;}/*!sc*/
+.bscNff img{width:100%;height:auto;}/*!sc*/
+.bscNff a{color:var(--highlight-color);}/*!sc*/
+.bscNff h1,.bscNff h2{position:relative;margin-bottom:1.5rem;}/*!sc*/
+.bscNff h1:first-child,.bscNff h2:first-child{margin-top:0;}/*!sc*/
+@media (min-width:700px){.bscNff h1,.bscNff h2{margin-top:4rem;}}/*!sc*/
+.bscNff h1:after,.bscNff h2:after{content:' ';width:5rem;height:1px;border-bottom:1px solid var(--highlight-color);opacity:0.5;position:absolute;left:0;bottom:-0.5rem;}/*!sc*/
+.bscNff h1 small,.bscNff h2 small{font-weight:var(--headline-font-weight-thin);font-size:50%;text-transform:uppercase;}/*!sc*/
+.bscNff strong{font-weight:var(--text-font-weigth-bold);}/*!sc*/
+.bscNff blockquote{border:1px solid var(--heart-color);border-radius:5px;padding:0 1rem;margin:0;background-color:var(--note-bg-color);}/*!sc*/
+.bscNff blockquote a{color:var(--heart-color-on-note);}/*!sc*/
+.bscNff div.twitter-tweet-rendered{margin:2rem auto !important;}/*!sc*/
+.bscNff img:not([src]){visibility:hidden;}/*!sc*/
+.bscNff img[data-large-source='1']{width:100vw;margin-left:-1rem;margin-right:-1rem;}/*!sc*/
+@media (min-width:700px){.bscNff img[data-large-source='1']{margin-top:4rem;margin-bottom:4rem;margin-left:calc((100vw - 700px) / 2 * -1);margin-right:calc((100vw - 700px) / 2 * -1);}}/*!sc*/
+.bscNff li + li{padding-top:1rem;}/*!sc*/
+@media (min-width:700px){.bscNff li + li{padding-top:0;}}/*!sc*/
+.bscNff pre[class*='language-'] > code{border-color:var(--highlight-color);background-image:none;}/*!sc*/
+.bscNff pre[class*='language-']:before,.bscNff pre[class*='language-']:after{box-shadow:none;}/*!sc*/
+.bscNff pre[class*='language-'] .token.constant{color:var(--highlight-color);}/*!sc*/
+.bscNff pre[class*='language-'] .token.keyword{color:var(--highlight-color);}/*!sc*/
+.bscNff pre[class*='language-'] .token.boolean{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.function{color:var(--color-syntax-ChelseaGem);}/*!sc*/
+.bscNff pre[class*='language-'] .token.number{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.operator{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.punctuation{color:var(--color-syntax-Emperor);}/*!sc*/
+.bscNff pre[class*='language-'] .token.parameter{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.regex{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.string{color:var(--color-syntax-JapaneseLaurel);}/*!sc*/
+.bscNff pre[class*='language-'] .token.class-name{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.comment{color:var(--color-syntax-DoveGray);}/*!sc*/
+.bscNff pre[class*='language-'] .token.template-string{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.inserted{color:var(--color-syntax-JapaneseLaurel);}/*!sc*/
+data-styled.g4[id="Content-sc-1unkf2t-0"]{content:"bscNff,"}/*!sc*/
+.bqEswo{min-height:100%;background-color:var(--background-color-dark);color:var(--text-color-light);font-size:var(--small-font-size);}/*!sc*/
+.bqEswo a{color:var(--highlight-color-on-dark);-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.bqEswo hr{border:0;border-bottom:1px solid var(--highlight-color-on-dark);opacity:0.5;width:5rem;margin:0;}/*!sc*/
+.bqEswo h1,.bqEswo h2{position:relative;margin-bottom:1.5rem;}/*!sc*/
+.bqEswo h1:after,.bqEswo h2:after{content:' ';width:5rem;height:1px;border-bottom:1px solid var(--highlight-color-on-dark);opacity:0.5;position:absolute;left:0;bottom:-0.5rem;}/*!sc*/
+.bqEswo h1{font-size:42px;}/*!sc*/
+.bqEswo h1 a{color:inherit;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+.bqEswo h1 svg{width:calc(42px * 1.25);height:calc(42px * 1.25);}/*!sc*/
+.bqEswo h2{margin-top:3rem;}/*!sc*/
+data-styled.g12[id="Footer__StyledFooter-sc-inlkh7-0"]{content:"bqEswo,"}/*!sc*/
+.euxZA-D{max-width:var(--max-width);padding:1rem 1rem;}/*!sc*/
+@media (min-width:700px){.euxZA-D{padding:4rem 0;margin:0 auto;}}/*!sc*/
+.euxZA-D p{max-width:calc(var(--max-width) / 2);}/*!sc*/
+.euxZA-D ul{list-style:none;padding:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}/*!sc*/
+.euxZA-D ul li + li{padding-top:0;}/*!sc*/
+.euxZA-D ul li + li:before{content:'·';padding:0.5rem;}/*!sc*/
+@media (min-width:700px){.euxZA-D ul{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}.euxZA-D ul li + li:before{content:'';padding:0;}}/*!sc*/
+data-styled.g13[id="Footer__Wrapper-sc-inlkh7-1"]{content:"euxZA-D,"}/*!sc*/
+.erxblp{margin-top:2rem;}/*!sc*/
+data-styled.g14[id="Footer__Copyright-sc-inlkh7-2"]{content:"erxblp,"}/*!sc*/
+.bRXULA{font-family:var(--headline-font-family);font-weight:var(--headline-font-weight-light);padding:1rem 0;border-bottom:1px solid rgba(0,0,0,0.1);}/*!sc*/
+.bRXULA strong{font-weight:var(--headline-font-weight);}/*!sc*/
+.bRXULA a{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.bRXULA a:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+data-styled.g16[id="MainNav__StyledNav-sc-84y1hf-0"]{content:"bRXULA,"}/*!sc*/
+.iavLyM{font-size:25px;font-weight:var(--headline-font-weight);color:inherit;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+.iavLyM svg{width:calc(25px * 1.25);height:calc(25px * 1.25);}/*!sc*/
+data-styled.g17[id="MainNav__Logo-sc-84y1hf-1"]{content:"iavLyM,"}/*!sc*/
+.khhOZg{text-transform:uppercase;margin-top:1rem;}/*!sc*/
+.khhOZg a{color:var(--text-color);}/*!sc*/
+.khhOZg a.active,.khhOZg a:hover{color:var(--highlight-color);-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.khhOZg a + a{margin-left:1rem;}/*!sc*/
+@media (min-width:700px){.khhOZg{margin-top:0;}}/*!sc*/
+data-styled.g18[id="MainNav__ContentNav-sc-84y1hf-2"]{content:"khhOZg,"}/*!sc*/
+.cRsqZM{padding:0 1rem;max-width:var(--max-width);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}/*!sc*/
+@media (min-width:700px){.cRsqZM{padding:0;margin:0 auto;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}/*!sc*/
+data-styled.g19[id="MainNav__Wrapper-sc-84y1hf-3"]{content:"cRsqZM,"}/*!sc*/
+.hSIzAH{background-color:var(--background-color-dark);color:var(--text-color-light);font-size:var(--small-font-size);font-family:var(--headline-font-family);font-weight:var(--headline-font-weight-light);position:fixed;top:0;left:0;width:100%;z-index:99999;}/*!sc*/
+.hSIzAH strong{font-weight:var(--headline-font-weight);}/*!sc*/
+.hSIzAH a{color:var(--text-color-light);-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.hSIzAH a:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+data-styled.g20[id="MetaNav__StyledNav-sc-1vlf8rg-0"]{content:"hSIzAH,"}/*!sc*/
+.ehYVXp{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;-webkit-flex-shrink:1;-ms-flex-negative:1;flex-shrink:1;}/*!sc*/
+.ehYVXp strong{text-transform:uppercase;}/*!sc*/
+data-styled.g21[id="MetaNav__Shrink-sc-1vlf8rg-1"]{content:"ehYVXp,"}/*!sc*/
+.jfwrQy{display:none;}/*!sc*/
+data-styled.g22[id="MetaNav__ContentNav-sc-1vlf8rg-2"]{content:"jfwrQy,"}/*!sc*/
+.kNKipO{padding:0 1rem;margin:0 auto;max-width:var(--max-width);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:40px;}/*!sc*/
+@media (min-width:700px){.kNKipO{padding:0;}}/*!sc*/
+.kNKipO span + span:before{content:'·';padding:0.25rem;}/*!sc*/
+data-styled.g23[id="MetaNav__Wrapper-sc-1vlf8rg-3"]{content:"kNKipO,"}/*!sc*/
+#___gatsby{padding-top:40px;}/*!sc*/
+body.scrolling .MetaNav__ContentNav-sc-1vlf8rg-2{display:block;}/*!sc*/
+body.scrolling .MetaNav__Shrink-sc-1vlf8rg-1 span{display:none;}/*!sc*/
+body.scrolling .MetaNav__Wrapper-sc-1vlf8rg-3 svg{display:none;}/*!sc*/
+data-styled.g24[id="sc-global-QOhQF1"]{content:"sc-global-QOhQF1,"}/*!sc*/
+:root{--text-font-family:Roboto,sans-serif;--text-font-weigth:400;--text-font-weigth-bold:500;--headline-font-family:Raleway,sans-serif;--headline-font-weight:700;--headline-font-weight-light:500;--headline-font-weight-thin:300;--background-color:#ffffff;--background-color-dark:#191919;--highlight-color:#007da7;--highlight-color-on-dark:#00b4ef;--note-bg-color:#e7f9ff;--text-color:#3f3f3f;--text-color-light:#ffffffd9;--heart-color:#e00073;--heart-color-on-note:#d8006f;--small-font-size:12px;--max-width:700px;--color-syntax-ChelseaGem:#aa5d00;--color-syntax-DeepCerulean:#007faa;--color-syntax-DoveGray:#696969;--color-syntax-Emperor:#545454;--color-syntax-JapaneseLaurel:#008000;--color-syntax-Thunderbird:#d91e18;}/*!sc*/
+html,body{font-family:var(--text-font-family);font-weight:var(--text-font-weigth);height:100%;background-color:var(--background-color);color:var(--text-color);}/*!sc*/
+html h1,body h1,html h2,body h2,html h3,body h3,html h4,body h4,html h5,body h5,html h6,body h6{font-family:var(--headline-font-family);font-weight:var(--headline-font-weight);line-height:115%;}/*!sc*/
+#___gatsby,#gatsby-focus-wrapper{height:100%;}/*!sc*/
+body{overflow-x:hidden;}/*!sc*/
+data-styled.g25[id="sc-global-gzyOkx1"]{content:"sc-global-gzyOkx1,"}/*!sc*/
+.fkcflf{padding:1rem;margin-bottom:4rem;max-width:var(--max-width);}/*!sc*/
+@media (min-width:700px){.fkcflf{padding:0;margin:4rem auto;}}/*!sc*/
+.fkcflf.home .Content-sc-1unkf2t-0:before{display:inline-block;content:'';background-image:url('//images.ctfassets.net/bncv3c2gt878/18M7LZPr4Dah1nSJagy6bk/09d2f6f4f373d983d0214ecd896bd89f/Me_2022-08?w=300&fm=webp');background-size:cover;width:150px;height:150px;border-radius:100%;border:2px solid var(--heart-color);margin-top:3rem;margin-bottom:2rem;margin-left:calc((100vw / 2) - (154px / 2) - 1rem);box-shadow:0px 0px 15px 3px #00000057;}/*!sc*/
+@media (min-width:700px){.fkcflf.home .Content-sc-1unkf2t-0:before{margin-top:0;margin-left:calc(700px / 2 - 154px / 2);}}/*!sc*/
+.fkcflf.twitter-status article .Title__Wrapper-sc-13td2sy-2 h1,.fkcflf.twitter-archive article .Title__Wrapper-sc-13td2sy-2 h1{margin-top:0.5rem;}/*!sc*/
+data-styled.g26[id="page__Main-sc-64o6a0-0"]{content:"fkcflf,"}/*!sc*/
+.dMtdnQ{margin:4rem 0;}/*!sc*/
+.dMtdnQ section{margin:4rem 0;}/*!sc*/
+data-styled.g27[id="post__Footer-sc-79pspf-0"]{content:"dMtdnQ,"}/*!sc*/
+</style><title data-react-helmet="true">Markus Tacker · Migrating to AWS SDK v3 for JavaScript</title><link data-react-helmet="true" rel="canonical" href="https://coderbyheart.com/aws-sdk-v3"/><link data-react-helmet="true" rel="icon" type="image/x-icon" href="/favicon.ico"/><link data-react-helmet="true" rel="preconnect" href="https://fonts.gstatic.com"/><link data-react-helmet="true" rel="preconnect" href="https://cdn.jsdelivr.net"/><link data-react-helmet="true" rel="preconnect" href="https://fonts.googleapis.com"/><link data-react-helmet="true" rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/><script data-react-helmet="true" type="text/javascript">(function(d){
+	var x = d.createElement("link");
+	var y = d.getElementsByTagName("script")[0];
+	x.rel = "stylesheet";
+	x.href = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Raleway:wght@300;500;700&display=swap";
+	y.parentNode.insertBefore(x, y);
+})(document);</script><script data-react-helmet="true" async="" src="/main.js?v=1729695225510"></script><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><meta name="version" content="1729695225513"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header><nav class="MetaNav__StyledNav-sc-1vlf8rg-0 hSIzAH"><div class="MetaNav__Wrapper-sc-1vlf8rg-3 kNKipO"><div class="MetaNav__Shrink-sc-1vlf8rg-1 ehYVXp"><a href="/"><strong>Markus Tacker</strong><span> · <!-- -->Software Crafter</span></a></div><div class="MetaNav__ContentNav-sc-1vlf8rg-2 jfwrQy"><span><a href="/archive">Blog</a></span><span><a href="/talks">Talks</a></span><span><a href="/communities">Communities</a></span></div></div></nav><nav class="MainNav__StyledNav-sc-84y1hf-0 bRXULA"><div class="MainNav__Wrapper-sc-84y1hf-3 cRsqZM"><a href="/" class="MainNav__Logo-sc-84y1hf-1 iavLyM">coder.by(<svg width="51.234638mm" height="51.234638mm" viewBox="0 0 51.234638 51.234638" version="1.1"><g transform="translate(-96.090815,-224.60292)"><path d="m 120.88872,275.83756 c -0.3544,-1.74196 -4.26401,-14.11291 -14.48044,-15.77415 -10.287693,-1.67184 -7.996191,-8.46899 -7.996191,-8.46899 0,0 1.096201,5.7017 7.493151,2.65792 -7.640381,0.44232 -13.420099,-13.41965 -3.05077,-21.17156 3.13005,-2.33996 2.30471,-4.41663 2.76669,-6.34777 0.44028,-1.83853 3.4651,-3.06628 4.97184,-1.20393 -1.16557,-0.97638 -3.4146,-0.45908 -3.7034,1.46985 -0.3742,2.49783 3.366,3.76042 6.30069,4.67064 3.91151,1.21364 8.29112,7.63813 1.92484,12.61968 2.57605,-8.74504 -10.19189,-8.19468 -9.50624,-0.83041 0.82959,8.91131 15.05851,8.88308 16.10799,19.56853 0.101,1.02136 -0.27558,2.39066 0.29022,3.56373 -0.17271,-1.01122 -0.18499,-2.0855 0.63988,-3.5408 2.08481,-3.67662 4.77034,-5.91647 2.60908,-12.07548 -0.45254,-1.29125 -0.42753,-1.89542 -0.006,-2.91766 -0.3223,1.16159 -0.12741,2.36641 1.36329,3.01909 7.06799,3.09274 13.84764,-2.9988 11.51509,-10.45745 -2.81531,-9.00435 -13.41964,-3.80187 -8.35577,0.10011 -2.88609,-1.40503 -7.30959,1.72034 -3.52739,5.56498 0.18357,0.18654 0.87819,0.48951 1.53695,0.13098 -0.59694,0.40131 -1.04429,0.2721 -1.6771,0.0392 -10.26219,-3.77452 -4.27531,-17.20123 6.77732,-16.8599 3.90111,0.11996 5.77782,1.20173 7.24823,2.16664 2.82097,1.85088 5.50838,0.48863 5.34652,-0.85422 -0.0633,-0.527 -0.68569,-1.24362 -1.5771,-0.73162 0.62572,-0.56316 2.09519,0.026 2.23676,0.9799 0.13826,0.93448 -0.10617,1.83942 -1.00088,2.53532 -1.04052,0.80967 -1.2826,1.54923 -0.68849,2.83563 0.68802,1.48838 2.72895,6.77157 0.61723,12.63203 -3.57174,9.91281 -13.49795,7.02073 -15.55775,14.18435 1.90927,-2.48989 4.5745,-0.082 6.66215,-4.0259 -0.44452,10.1289 -12.17101,5.64613 -15.28077,16.52121" style="fill:#e00073;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.456184"></path></g></svg>)</a><div class="MainNav__ContentNav-sc-84y1hf-2 khhOZg"><a href="/">Home</a><a href="/archive">Blog</a><a href="/talks">Talks</a><a href="/communities">Communities</a></div></div></nav></header><main class="page__Main-sc-64o6a0-0 fkcflf post"><div class="Content-sc-1unkf2t-0 bscNff"><article><div class="Title__Wrapper-sc-13td2sy-2 fhFGup"><div class="Title__Subtitle-sc-13td2sy-0 kSKgwx">Cloud Native</div><h1>Migrating to AWS SDK v3 for JavaScript</h1><time dateTime="2021-01-05T16:00:00.000Z" class="Title__Time-sc-13td2sy-1 HYxvl">5. January 2021</time></div><p></p>
+<p>AWS recently
+<a href="https://aws.amazon.com/blogs/developer/modular-aws-sdk-for-javascript-is-now-generally-available/" target="_blank" rel="nofollow noreferrer">announced the general availability</a>
+of the
+<a href="https://github.com/aws/aws-sdk-js-v3" target="_blank" rel="nofollow noreferrer">version 3 of their SDK for JavaScript</a>.</p>
+<p>The most notable changes are</p>
+<ul>
+<li>the switch to providing modular packages: this allows to reduce the overall
+size of the dependencies and makes bundling, for example for web applications,
+faster,</li>
+<li>first-class Promise support: the infamous <code>.promise()</code> is no more,</li>
+<li>first-class TypeScript support: the SDK has now been written in TypeScript, so
+the definitions (which are maintained in
+<a href="https://github.com/DefinitelyTyped/DefinitelyTyped" target="_blank" rel="nofollow noreferrer">DefinitlyTyped</a> for
+version 2 of the SDK) will not longer lag behind,</li>
+<li>a new middleware stack that improves debuggability,</li>
+<li><a href="https://aws.amazon.com/blogs/developer/abortcontroller-in-modular-aws-sdk-for-javascript/" target="_blank" rel="nofollow noreferrer">the ability to abort pending requests</a>
+which is especially interesting for web applications.</li>
+</ul>
+<p>In this blog post I will summarize my findings when migrating the AWS flavour of
+<a href="https://github.com/bifravst/" target="_blank" rel="nofollow noreferrer">Bifravst</a> to version 3 of the AWS SDK.</p>
+<h2 id="command-is-the-new-method" style="position:relative"><a href="#command-is-the-new-method" aria-label="command is the new method permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>Command</em> is the new <em>method</em></h2>
+<p>Instead of calling methods on the client instance directly, e.g.
+<code>s3.putObject().promise()</code>, in v3 the client&#x27;s <code>send()</code> method has to be called
+with an instance of a <em>command</em> for the operation:
+<code>s3.send(new PutObjectCommand())</code>.</p>
+<p>So the general pattern to migrate to v3 is:</p>
+<div class="gatsby-highlight" data-language="diff"><pre class="language-diff"><code class="language-diff"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span> service.operation()
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> service.send(new OperationCommand({}))</span></code></pre></div>
+<p>This worked in without issues in most cases. The arguments for the command class
+stay the same. Operations without arguments need to get passed an empty object
+(<code>{}</code>).</p>
+<h3 id="constructing-a-client" style="position:relative"><a href="#constructing-a-client" aria-label="constructing a client permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Constructing a client</h3>
+<p>Client instances are constructed as before using <code>new</code>.<br/>
+You always need to pass an object to the constructor, even if not providing any
+configuration.</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> iot <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">IoTClient</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h3 id="calling-an-operation" style="position:relative"><a href="#calling-an-operation" aria-label="calling an operation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Calling an operation</h3>
+<p>Operations are now called by <em>sending</em> a <em>command</em>:</p>
+<div class="gatsby-highlight" data-language="typescript"><pre class="language-typescript"><code class="language-typescript"><span class="token keyword">const</span> <span class="token punctuation">{</span> things <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> iot<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ListThingsCommand</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>Here, again, you always need to pass an object to the constructor of the
+command, even if not providing any parameters to the operation.</p>
+<h3 id="a-complete-example" style="position:relative"><a href="#a-complete-example" aria-label="a complete example permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A complete example:</h3>
+<div class="gatsby-highlight" data-language="diff"><pre class="language-diff"><code class="language-diff"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span> import { Iot } from &#x27;aws-sdk&#x27;
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> import {
+<span class="token prefix inserted">+</span> 	IoTClient,
+<span class="token prefix inserted">+</span> 	ListThingsCommand,
+<span class="token prefix inserted">+</span> } from &#x27;@aws-sdk/client-iot&#x27;
+</span>
+<span class="token deleted-sign deleted"><span class="token prefix deleted">-</span> const iot = new Iot()
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> const iot = new IoTClient({})
+</span>
+<span class="token deleted-sign deleted"><span class="token prefix deleted">-</span> const { things } = await iot.listThings().promise()
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> const { things } = await iot.send(new ListThingsCommand({}))</span></code></pre></div>
+<h3 id="updating-imports" style="position:relative"><a href="#updating-imports" aria-label="updating imports permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updating imports</h3>
+<p>Instead of pulling the dependency from
+<a href="https://www.npmjs.com/package/aws-sdk" target="_blank" rel="nofollow noreferrer"><code>aws-sdk</code></a>, find the needed client
+package in the
+<a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/" target="_blank" rel="nofollow noreferrer">API reference for the v3 SDK</a>,
+in the case above we need the
+<a href="https://www.npmjs.com/package/@aws-sdk/client-iot" target="_blank" rel="nofollow noreferrer"><code>@aws-sdk/client-iot</code></a>.</p>
+<blockquote>
+<p><em>Note:</em> <code>IoT</code> now has a capital <code>T</code> at the end.</p>
+</blockquote>
+<p>The <code>IotData</code> client from v2 is now located in
+<a href="https://www.npmjs.com/package/@aws-sdk/client-iot-data-plane" target="_blank" rel="nofollow noreferrer"><code>@aws-sdk/client-iot-data-plane</code></a>
+and called <code>IoTDataPlaneClient</code>.</p>
+<h2 id="iot-payload-is-now-uint8array" style="position:relative"><a href="#iot-payload-is-now-uint8array" aria-label="iot payload is now uint8array permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IoT: Payload is now <code>Uint8Array</code></h2>
+<p>Some operations, like <code>DescribeThingShadowCommand</code>
+<a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-iot-data-plane/modules/getthingshadowresponse.html#payload" target="_blank" rel="nofollow noreferrer">return a JSON string now as <code>Uint8Array</code></a>.
+These need to be decoded using the TextEncoder util in Node.js:</p>
+<div class="gatsby-highlight" data-language="diff"><pre class="language-diff"><code class="language-diff"><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> import { TextDecoder } from &#x27;util&#x27;
+</span>
+<span class="token deleted-sign deleted"><span class="token prefix deleted">-</span> const { statusCode, body } = JSON.parse(Payload?.toString() ?? &#x27;&#x27;)
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> const { statusCode, body } = JSON.parse(
+<span class="token prefix inserted">+</span>   new TextDecoder(&#x27;utf-8&#x27;).decode(Payload),
+<span class="token prefix inserted">+</span> )</span></code></pre></div>
+<p>or the
+<a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/modules/_aws_sdk_util_utf8_browser.html" target="_blank" rel="nofollow noreferrer"><code>@aws-sdk/util-utf8-browser</code></a>
+helpers for browser applications:</p>
+<div class="gatsby-highlight" data-language="diff"><pre class="language-diff"><code class="language-diff"><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> import { toUtf8 } from &#x27;@aws-sdk/util-utf8-browser&#x27;
+</span>
+<span class="token deleted-sign deleted"><span class="token prefix deleted">-</span> const { statusCode, body } = JSON.parse(Payload?.toString() ?? &#x27;&#x27;)
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> const { statusCode, body } = JSON.parse(toUtf8(Payload?.toString() ?? &#x27;&#x27;))</span></code></pre></div>
+<h2 id="not-in-v3-stepfunctions" style="position:relative"><a href="#not-in-v3-stepfunctions" aria-label="not in v3 stepfunctions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Not in v3: StepFunctions</h2>
+<p>The StepFunctions client has not been ported to v3 because the service
+<a href="https://github.com/aws/aws-sdk-js-v3/issues/1162" target="_blank" rel="nofollow noreferrer">does not support CORS</a>,
+because browsers cannot interact with it.</p>
+<h2 id="s3" style="position:relative"><a href="#s3" aria-label="s3 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>S3</h2>
+<h3 id="createpresignedpost" style="position:relative"><a href="#createpresignedpost" aria-label="createpresignedpost permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>createPresignedPost</h3>
+<p>S3.createPresignedPost() is now in <code>@aws-sdk/s3-presigned-post</code></p>
+<div class="gatsby-highlight" data-language="diff"><pre class="language-diff"><code class="language-diff"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span> import { S3 } from &#x27;aws-sdk&#x27;
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> import { S3Client } from &#x27;@aws-sdk/client-s3&#x27;
+<span class="token prefix inserted">+</span> import { createPresignedPost } from &#x27;@aws-sdk/s3-presigned-post&#x27;
+<span class="token prefix inserted">+</span> import { CreateJobCommand, IoTClient } from &#x27;@aws-sdk/client-iot&#x27;
+</span>
+<span class="token deleted-sign deleted"><span class="token prefix deleted">-</span> const s3 = new S3()
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> const s3 = new S3Client({})
+</span>
+<span class="token deleted-sign deleted"><span class="token prefix deleted">-</span> const { url, fields } = s3.createPresignedPost({
+<span class="token prefix deleted">-</span>   Bucket: bucketName,
+<span class="token prefix deleted">-</span>   Fields: {
+<span class="token prefix deleted">-</span>     key: `${jobId}.json`,
+<span class="token prefix deleted">-</span>   },
+<span class="token prefix deleted">-</span> })
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> const { url, fields } = await createPresignedPost(s3, {
+<span class="token prefix inserted">+</span>   Bucket: bucketName,
+<span class="token prefix inserted">+</span>   Key: `${jobId}.json`,
+<span class="token prefix inserted">+</span> })</span></code></pre></div>
+<blockquote>
+<p><em>Note:</em> It was made async and the <code>Key</code> field needs to be at the top level.</p>
+</blockquote>
+<h3 id="signaturedoesnotmatch-error-when-uploading-a-file" style="position:relative"><a href="#signaturedoesnotmatch-error-when-uploading-a-file" aria-label="signaturedoesnotmatch error when uploading a file permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SignatureDoesNotMatch error when uploading a file</h3>
+<p><a href="https://github.com/aws/aws-sdk-js-v3/issues/1800" target="_blank" rel="nofollow noreferrer">There is currently a bug</a>
+when uploading a file with a custom content-type. The workaround is to
+<a href="https://github.com/aws/aws-sdk-js-v3/issues/1800#issuecomment-749459712" target="_blank" rel="nofollow noreferrer">add a custom middleware that removes the extra header</a>:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">s3<span class="token punctuation">.</span>middlewareStack<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>
+  <span class="token punctuation">(</span><span class="token parameter">next</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">args</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">delete</span> args<span class="token punctuation">.</span>request<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">&quot;content-type&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">next</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">step</span><span class="token operator">:</span> <span class="token string">&quot;build&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">await</span> s3<span class="token punctuation">.</span><span class="token function">putObject</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">Bucket</span><span class="token operator">:</span> bucket<span class="token punctuation">,</span>
+  <span class="token literal-property property">Key</span><span class="token operator">:</span> key<span class="token punctuation">,</span>
+  <span class="token literal-property property">Body</span><span class="token operator">:</span> body<span class="token punctuation">,</span>
+  <span class="token literal-property property">ContentType</span><span class="token operator">:</span> contentType<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h2 id="custom-signed-http-requests" style="position:relative"><a href="#custom-signed-http-requests" aria-label="custom signed http requests permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom signed HTTP requests</h2>
+<p>In case you need to construct your own signed requests, the <code>AWS.Signers.V4</code>
+have also been moved:</p>
+<div class="gatsby-highlight" data-language="diff"><pre class="language-diff"><code class="language-diff"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span> import * as AWS from &#x27;aws-sdk&#x27;
+<span class="token prefix deleted">-</span> import { Credentials, Endpoint, HttpRequest } from &#x27;aws-sdk&#x27;
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> import { SignatureV4 } from &#x27;@aws-sdk/signature-v4&#x27;
+<span class="token prefix inserted">+</span> import { Credentials, Endpoint } from &#x27;@aws-sdk/types&#x27;
+<span class="token prefix inserted">+</span> import { HttpRequest } from &#x27;@aws-sdk/protocol-http&#x27;
+<span class="token prefix inserted">+</span> import { parse } from &#x27;url&#x27;</span></code></pre></div>
+<p>Credentials now longer have a class, but a type:</p>
+<div class="gatsby-highlight" data-language="diff"><pre class="language-diff"><code class="language-diff"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span> const credentials = new Credentials(AccessKeyId, SecretKey, SessionToken)
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> const credentials: Credentials = {
+<span class="token prefix inserted">+</span>	  accessKeyId,
+<span class="token prefix inserted">+</span>	  secretAccessKey,
+<span class="token prefix inserted">+</span>	  sessionToken,
+<span class="token prefix inserted">+</span> }</span></code></pre></div>
+<p>Also the <code>Endpoint</code> class has been removed, so some URL parsing is nedded.</p>
+<div class="gatsby-highlight" data-language="diff"><pre class="language-diff"><code class="language-diff"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span>	const httpRequest = new HttpRequest(new Endpoint(endpoint), region)
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span>	const httpRequest = new HttpRequest(
+<span class="token prefix inserted">+</span>		((p: ReturnType&lt;typeof parse&gt;): Endpoint =&gt;
+<span class="token prefix inserted">+</span>			({
+<span class="token prefix inserted">+</span>				...p,
+<span class="token prefix inserted">+</span>				port: p.port !== null ? parseInt(p.port, 10) : undefined,
+<span class="token prefix inserted">+</span>			} as Endpoint))(parse(endpoint)),
+<span class="token prefix inserted">+</span>	)</span></code></pre></div>
+<p>Finally a signer can be created:</p>
+<div class="gatsby-highlight" data-language="diff"><pre class="language-diff"><code class="language-diff"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span>	const signer = new AWS.Signers.V4(httpRequest, &#x27;appsync&#x27;, true)
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span>	const signer = new SignatureV4(httpRequest, &#x27;appsync&#x27;, true)</span></code></pre></div>
+<h2 id="removed-types" style="position:relative"><a href="#removed-types" aria-label="removed types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Removed types</h2>
+<p>Some types have been removed or better, replaced with their idiomatic TypeScript
+equivalent.</p>
+<p>For example in the Timestream client, previously there was a
+<code>type Records = Record[]</code>, which now no longer exists:</p>
+<div class="gatsby-highlight" data-language="diff"><pre class="language-diff"><code class="language-diff"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span> import { TimestreamWrite } from &#x27;aws-sdk&#x27;
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span> import { _Record } from &#x27;@aws-sdk/client-timestream-write&#x27;
+</span>
+<span class="token deleted-sign deleted"><span class="token prefix deleted">-</span>	return Records.filter(isNotNullOrUndefined) as TimestreamWrite.Records
+</span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span>	return Records.filter(isNotNullOrUndefined) as _Record[]</span></code></pre></div>
+<p>This needs a little bit of digging through the TypeScript definitions to figure
+out which types still exist and which need to be replaced.</p>
+<hr/>
+<p>The migration was relatively straight forward and because of the BDD tests in
+the project this refactoring could be done without a hassle. I will keep
+updating this post in case there are more noteworthy findings.</p><footer class="post__Footer-sc-79pspf-0 dMtdnQ"></footer></article></div></main><footer class="Footer__StyledFooter-sc-inlkh7-0 bqEswo"><div class="Footer__Wrapper-sc-inlkh7-1 euxZA-D"><h1><a href="/">coder.by(<svg width="51.234638mm" height="51.234638mm" viewBox="0 0 51.234638 51.234638" version="1.1"><g transform="translate(-96.090815,-224.60292)"><path d="m 120.88872,275.83756 c -0.3544,-1.74196 -4.26401,-14.11291 -14.48044,-15.77415 -10.287693,-1.67184 -7.996191,-8.46899 -7.996191,-8.46899 0,0 1.096201,5.7017 7.493151,2.65792 -7.640381,0.44232 -13.420099,-13.41965 -3.05077,-21.17156 3.13005,-2.33996 2.30471,-4.41663 2.76669,-6.34777 0.44028,-1.83853 3.4651,-3.06628 4.97184,-1.20393 -1.16557,-0.97638 -3.4146,-0.45908 -3.7034,1.46985 -0.3742,2.49783 3.366,3.76042 6.30069,4.67064 3.91151,1.21364 8.29112,7.63813 1.92484,12.61968 2.57605,-8.74504 -10.19189,-8.19468 -9.50624,-0.83041 0.82959,8.91131 15.05851,8.88308 16.10799,19.56853 0.101,1.02136 -0.27558,2.39066 0.29022,3.56373 -0.17271,-1.01122 -0.18499,-2.0855 0.63988,-3.5408 2.08481,-3.67662 4.77034,-5.91647 2.60908,-12.07548 -0.45254,-1.29125 -0.42753,-1.89542 -0.006,-2.91766 -0.3223,1.16159 -0.12741,2.36641 1.36329,3.01909 7.06799,3.09274 13.84764,-2.9988 11.51509,-10.45745 -2.81531,-9.00435 -13.41964,-3.80187 -8.35577,0.10011 -2.88609,-1.40503 -7.30959,1.72034 -3.52739,5.56498 0.18357,0.18654 0.87819,0.48951 1.53695,0.13098 -0.59694,0.40131 -1.04429,0.2721 -1.6771,0.0392 -10.26219,-3.77452 -4.27531,-17.20123 6.77732,-16.8599 3.90111,0.11996 5.77782,1.20173 7.24823,2.16664 2.82097,1.85088 5.50838,0.48863 5.34652,-0.85422 -0.0633,-0.527 -0.68569,-1.24362 -1.5771,-0.73162 0.62572,-0.56316 2.09519,0.026 2.23676,0.9799 0.13826,0.93448 -0.10617,1.83942 -1.00088,2.53532 -1.04052,0.80967 -1.2826,1.54923 -0.68849,2.83563 0.68802,1.48838 2.72895,6.77157 0.61723,12.63203 -3.57174,9.91281 -13.49795,7.02073 -15.55775,14.18435 1.90927,-2.48989 4.5745,-0.082 6.66215,-4.0259 -0.44452,10.1289 -12.17101,5.64613 -15.28077,16.52121" style="fill:#e00073;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.456184"></path></g></svg>)</a></h1><div class="Content-sc-1unkf2t-0 bscNff"><p>Software Crafter building 🌩️ cloud-based cellular IoT solutions at
+<a href="https://nordicsemi.com/" target="_blank" rel="nofollow noreferrer">Nordic Semiconductor</a>.<br/>
+Mentor. Speaker. Conference &amp; Community builder. Camper. 🏕️ 🚐</p>
+<h2 id="markus-tacker" style="position:relative"><a href="#markus-tacker" aria-label="markus tacker permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Markus Tacker</h2>
+<p><strong>Media Computer Scientist (B.Sc.)</strong></p>
+<ul>
+<li>📨 <a href="mailto:m@coderbyheart.com" target="_blank" rel="nofollow noreferrer">m@coderbyheart.com</a></li>
+</ul>
+<h2 id="connect" style="position:relative"><a href="#connect" aria-label="connect permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connect</h2>
+<p>You can find me on these sites.</p>
+<p><em>Please note that I will reject connection requests from people I&#x27;ve never met
+personally.</em></p>
+<ul>
+<li><a rel="me" href="https://chaos.social/@coderbyheart" title="Markus Tacker on Mastodon">Mastodon</a></li>
+<li><a rel="me" href="https://matrix.to/#/@coderbyheart:matrix.im" title="Markus Tacker on Matrix">Matrix</a></li>
+<li><a rel="me" href="https://www.linkedin.com/in/markustacker" title="Markus Tacker on LinkedIn">LinkedIn</a></li>
+<li><a rel="me" href="https://github.com/coderbyheart" title="Markus Tacker on GitHub">GitHub</a></li>
+<li><a rel="me" href="https://www.instagram.com/coderbyheart/" title="Markus Tacker on Instagram">Instagram</a></li>
+</ul></div><p class="Footer__Copyright-sc-inlkh7-2 erxblp">© 2015-<!-- -->2024<!-- --> <a href="https://coderbyheart.com/">Markus Tacker</a>. All rights reserved.</p></div></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/aws-sdk-v3";window.___webpackCompilationHash="dc3e4f82e3bdc203dabf";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-ce650185473b5c8bc2cd.js"],"app":["/app-c16511fa12597b6ac885.js"],"component---src-page-archive-tsx":["/component---src-page-archive-tsx-7b0168ce674cae6b8f9d.js"],"component---src-page-default-tsx":["/component---src-page-default-tsx-ef1c0b6777e61335f03d.js"],"component---src-page-post-tsx":["/component---src-page-post-tsx-e69b0f93bfb0d2cae05a.js"],"component---src-page-social-tsx":["/component---src-page-social-tsx-daed767018f32020628a.js"],"component---src-page-twitter-archive-tsx":["/component---src-page-twitter-archive-tsx-8df0e4e8785018e1682c.js"],"component---src-page-twitter-archive-year-month-tsx":["/component---src-page-twitter-archive-year-month-tsx-66933804ada4360d5f7b.js"],"component---src-page-twitter-archive-year-tsx":["/component---src-page-twitter-archive-year-tsx-bf5c1759205429007270.js"],"component---src-page-twitter-status-tsx":["/component---src-page-twitter-status-tsx-80b22a788796c269fa88.js"]};/*]]>*/</script><script src="/polyfill-ce650185473b5c8bc2cd.js" nomodule=""></script><script src="/app-c16511fa12597b6ac885.js" async=""></script><script src="/framework-6358eeee7e1b762de230.js" async=""></script><script src="/webpack-runtime-1141bf526e80db2d365e.js" async=""></script></body></html>

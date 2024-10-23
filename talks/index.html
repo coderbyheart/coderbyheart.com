@@ -1,0 +1,561 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.25.6"/><meta data-react-helmet="true" name="description" content="Software Crafter building 🌩️ cloud-based cellular IoT solutions at Nordic Semiconductor.​
+		Mentor. Speaker. ​Conference &amp; Community builder. Camper. 🏕️ 🚐"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:site" content="@coderbyheart"/><meta data-react-helmet="true" name="twitter:title" content="Talks"/><meta data-react-helmet="true" name="twitter:description" content="Software Crafter building 🌩️ cloud-based cellular IoT solutions at Nordic Semiconductor.​
+		Mentor. Speaker. ​Conference &amp; Community builder. Camper. 🏕️ 🚐"/><meta data-react-helmet="true" name="twitter:image" content="https://images.ctfassets.net/bncv3c2gt878/3Jk4P6nFPNzaz1gsguktk8/350b7e4ddb2c7d86416243d9902920e2/social-card-default-2020.png"/><style data-href="/styles.d3b292d3c2962f779862.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:visible;padding:1px;position:relative}pre[class*=language-]>code{background-attachment:local;background-color:#fdfdfd;background-image:linear-gradient(transparent 50%,rgba(69,142,209,.04) 0);background-origin:content-box;background-size:3em 3em;border-left:10px solid #358ccb;box-shadow:-1px 0 0 0 #358ccb,0 0 0 1px #dfdfdf;position:relative;z-index:1}code[class*=language-]{display:block;height:inherit;max-height:inherit;overflow:auto;padding:0 1em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdfdfd;box-sizing:border-box;margin-bottom:1em}:not(pre)>code[class*=language-]{border:1px solid rgba(0,0,0,.1);border-radius:.3em;color:#c92c2c;display:inline;padding:.2em;position:relative;white-space:normal}pre[class*=language-]:after,pre[class*=language-]:before{bottom:.75em;box-shadow:0 13px 8px #979797;content:"";display:block;height:20%;left:.18em;max-height:13em;position:absolute;transform:rotate(-2deg);width:40%}pre[class*=language-]:after{left:auto;right:.75em;transform:rotate(2deg)}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{background:hsla(0,0%,100%,.5);color:#a67f59}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{background:hsla(0,0%,100%,.5);color:#a67f59}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.namespace{opacity:.7}@media screen and (max-width:767px){pre[class*=language-]:after,pre[class*=language-]:before{bottom:14px;box-shadow:none}}pre[class*=language-].line-numbers.line-numbers{padding-left:0}pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-bottom:0;padding-left:0;padding-top:0}pre[data-line] code{padding-left:4em;position:relative}pre .line-highlight{margin-top:0}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 80)
+          }), 0)
+        }
+      }
+    })
+  </script><style data-styled="" data-styled-version="5.3.9">.kSKgwx{font-family:var(--headline-font-family);font-weight:var(--headline-font-weight-thin);}/*!sc*/
+data-styled.g1[id="Title__Subtitle-sc-13td2sy-0"]{content:"kSKgwx,"}/*!sc*/
+.fhFGup{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}/*!sc*/
+.fhFGup h1{margin-top:0.5rem;}/*!sc*/
+data-styled.g3[id="Title__Wrapper-sc-13td2sy-2"]{content:"fhFGup,"}/*!sc*/
+.bscNff{line-height:150%;}/*!sc*/
+.bscNff img{width:100%;height:auto;}/*!sc*/
+.bscNff a{color:var(--highlight-color);}/*!sc*/
+.bscNff h1,.bscNff h2{position:relative;margin-bottom:1.5rem;}/*!sc*/
+.bscNff h1:first-child,.bscNff h2:first-child{margin-top:0;}/*!sc*/
+@media (min-width:700px){.bscNff h1,.bscNff h2{margin-top:4rem;}}/*!sc*/
+.bscNff h1:after,.bscNff h2:after{content:' ';width:5rem;height:1px;border-bottom:1px solid var(--highlight-color);opacity:0.5;position:absolute;left:0;bottom:-0.5rem;}/*!sc*/
+.bscNff h1 small,.bscNff h2 small{font-weight:var(--headline-font-weight-thin);font-size:50%;text-transform:uppercase;}/*!sc*/
+.bscNff strong{font-weight:var(--text-font-weigth-bold);}/*!sc*/
+.bscNff blockquote{border:1px solid var(--heart-color);border-radius:5px;padding:0 1rem;margin:0;background-color:var(--note-bg-color);}/*!sc*/
+.bscNff blockquote a{color:var(--heart-color-on-note);}/*!sc*/
+.bscNff div.twitter-tweet-rendered{margin:2rem auto !important;}/*!sc*/
+.bscNff img:not([src]){visibility:hidden;}/*!sc*/
+.bscNff img[data-large-source='1']{width:100vw;margin-left:-1rem;margin-right:-1rem;}/*!sc*/
+@media (min-width:700px){.bscNff img[data-large-source='1']{margin-top:4rem;margin-bottom:4rem;margin-left:calc((100vw - 700px) / 2 * -1);margin-right:calc((100vw - 700px) / 2 * -1);}}/*!sc*/
+.bscNff li + li{padding-top:1rem;}/*!sc*/
+@media (min-width:700px){.bscNff li + li{padding-top:0;}}/*!sc*/
+.bscNff pre[class*='language-'] > code{border-color:var(--highlight-color);background-image:none;}/*!sc*/
+.bscNff pre[class*='language-']:before,.bscNff pre[class*='language-']:after{box-shadow:none;}/*!sc*/
+.bscNff pre[class*='language-'] .token.constant{color:var(--highlight-color);}/*!sc*/
+.bscNff pre[class*='language-'] .token.keyword{color:var(--highlight-color);}/*!sc*/
+.bscNff pre[class*='language-'] .token.boolean{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.function{color:var(--color-syntax-ChelseaGem);}/*!sc*/
+.bscNff pre[class*='language-'] .token.number{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.operator{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.punctuation{color:var(--color-syntax-Emperor);}/*!sc*/
+.bscNff pre[class*='language-'] .token.parameter{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.regex{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.string{color:var(--color-syntax-JapaneseLaurel);}/*!sc*/
+.bscNff pre[class*='language-'] .token.class-name{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.comment{color:var(--color-syntax-DoveGray);}/*!sc*/
+.bscNff pre[class*='language-'] .token.template-string{color:inherit;}/*!sc*/
+.bscNff pre[class*='language-'] .token.inserted{color:var(--color-syntax-JapaneseLaurel);}/*!sc*/
+data-styled.g4[id="Content-sc-1unkf2t-0"]{content:"bscNff,"}/*!sc*/
+.bqEswo{min-height:100%;background-color:var(--background-color-dark);color:var(--text-color-light);font-size:var(--small-font-size);}/*!sc*/
+.bqEswo a{color:var(--highlight-color-on-dark);-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.bqEswo hr{border:0;border-bottom:1px solid var(--highlight-color-on-dark);opacity:0.5;width:5rem;margin:0;}/*!sc*/
+.bqEswo h1,.bqEswo h2{position:relative;margin-bottom:1.5rem;}/*!sc*/
+.bqEswo h1:after,.bqEswo h2:after{content:' ';width:5rem;height:1px;border-bottom:1px solid var(--highlight-color-on-dark);opacity:0.5;position:absolute;left:0;bottom:-0.5rem;}/*!sc*/
+.bqEswo h1{font-size:42px;}/*!sc*/
+.bqEswo h1 a{color:inherit;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+.bqEswo h1 svg{width:calc(42px * 1.25);height:calc(42px * 1.25);}/*!sc*/
+.bqEswo h2{margin-top:3rem;}/*!sc*/
+data-styled.g12[id="Footer__StyledFooter-sc-inlkh7-0"]{content:"bqEswo,"}/*!sc*/
+.euxZA-D{max-width:var(--max-width);padding:1rem 1rem;}/*!sc*/
+@media (min-width:700px){.euxZA-D{padding:4rem 0;margin:0 auto;}}/*!sc*/
+.euxZA-D p{max-width:calc(var(--max-width) / 2);}/*!sc*/
+.euxZA-D ul{list-style:none;padding:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}/*!sc*/
+.euxZA-D ul li + li{padding-top:0;}/*!sc*/
+.euxZA-D ul li + li:before{content:'·';padding:0.5rem;}/*!sc*/
+@media (min-width:700px){.euxZA-D ul{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}.euxZA-D ul li + li:before{content:'';padding:0;}}/*!sc*/
+data-styled.g13[id="Footer__Wrapper-sc-inlkh7-1"]{content:"euxZA-D,"}/*!sc*/
+.erxblp{margin-top:2rem;}/*!sc*/
+data-styled.g14[id="Footer__Copyright-sc-inlkh7-2"]{content:"erxblp,"}/*!sc*/
+.bRXULA{font-family:var(--headline-font-family);font-weight:var(--headline-font-weight-light);padding:1rem 0;border-bottom:1px solid rgba(0,0,0,0.1);}/*!sc*/
+.bRXULA strong{font-weight:var(--headline-font-weight);}/*!sc*/
+.bRXULA a{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.bRXULA a:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+data-styled.g16[id="MainNav__StyledNav-sc-84y1hf-0"]{content:"bRXULA,"}/*!sc*/
+.iavLyM{font-size:25px;font-weight:var(--headline-font-weight);color:inherit;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+.iavLyM svg{width:calc(25px * 1.25);height:calc(25px * 1.25);}/*!sc*/
+data-styled.g17[id="MainNav__Logo-sc-84y1hf-1"]{content:"iavLyM,"}/*!sc*/
+.khhOZg{text-transform:uppercase;margin-top:1rem;}/*!sc*/
+.khhOZg a{color:var(--text-color);}/*!sc*/
+.khhOZg a.active,.khhOZg a:hover{color:var(--highlight-color);-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.khhOZg a + a{margin-left:1rem;}/*!sc*/
+@media (min-width:700px){.khhOZg{margin-top:0;}}/*!sc*/
+data-styled.g18[id="MainNav__ContentNav-sc-84y1hf-2"]{content:"khhOZg,"}/*!sc*/
+.cRsqZM{padding:0 1rem;max-width:var(--max-width);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}/*!sc*/
+@media (min-width:700px){.cRsqZM{padding:0;margin:0 auto;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}/*!sc*/
+data-styled.g19[id="MainNav__Wrapper-sc-84y1hf-3"]{content:"cRsqZM,"}/*!sc*/
+.hSIzAH{background-color:var(--background-color-dark);color:var(--text-color-light);font-size:var(--small-font-size);font-family:var(--headline-font-family);font-weight:var(--headline-font-weight-light);position:fixed;top:0;left:0;width:100%;z-index:99999;}/*!sc*/
+.hSIzAH strong{font-weight:var(--headline-font-weight);}/*!sc*/
+.hSIzAH a{color:var(--text-color-light);-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.hSIzAH a:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+data-styled.g20[id="MetaNav__StyledNav-sc-1vlf8rg-0"]{content:"hSIzAH,"}/*!sc*/
+.ehYVXp{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;-webkit-flex-shrink:1;-ms-flex-negative:1;flex-shrink:1;}/*!sc*/
+.ehYVXp strong{text-transform:uppercase;}/*!sc*/
+data-styled.g21[id="MetaNav__Shrink-sc-1vlf8rg-1"]{content:"ehYVXp,"}/*!sc*/
+.jfwrQy{display:none;}/*!sc*/
+data-styled.g22[id="MetaNav__ContentNav-sc-1vlf8rg-2"]{content:"jfwrQy,"}/*!sc*/
+.kNKipO{padding:0 1rem;margin:0 auto;max-width:var(--max-width);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:40px;}/*!sc*/
+@media (min-width:700px){.kNKipO{padding:0;}}/*!sc*/
+.kNKipO span + span:before{content:'·';padding:0.25rem;}/*!sc*/
+data-styled.g23[id="MetaNav__Wrapper-sc-1vlf8rg-3"]{content:"kNKipO,"}/*!sc*/
+#___gatsby{padding-top:40px;}/*!sc*/
+body.scrolling .MetaNav__ContentNav-sc-1vlf8rg-2{display:block;}/*!sc*/
+body.scrolling .MetaNav__Shrink-sc-1vlf8rg-1 span{display:none;}/*!sc*/
+body.scrolling .MetaNav__Wrapper-sc-1vlf8rg-3 svg{display:none;}/*!sc*/
+data-styled.g24[id="sc-global-QOhQF1"]{content:"sc-global-QOhQF1,"}/*!sc*/
+:root{--text-font-family:Roboto,sans-serif;--text-font-weigth:400;--text-font-weigth-bold:500;--headline-font-family:Raleway,sans-serif;--headline-font-weight:700;--headline-font-weight-light:500;--headline-font-weight-thin:300;--background-color:#ffffff;--background-color-dark:#191919;--highlight-color:#007da7;--highlight-color-on-dark:#00b4ef;--note-bg-color:#e7f9ff;--text-color:#3f3f3f;--text-color-light:#ffffffd9;--heart-color:#e00073;--heart-color-on-note:#d8006f;--small-font-size:12px;--max-width:700px;--color-syntax-ChelseaGem:#aa5d00;--color-syntax-DeepCerulean:#007faa;--color-syntax-DoveGray:#696969;--color-syntax-Emperor:#545454;--color-syntax-JapaneseLaurel:#008000;--color-syntax-Thunderbird:#d91e18;}/*!sc*/
+html,body{font-family:var(--text-font-family);font-weight:var(--text-font-weigth);height:100%;background-color:var(--background-color);color:var(--text-color);}/*!sc*/
+html h1,body h1,html h2,body h2,html h3,body h3,html h4,body h4,html h5,body h5,html h6,body h6{font-family:var(--headline-font-family);font-weight:var(--headline-font-weight);line-height:115%;}/*!sc*/
+#___gatsby,#gatsby-focus-wrapper{height:100%;}/*!sc*/
+body{overflow-x:hidden;}/*!sc*/
+data-styled.g25[id="sc-global-gzyOkx1"]{content:"sc-global-gzyOkx1,"}/*!sc*/
+.fkcflf{padding:1rem;margin-bottom:4rem;max-width:var(--max-width);}/*!sc*/
+@media (min-width:700px){.fkcflf{padding:0;margin:4rem auto;}}/*!sc*/
+.fkcflf.home .Content-sc-1unkf2t-0:before{display:inline-block;content:'';background-image:url('//images.ctfassets.net/bncv3c2gt878/18M7LZPr4Dah1nSJagy6bk/09d2f6f4f373d983d0214ecd896bd89f/Me_2022-08?w=300&fm=webp');background-size:cover;width:150px;height:150px;border-radius:100%;border:2px solid var(--heart-color);margin-top:3rem;margin-bottom:2rem;margin-left:calc((100vw / 2) - (154px / 2) - 1rem);box-shadow:0px 0px 15px 3px #00000057;}/*!sc*/
+@media (min-width:700px){.fkcflf.home .Content-sc-1unkf2t-0:before{margin-top:0;margin-left:calc(700px / 2 - 154px / 2);}}/*!sc*/
+.fkcflf.twitter-status article .Title__Wrapper-sc-13td2sy-2 h1,.fkcflf.twitter-archive article .Title__Wrapper-sc-13td2sy-2 h1{margin-top:0.5rem;}/*!sc*/
+data-styled.g26[id="page__Main-sc-64o6a0-0"]{content:"fkcflf,"}/*!sc*/
+</style><title data-react-helmet="true">Markus Tacker · Talks</title><link data-react-helmet="true" rel="canonical" href="https://coderbyheart.com/talks"/><link data-react-helmet="true" rel="icon" type="image/x-icon" href="/favicon.ico"/><link data-react-helmet="true" rel="preconnect" href="https://fonts.gstatic.com"/><link data-react-helmet="true" rel="preconnect" href="https://cdn.jsdelivr.net"/><link data-react-helmet="true" rel="preconnect" href="https://fonts.googleapis.com"/><link data-react-helmet="true" rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/><script data-react-helmet="true" type="text/javascript">(function(d){
+	var x = d.createElement("link");
+	var y = d.getElementsByTagName("script")[0];
+	x.rel = "stylesheet";
+	x.href = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Raleway:wght@300;500;700&display=swap";
+	y.parentNode.insertBefore(x, y);
+})(document);</script><script data-react-helmet="true" async="" src="/main.js?v=1729695225446"></script><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><meta name="version" content="1729695225450"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header><nav class="MetaNav__StyledNav-sc-1vlf8rg-0 hSIzAH"><div class="MetaNav__Wrapper-sc-1vlf8rg-3 kNKipO"><div class="MetaNav__Shrink-sc-1vlf8rg-1 ehYVXp"><a href="/"><strong>Markus Tacker</strong><span> · <!-- -->Software Crafter</span></a></div><div class="MetaNav__ContentNav-sc-1vlf8rg-2 jfwrQy"><span><a href="/archive">Blog</a></span><span><a aria-current="page" class="" href="/talks">Talks</a></span><span><a href="/communities">Communities</a></span></div></div></nav><nav class="MainNav__StyledNav-sc-84y1hf-0 bRXULA"><div class="MainNav__Wrapper-sc-84y1hf-3 cRsqZM"><a href="/" class="MainNav__Logo-sc-84y1hf-1 iavLyM">coder.by(<svg width="51.234638mm" height="51.234638mm" viewBox="0 0 51.234638 51.234638" version="1.1"><g transform="translate(-96.090815,-224.60292)"><path d="m 120.88872,275.83756 c -0.3544,-1.74196 -4.26401,-14.11291 -14.48044,-15.77415 -10.287693,-1.67184 -7.996191,-8.46899 -7.996191,-8.46899 0,0 1.096201,5.7017 7.493151,2.65792 -7.640381,0.44232 -13.420099,-13.41965 -3.05077,-21.17156 3.13005,-2.33996 2.30471,-4.41663 2.76669,-6.34777 0.44028,-1.83853 3.4651,-3.06628 4.97184,-1.20393 -1.16557,-0.97638 -3.4146,-0.45908 -3.7034,1.46985 -0.3742,2.49783 3.366,3.76042 6.30069,4.67064 3.91151,1.21364 8.29112,7.63813 1.92484,12.61968 2.57605,-8.74504 -10.19189,-8.19468 -9.50624,-0.83041 0.82959,8.91131 15.05851,8.88308 16.10799,19.56853 0.101,1.02136 -0.27558,2.39066 0.29022,3.56373 -0.17271,-1.01122 -0.18499,-2.0855 0.63988,-3.5408 2.08481,-3.67662 4.77034,-5.91647 2.60908,-12.07548 -0.45254,-1.29125 -0.42753,-1.89542 -0.006,-2.91766 -0.3223,1.16159 -0.12741,2.36641 1.36329,3.01909 7.06799,3.09274 13.84764,-2.9988 11.51509,-10.45745 -2.81531,-9.00435 -13.41964,-3.80187 -8.35577,0.10011 -2.88609,-1.40503 -7.30959,1.72034 -3.52739,5.56498 0.18357,0.18654 0.87819,0.48951 1.53695,0.13098 -0.59694,0.40131 -1.04429,0.2721 -1.6771,0.0392 -10.26219,-3.77452 -4.27531,-17.20123 6.77732,-16.8599 3.90111,0.11996 5.77782,1.20173 7.24823,2.16664 2.82097,1.85088 5.50838,0.48863 5.34652,-0.85422 -0.0633,-0.527 -0.68569,-1.24362 -1.5771,-0.73162 0.62572,-0.56316 2.09519,0.026 2.23676,0.9799 0.13826,0.93448 -0.10617,1.83942 -1.00088,2.53532 -1.04052,0.80967 -1.2826,1.54923 -0.68849,2.83563 0.68802,1.48838 2.72895,6.77157 0.61723,12.63203 -3.57174,9.91281 -13.49795,7.02073 -15.55775,14.18435 1.90927,-2.48989 4.5745,-0.082 6.66215,-4.0259 -0.44452,10.1289 -12.17101,5.64613 -15.28077,16.52121" style="fill:#e00073;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.456184"></path></g></svg>)</a><div class="MainNav__ContentNav-sc-84y1hf-2 khhOZg"><a href="/">Home</a><a href="/archive">Blog</a><a aria-current="page" class="active" href="/talks">Talks</a><a href="/communities">Communities</a></div></div></nav></header><main class="page__Main-sc-64o6a0-0 fkcflf talks"><div class="Content-sc-1unkf2t-0 bscNff"><div class="Title__Wrapper-sc-13td2sy-2 fhFGup"><div class="Title__Subtitle-sc-13td2sy-0 kSKgwx">A list of my talks</div><h1>Talks</h1></div><p>I am available for speaking engagements! Just contact me if you feel I can
+contribute to your event or conference.</p>
+<h2 id="upcoming-strongly-typed-third-party-integrations-with-typescript" style="position:relative"><a href="#upcoming-strongly-typed-third-party-integrations-with-typescript" aria-label="upcoming strongly typed third party integrations with typescript permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upcoming: Strongly typed third-party integrations with TypeScript</h2>
+<blockquote>
+<p>Many of us have to integrate third-party APIs, and we cannot trust their
+documentation. We also need to track when their data format changes. The same
+is true for integrating our own (or other teams’) microservices. I will show
+how we do this in an effective and flexible way using TypeScript.</p>
+</blockquote>
+<p>In this talk, I will present my approach to doing this safely with TypeScript
+and how this enables end-to-end contract testing which I have been using for
+many years and consider one of the robust best practices we apply basically in
+all of our web application projects.</p>
+<p>This is a very practical, hands-on talk with many concrete examples that will
+give the audience a clear guide on how to build robust, well documented system
+integrations.</p>
+<p>We leverage NPM modules to version our API definition and create a clear source
+of truth for all your integrations, be it a REST API, WebSocket or CoAP
+messages-the same principle applies.</p>
+<p>The three key-takeaways are:</p>
+<ul>
+<li>learn about <a href="https://github.com/sinclairzx81/typebox" target="_blank" rel="nofollow noreferrer">TypeBox</a> and how I use
+it to make integrations of third-party APIs type-safe</li>
+<li>see a code-example where a frontend-application runs against a mock-API using
+these types</li>
+<li>get to know techniques to discover breaking API changes through monitoring</li>
+</ul>
+<p>🇳🇴 <a href="https://www.meetup.com/bartjs/" target="_blank" rel="nofollow noreferrer">Bart.js</a>, (Trondheim, Norway) 📅 20.
+November 2024</p>
+<h2 id="software-quality-made-this-talk-happen-push-to-deploy-as-the-means-to-deal-with-uncertainty" style="position:relative"><a href="#software-quality-made-this-talk-happen-push-to-deploy-as-the-means-to-deal-with-uncertainty" aria-label="software quality made this talk happen push to deploy as the means to deal with uncertainty permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Software Quality made this talk happen: push-to-deploy as the means to deal with uncertainty</h2>
+<p><a href="https://www.youtube.com/watch?v=2KeBxWAdndo" target="_blank" rel="nofollow noreferrer">Video</a> ·
+<a href="./push-to-deploy-as-the-means-to-deal-with-uncertainty">Blog post</a> ·
+<a href="https://drive.google.com/file/d/1ZrrTc4YdN0C23C1GOXilOaD4eCfsplYO/view?usp=sharing" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>This talk is an encouragement for developers to trust their skills and tools,
+but also invest in mastering them.</p>
+<h3 id="the-three-main-takeaways-are" style="position:relative"><a href="#the-three-main-takeaways-are" aria-label="the three main takeaways are permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The three main takeaways are:</h3>
+<ol>
+<li>Prioritize writing good quality software that rarely breaks. This allows for
+better work-life balance and frees up time for self-development and community
+initiatives.</li>
+<li>Utilize Test-Driven Development (TDD) with a focus on outside-in testing.
+This builds confidence in code changes and keeps the focus on delivering
+value to the user.</li>
+<li>Focus on user stories when building products. This ensures collaboration with
+all stakeholders and fosters a successful software development process.</li>
+</ol>
+<p>🇫🇷 <a href="https://ncrafts.io/speaker/markustacker" target="_blank" rel="nofollow noreferrer">NewCrafts</a> (Paris, Germany) 📅 16.
+May 2024</p>
+<h2 id="exploring-better-ways-to-write-tests" style="position:relative"><a href="#exploring-better-ways-to-write-tests" aria-label="exploring better ways to write tests permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exploring better ways to write tests</h2>
+<p>Video: <a href="https://vimeo.com/showcase/10739959/video/887919689" target="_blank" rel="nofollow noreferrer">Updated version</a>,
+<a href="https://www.youtube.com/watch?v=dZX7SbGOGn4" target="_blank" rel="nofollow noreferrer">First version</a> ·
+<a href="./exploring-better-ways-to-write-tests">Blog post</a> ·
+<a href="https://bit.ly/better-test-tools" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>Very often we focus on improving the way we write tests within our test
+frameworks. I on the other hand invest time into building new test frameworks.
+Over the last years I have worked on
+<a href="#it-does-not-run-on-my-machine-integration-testing-a-cloud-native-application">end-to-end testing cloud native applications</a>,
+which lead to the development of a BDD feature runner. This year I took the idea
+even further with a focus on coming closer to the goal of living documentation:
+the test files are now written in Markdown. In addition I started to work on
+fixing another big issue that we encounter often:
+<a href="/twitter/status/1381512195612246018">our inability to provide good architecture documentation</a>
+... what we need is not big, huge architecture diagrams for entire systems (like
+we get when we use C4, Arc42), but diagrams that are context-sensitive. BDD is
+actually a great source for these kinds of diagrams and this is what I want to
+share in this talk.</p>
+<h3 id="key-take-aways" style="position:relative"><a href="#key-take-aways" aria-label="key take aways permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Key take-aways</h3>
+<ul>
+<li>that testing, developing and documentation go hand in hand</li>
+<li>that we as people working on these system need to look at our tools and find
+ways to improve them</li>
+<li>ideas on how to build living, understandable, up-date architecture diagrams</li>
+<li>new ideas about the features of GitHub Actions, traceability and automated
+diagram generation</li>
+</ul>
+<p>🇪🇪 <a href="https://nordictestingdays.eu/" target="_blank" rel="nofollow noreferrer">Nordic Testing Day 2023</a> (Tallin, Estonia) 📅
+7-9. Juni 2023<br/>
+🇳🇴
+<a href="https://2023.trondheimdc.no/speakers/markus-tacker/" target="_blank" rel="nofollow noreferrer">Trondheim Developer Conference 2023</a>
+(Trondheim, Norway) 📅 23. October 2023</p>
+<h2 id="firmware-test-automation-using-real-embedded-devices" style="position:relative"><a href="#firmware-test-automation-using-real-embedded-devices" aria-label="firmware test automation using real embedded devices permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Firmware test automation using real embedded devices</h2>
+<p><a href="./firmware-test-automation-using-real-embedded-devices">Blog post</a> ·
+<a href="https://bit.ly/fwtesting" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>In this talk I am presenting my approach on testing embedded firmware using real
+hardware.</p>
+<p>Testing firmware in emulators drastically limits what actually gets tested and
+it can quickly become very tedious to mock, fake and set up environments for
+embedded firmware that needs to connect to cloud services.</p>
+<p>I am taking a different route: let the firmware run on real hardware, and test
+its behavior.</p>
+<p>I show how I implemented these tests using Zephyr, AWS, and GitHub Actions.
+However, this solution can be applied in any environment which cannot be run
+inside a test runner.</p>
+<p>🇪🇪 <a href="./ntd2022">Nordic Testing Day 2022</a> (Tallin, Estonia) 📅 3. Juni 2022</p>
+<h2 id="i-am-a-coder-help-me-learn-to-collaborate" style="position:relative"><a href="#i-am-a-coder-help-me-learn-to-collaborate" aria-label="i am a coder help me learn to collaborate permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>I am a coder, help me learn to collaborate!</h2>
+<p><a href="https://vimeo.com/691826440" target="_blank" rel="nofollow noreferrer">Video</a> ·
+<a href="./i-am-a-coder-help-me-learn-to-collaborate">Blog post</a> ·
+<a href="https://twitter.com/coderbyheart/status/1119970835014529024" target="_blank" rel="nofollow noreferrer">Twitter Thread</a></p>
+<p>This talk is a wake up call and should inspire other developers like me, to
+start looking into improving their communication and collaboration skills. I
+want to show the fallacy of aiming to be a fantastic coder and provide concrete
+examples and resources on how to start.</p>
+<p>🇳🇴
+<a href="https://2022.boosterconf.no/talk/2-using-communication-frameworks-to-become-a-better-engineering-leader/" target="_blank" rel="nofollow noreferrer">BoosterConf 2022</a>
+(Bergen, Norway) 📅 24. March 2022</p>
+<h2 id="serverless-architecture-for-iot-on-aws" style="position:relative"><a href="#serverless-architecture-for-iot-on-aws" aria-label="serverless architecture for iot on aws permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Serverless Architecture for IoT on AWS</h2>
+<p>Slides: <a href="https://bit.ly/awsiotarch" target="_blank" rel="nofollow noreferrer">Interactive</a> ·
+<a href="https://youtu.be/E7t6BXGIZHk" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>Let&#x27;s have a look how a temperature reading travels an IoT solution on AWS and
+Azure from the device to the web application.</p>
+<p>This is a talk that explains the benefits of serverless in general in why it is
+especially suitable for IoT applications. It also shows a concrete, open-source
+example.</p>
+<p>It will provide an introduction to serverless in general, and how it is
+implemented at the different cloud vendors (looking at AWS and Azure, where I
+have implemented the same application using the respective cloud&#x27;s idiomatic
+way), and why it is especially relevant for IoT deployments.</p>
+<p>🇳🇴
+<a href="https://www.kristiania.no/en/syllabus/school-of-economics-innovation-and-technology/first-cycle-degree/tek303/machine-to-machine-communication/" target="_blank" rel="nofollow noreferrer">Høyskolen Kristiania, TEK303, Machine-to-Machine Communication</a>,
+(Oslo, Norway) Guest lecture 📅 9. November 2021<br/>
+🌐
+<a href="https://www.ntnu.edu/studies/courses/IDG2001" target="_blank" rel="nofollow noreferrer">NTNU, IDG2001, Cloud Technologies</a>,
+Online guest lecture 📅 23. February 2022<br/>
+🌐
+<a href="https://www.ntnu.edu/studies/courses/PROG2005" target="_blank" rel="nofollow noreferrer">NTNU, PROG2005, Cloud Technologies</a>,
+Online guest lecture 📅 30. March 2022<br/>
+🇳🇴
+<a href="https://www.meetup.com/AWS-User-Group-Trondheim/events/283260963/" target="_blank" rel="nofollow noreferrer">AWS UserGroup</a>
+(Trondheim, Norway) 📅 30. March 2022</p>
+<h2 id="cloud-connectivity-and-protocols-for-the-internet-of-things" style="position:relative"><a href="#cloud-connectivity-and-protocols-for-the-internet-of-things" aria-label="cloud connectivity and protocols for the internet of things permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cloud connectivity and protocols for the Internet of Things</h2>
+<p><a href="/cloud-connectivity-and-protocols-for-the-internet-of-things">Blog post</a> ·
+Slides:
+<a href="https://devzone.nordicsemi.com/cfs-file/__key/support-attachments/beef5d1b77644c448dabff31668f3a47-cfd384f9b1874d3caf1df02c9677eca4/2870.PowerPoint.Slides.with.Notes.pdf" target="_blank" rel="nofollow noreferrer">PDF</a>,
+<a href="https://coderbyheart.github.io/nordicwebinar2020/index.html" target="_blank" rel="nofollow noreferrer">Interactive</a> ·
+<a href="https://www.youtube.com/watch?v=pNaBB_OFbgg" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>This is a webinar I did for
+<a href="https://www.nordicsemi.com/Events/Webinars" target="_blank" rel="nofollow noreferrer">Nordic Semiconductor Tech Webinars</a>
+together with my colleague Carl Richard Fosse, but it applies to everyone who
+wants to get an introduction to protocols to consider when developing a cellular
+IoT product.</p>
+<p>It provides an overview over the important factors that need to be considered
+when it comes to picking the right solution for sending your products&#x27; data to
+the cloud.</p>
+<p>🌐
+<a href="https://webinars.nordicsemi.com/cloud-connectivity-and-protocols-5" target="_blank" rel="nofollow noreferrer">Nordic Tech Webinar</a>
+(Online) 📅 21. October 2020</p>
+<h2 id="it-does-not-run-on-my-machine-integration-testing-a-cloud-native-application" style="position:relative"><a href="#it-does-not-run-on-my-machine-integration-testing-a-cloud-native-application" aria-label="it does not run on my machine integration testing a cloud native application permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>It does not run on my machine: Integration testing a cloud-native application</h2>
+<p><a href="/it-does-not-run-on-my-machine">Blog post</a> ·
+<a href="https://docs.google.com/presentation/d/1Vlzwqw0siIK-2IL0MjahFUvnuHFDf9NqFQr95mG_tEI/edit?usp=sharing" target="_blank" rel="nofollow noreferrer">Slides</a>
+· <a href="https://youtu.be/yt7oJ-To4kI" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>In this talk I will take you through the challenge of testing a cloud-native
+application. I will cover the challenges when developing solutions on top of
+serverless components which you cannot run on your own machine and how I
+designed a BDD driven approach to run the integration tests.</p>
+<p>🇩🇪 <a href="https://www.socrates-conference.de/" target="_blank" rel="nofollow noreferrer">SoCraTes Conference 2018</a> (Soltau,
+Germany) 📅 31. August 2018<br/>
+🇫🇮 <a href="https://codefreeze.fi/" target="_blank" rel="nofollow noreferrer">Codefreeze 2019</a> (Kiilopää, Finland) 📅 9. January
+2019<br/>
+🇪🇸
+<a href="https://europeantestingconference.eu/2019/topics/#markus-tacker" target="_blank" rel="nofollow noreferrer">Euro Testing Conference 2019</a>
+(Valencia, Spain) 📅 14-15. February 2019<br/>
+🇸🇪 <a href="http://oredev.org/" target="_blank" rel="nofollow noreferrer">Øredev 2019</a> (Malmö, Sweden) 📅 November 2019<br/>
+🇳🇴
+<a href="https://www.meetup.com/de-DE/AWS-User-Group-Trondheim/events/265747804/" target="_blank" rel="nofollow noreferrer">AWS UserGroup</a>
+(Trondheim, Norway) 📅 November 2019<br/>
+🇸🇪 <a href="https://awscommunitynordics.org/communityday/" target="_blank" rel="nofollow noreferrer">AWS Community Days Nordics</a>
+(Stockholm, Sweden) 📅 January 2020</p>
+<h2 id="about-call-for-papers" style="position:relative"><a href="#about-call-for-papers" aria-label="about call for papers permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>About: Call for Papers</h2>
+<p><a href="/call-for-proposals-lightning-talk">Blog post</a> ·
+<a href="https://docs.google.com/presentation/d/1Jmsf7aU2saJBzrWMCFrtxfiofWOSvS62BKKMRLDhb_Q/edit?usp=sharing" target="_blank" rel="nofollow noreferrer">Slides</a>
+· <a href="https://www.youtube.com/watch?v=jzqCzGXT7hw" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>Lightning talk about how conference call for papers work.</p>
+<p>🇩🇪 <a href="https://www.globaldiversitycfpday.com/events/169" target="_blank" rel="nofollow noreferrer">Global Diversity CFP Day</a>
+(Frankfurt, Germany) 📅 2. March 2019</p>
+<h2 id="prototyping-products-for-the-internet-of-things-using-javascript" style="position:relative"><a href="#prototyping-products-for-the-internet-of-things-using-javascript" aria-label="prototyping products for the internet of things using javascript permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prototyping products for the Internet of Things using JavaScript</h2>
+<p><a href="/prototyping-products-for-the-internet-of-things-using-javascript">Blog post</a> ·
+<a href="https://docs.google.com/presentation/d/1E1PcSo463K_1uQTKYZ6IDgOwEwaxrirpTYMvgiL0as4/edit?usp=sharing" target="_blank" rel="nofollow noreferrer">Slides</a>
+· <a href="https://www.youtube.com/watch?v=HpNv8Ahb2MU" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>In 2018 we will see a big change in the IoT landscape: based on LTE-m devices
+can connect to the internet over long distances and will be running off
+batteries for years. Learn about the principles and protocols involved and how
+to leverage JavaScript down to the hardware to build your own solution.</p>
+<p>🇳🇴
+<a href="https://www.meetup.com/de-DE/AWS-User-Group-Trondheim/events/249419495/" target="_blank" rel="nofollow noreferrer">AWS UserGroup</a>
+(Trondheim, Norway) 📅 15. May 2018 ·
+<a href="https://docs.google.com/presentation/d/1KJ34Tjs1-6hFrJKdHwERUQr_x8vTpDbBv7Ps6MKbm-c/edit?usp=sharing" target="_blank" rel="nofollow noreferrer">Slides</a><br/>
+🇪🇸 <a href="https://jonthebeach.com/" target="_blank" rel="nofollow noreferrer">J On the Beach</a> (Málaga, Spain) 📅 23-25. May 2018
+·
+<a href="https://docs.google.com/presentation/d/1vMFDSY8kn52SxnC_iEUcmJ7SJY8jpfi__oAulxE-uvQ/edit?usp=sharing" target="_blank" rel="nofollow noreferrer">Slides</a>,
+<a href="https://coderbyheart.com/jotb2018-interview" target="_blank" rel="nofollow noreferrer">Video of Q&amp;A</a><br/>
+🇳🇴 <a href="https://ndcoslo.com/speaker/markus-tacker/" target="_blank" rel="nofollow noreferrer">NDC</a> (Oslo, Norway) 📅 11-15. June
+2018 · <a href="https://docs.google.com/presentation/d/1cqPLtr5r8eP4GcPPBLDb46UOjHU6xH8UMCZx5pAHa0c/edit?usp=sharing" target="_blank" rel="nofollow noreferrer">Slides</a><br/>
+🇩🇪 <a href="https://www.codetalks.de/#talk-181" target="_blank" rel="nofollow noreferrer">code.talks</a> (Hamburg, Germany) 📅 19. October
+2018 · <a href="https://docs.google.com/presentation/d/1E1PcSo463K_1uQTKYZ6IDgOwEwaxrirpTYMvgiL0as4/edit?usp=sharing" target="_blank" rel="nofollow noreferrer">Slides</a>,
+<a href="https://www.youtube.com/watch?v=HpNv8Ahb2MU" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<h2 id="what-is-the-best-backend-language" style="position:relative"><a href="#what-is-the-best-backend-language" aria-label="what is the best backend language permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is the best backend language</h2>
+<p><a href="/backend-languages-panel-at-code-talks-hamburg-2018/">Blog post</a> ·
+<a href="https://www.youtube.com/watch?v=7n3ROn3yABY" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>Panel at code.talks Hamburg.</p>
+<p>🇩🇪 <a href="https://www.codetalks.de/#talk-181" target="_blank" rel="nofollow noreferrer">code.talks</a> (Hamburg, Germany) 📅
+October 19th 2018</p>
+<h2 id="motivating-developers-with-purposeful-work" style="position:relative"><a href="#motivating-developers-with-purposeful-work" aria-label="motivating developers with purposeful work permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Motivating developers with purposeful work</h2>
+<p><a href="https://docs.google.com/presentation/d/1h9JkH7vF_w_s37DTu4iMImKvHxZletoKDoniTe1r4cI/edit?usp=sharing" target="_blank" rel="nofollow noreferrer">Slides</a>
+· <a href="https://www.youtube.com/watch?v=ycE_1uwlE-M&amp;t=2m59s" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>I work at a company where we decide on our own, when how and on what we work; I
+have full control over my life. We believe that working in a so-called network
+organization, without central leadership, is the only sensible and sustainable
+way to run a business. But what does that mean for managers if you no longer can
+assign work to your team? New skills are required and in this talk I want to
+give a glimpse into the future of tech-leadership and what is need from you to
+build a joyful workplace for team.</p>
+<p>🇦🇹
+<a href="http://topconf.com/linz-2017/trackevent/motivating-developers-with-purposeful-work/" title="Topconf Software Conferences are premier international software conference designed for Developers, Product owners / managers, Architects, Project Managers, Methods- and Process-Experts." target="_blank" rel="nofollow noreferrer">Topconf</a>
+(Linz, Austria) 📅 2. March 2017</p>
+<h2 id="tdd-vs-velocity-testing-for-start-ups-and-other-organizations-with-fast-innovation-cycles" style="position:relative"><a href="#tdd-vs-velocity-testing-for-start-ups-and-other-organizations-with-fast-innovation-cycles" aria-label="tdd vs velocity testing for start ups and other organizations with fast innovation cycles permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TDD vs. Velocity: Testing for start-ups and other organizations with fast innovation cycles</h2>
+<p><a href="https://docs.google.com/presentation/d/1syRztRCV8BeF9p1vAHy6AepvNUa1n2hUUBRskbqx_3k/edit" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>These days, when every new project is a start-up, we need to run software that
+is both robust (because there are customers already using it) and open for
+change (because we are constantly adding new features). This provides a
+challenge for applying TDD.</p>
+<p>🇩🇪
+<a href="https://dev-night.io/" title="/dev/night - Meetup für Entwickler" target="_blank" rel="nofollow noreferrer">Tradebyte /dev/night</a>
+(Ansbach, Germany) 📅 May 16th 2017<br/>
+🇩🇪 <a href="https://developercamp.io/" target="_blank" rel="nofollow noreferrer">Developer Camp 2017</a> (Nuremberg, Germany) 📅 17.
+May 2017</p>
+<h2 id="5-years-ctoing-sharing-the-good-and-the-bad" style="position:relative"><a href="#5-years-ctoing-sharing-the-good-and-the-bad" aria-label="5 years ctoing sharing the good and the bad permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5 years CTOing: sharing the good and the bad</h2>
+<p><a href="https://docs.google.com/presentation/d/14Q6FQUg2YNkFINWAMSHyKKP1-h11kQ51dc9r_j70PAQ/edit" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>Sharing my experiences working for 5 years as the CTO for DeinBus.de, dotHIV,
+Fintura, and Resourceful Humans.</p>
+<p>🇩🇪 <a href="https://developercamp.io/" target="_blank" rel="nofollow noreferrer">Developer Camp 2017</a> (Nuremberg, Germany) 📅 17.
+May 2017</p>
+<h2 id="tools--tipps-für-freelancer-und-selbständige" style="position:relative"><a href="#tools--tipps-f%C3%BCr-freelancer-und-selbst%C3%A4ndige" aria-label="tools  tipps für freelancer und selbständige permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tools + Tipps für Freelancer und Selbständige</h2>
+<p>🇩🇪 <a href="https://www.facebook.com/events/628000664046095" target="_blank" rel="nofollow noreferrer">Donnerstalk im Heimathafen</a>
+(Wiesbaden, Germany) 📅 February 2nd 2017</p>
+<h2 id="there-is-no-half-remote-team" style="position:relative"><a href="#there-is-no-half-remote-team" aria-label="there is no half remote team permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>There is no half-remote team</h2>
+<p><a href="https://docs.google.com/presentation/d/1wOsTthhK1rgmSYl6ZChHzSTD3hkMjmlkfZKnlgQtU94/edit" target="_blank" rel="nofollow noreferrer">Slides</a>
+· <a href="https://www.youtube.com/watch?v=wxpZZN01VKY" target="_blank" rel="nofollow noreferrer">Video</a><br/>
+German version:
+<a href="https://docs.google.com/presentation/d/1ucg24JaR8IEz4HCNrd9TRRq6lY8g3kU17pwuaqkPihE/edit" target="_blank" rel="nofollow noreferrer">Slides</a>
+· <a href="https://www.youtube.com/watch?v=ZO2bYPOlhf8" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>Having remotes on the team enables you to hire for talent and not for
+availability. From my recent positions I learned that it is critical to encode
+remote work in every team members work habits-even if they are working on
+location. This talk highlights the issues that arise when teams or not
+co-located and how to deal with them.</p>
+<p>🇦🇹
+<a href="http://topconf.com/linz-2016/trackevent/there-is-no-half-remote-team/" target="_blank" rel="nofollow noreferrer">TopConf</a>
+(Austria) 📅 2. February 2016<br/>
+🇩🇪 <a href="http://wmfra.de/" target="_blank" rel="nofollow noreferrer">Webmontag</a> (Frankfurt, Germany) 📅 11. January 2016<br/>
+🇩🇪
+<a href="http://www.wj-frankfurt.de/?module=*termin&amp;id=10210" title="Wirtschaftsjunioren bei der IHK Frankfurt am Main e.V." target="_blank" rel="nofollow noreferrer">WJ Frankfurt</a>
+(Frankfurt, Germany) 📅 10. May 2017</p>
+<h2 id="automating-library-releases-and-dependency-management-in-javascript" style="position:relative"><a href="#automating-library-releases-and-dependency-management-in-javascript" aria-label="automating library releases and dependency management in javascript permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Automating library releases and dependency management in JavaScript</h2>
+<p><a href="https://docs.google.com/presentation/d/1RkvHqO80KTH-udkOvnKHd8qc3MBIzc6DC62EYlcXciA/edit" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>This talk will walk through all the packages and services necessary to automate
+dependency management in your JavaScript project. Added bonus: you will lear how
+to automate the release of your libraries, too!</p>
+<p>🇩🇪 <a href="https://developercamp.io/" target="_blank" rel="nofollow noreferrer">Developer Camp 2017</a> (Würzburg, Germany) 📅 17.
+May 2017<br/>
+🇩🇪
+<a href="http://www.meetup.com/de-DE/FrankfurtJS/" title="FrankfurtJS is a JavaScript, HTML5 and NodeJS user group in Frankfurt currently organized by Kahlil Lechelt, Jo Meenen and Eugene Terehov." target="_blank" rel="nofollow noreferrer">FrankfurtJS</a>,
+<a href="http://www.meetup.com/de-DE/FrankfurtJS/events/233554467/" target="_blank" rel="nofollow noreferrer">#10</a> (Frankfurt,
+Germany) 📅 12. October 2016<br/>
+🇩🇪
+<a href="http://jscraftcamp.org/" title="A BarCamp about JavaScript and Software Craftsmanship" target="_blank" rel="nofollow noreferrer">JS CraftCamp</a>
+(Munich, Germany) 📅 October 8th 2016<br/>
+🇩🇪
+<a href="https://www.socrates-conference.de/" title="International Software Craftsmanship and Testing Conference in Germany" target="_blank" rel="nofollow noreferrer">SoCraTes 2016</a>
+(Soltau, Germany) 📅 25. August 2016<br/>
+🇩🇪
+<a href="https://entwicklertag.de/frankfurt/2016/bdd-end-end-browser-testing-mit-nodejs" target="_blank" rel="nofollow noreferrer">Entwicklertag</a>
+(Frankfurt, Germany) 📅 10. March 2016</p>
+<h2 id="keynote-wie-man-ein-top-down-unternehmen-in-eine-netzwerk-organisation-wandelt" style="position:relative"><a href="#keynote-wie-man-ein-top-down-unternehmen-in-eine-netzwerk-organisation-wandelt" aria-label="keynote wie man ein top down unternehmen in eine netzwerk organisation wandelt permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Keynote: Wie man ein Top-Down Unternehmen in eine Netzwerk-Organisation wandelt</h2>
+<p><a href="https://drive.google.com/open?id=0B-LQs0Ik2hPpeXpKZ0M1cFcxc0U" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>This talk dives into the Resourceful Human way of transforming a hierarchical
+organization of followers into a network of entrepreneurs.</p>
+<p>🇦🇹
+<a href="http://hrsummit.at/" title="Der größte HR Event Österreichs. HR-Fachkongress und Messe in einem Event. Wissenstransfer - Networking – Entertainment" target="_blank" rel="nofollow noreferrer">HR Inside Summit 2016</a>
+(Vienna, Austria) 📅 13. October 2016</p>
+<h2 id="introducing-prototype-fund" style="position:relative"><a href="#introducing-prototype-fund" aria-label="introducing prototype fund permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introducing: Prototype Fund</h2>
+<p><a href="https://docs.google.com/presentation/d/11n3lDTEqAf6p-U2lQaSdtgjTpAhrDk8qtiIg_qH21kE/edit?usp=sharing" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>This talk introduces the <a href="http://prototypefund.de/" target="_blank" rel="nofollow noreferrer">Prototype Fund</a>, the
+incubator for open source and civic hacking projects by
+<a href="http://www.betterplace-lab.org/en/" title="betterplace lab is a digital-social think-tank in Berlin." target="_blank" rel="nofollow noreferrer">betterplace lab</a>,
+<a href="https://okfn.de/en/" title="The Open Knowledge Foundation Germany is a nonprofit organization that advocates open knowledge, open data, transparency, and civil participation." target="_blank" rel="nofollow noreferrer">Open Knowledge Foundation Deutschland</a></p>
+<p>🇩🇪
+<a href="http://wmfra.de/" title="Der Webmontag Frankfurt ist eine Veranstaltungsreihe zu Gesellschaft und Technik mit spannenden Vorträgen aus IT, Marketing/PR, Wissenschaft und Kultur. Angetrieben von den Möglichkeiten des Internets findet sich die Rhein-Main-Netzgemeinde rund um das Themenfeld der digitalen Transformation zusammen." target="_blank" rel="nofollow noreferrer">Webmontag</a>,
+<a href="https://www.xing.com/events/webmontag-frankfurt-80-classic-1684249" title="Der Webmontag Frankfurt ist eine Veranstaltungsreihe zu Gesellschaft und Technik mit spannenden Vorträgen aus IT, Marketing/PR, Wissenschaft und Kultur. Angetrieben von den Möglichkeiten des Internets findet sich die Rhein-Main-Netzgemeinde rund um das Themenfeld der digitalen Transformation zusammen." target="_blank" rel="nofollow noreferrer">#80: „Classic”</a>
+(Frankfurt, Germany) 📅 11. July 2016</p>
+<h2 id="was-startups-von-konzernen-lernen-können" style="position:relative"><a href="#was-startups-von-konzernen-lernen-k%C3%B6nnen" aria-label="was startups von konzernen lernen können permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Was Startups von Konzernen lernen können</h2>
+<p><a href="https://drive.google.com/open?id=19r-8sRswqTx54mFMERtgAkr2-IXFsOsj2Asvw-o1YEU" target="_blank" rel="nofollow noreferrer">Slides</a>
+· <a href="https://www.youtube.com/watch?v=c8tx35r7-44" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>This talk summarizes some of the aspects that big corporations can learn from
+startups.</p>
+<p>🇩🇪
+<a href="https://www.xing.com/events/webmontag-frankfurt-79-startup-1675857" target="_blank" rel="nofollow noreferrer">Webmontag</a>
+(Frankfurt, Germany) 📅 2. May 2016</p>
+<h2 id="art-expert-talk-agil-arbeiten-in-verteilten-teams" style="position:relative"><a href="#art-expert-talk-agil-arbeiten-in-verteilten-teams" aria-label="art expert talk agil arbeiten in verteilten teams permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ART Expert Talk: Agil Arbeiten in verteilten Teams</h2>
+<p><a href="https://docs.google.com/presentation/d/1q0PcMZbVJ4QsgEIvPFZ6xwEWA3P-s6qaYMvW30BA0yU/edit" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>Insights into how distributed teams can work effectively.</p>
+<p>🇩🇪
+<a href="http://digitalspirit.dbsystel.de/mit-agilitaet-gemeinsam-zu-besserer-software/" target="_blank" rel="nofollow noreferrer">DB Systel Agile Round Table</a>
+(Frankfurt, Germany) 📅 28. May 2016</p>
+<h2 id="nodejs--cqrs--es--redis-app-architecture-showcase" style="position:relative"><a href="#nodejs--cqrs--es--redis-app-architecture-showcase" aria-label="nodejs  cqrs  es  redis app architecture showcase permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Node.js / CQRS / ES / Redis app architecture showcase</h2>
+<p>Session at <a href="https://www.unkonf.de/" target="_blank" rel="nofollow noreferrer">unKonf</a> about an architecture built on top
+of event-source (ES/CQRS) using Node.js and Redis.</p>
+<p>🇩🇪 <a href="https://www.unkonf.de/" target="_blank" rel="nofollow noreferrer">unKonf</a> (Mannheim, Germany) 📅 16. April 2016</p>
+<h2 id="using-make-in-frontend-projects" style="position:relative"><a href="#using-make-in-frontend-projects" aria-label="using make in frontend projects permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using make in frontend projects</h2>
+<p><a href="https://github.com/ResourcefulHumans/graph-demo/blob/9b35bca0798594249091ffd3d4434e6b1628bac8/Makefile" target="_blank" rel="nofollow noreferrer">Example</a></p>
+<p>Session at <a href="https://www.unkonf.de/" target="_blank" rel="nofollow noreferrer">unKonf</a> about why you don&#x27;t need Gulp or
+Grunt.</p>
+<p>🇩🇪 <a href="https://www.unkonf.de/" target="_blank" rel="nofollow noreferrer">unKonf</a> (Mannheim, Germany) 📅 16. April 2016</p>
+<h2 id="code-is-not-poetry" style="position:relative"><a href="#code-is-not-poetry" aria-label="code is not poetry permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code is not poetry</h2>
+<p><a href="https://drive.google.com/open?id=1qgluNt7gsR9ulgaJl4YP5SFIuRJydMWKGVgTBXH6mj4" target="_blank" rel="nofollow noreferrer">Slides</a><br/>
+German version:
+<a href="https://docs.google.com/presentation/d/15pjuzV6sG14bnGwRd3PuwYLrOyu0uVEllTj7emhTvUg/edit" target="_blank" rel="nofollow noreferrer">Slides</a>
+· <a href="https://www.youtube.com/watch?v=_Tzrc9mh37U" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>A (very opinionated) talk about why software developers are merely glorified
+plumbers.</p>
+<p>🇩🇪 <a href="http://wmfra.de/" target="_blank" rel="nofollow noreferrer">Webmontag</a> (Frankfurt, GErmany) 📅 8. June 2015<br/>
+🇩🇪
+<a href="https://www.microsoft.com/germany/technical-summit/default.aspx" title="The larges German Microsoft Conference for developers and IT professionals." target="_blank" rel="nofollow noreferrer">Technical Summit 2016</a>
+(Darmstadt, Germany) 📅 6. December 2016</p>
+<h2 id="software-development-process-at-fintura" style="position:relative"><a href="#software-development-process-at-fintura" aria-label="software development process at fintura permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Software Development Process at Fintura</h2>
+<p><a href="https://docs.google.com/presentation/d/1UKDy9MMkLq08XRHNPiB8OrYD3zLWwmBulb9K5dU6Hsc/edit?usp=sharing" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>How we build software at Fintura.</p>
+<p>🇩🇪 <a href="http://www.meetup.com/de-DE/Coding-Night-Frankfurt/" target="_blank" rel="nofollow noreferrer">Coding Night</a>
+(Frankfurt, Germany) 📅 17. July 2015</p>
+<h2 id="tech-stack-at-fintura" style="position:relative"><a href="#tech-stack-at-fintura" aria-label="tech stack at fintura permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tech Stack at Fintura</h2>
+<p><a href="https://docs.google.com/presentation/d/11GgGze02kaFlJVBWJtv-GeWAB8MfppG4GkT55EBeQTg/edit" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>How we run software at Fintura.</p>
+<p>🇩🇪 <a href="http://www.meetup.com/de-DE/Coding-Night-Frankfurt/" target="_blank" rel="nofollow noreferrer">Coding Night</a>
+(Frankfurt, Germany) 📅 17. June 2015</p>
+<h2 id="trello" style="position:relative"><a href="#trello" aria-label="trello permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trello</h2>
+<p><a href="https://docs.google.com/presentation/d/14wTDlzPjKTu5h5hOHGTWj8VEhvQOnZBDCvwCqaKgUag/edit" target="_blank" rel="nofollow noreferrer">Slides</a>
+· <a href="https://www.youtube.com/watch?v=DV0SC01R9kc" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>A talk about the best project management software on the planet.</p>
+<p>🇩🇪 <a href="http://wemoof.de/" target="_blank" rel="nofollow noreferrer">Webmontag</a> (Offenbach, Germany) 📅 27. February 2014</p>
+<h2 id="futureofwork-in-the-wild" style="position:relative"><a href="#futureofwork-in-the-wild" aria-label="futureofwork in the wild permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>#futureofwork in the wild</h2>
+<p><a href="https://docs.google.com/presentation/d/19pEr71BmekzbN5D67K2lOvmuHUlV_0_9g4gMgu-OWjw/edit" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>A talk about great examples of non-traditional organization concepts.</p>
+<p>🇩🇪 <a href="http://asffm.blogspot.de/" target="_blank" rel="nofollow noreferrer">Agiler Stammtisch FFM</a> (Frankfurt, Germany) 📅 2.
+April 2014</p>
+<h2 id="dothiv" style="position:relative"><a href="#dothiv" aria-label="dothiv permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>dotHIV</h2>
+<p><a href="https://docs.google.com/presentation/d/1SzhOkZYPlX4qomxdCCm1MHZgdcsU8kl8zdkZRsqbnX4/edit" target="_blank" rel="nofollow noreferrer">Slides</a>
+· <a href="https://www.youtube.com/watch?v=h36BGbdYfzs" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>Introducing the dotHIV initiative.</p>
+<p>🇩🇪 <a href="http://wmfra.de/" target="_blank" rel="nofollow noreferrer">Webmontag</a> (Frankfurt, Germany) 📅 10. November 2014</p>
+<h2 id="riesengeschäft-und-geldmacherei" style="position:relative"><a href="#riesengesch%C3%A4ft-und-geldmacherei" aria-label="riesengeschäft und geldmacherei permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.riesengeschäft und .geldmacherei?</h2>
+<p><a href="https://docs.google.com/presentation/d/1CDblqJHUc3piD9VOpOWwWBf28tXJWCmoAefOcMUow7I/edit" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>Wie der dotHIV e.V. den #newgTLDs ihre Daseinsberechtigung gibt</p>
+<p>🇩🇪 <a href="http://wemoof.de/" target="_blank" rel="nofollow noreferrer">Webmontag</a> (Frankfurt, Germany) 📅 24. August 2014</p>
+<h2 id="cloud-worker" style="position:relative"><a href="#cloud-worker" aria-label="cloud worker permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cloud Worker</h2>
+<p><a href="https://docs.google.com/presentation/d/1BI_3-ua0IVl4P4dakHB4hXzn9h3wmVJHw0hZ5SO_hMo/edit" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p><strong>Update January 2020:</strong> I&#x27;ve revisisted this talk
+<a href="https://twitter.com/coderbyheart/status/1212874457964064768" target="_blank" rel="nofollow noreferrer">here</a>.</p>
+<p>🇩🇪 <a href="http://heimathafen-wiesbaden.de/" target="_blank" rel="nofollow noreferrer">Donnerstalk im Heimathafen</a> (Wiesbaden,
+Germany) 📅 4. April 2013</p>
+<h2 id="mein-traum---mein-startup" style="position:relative"><a href="#mein-traum---mein-startup" aria-label="mein traum   mein startup permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mein Traum - Mein Startup</h2>
+<p><a href="https://docs.google.com/presentation/d/1PEo6dQbTyloN_v-XxxOLK1j4pHjE8n8eDAqI36Prlqw/edit" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>🇩🇪 <a href="https://www.hs-rm.de/" target="_blank" rel="nofollow noreferrer">Hochschule RheinMain</a> (Wiesbaden, Germany) 📅 15. May
+2013</p>
+<h2 id="warum-offenbach-einen-webmontag-braucht" style="position:relative"><a href="#warum-offenbach-einen-webmontag-braucht" aria-label="warum offenbach einen webmontag braucht permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Warum Offenbach einen Webmontag braucht</h2>
+<p><a href="https://docs.google.com/presentation/d/1uYe0LAyZ5ujMCvMv0PyM090KE6ubz7Jz2lF_pXXguPQ/edit" target="_blank" rel="nofollow noreferrer">Slides</a>
+· <a href="https://www.youtube.com/watch?v=fHV7ur7JUxQ" target="_blank" rel="nofollow noreferrer">Video</a></p>
+<p>🇩🇪 <a href="http://wemoof.de/" target="_blank" rel="nofollow noreferrer">Webmontag</a> (Offenbach, Germany) 📅 13. May 2013</p>
+<h2 id="ugrm--usergroups-rheinmain-ein-überblick-über-die-szene" style="position:relative"><a href="#ugrm--usergroups-rheinmain-ein-%C3%BCberblick-%C3%BCber-die-szene" aria-label="ugrm  usergroups rheinmain ein überblick über die szene permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>#ugrm – UserGroups RheinMain. Ein Überblick über die Szene</h2>
+<p>An overview over tech tech meetup scene in the RheinMain region.</p>
+<p>🇩🇪 <a href="http://wmfra.de/" target="_blank" rel="nofollow noreferrer">Webmontag</a> (Frankfurt, Germany) 📅 8. April 2013</p>
+<h2 id="coworking-szene-rheinmain" style="position:relative"><a href="#coworking-szene-rheinmain" aria-label="coworking szene rheinmain permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Coworking Szene RheinMain</h2>
+<p><a href="https://docs.google.com/presentation/d/1eHVyhQPE4drzoSlY0rRqPD1w5wddF0MJNMqTL3Fh-cA/edit" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>Highlighting the coworking initiatives in the region.</p>
+<p>🇩🇪 <a href="http://wmfra.de/" target="_blank" rel="nofollow noreferrer">Webmontag</a> (Frankfurt, Germany) 📅 12. November 2012</p>
+<h2 id="restful-apis-mit-django" style="position:relative"><a href="#restful-apis-mit-django" aria-label="restful apis mit django permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RESTful APIs mit Django</h2>
+<p><a href="https://docs.google.com/presentation/d/1AK_sn88E1hIX0FQmgzjd8XFBR7i32b1JgsPQt1b1B8w/edit" target="_blank" rel="nofollow noreferrer">Slides</a></p>
+<p>How to build RESTful APIs using the Python-based Django framework.</p>
+<p>🇩🇪 <a href="http://pyugrm.de/" target="_blank" rel="nofollow noreferrer">Python UserGroup RheinMain</a> (Frankfurt, Germany) 📅 18.
+July 2012</p></div></main><footer class="Footer__StyledFooter-sc-inlkh7-0 bqEswo"><div class="Footer__Wrapper-sc-inlkh7-1 euxZA-D"><h1><a href="/">coder.by(<svg width="51.234638mm" height="51.234638mm" viewBox="0 0 51.234638 51.234638" version="1.1"><g transform="translate(-96.090815,-224.60292)"><path d="m 120.88872,275.83756 c -0.3544,-1.74196 -4.26401,-14.11291 -14.48044,-15.77415 -10.287693,-1.67184 -7.996191,-8.46899 -7.996191,-8.46899 0,0 1.096201,5.7017 7.493151,2.65792 -7.640381,0.44232 -13.420099,-13.41965 -3.05077,-21.17156 3.13005,-2.33996 2.30471,-4.41663 2.76669,-6.34777 0.44028,-1.83853 3.4651,-3.06628 4.97184,-1.20393 -1.16557,-0.97638 -3.4146,-0.45908 -3.7034,1.46985 -0.3742,2.49783 3.366,3.76042 6.30069,4.67064 3.91151,1.21364 8.29112,7.63813 1.92484,12.61968 2.57605,-8.74504 -10.19189,-8.19468 -9.50624,-0.83041 0.82959,8.91131 15.05851,8.88308 16.10799,19.56853 0.101,1.02136 -0.27558,2.39066 0.29022,3.56373 -0.17271,-1.01122 -0.18499,-2.0855 0.63988,-3.5408 2.08481,-3.67662 4.77034,-5.91647 2.60908,-12.07548 -0.45254,-1.29125 -0.42753,-1.89542 -0.006,-2.91766 -0.3223,1.16159 -0.12741,2.36641 1.36329,3.01909 7.06799,3.09274 13.84764,-2.9988 11.51509,-10.45745 -2.81531,-9.00435 -13.41964,-3.80187 -8.35577,0.10011 -2.88609,-1.40503 -7.30959,1.72034 -3.52739,5.56498 0.18357,0.18654 0.87819,0.48951 1.53695,0.13098 -0.59694,0.40131 -1.04429,0.2721 -1.6771,0.0392 -10.26219,-3.77452 -4.27531,-17.20123 6.77732,-16.8599 3.90111,0.11996 5.77782,1.20173 7.24823,2.16664 2.82097,1.85088 5.50838,0.48863 5.34652,-0.85422 -0.0633,-0.527 -0.68569,-1.24362 -1.5771,-0.73162 0.62572,-0.56316 2.09519,0.026 2.23676,0.9799 0.13826,0.93448 -0.10617,1.83942 -1.00088,2.53532 -1.04052,0.80967 -1.2826,1.54923 -0.68849,2.83563 0.68802,1.48838 2.72895,6.77157 0.61723,12.63203 -3.57174,9.91281 -13.49795,7.02073 -15.55775,14.18435 1.90927,-2.48989 4.5745,-0.082 6.66215,-4.0259 -0.44452,10.1289 -12.17101,5.64613 -15.28077,16.52121" style="fill:#e00073;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.456184"></path></g></svg>)</a></h1><div class="Content-sc-1unkf2t-0 bscNff"><p>Software Crafter building 🌩️ cloud-based cellular IoT solutions at
+<a href="https://nordicsemi.com/" target="_blank" rel="nofollow noreferrer">Nordic Semiconductor</a>.<br/>
+Mentor. Speaker. Conference &amp; Community builder. Camper. 🏕️ 🚐</p>
+<h2 id="markus-tacker" style="position:relative"><a href="#markus-tacker" aria-label="markus tacker permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Markus Tacker</h2>
+<p><strong>Media Computer Scientist (B.Sc.)</strong></p>
+<ul>
+<li>📨 <a href="mailto:m@coderbyheart.com" target="_blank" rel="nofollow noreferrer">m@coderbyheart.com</a></li>
+</ul>
+<h2 id="connect" style="position:relative"><a href="#connect" aria-label="connect permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connect</h2>
+<p>You can find me on these sites.</p>
+<p><em>Please note that I will reject connection requests from people I&#x27;ve never met
+personally.</em></p>
+<ul>
+<li><a rel="me" href="https://chaos.social/@coderbyheart" title="Markus Tacker on Mastodon">Mastodon</a></li>
+<li><a rel="me" href="https://matrix.to/#/@coderbyheart:matrix.im" title="Markus Tacker on Matrix">Matrix</a></li>
+<li><a rel="me" href="https://www.linkedin.com/in/markustacker" title="Markus Tacker on LinkedIn">LinkedIn</a></li>
+<li><a rel="me" href="https://github.com/coderbyheart" title="Markus Tacker on GitHub">GitHub</a></li>
+<li><a rel="me" href="https://www.instagram.com/coderbyheart/" title="Markus Tacker on Instagram">Instagram</a></li>
+</ul></div><p class="Footer__Copyright-sc-inlkh7-2 erxblp">© 2015-<!-- -->2024<!-- --> <a href="https://coderbyheart.com/">Markus Tacker</a>. All rights reserved.</p></div></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/talks";window.___webpackCompilationHash="dc3e4f82e3bdc203dabf";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-ce650185473b5c8bc2cd.js"],"app":["/app-c16511fa12597b6ac885.js"],"component---src-page-archive-tsx":["/component---src-page-archive-tsx-7b0168ce674cae6b8f9d.js"],"component---src-page-default-tsx":["/component---src-page-default-tsx-ef1c0b6777e61335f03d.js"],"component---src-page-post-tsx":["/component---src-page-post-tsx-e69b0f93bfb0d2cae05a.js"],"component---src-page-social-tsx":["/component---src-page-social-tsx-daed767018f32020628a.js"],"component---src-page-twitter-archive-tsx":["/component---src-page-twitter-archive-tsx-8df0e4e8785018e1682c.js"],"component---src-page-twitter-archive-year-month-tsx":["/component---src-page-twitter-archive-year-month-tsx-66933804ada4360d5f7b.js"],"component---src-page-twitter-archive-year-tsx":["/component---src-page-twitter-archive-year-tsx-bf5c1759205429007270.js"],"component---src-page-twitter-status-tsx":["/component---src-page-twitter-status-tsx-80b22a788796c269fa88.js"]};/*]]>*/</script><script src="/polyfill-ce650185473b5c8bc2cd.js" nomodule=""></script><script src="/app-c16511fa12597b6ac885.js" async=""></script><script src="/framework-6358eeee7e1b762de230.js" async=""></script><script src="/webpack-runtime-1141bf526e80db2d365e.js" async=""></script></body></html>
