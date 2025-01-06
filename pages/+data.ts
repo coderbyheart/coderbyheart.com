@@ -1,8 +1,8 @@
-import { loadContentFromMarkdown } from "#content/loadContentFromMarkdown.ts";
-import { MarkdownContent } from "#content/loadMarkdownContent.ts";
+import { loadContentFromMarkdown } from '#content/loadContentFromMarkdown.ts'
+import type { MarkdownContent } from '#content/loadMarkdownContent.ts'
 
 export const data = async (): Promise<{
-  pages: Map<string, MarkdownContent>;
+	pages: Map<string, MarkdownContent>
 }> => ({
-  pages: await loadContentFromMarkdown(),
-});
+	pages: await loadContentFromMarkdown(),
+})

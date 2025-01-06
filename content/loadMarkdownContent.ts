@@ -1,48 +1,48 @@
-import { readdir, readFile } from "node:fs/promises";
-import path, { parse } from "node:path";
-import format from "rehype-format";
-import html from "rehype-stringify";
-import { remark } from "remark";
-import extract from "remark-extract-frontmatter";
-import frontmatter from "remark-frontmatter";
-import remark2rehype from "remark-rehype";
-import yaml from "yaml";
+import { readdir, readFile } from 'node:fs/promises'
+import path, { parse } from 'node:path'
+import format from 'rehype-format'
+import html from 'rehype-stringify'
+import { remark } from 'remark'
+import extract from 'remark-extract-frontmatter'
+import frontmatter from 'remark-frontmatter'
+import remark2rehype from 'remark-rehype'
+import yaml from 'yaml'
 
 const parseMarkdown = remark()
-  .use(frontmatter, ["yaml"])
-  .use(extract, { yaml: yaml.parse })
-  .use(remark2rehype, { allowDangerousHtml: true })
-  .use(format, {})
-  .use(html, { allowDangerousHtml: true });
+	.use(frontmatter, ['yaml'])
+	.use(extract, { yaml: yaml.parse })
+	.use(remark2rehype, { allowDangerousHtml: true })
+	.use(format, {})
+	.use(html, { allowDangerousHtml: true })
 
 export type MarkdownContent = Record<string, any> & {
-  slug: string;
-  html: string;
-};
+	slug: string
+	html: string
+}
 
 export const loadMarkdownContent = async (): Promise<
-  Array<MarkdownContent>
+	Array<MarkdownContent>
 > => {
-  const resourceFiles = (
-    await readdir(path.join(process.cwd(), "content"))
-  ).filter((f) => f.endsWith(".md"));
+	const resourceFiles = (
+		await readdir(path.join(process.cwd(), 'content'))
+	).filter((f) => f.endsWith('.md'))
 
-  return await Promise.all(
-    resourceFiles.map(async (f) =>
-      loadMarkdownContentFromFile(path.join(process.cwd(), "content", f)),
-    ),
-  );
-};
+	return await Promise.all(
+		resourceFiles.map(async (f) =>
+			loadMarkdownContentFromFile(path.join(process.cwd(), 'content', f)),
+		),
+	)
+}
 
 export const loadMarkdownContentFromFile = async (
-  file: string,
+	file: string,
 ): Promise<MarkdownContent> => {
-  const source = await readFile(file, "utf-8");
-  const md = await parseMarkdown.process(source);
+	const source = await readFile(file, 'utf-8')
+	const md = await parseMarkdown.process(source)
 
-  return {
-    ...md.data,
-    html: md.value,
-    slug: parse(file).base.replace(/\.md$/, ""),
-  } as MarkdownContent;
-};
+	return {
+		...md.data,
+		html: md.value,
+		slug: parse(file).base.replace(/\.md$/, ''),
+	} as MarkdownContent
+}

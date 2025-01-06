@@ -1,7 +1,7 @@
-import config from "@bifravst/eslint-config-typescript";
+import config from '@bifravst/eslint-config-typescript'
 export default [
-  ...config,
-  {
-    ignores: ["build/*"],
-  },
-];
+	...config,
+	{
+		ignores: ['build/*'],
+	},
+]

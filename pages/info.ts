@@ -1,2 +1,2 @@
-export const name = "Markus Tacker";
-export const tagLine = "Software Crafter";
+export const name = 'Markus Tacker'
+export const tagLine = 'Software Crafter'
