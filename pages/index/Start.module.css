@@ -1,0 +1,9 @@
+.start {
+  margin-top: 4rem;
+}
+
+@media (min-width: 700px) {
+  .start {
+    margin-top: 8rem;
+  }
+}

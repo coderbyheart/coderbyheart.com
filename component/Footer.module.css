@@ -1,0 +1,113 @@
+.footer {
+  min-height: calc(100vh - 40px);
+  background-color: var(--background-color-dark);
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+}
+
+.footer a {
+  color: var(--highlight-color-on-dark);
+  text-decoration: none;
+}
+
+.footer hr {
+  border: 0;
+  border-bottom: 1px solid var(--highlight-color-on-dark);
+  opacity: 0.5;
+  width: 5rem;
+  margin: 0;
+}
+
+.footer h1,
+.footer h2 {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.footer h1::after,
+.footer h2::after {
+  content: " ";
+  width: 5rem;
+  height: 1px;
+  border-bottom: 1px solid var(--highlight-color-on-dark);
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+}
+
+.footer h1 {
+  font-size: 42px;
+}
+
+.footer h2 {
+  font-size: 18px;
+}
+
+.footer h1 a {
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  width: calc(42px * 1.25);
+  height: calc(42px * 1.25);
+}
+
+.footer h2 {
+  margin-top: 3rem;
+}
+
+.footer > section {
+  max-width: var(--max-width);
+  padding: 1rem 1rem;
+}
+
+@media (min-width: 700px) {
+  .footer > section {
+    padding: 4rem 0;
+    margin: 0 auto;
+  }
+}
+
+.footer > section p {
+  max-width: calc(var(--max-width) / 3);
+}
+
+.footer > section ul li + li {
+  padding-top: 0;
+}
+
+.footer > section li + li::before {
+  content: "";
+  padding: 0;
+}
+
+@media (min-width: 700px) {
+  .footer > section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer > section li + li {
+    padding-top: 0;
+  }
+
+  .footer > section li + li::before {
+    content: "·";
+    padding: 0.5rem;
+  }
+}
+
+.photo {
+  width: 33%;
+  max-width: 150px;
+  height: auto;
+  float: right;
+  border-radius: 100%;
+  border: 2px solid var(--heart-color);
+  margin-left: 1rem;
+}

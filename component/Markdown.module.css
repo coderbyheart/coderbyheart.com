@@ -1,0 +1,160 @@
+.content p {
+  line-height: 150%;
+  margin-bottom: 1rem;
+}
+
+.content img {
+  width: 100%;
+  height: auto;
+}
+
+.content a {
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
+
+.content h1,
+.content h2 {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.content h1:first-child,
+.content h2:first-child {
+  margin-top: 0;
+}
+
+.content h1:after,
+.content h2:after {
+  content: " ";
+  width: 5rem;
+  height: 1px;
+  border-bottom: 1px solid var(--highlight-color);
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+}
+
+.content h1 small,
+.content h2 small {
+  font-weight: 300;
+  font-size: 50%;
+  text-transform: uppercase;
+}
+
+.content strong {
+  font-weight: 600;
+}
+
+.content em {
+  font-style: italic;
+}
+
+.content blockquote {
+  border: 1px solid var(--heart-color);
+  border-radius: 5px;
+  padding: 0 1rem;
+  margin: 0;
+  background-color: var(--note-bg-color);
+}
+
+.content div.twitter-tweet-rendered {
+  margin: 2rem auto !important;
+}
+
+.content img:not([src]) {
+  visibility: hidden;
+}
+
+.content img[data-large-source="1"] {
+  width: 100vw;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+@media (min-width: 800px) {
+  .content img[data-large-source="1"] {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-left: calc((100vw - 800px) / 2 * -1);
+    margin-right: calc((100vw - 800px) / 2 * -1);
+  }
+}
+
+/* Bigger tap targets on mobile */
+.content li + li {
+  padding-top: 1rem;
+}
+
+@media (min-width: 800px) {
+  .content li + li {
+    padding-top: 0;
+  }
+}
+
+.content pre[class*="language-"] > code {
+  border-color: var(--highlight-color);
+  background-image: none;
+}
+
+.content pre[class*="language-"]::before,
+.content pre[class*="language-"]::after {
+  box-shadow: none;
+}
+
+.content pre[class*="language-"] .token.constant {
+  color: var(--highlight-color);
+}
+
+.content pre[class*="language-"] .token.keyword {
+  color: var(--highlight-color);
+}
+
+.content pre[class*="language-"] .token.boolean {
+  color: inherit;
+}
+
+.content pre[class*="language-"] .token.function {
+  color: var(--color-syntax-ChelseaGem);
+}
+
+.content pre[class*="language-"] .token.number {
+  color: inherit;
+}
+
+.content pre[class*="language-"] .token.operator {
+  color: inherit;
+}
+
+.content pre[class*="language-"] .token.punctuation {
+  color: var(--color-syntax-Emperor);
+}
+
+.content pre[class*="language-"] .token.parameter {
+  color: inherit;
+}
+
+.content pre[class*="language-"] .token.regex {
+  color: inherit;
+}
+
+.content pre[class*="language-"] .token.string {
+  color: var(--color-syntax-JapaneseLaurel);
+}
+
+.content pre[class*="language-"] .token.class-name {
+  color: inherit;
+}
+
+.content pre[class*="language-"] .token.comment {
+  color: var(--color-syntax-DoveGray);
+}
+
+.content pre[class*="language-"] .token.template-string {
+  color: inherit;
+}
+
+.content pre[class*="language-"] .token.inserted {
+  color: var(--color-syntax-JapaneseLaurel);
+}

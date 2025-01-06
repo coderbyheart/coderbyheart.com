@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "nodenext",
+    "target": "ESNext",
+    "module": "NodeNext",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "#content/*": ["content/*"],
+      "#component/*": ["component/*"],
+      "#pages/*": ["pages/*"],
+      "#layout/*": ["layout/*"],
+      "#util/*": ["util/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

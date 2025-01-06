@@ -1,0 +1,73 @@
+.meta {
+  font-family: "Roboto Flex", serif;
+  font-weight: 300;
+  background-color: var(--background-color-dark);
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+}
+
+.meta strong {
+  font-weight: 700;
+}
+
+.meta a {
+  color: var(--text-color-light);
+  text-decoration: none;
+}
+
+.meta a:hover {
+  text-decoration: underline;
+}
+
+.shrink {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 1;
+}
+
+.shrink strong {
+  text-transform: uppercase;
+}
+
+.content {
+  display: none;
+}
+
+.meta > section {
+  padding: 0 1rem;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.meta > section span + span > *:before {
+  content: "·";
+  padding: 0.25rem;
+}
+
+@media (min-width: 700px) {
+  .meta > section {
+    padding: 0;
+  }
+}
+
+.meta:global(.scrolling) .content {
+  display: block;
+}
+
+.meta:global(.scrolling) .shrink span {
+  display: none;
+}
+
+.meta:global(.scrolling) .wrapper svg {
+  display: none;
+}
