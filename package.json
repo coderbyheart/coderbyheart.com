@@ -7,7 +7,8 @@
     "start": "vite",
     "prepare": "husky",
     "postinstall": "check-node-version --package",
-    "lint": "eslint --ext .js,.ts,.tsx src"
+    "lint": "eslint --ext .js,.ts,.tsx src",
+    "build": "vite build --emptyOutDir"
   },
   "keywords": [
     "Markus Tacker",
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@bifravst/eslint-config-typescript": "6.1.19",
     "@bifravst/prettier-config": "1.1.4",
+    "@commitlint/config-conventional": "19.6.0",
     "@types/lodash-es": "4.17.12",
     "check-node-version": "4.2.1",
     "commitlint": "19.6.1",
