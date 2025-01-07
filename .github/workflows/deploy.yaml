@@ -36,4 +36,8 @@ jobs:
           VERSION: ${{ env.VERSION }}
         run: |
           npm run build
+
+      - name: Save version
+        run: |
+          mkdir ./public/client/.well-known
           echo ${{ env.VERSION }} > ./public/client/.well-known/release
