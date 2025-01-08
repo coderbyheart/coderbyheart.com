@@ -1,10 +1,8 @@
----
-noheadline: true
----
-
 # Hei 👋, I am Markus.
 
 **I'm a coder by heart and an organizational hacker by passion.**
+
+[`{"pronoun":"he"}`](http://pronoun.is/he)
 
 As a
 [Software Crafter](https://coderbyheart.com/become-a-certified-software-craftsperson/)
@@ -19,8 +17,6 @@ on Twitter. Now I am on Mastodon, and you can follow
 [@coderbyheart@chaos.social](https://chaos.social/@coderbyheart) there for my
 daily ramblings about the challenges of writing software.
 
-[`{"pronoun":"he"}`](http://pronoun.is/he)
-
 I live in Trondheim, Norway 🇳🇴 and share photos about my camping adventures and
 more on [photos.coderbyheart.com](https://photos.coderbyheart.com) and
 [Instagram](https://instagram.com/coderbyheart).
@@ -34,5 +30,7 @@ I especially enjoys the diverse and deep discussion of the
 
 Don't hesitate to contact me, if you need advice,
 [I'm happy to help](https://chaos.social/@coderbyheart/109245002857233532).
+
+---
 
 <https://chaos.social/@coderbyheart/109245002857233532/embed>

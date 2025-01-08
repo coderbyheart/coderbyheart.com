@@ -82,6 +82,12 @@
   }
 }
 
+.content hr {
+  border-top: 1px solid var(--highlight-color);
+  margin: 2rem 0;
+  width: 5rem;
+}
+
 /* Bigger tap targets on mobile */
 .content li + li {
   padding-top: 1rem;

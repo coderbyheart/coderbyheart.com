@@ -1,7 +1,7 @@
 import { Markdown } from '#component/Markdown.tsx'
 import { Me } from '#component/Me.tsx'
-import type { MarkdownContent } from '#content/loadMarkdownContent.ts'
 import { Main } from '#layout/Main.tsx'
+import type { MarkdownContent } from '#util/loadMarkdownContent.ts'
 import { useData } from 'vike-solid/useData'
 
 import styles from './Start.module.css'
