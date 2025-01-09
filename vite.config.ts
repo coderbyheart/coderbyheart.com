@@ -12,7 +12,6 @@ export default defineConfig({
 		vikeSolid(),
 	],
 	build: {
-		outDir: './public',
 		sourcemap: true,
 	},
 	resolve: {

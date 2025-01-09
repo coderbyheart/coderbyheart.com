@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "prepare": "husky",
+    "prepare": "husky && cp ./node_modules/the-new-css-reset/css/reset.css public",
     "postinstall": "check-node-version --package",
     "lint": "eslint --ext .js,.ts,.tsx src",
     "build": "vite build --emptyOutDir"
@@ -36,7 +36,7 @@
     "npm": ">=10"
   },
   "devDependencies": {
-    "@bifravst/eslint-config-typescript": "6.1.19",
+    "@bifravst/eslint-config-typescript": "6.1.20",
     "@bifravst/prettier-config": "1.1.4",
     "@commitlint/config-conventional": "19.6.0",
     "@types/lodash-es": "4.17.12",
@@ -51,7 +51,7 @@
     "remark-extract-frontmatter": "^3.2.0",
     "remark-frontmatter": "^5.0.0",
     "remark-rehype": "^11.1.1",
-    "vike": "0.4.212",
+    "vike": "0.4.213",
     "vike-solid": "0.7.8",
     "yaml": "^2.7.0"
   },
@@ -86,7 +86,7 @@
     "@solid-primitives/intersection-observer": "2.1.6",
     "date-fns": "4.1.0",
     "lodash-es": "4.17.21",
-    "solid-js": "1.9.3",
+    "solid-js": "1.9.4",
     "the-new-css-reset": "1.11.3"
   }
 }
