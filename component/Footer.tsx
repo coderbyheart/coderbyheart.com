@@ -1,5 +1,5 @@
-import type { MarkdownContent } from '#content/loadMarkdownContent.ts'
 import { name } from '#pages/info.ts'
+import type { MarkdownContent } from '#util/loadMarkdownContent.ts'
 import { useData } from 'vike-solid/useData'
 import { Link } from './Link.tsx'
 import { Markdown } from './Markdown.tsx'

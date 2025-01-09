@@ -6,7 +6,8 @@ import {
 } from 'solid-js'
 import { Dynamic, isServer } from 'solid-js/web'
 import styles from './Markdown.module.css'
-import { MastodonStatus } from './Markdown/CustomElement/MastodonStatus.tsx'
+import { MastodonStatus } from './Markdown/CustomElement/MastodonStatus/MastodonStatus.tsx'
+import { getChaosEmbedURL } from './Markdown/CustomElement/MastodonStatus/getChaosEmbedURL.ts'
 
 const genericComponent = (element: Element) => {
 	const attributesMap: { [key: string]: string } = {}
@@ -27,18 +28,6 @@ const elementToComponent = (
 	if (maybeChaosEmbedURL !== null)
 		return () => <MastodonStatus url={maybeChaosEmbedURL} />
 	return genericComponent(element)
-}
-
-const getChaosEmbedURL = (element: Element): URL | null => {
-	try {
-		const url = new URL(element.getAttribute('href')!)
-		return url.hostname.includes('chaos.social') &&
-			url.pathname.endsWith('/embed')
-			? url
-			: null
-	} catch {
-		return null
-	}
 }
 
 export const Markdown = (props: { html: string }) => {
@@ -65,7 +54,6 @@ export const Markdown = (props: { html: string }) => {
 			} else if (node.nodeType === Node.TEXT_NODE) {
 				return node.textContent
 			}
-			console.error('Unknown node type', node)
 			return null
 		}
 

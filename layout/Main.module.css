@@ -1,6 +1,5 @@
 .main {
   padding: 1rem;
-  margin-bottom: 4rem;
   max-width: var(--max-width);
   line-height: 150%;
 }
@@ -8,6 +7,6 @@
 @media (min-width: 700px) {
   .main {
     padding: 0;
-    margin: 4rem auto;
+    margin: 2rem auto 0 auto;
   }
 }

@@ -18,6 +18,10 @@ const parseMarkdown = remark()
 export type MarkdownContent = Record<string, any> & {
 	slug: string
 	html: string
+	hero?: {
+		alt: string // e.g. "Stokkøya"
+		src: string // e.g. "https://images.ctfassets.net/bncv3c2gt878/3EXc2Uvcr9uEvpBQeytG9r/e0aca42ce58340d265410eaf43453280/50180400301_5da8837da3_k_d.jpg"
+	}
 }
 
 export const loadMarkdownContent = async (): Promise<
