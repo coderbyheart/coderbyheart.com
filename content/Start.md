@@ -1,7 +1,7 @@
 ---
 hero:
   alt: Stokkøya
-  src: https://images.ctfassets.net/bncv3c2gt878/3EXc2Uvcr9uEvpBQeytG9r/e0aca42ce58340d265410eaf43453280/50180400301_5da8837da3_k_d.jpg
+  src: https://live.staticflickr.com/65535/50180400301_5da8837da3_k_d.jpg
 ---
 
 # Hei 👋, I am Markus.

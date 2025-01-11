@@ -19,7 +19,10 @@ const Page = () => {
 				<Markdown html={start.html} />
 			</Main>
 			{start.hero !== undefined && (
-				<Hero alt={start.hero.alt} src={new URL(start.hero.src)} />
+				<Hero
+					alt={start.hero.alt}
+					src={new URL(start.hero.cdn?.url ?? start.hero.src)}
+				/>
 			)}
 		</>
 	)
