@@ -4,11 +4,11 @@
   "description": "Source code for coderbyheart.com",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "start": "vike dev",
     "prepare": "husky && cp ./node_modules/the-new-css-reset/css/reset.css public",
     "postinstall": "check-node-version --package",
     "lint": "eslint --ext .js,.ts,.tsx src",
-    "build": "vite build --emptyOutDir"
+    "build": "vike build --emptyOutDir"
   },
   "keywords": [
     "Markus Tacker",
