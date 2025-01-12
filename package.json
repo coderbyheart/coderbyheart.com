@@ -8,7 +8,7 @@
     "prepare": "husky && cp ./node_modules/the-new-css-reset/css/reset.css public",
     "postinstall": "check-node-version --package",
     "lint": "eslint --ext .js,.ts,.tsx src",
-    "build": "vike build --emptyOutDir"
+    "build": "vike build"
   },
   "keywords": [
     "Markus Tacker",
