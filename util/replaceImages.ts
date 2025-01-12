@@ -104,7 +104,7 @@ export const replaceImages = async (
 	const cdn = {
 		url: cdnURL,
 		size: statSync(localFilePath).size, // e.g. 5106419
-		image: {
+		dim: {
 			width, //e.g. 3008,
 			height, //e.g. 4000,
 		},

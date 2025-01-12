@@ -15,24 +15,32 @@ const parseMarkdown = remark()
 	.use(format, {})
 	.use(html, { allowDangerousHtml: true })
 
+export type CDNPhoto = {
+	url: string // e.g. 'https://7w7z6ydf2htamqdsm6nbxm7sma0nkltc.lambda-url.eu-central-1.on.aws/coderbyheart.com/media/18248d974deb8473d2145868b5cbd133800ac415c2576d34b7b3af432eacd486'
+	size: number // e.g. 618090
+	dim: {
+		width: number // e.g. 2045;
+		height: number // e.g. 1152
+	}
+	thumbnail: string // e.g. 'data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQABAABUB8JbACdADcDjs0AADoE7M0KBjrhR+oZpkY1qaTZfL7grjZJ1Hkl4+uLTpU832XJRz302ma3sQAAA=='
+	preview: string // e.g. 'data:image/webp;base64,UklGRlwBAABXRUJQVlA4IFABAACQCQCdASpAACQAPzmWw1qvKqekKBVY4eAnCWQAsylqRZhGkiLAdiytrxGjH2nZpGK1olETvAvfhHFmynYmugb0RiWiUdvnLs2LSf+WA7XbK5eUaNAAAPnWhdy+YvpXPP4q/7y6RFaNESXgsaGqTQxQ+m0/ZP1o0NlCaCuW7IZNF7GC19IWU/Qh6Wt6jNTRKsfepo/EEyFSFY4LCVld7sHQ1F9MWKe9SDyB8sE5ugKoo+kKjQ/0pFCB9W4TFM8jJv6Ir3V/CcWGJOkkW5whdGPuVHMRAPJ4/4k+8pwN4dd8o5X8iQrc/Wm7cGtEEmg3sVfKBKQfXuz6dHnR2W0QmA/tllaA2KmD8Wc9Df2liA00FHDK8FHZbGIq6WEqs7KjbbxFw09q4Es4/ikvmRDcHPLIMFkK+gdgdTdLEgJ0ZoCiqwdle2kyEJahSDGDIMUAAAA='
+	type: string // e.g. 'JPEG'
+}
+
+export type PhotoOnCDN = Photo & {
+	cdn: CDNPhoto
+}
+
+export type Photo = {
+	alt: string // e.g. "Stokkøya"
+	src: string // e.g. "https://images.ctfassets.net/bncv3c2gt878/3EXc2Uvcr9uEvpBQeytG9r/e0aca42ce58340d265410eaf43453280/50180400301_5da8837da3_k_d.jpg"
+	cdn?: CDNPhoto
+}
+
 export type MarkdownContent = Record<string, any> & {
 	slug: string
 	html: string
-	hero?: {
-		alt: string // e.g. "Stokkøya"
-		src: string // e.g. "https://images.ctfassets.net/bncv3c2gt878/3EXc2Uvcr9uEvpBQeytG9r/e0aca42ce58340d265410eaf43453280/50180400301_5da8837da3_k_d.jpg"
-		cdn?: {
-			url: string // e.g. 'https://7w7z6ydf2htamqdsm6nbxm7sma0nkltc.lambda-url.eu-central-1.on.aws/coderbyheart.com/media/18248d974deb8473d2145868b5cbd133800ac415c2576d34b7b3af432eacd486'
-			size: number // e.g. 618090
-			image: {
-				width: number // e.g. 2045;
-				height: number // e.g. 1152
-			}
-			thumbnail: string // e.g. 'data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQABAABUB8JbACdADcDjs0AADoE7M0KBjrhR+oZpkY1qaTZfL7grjZJ1Hkl4+uLTpU832XJRz302ma3sQAAA=='
-			preview: string // e.g. 'data:image/webp;base64,UklGRlwBAABXRUJQVlA4IFABAACQCQCdASpAACQAPzmWw1qvKqekKBVY4eAnCWQAsylqRZhGkiLAdiytrxGjH2nZpGK1olETvAvfhHFmynYmugb0RiWiUdvnLs2LSf+WA7XbK5eUaNAAAPnWhdy+YvpXPP4q/7y6RFaNESXgsaGqTQxQ+m0/ZP1o0NlCaCuW7IZNF7GC19IWU/Qh6Wt6jNTRKsfepo/EEyFSFY4LCVld7sHQ1F9MWKe9SDyB8sE5ugKoo+kKjQ/0pFCB9W4TFM8jJv6Ir3V/CcWGJOkkW5whdGPuVHMRAPJ4/4k+8pwN4dd8o5X8iQrc/Wm7cGtEEmg3sVfKBKQfXuz6dHnR2W0QmA/tllaA2KmD8Wc9Df2liA00FHDK8FHZbGIq6WEqs7KjbbxFw09q4Es4/ikvmRDcHPLIMFkK+gdgdTdLEgJ0ZoCiqwdle2kyEJahSDGDIMUAAAA='
-			type: string // e.g. 'JPEG'
-		}
-	}
+	hero?: Photo
 }
 
 export const loadMarkdownContent = async (): Promise<

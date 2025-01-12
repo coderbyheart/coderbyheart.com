@@ -1,10 +1,9 @@
+import { Hero } from '#component/Hero/Hero.tsx'
 import { Markdown } from '#component/Markdown.tsx'
 import { Me } from '#component/Me.tsx'
 import { Main } from '#layout/Main.tsx'
 import type { MarkdownContent } from '#util/loadMarkdownContent.ts'
 import { useData } from 'vike-solid/useData'
-
-import { Hero } from '#component/Hero/Hero.tsx'
 import styles from './Start.module.css'
 
 const Page = () => {
@@ -18,12 +17,7 @@ const Page = () => {
 				<Me />
 				<Markdown html={start.html} />
 			</Main>
-			{start.hero !== undefined && (
-				<Hero
-					alt={start.hero.alt}
-					src={new URL(start.hero.cdn?.url ?? start.hero.src)}
-				/>
-			)}
+			{start.hero !== undefined && <Hero hero={start.hero} />}
 		</>
 	)
 }

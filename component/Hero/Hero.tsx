@@ -1,34 +1,101 @@
-import { createSignal } from 'solid-js'
-
+import type { Photo, PhotoOnCDN } from '#util/loadMarkdownContent.ts'
+import { createVisibilityObserver } from '@solid-primitives/intersection-observer'
+import { createEffect, createSignal, Show } from 'solid-js'
 import styles from './Hero.module.css'
 
-const responsive = (url: URL, width: number): string => {
-	if (url.hostname.includes('images.ctfassets.net')) {
-		const responsiveURL = new URL(url.toString())
-		responsiveURL.searchParams.set('w', width.toString())
-		responsiveURL.searchParams.set('fm', 'webp')
-		responsiveURL.searchParams.set('q', '90')
-		return responsiveURL.toString()
-	}
-	return url.toString()
-}
+const hiRes = (size: number): number =>
+	Math.floor(size * (window.devicePixelRatio ?? 1))
 
-export const Hero = (props: { alt: string; src: URL }) => {
+export const thumb = (size: number, url: URL): string =>
+	`${url.toString()}?f=thumb&w=${hiRes(size)}&q=8`
+
+export const sized = (
+	{ width, height }: { width: number; height: number },
+	url: URL,
+) => `${url.toString()}?f=scaled&w=${hiRes(width)}&h=${hiRes(height)}&q=9`
+
+export const Hero = (props: { hero: Photo }) => (
+	<aside class={styles.hero}>
+		<Show
+			when={props.hero.cdn !== undefined}
+			fallback={<SimpleImage hero={props.hero} />}
+		>
+			<ResponsiveImage photo={props.hero as PhotoOnCDN} />
+		</Show>
+	</aside>
+)
+
+const SimpleImage = (props: { hero: Photo }) => (
+	<img src={props.hero.src} alt={props.hero.alt} />
+)
+
+const ResponsiveImage = (props: { photo: PhotoOnCDN }) => {
+	const { cdn } = props.photo
 	let el: HTMLImageElement | undefined
-	const [width] = createSignal<number>(1024)
+	const [resizedURL, setResizedURL] = createSignal<URL>()
 
-	const url = () => responsive(props.src, width())
+	const inView = createVisibilityObserver({ threshold: 0.01 })(() => el)
+
+	createEffect(() => {
+		if (inView() && resizedURL() === undefined) {
+			const width = el?.getBoundingClientRect().width ?? -1
+			console.debug('[ResponsiveImage]', 'Width:', width)
+			if (width > 0) {
+				const resizedUrl = new URL(
+					sized(
+						{
+							width,
+							height: Math.floor(width * (cdn.dim.height / cdn.dim.width)),
+						},
+						new URL(cdn.url),
+					),
+				)
+				console.debug(
+					'[ResponsiveImage]',
+					'Resized URL:',
+					resizedUrl.toString(),
+				)
+				const start = Date.now()
+				fetch(resizedUrl.toString(), {
+					mode: 'no-cors',
+				})
+					.then(() => {
+						setResizedURL(resizedUrl)
+						console.debug(
+							'[ResponsiveImage]',
+							'fetched in',
+							Date.now() - start,
+							'ms',
+						)
+					})
+					.catch((err) =>
+						console.error(
+							'[ResponsiveImage]',
+							'Error fetching',
+							resizedUrl.toString(),
+							err,
+						),
+					)
+			}
+		}
+	})
 
 	return (
-		<aside class={styles.hero}>
+		<picture
+			style={{
+				'aspect-ratio': `${cdn.dim.width} / ${cdn.dim.height}`,
+			}}
+		>
+			<Show when={resizedURL() !== undefined}>
+				<source srcset={resizedURL()!.toString()} />
+			</Show>
 			<img
-				src={url()}
-				alt={props.alt}
-				style={{
-					'aspect-ratio': '2048/1152',
-				}}
+				src={cdn.preview}
+				alt={props.photo.alt}
+				width={cdn.dim.width}
+				height={cdn.dim.height}
 				ref={el}
 			/>
-		</aside>
+		</picture>
 	)
 }
