@@ -23,8 +23,8 @@ on Twitter. Now I am on Mastodon, and you can follow
 [@coderbyheart@chaos.social](https://chaos.social/@coderbyheart) there for my
 daily ramblings about the challenges of writing software.
 
-I live in Trondheim, Norway 🇳🇴 and share photos about my camping adventures and
-more on [photos.coderbyheart.com](https://photos.coderbyheart.com) and
+I live in Oslo, Norway 🇳🇴 and share photos about my camping adventures and more
+on [photos.coderbyheart.com](https://photos.coderbyheart.com) and
 [Instagram](https://instagram.com/coderbyheart).
 
 My professional career has been greatly influenced by taking an active role in
