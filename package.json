@@ -36,7 +36,7 @@
     "npm": ">=10"
   },
   "devDependencies": {
-    "@aws-sdk/client-s3": "3.731.1",
+    "@aws-sdk/client-s3": "3.735.0",
     "@bifravst/eslint-config-typescript": "6.1.20",
     "@bifravst/from-env": "3.0.2",
     "@bifravst/prettier-config": "1.1.4",
@@ -45,7 +45,7 @@
     "check-node-version": "4.2.1",
     "commitlint": "19.6.1",
     "husky": "9.1.7",
-    "lint-staged": "15.4.1",
+    "lint-staged": "15.4.3",
     "prettier": "3.4.2",
     "rehype-format": "^5.0.1",
     "rehype-stringify": "^10.0.1",
@@ -53,7 +53,7 @@
     "remark-extract-frontmatter": "^3.2.0",
     "remark-frontmatter": "^5.0.0",
     "remark-rehype": "^11.1.1",
-    "vike": "0.4.218",
+    "vike": "0.4.219",
     "vike-solid": "0.7.8",
     "yaml": "^2.7.0"
   },
@@ -86,7 +86,7 @@
   },
   "dependencies": {
     "@bifravst/run": "^1.2.0",
-    "@solid-primitives/intersection-observer": "2.1.6",
+    "@solid-primitives/intersection-observer": "2.2.0",
     "date-fns": "4.1.0",
     "lodash-es": "4.17.21",
     "solid-js": "1.9.4",
