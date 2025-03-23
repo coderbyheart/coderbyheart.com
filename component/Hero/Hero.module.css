@@ -1,27 +1,27 @@
 .hero picture {
-    width: 100%;
+  width: 100%;
 }
 
 .hero picture img {
-    height: auto;
-    display: block;
+  height: auto;
+  display: block;
 }
 
 @media screen and (min-width: 700px) {
-    .hero {
-        display: flex;
-        margin-bottom: 8rem;
-        justify-content: center;
-    }
+  .hero {
+    display: flex;
+    margin-bottom: 8rem;
+    justify-content: center;
+  }
 
-    .hero picture {
-        max-width: 70vw;
-        width: 100%;
-        height: auto;
-    }
+  .hero picture {
+    max-width: 70vw;
+    width: 100%;
+    height: auto;
+  }
 
-    .hero picture img {
-        border-radius: 1rem;
-        box-shadow: 0px 0px 10px 5px #00000014;
-    }
+  .hero picture img {
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px 5px #00000014;
+  }
 }
