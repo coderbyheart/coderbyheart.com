@@ -6,13 +6,16 @@ import styles from './Hero.module.css'
 const hiRes = (size: number): number =>
 	Math.floor(size * (window.devicePixelRatio ?? 1))
 
+const roundTo50 = (size: number): number => Math.floor(size / 50) * 50
+
 export const thumb = (size: number, url: URL): string =>
 	`${url.toString()}?f=thumb&w=${hiRes(size)}&q=8`
 
 export const sized = (
 	{ width, height }: { width: number; height: number },
 	url: URL,
-) => `${url.toString()}?f=scaled&w=${hiRes(width)}&h=${hiRes(height)}&q=9`
+) =>
+	`${url.toString()}?f=scaled&w=${roundTo50(hiRes(width))}&h=${roundTo50(hiRes(height))}&q=9`
 
 export const Hero = (props: { hero: Photo }) => (
 	<aside class={styles.hero}>
