@@ -5,12 +5,7 @@ import { homepage, version } from './siteInfo.ts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [
-		vike({
-			prerender: true,
-		}),
-		vikeSolid(),
-	],
+	plugins: [vike(), vikeSolid()],
 	build: {
 		sourcemap: true,
 	},

@@ -13,4 +13,5 @@ export const config = {
 	// Default <meta name="description">
 	description:
 		'Software Crafter building 🌩️ cloud-based cellular IoT solutions at Nordic Semiconductor.​ Mentor. Speaker. ​Conference & Community builder. Camper. 🏕️ 🚐',
+	prerender: true,
 } as const satisfies Config
