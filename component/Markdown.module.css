@@ -43,6 +43,20 @@
   text-transform: uppercase;
 }
 
+@media (min-width: 800px) {
+  .content h1,
+  .content h2 {
+    margin-top: 4rem;
+  }
+}
+
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  margin-bottom: 1rem;
+}
+
 .content strong {
   font-weight: 600;
 }
@@ -163,4 +177,23 @@
 
 .content pre[class*="language-"] .token.inserted {
   color: var(--color-syntax-JapaneseLaurel);
+}
+
+.content blockquote {
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content ul li {
+  list-style-type: disc;
+}
+
+.content ol li {
+  list-style-type: decimal;
 }

@@ -41,6 +41,8 @@ export type MarkdownContent = Record<string, any> & {
 	slug: string
 	html: string
 	hero?: Photo
+	title?: string
+	subtitle?: string
 }
 
 export const loadMarkdownContent = async (): Promise<

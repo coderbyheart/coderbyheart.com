@@ -1,0 +1,9 @@
+.talks {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 700px) {
+  .talks {
+    margin-bottom: 8rem;
+  }
+}
