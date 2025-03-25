@@ -1,6 +1,7 @@
 import { name } from '#pages/info.ts'
 import type { MarkdownContent } from '#util/loadMarkdownContent.ts'
 import { useData } from 'vike-solid/useData'
+import { Ago } from './Ago.tsx'
 import { Link } from './Link.tsx'
 import { Markdown } from './Markdown.tsx'
 import { ShowWhenVisible } from './ShowWhenVisible.tsx'
@@ -40,6 +41,13 @@ export const Footer = () => {
 					</a>
 					.<br />
 					All rights reserved.
+				</p>
+				<p class="mt-2 build-info">Version: {VERSION}.</p>
+				<p class="build-info">
+					<time datetime={BUILD_TIME}>
+						Last updated:&nbsp;
+						<Ago time={new Date(BUILD_TIME)} />.
+					</time>
 				</p>
 			</section>
 		</footer>

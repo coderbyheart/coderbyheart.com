@@ -115,3 +115,7 @@ footer.page .photo {
   border: 2px solid var(--heart-color);
   margin-left: 1rem;
 }
+
+footer.page .build-info {
+  opacity: 0.5;
+}
