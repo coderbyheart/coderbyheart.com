@@ -1,23 +1,23 @@
-.nav {
+nav.main {
   font-family: "Raleway", sans-serif;
   padding: 1rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-top: 40px;
 }
 
-.nav strong {
+nav.main strong {
   font-weight: 700;
 }
 
-.nav a {
+nav.main a {
   text-decoration: none;
 }
 
-.nav a:hover {
+nav.main a:hover {
   text-decoration: underline;
 }
 
-.logo {
+nav.main .logo {
   font-size: 25px;
   font-weight: 700;
   color: inherit;
@@ -25,37 +25,37 @@
   align-items: center;
 }
 
-.heart {
+nav.main .heart {
   width: calc(25px * 1.25);
   height: calc(25px * 1.25);
 }
 
-.content {
+nav.main .content {
   text-transform: uppercase;
   margin-top: 1rem;
 }
 
 @media (min-width: 700px) {
-  .content {
+  nav.main .content {
     margin-top: 0;
   }
 }
 
-.content a {
+nav.main .content a {
   color: var(--text-color);
   font-weight: 500;
 }
 
-.content a:hover {
+nav.main .content a:hover {
   color: var(--highlight-color);
   text-decoration: none;
 }
 
-.content a + a {
+nav.main .content a + a {
   margin-left: 1rem;
 }
 
-.wrapper {
+nav.main .wrapper {
   padding: 0 1rem;
   max-width: var(--max-width);
   display: flex;
@@ -65,7 +65,7 @@
 }
 
 @media (min-width: 700px) {
-  .wrapper {
+  nav.main .wrapper {
     padding: 0;
     margin: 0 auto;
     flex-direction: row;

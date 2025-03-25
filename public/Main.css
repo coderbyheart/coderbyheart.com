@@ -1,11 +1,11 @@
-.main {
+main.main {
   padding: 1rem;
   max-width: var(--max-width);
   line-height: 150%;
 }
 
 @media (min-width: 700px) {
-  .main {
+  main.main {
     padding: 0;
     margin: 2rem auto 0 auto;
   }

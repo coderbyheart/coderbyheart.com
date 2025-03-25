@@ -4,7 +4,6 @@ import { Me } from '#component/Me.tsx'
 import { Main } from '#layout/Main.tsx'
 import type { MarkdownContent } from '#util/loadMarkdownContent.ts'
 import { useData } from 'vike-solid/useData'
-import styles from './Start.module.css'
 
 const Page = () => {
 	const { pages } = useData<{ pages: Map<string, MarkdownContent> }>()
@@ -13,7 +12,7 @@ const Page = () => {
 	if (start === undefined) throw new Error('Start not found!')
 	return (
 		<>
-			<Main class={styles.start}>
+			<Main class={'start'}>
 				<Me />
 				<Markdown html={start.html} />
 			</Main>

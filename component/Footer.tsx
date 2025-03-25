@@ -6,7 +6,6 @@ import { Markdown } from './Markdown.tsx'
 import { ShowWhenVisible } from './ShowWhenVisible.tsx'
 import { avatarUrl } from './avatarUrl.ts'
 
-import styles from './Footer.module.css'
 import heart from './heart.svg'
 
 export const Footer = () => {
@@ -16,17 +15,17 @@ export const Footer = () => {
 	if (footer === undefined) throw new Error('Footer not found!')
 
 	return (
-		<footer class={styles.footer}>
+		<footer class={'page'}>
 			<section>
 				<h1>
 					<Link to={'/'}>
 						coder.by(
-						<img src={heart} alt="❤️" class={styles.heart} />)
+						<img src={heart} alt="❤️" class={'heart'} />)
 					</Link>
 				</h1>
 				<ShowWhenVisible>
 					<img
-						class={styles.photo}
+						class={'photo'}
 						alt={name}
 						src={avatarUrl()}
 						width="150"

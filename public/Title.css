@@ -1,33 +1,33 @@
-.subtitle {
+header.title div {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
 }
 
-.time {
+header.title time {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
 }
 
-.title {
+header.title {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
 
-.title h1 {
+header.title h1 {
   position: relative;
   margin-top: 0.5rem;
   margin-bottom: 2rem;
 }
 
 @media (min-width: 800px) {
-  .title {
+  header.title {
     margin-top: 4rem;
     margin-bottom: 1rem;
   }
 }
 
-.title h1:after {
+header.title h1:after {
   content: " ";
   width: 5rem;
   height: 1px;

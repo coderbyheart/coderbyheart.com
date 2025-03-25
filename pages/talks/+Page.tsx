@@ -4,7 +4,6 @@ import { Main } from '#layout/Main.tsx'
 import type { MarkdownContent } from '#util/loadMarkdownContent.ts'
 import { Show } from 'solid-js'
 import { useData } from 'vike-solid/useData'
-import styles from './Talks.module.css'
 
 const Page = () => {
 	const { pages } = useData<{ pages: Map<string, MarkdownContent> }>()
@@ -12,7 +11,7 @@ const Page = () => {
 	const talks = pages.get('Talks')
 	if (talks === undefined) throw new Error('Talks not found!')
 	return (
-		<Main class={styles.talks}>
+		<Main class={'talks'}>
 			<Show when={talks.title !== undefined}>
 				<Title
 					title={talks.title}

@@ -5,7 +5,6 @@ import {
 	type ParentProps,
 } from 'solid-js'
 import { Dynamic, isServer } from 'solid-js/web'
-import styles from './Markdown.module.css'
 import { MastodonStatus } from './Markdown/CustomElement/MastodonStatus/MastodonStatus.tsx'
 import { getChaosEmbedURL } from './Markdown/CustomElement/MastodonStatus/getChaosEmbedURL.ts'
 
@@ -31,7 +30,7 @@ const elementToComponent = (
 }
 
 export const Markdown = (props: { html: string }) => {
-	if (isServer) return <div class={styles.content} innerHTML={props.html} />
+	if (isServer) return <div class={'content'} innerHTML={props.html} />
 
 	const parser = new DOMParser()
 	const doc = parser.parseFromString(

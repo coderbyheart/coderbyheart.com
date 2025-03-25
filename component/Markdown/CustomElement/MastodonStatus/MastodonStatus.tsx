@@ -2,8 +2,6 @@ import { createVisibilityObserver } from '@solid-primitives/intersection-observe
 import { memoize } from 'lodash-es'
 import { createEffect, createSignal, Show } from 'solid-js'
 
-import styles from './MastodonStatus.module.css'
-
 const loadScriptAsync = memoize(
 	async (uri: string) =>
 		new Promise<void>((resolve) => {
@@ -44,7 +42,7 @@ export const MastodonStatus = (props: { url: URL }) => {
 			<Show when={loaded()}>
 				<iframe
 					src={props.url.toString()}
-					class={styles.iframe}
+					class={'iframe'}
 					width="400"
 					allowfullscreen
 				></iframe>

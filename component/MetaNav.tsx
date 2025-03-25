@@ -4,8 +4,6 @@ import { debounce } from 'lodash-es'
 import { createEffect, createSignal } from 'solid-js'
 import { name, tagLine } from '../pages/info.ts'
 
-import styles from './MetaNav.module.css'
-
 const isScrolling = () => !isSSR && window.scrollY > 0
 
 export const MetaNav = (props: { className?: string }) => {
@@ -26,17 +24,17 @@ export const MetaNav = (props: { className?: string }) => {
 
 	return (
 		<nav
-			class={`${styles.meta} ${props.className ?? ''}`}
+			class={`meta ${props.className ?? ''}`}
 			classList={{ scrolling: scrolling() }}
 		>
 			<section>
-				<div class={styles.shrink}>
+				<div class={'shrink'}>
 					<Link to={'/'}>
 						<strong>{name}</strong>
 						<span> &middot; {tagLine}</span>
 					</Link>
 				</div>
-				<div class={styles.content}>
+				<div class={'content'}>
 					<span>
 						<Link to={'/archive'}>Blog</Link>
 					</span>

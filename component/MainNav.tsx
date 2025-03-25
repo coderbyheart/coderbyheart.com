@@ -2,16 +2,14 @@ import { Link } from './Link.tsx'
 
 import heart from './heart.svg'
 
-import styles from './MainNav.module.css'
-
 export const MainNav = ({ className }: { className?: string }) => (
-	<nav class={`${styles.nav} ${className ?? ''}`}>
-		<div class={styles.wrapper}>
-			<a class={styles.logo} href={'/'}>
+	<nav class={`main ${className ?? ''}`}>
+		<div class={'wrapper'}>
+			<a class={'logo'} href={'/'}>
 				coder.by(
-				<img src={heart} alt="❤️" class={styles.heart} />)
+				<img src={heart} alt="❤️" class={'heart'} />)
 			</a>
-			<div class={styles.content}>
+			<div class={'content'}>
 				<Link to={'/'}>Home</Link>
 				<Link to={'/archive'}>Blog</Link>
 				<Link to={'/talks'}>Talks</Link>

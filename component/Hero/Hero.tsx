@@ -1,7 +1,6 @@
 import type { Photo, PhotoOnCDN } from '#util/loadMarkdownContent.ts'
 import { createVisibilityObserver } from '@solid-primitives/intersection-observer'
 import { createEffect, createSignal, Show } from 'solid-js'
-import styles from './Hero.module.css'
 
 const hiRes = (size: number): number =>
 	Math.floor(size * (window.devicePixelRatio ?? 1))
@@ -18,7 +17,7 @@ export const sized = (
 	`${url.toString()}?f=scaled&w=${roundTo50(hiRes(width))}&h=${roundTo50(hiRes(height))}&q=9`
 
 export const Hero = (props: { hero: Photo }) => (
-	<aside class={styles.hero}>
+	<aside class={'hero'}>
 		<Show
 			when={props.hero.cdn !== undefined}
 			fallback={<SimpleImage hero={props.hero} />}
