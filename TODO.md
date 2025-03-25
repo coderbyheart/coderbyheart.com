@@ -1,1 +1,2 @@
 - Use OIDC in GitHub action build step
+- Set up semantic release
