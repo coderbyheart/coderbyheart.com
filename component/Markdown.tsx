@@ -34,7 +34,7 @@ export const Markdown = (props: { html: string }) => {
 
 	const parser = new DOMParser()
 	const doc = parser.parseFromString(
-		`<article>${props.html}</article>`,
+		`<article class="content">${props.html}</article>`,
 		'text/html',
 	)
 	const [rootComponent, setRootComponent] = createSignal<Node | null>(null)
