@@ -76,6 +76,28 @@ h6 {
   font-size: 16px;
 }
 
-.mt-2 {
+.mt-4 {
   margin-top: 2rem;
+}
+
+.ms-1 {
+  margin-left: 0.5rem;
+}
+
+.me-1 {
+  margin-right: 0.5rem;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.two-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dim {
+  opacity: 0.5;
 }

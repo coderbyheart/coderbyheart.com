@@ -34,21 +34,28 @@ export const Footer = () => {
 					/>
 				</ShowWhenVisible>
 				<Markdown html={footer.html} />
-				<p class="mt-2">
-					© 2015-{new Date().getFullYear()}{' '}
-					<a href="https://coderbyheart.com/" rel="me">
-						{name}
-					</a>
-					.<br />
-					All rights reserved.
-				</p>
-				<p class="mt-2 build-info">Version: {VERSION}.</p>
-				<p class="build-info">
-					<time datetime={BUILD_TIME}>
-						Last updated:&nbsp;
-						<Ago time={new Date(BUILD_TIME)} />.
-					</time>
-				</p>
+				<div class="two-columns mt-4">
+					<p>
+						© 2015-{new Date().getFullYear()}{' '}
+						<a href="https://coderbyheart.com/" rel="me">
+							{name}
+						</a>
+						.<br />
+						All rights reserved.
+					</p>
+					<p class="dim">
+						<br />
+						<abbr class="me-1" title="Version">
+							{VERSION}
+						</abbr>
+						&middot;
+						<abbr class={'ms-1'} title="Last updated">
+							<time datetime={BUILD_TIME}>
+								<Ago time={new Date(BUILD_TIME)} />
+							</time>
+						</abbr>
+					</p>
+				</div>
 			</section>
 		</footer>
 	)
