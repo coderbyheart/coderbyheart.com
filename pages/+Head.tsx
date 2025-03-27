@@ -22,5 +22,7 @@ export const Head = () => (
 		<link rel="stylesheet" href="./Start.css" />
 		<link rel="stylesheet" href="./Talks.css" />
 		<link rel="stylesheet" href="./MastodonStatus.css" />
+		<meta name="build-time" content={BUILD_TIME} />
+		<meta name="version" content={VERSION} />
 	</>
 )
