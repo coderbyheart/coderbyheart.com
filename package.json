@@ -40,22 +40,27 @@
     "@bifravst/eslint-config-typescript": "6.1.21",
     "@bifravst/from-env": "3.0.2",
     "@bifravst/prettier-config": "1.1.8",
+    "@bifravst/run": "1.2.0",
     "@commitlint/config-conventional": "19.8.0",
     "@types/lodash-es": "4.17.12",
+    "bottleneck": "2.19.5",
     "check-node-version": "4.2.1",
     "commitlint": "19.8.0",
+    "contentful": "11.5.11",
     "husky": "9.1.7",
     "lint-staged": "15.5.0",
+    "mdast": "3.0.0",
     "prettier": "3.5.3",
-    "rehype-format": "^5.0.1",
-    "rehype-stringify": "^10.0.1",
-    "remark": "^15.0.1",
-    "remark-extract-frontmatter": "^3.2.0",
-    "remark-frontmatter": "^5.0.0",
-    "remark-rehype": "^11.1.1",
+    "rehype-format": "5.0.1",
+    "rehype-stringify": "10.0.1",
+    "remark": "15.0.1",
+    "remark-extract-frontmatter": "3.2.0",
+    "remark-frontmatter": "5.0.0",
+    "remark-rehype": "11.1.1",
+    "unist-util-visit": "5.0.0",
     "vike": "0.4.227",
     "vike-solid": "0.7.9",
-    "yaml": "^2.7.0"
+    "yaml": "2.7.0"
   },
   "husky": {
     "hooks": {
@@ -85,7 +90,6 @@
     ]
   },
   "dependencies": {
-    "@bifravst/run": "^1.2.0",
     "@solid-primitives/intersection-observer": "2.2.0",
     "date-fns": "4.1.0",
     "lodash-es": "4.17.21",

@@ -1,4 +1,4 @@
-import type { MarkdownContent } from '#util/loadMarkdownContent.ts'
+import type { Photo } from '#util/loadMarkdownContent.ts'
 import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3'
 import { fromEnv } from '@bifravst/from-env'
 import run from '@bifravst/run'
@@ -13,6 +13,7 @@ import {
 } from 'node:fs'
 import os from 'node:os'
 import path, { sep } from 'node:path'
+import { getMediaEntry } from './contentful/getMediaEntry.ts'
 
 const s3 = new S3Client({})
 const { bucketName, photosCDNEndpoint } = fromEnv({
@@ -28,38 +29,35 @@ const cacheDir = path.join(__dirname, 'content', 'media', 'cache')
 const checkSum = (url: URL): string =>
 	crypto.createHash('sha256').update(url.toString()).digest('hex')
 
-export const replaceImages = async (
-	page: MarkdownContent,
-): Promise<MarkdownContent | null> => {
-	const hero = page.hero
-	if (hero === undefined) return null
-	if (!hero.src.startsWith('http')) return null
+export const replaceImage = async (image: Photo): Promise<Photo> => {
+	if (!image.src.startsWith('http')) return image
 
-	const src = new URL(hero.src)
+	const src = new URL(image.src)
 	const cs = checkSum(src)
 	const metaFilePath = path.join(cacheDir, cs + '.json')
 
 	if (exists(metaFilePath))
 		return {
-			...page,
-			hero: {
-				...hero,
-				cdn: JSON.parse(readFileSync(metaFilePath, 'utf-8')),
-			},
+			...image,
+			cdn: JSON.parse(readFileSync(metaFilePath, 'utf-8')),
 		}
 
-	console.debug(hero.src, 'Downloading...')
-	const response = await fetch(src)
+	const maybeMediaEntry = await getMediaEntry(cs)
+	const downloadURL =
+		maybeMediaEntry !== null ? `https:${maybeMediaEntry}` : src.toString()
+
+	console.debug(downloadURL, 'Downloading...')
+	const response = await fetch(downloadURL)
 	const tempFile = path.join(tempDir, cs)
 	writeFileSync(tempFile, Buffer.from(await response.arrayBuffer()), 'binary')
 
 	const originalInfo = await run({ command: 'identify', args: [tempFile] })
 	const [, type, dimensions, ,] = originalInfo.split(' ') // /tmp/f5bb4094-29eb-44ff-9c29-feaf5d2ce7d4 JPEG 3008x4000 3008x4000+0+0 8-bit sRGB 2.49426MiB 0.010u 0:00.004
 	if (type !== 'JPG' && type !== 'JPEG' && type !== 'PNG' && type !== 'GIF')
-		throw new Error(`Unsupported image type: ${type} in ${hero.src}!`)
+		throw new Error(`Unsupported image type: ${type} in ${downloadURL}!`)
 	const [width, height] = dimensions.split('x').map(Number)
 	if (isNaN(width) || isNaN(height))
-		throw new Error(`Invalid dimensions: ${dimensions} in ${hero.src}!`)
+		throw new Error(`Invalid dimensions: ${dimensions} in ${downloadURL}!`)
 
 	const localFilePath = path.join(
 		__dirname,
@@ -70,7 +68,7 @@ export const replaceImages = async (
 	)
 
 	copyFileSync(tempFile, localFilePath)
-	console.log(hero.src, localFilePath)
+	console.log(downloadURL, localFilePath)
 
 	const Key = `coderbyheart.com/media/${cs}`
 	try {
@@ -84,7 +82,7 @@ export const replaceImages = async (
 		)
 	} catch (err) {
 		console.error(
-			`Failed to upload ${hero.src} to S3!: ${(err as Error).message}`,
+			`Failed to upload ${downloadURL} to S3!: ${(err as Error).message}`,
 		)
 	}
 
@@ -97,7 +95,7 @@ export const replaceImages = async (
 		redirect: 'follow',
 	})
 	const orig = thumbnail.headers.get('x-amz-meta-original') // e.g. '/2023-12-10/IMG20231207121810.jpg JPEG 3456x4608 8-bit sRGB'
-	if (orig === null) throw new Error(`Failed to convert ${hero.src}!`)
+	if (orig === null) throw new Error(`Failed to convert ${downloadURL}!`)
 
 	const cdnURL = `${photosCDNEndpoint}${Key}`
 
@@ -119,11 +117,8 @@ export const replaceImages = async (
 	writeFileSync(metaFilePath, JSON.stringify(cdn, null, 2), 'utf-8')
 
 	return {
-		...page,
-		hero: {
-			...hero,
-			cdn,
-		},
+		...image,
+		cdn,
 	}
 }
 
