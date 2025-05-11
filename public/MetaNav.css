@@ -60,14 +60,14 @@ nav.meta > section span + span > *:before {
   }
 }
 
-nav.meta:global(.scrolling) .content {
+nav.meta.scrolling .content {
   display: block;
 }
 
-nav.meta:global(.scrolling) .shrink span {
+nav.meta.scrolling .shrink span {
   display: none;
 }
 
-nav.meta:global(.scrolling) .wrapper svg {
+nav.meta.scrolling .wrapper svg {
   display: none;
 }
