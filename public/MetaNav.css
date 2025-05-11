@@ -49,7 +49,7 @@ nav.meta > section {
   height: 40px;
 }
 
-nav.meta > section span + span > *:before {
+nav.meta > section .content > span + span:before {
   content: "·";
   padding: 0.25rem;
 }
