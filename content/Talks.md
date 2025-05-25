@@ -6,6 +6,8 @@ subtitle: A list of my talks
 I am available for speaking engagements! Just contact me if you feel I can
 contribute to your event or conference.
 
+![Me speaking at AdaCon 2025](https://photos.coderbyheart.com/photo/20241008T082310-3ec5e83b)
+
 ## Strongly typed third-party integrations with TypeScript
 
 [Slides](https://coderbyheart.github.io/strongly-type-third-party-integrations-with-typescript/#/title-slide)
