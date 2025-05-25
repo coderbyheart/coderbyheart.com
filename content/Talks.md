@@ -39,7 +39,9 @@ The three key-takeaways are:
 - get to know techniques to discover breaking API changes through monitoring
 
 🇳🇴 [Bart.js](https://www.meetup.com/bartjs/), (Trondheim, Norway) 📅 20.
-November 2024
+November 2024  
+🇪🇪 [Nordic Testing Day 2025](https://nordictestingdays.eu/) (Tallin, Estonia) 📅
+14-16. May 2025
 
 ## Software Quality made this talk happen: push-to-deploy as the means to deal with uncertainty
 
