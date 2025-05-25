@@ -1,8 +1,5 @@
-import path, { dirname } from 'path'
-import { fileURLToPath } from 'url'
+import path from 'path'
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-
-export const baseDir = path.resolve(__dirname, '..')
+export const baseDir = process.cwd()
 
 export const cacheDir = path.resolve(baseDir, 'content', 'media', 'cache')
