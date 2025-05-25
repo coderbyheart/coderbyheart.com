@@ -9,9 +9,3 @@ img.me {
   width: 150px;
   height: 150px;
 }
-
-@media (min-width: 700px) {
-  img.me {
-    margin-left: calc(700px / 2 - 154px / 2);
-  }
-}

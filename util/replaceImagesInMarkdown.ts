@@ -3,9 +3,16 @@ import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
 import { replaceImage } from './replaceImages.ts'
 
-type ImageElement = {
+type HTMLElement = {
 	type: 'element'
-	tagName: 'img'
+	tagName: string // e.g. 'div', 'span', etc.
+	properties: Record<string, unknown>
+	children?: Array<HTMLElement>
+}
+
+type ImageElement = HTMLElement & {
+	type: 'element'
+	tagName: 'img' // e.g. 'img'
 	properties: {
 		src: string
 		alt: string
@@ -33,46 +40,58 @@ type PictureElement = {
 }
 
 export const replaceImagesInMarkdown: Plugin<[], Root> = () => async (tree) => {
-	const images: Array<ImageElement> = []
+	const imageNodes: Array<ImageElement> = []
 
 	visit(tree, (node) => {
 		if ('tagName' in node && node.tagName === 'img') {
-			images.push(node as unknown as ImageElement)
+			imageNodes.push(node as unknown as ImageElement)
 		}
 	})
 
-	for (const image of images) {
+	for (const node of imageNodes) {
 		const cdnPhoto = await replaceImage({
-			alt: image.properties.alt,
-			src: image.properties.src,
+			alt: node.properties.alt,
+			src: node.properties.src,
 		})
 
+		// Replace the image with a picture element if the CDN is available
+		// and the image is not a placeholder
 		if (cdnPhoto.cdn !== undefined) {
-			const picture: PictureElement = image as unknown as PictureElement
-			picture.tagName = 'picture'
-			picture.properties = {
-				style: `aspect-ratio: ${cdnPhoto.cdn.dim.width} / ${cdnPhoto.cdn.dim.height}`,
-				['data-cdn']: true,
+			const picture: PictureElement = {
+				type: 'element',
+				tagName: 'picture',
+				properties: {
+					style: `aspect-ratio: ${cdnPhoto.cdn.dim.width} / ${cdnPhoto.cdn.dim.height}`,
+					['data-cdn']: true,
+				},
+				children: [
+					{
+						type: 'element',
+						tagName: 'source',
+						properties: {
+							srcset: cdnPhoto.cdn.url,
+						},
+					},
+					{
+						type: 'element',
+						tagName: 'img',
+						properties: {
+							src: cdnPhoto.cdn.preview,
+							alt: cdnPhoto.alt,
+							width: cdnPhoto.cdn.dim.width,
+							height: cdnPhoto.cdn.dim.height,
+						},
+					},
+				],
 			}
-			picture.children = [
-				{
-					type: 'element',
-					tagName: 'source',
-					properties: {
-						srcset: cdnPhoto.cdn.url,
-					},
-				},
-				{
-					type: 'element',
-					tagName: 'img',
-					properties: {
-						src: cdnPhoto.cdn.preview,
-						alt: cdnPhoto.alt,
-						width: cdnPhoto.cdn.dim.width,
-						height: cdnPhoto.cdn.dim.height,
-					},
-				},
-			]
+
+			//const picture: PictureElement = node as unknown as PictureElement
+			const hero: HTMLElement = node
+			hero.tagName = 'aside'
+			hero.properties = {
+				class: 'hero',
+			}
+			hero.children = [picture]
 		}
 	}
 }

@@ -30,28 +30,28 @@ nav.main .heart {
   height: calc(25px * 1.25);
 }
 
-nav.main .content {
+nav.main .links {
   text-transform: uppercase;
   margin-top: 1rem;
 }
 
 @media (min-width: 700px) {
-  nav.main .content {
+  nav.main .links {
     margin-top: 0;
   }
 }
 
-nav.main .content a {
+nav.main .links a {
   color: var(--text-color);
   font-weight: 500;
 }
 
-nav.main .content a:hover {
+nav.main .links a:hover {
   color: var(--highlight-color);
   text-decoration: none;
 }
 
-nav.main .content a + a {
+nav.main .links a + a {
   margin-left: 1rem;
 }
 

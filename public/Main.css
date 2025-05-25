@@ -1,12 +1,64 @@
 main.main {
-  padding: 1rem;
-  max-width: var(--max-width);
+  /* max-width: var(--max-width); */
   line-height: 150%;
+}
+
+main.main > header,
+main.main article.content > p,
+main.main article.content > h1,
+main.main article.content > h2,
+main.main article.content > h3,
+main.main article.content > h4,
+main.main article.content > h5,
+main.main article.content > h6,
+main.main article.content > blockquote {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+main.main article.content > ul,
+main.main article.content > ol {
+  padding-left: 2.5rem;
+}
+
+main.main article.content > hr {
+  margin-left: 1rem;
 }
 
 @media (min-width: 700px) {
   main.main {
     padding: 0;
     margin: 2rem auto 0 auto;
+  }
+
+  main.main > header,
+  main.main article.content > p,
+  main.main article.content > h1,
+  main.main article.content > h2,
+  main.main article.content > h3,
+  main.main article.content > h4,
+  main.main article.content > h5,
+  main.main article.content > h6,
+  main.main article.content > ul,
+  main.main article.content > ol,
+  main.main article.content > blockquote {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  main.main article.content > ul,
+  main.main article.content > ol {
+    padding-left: 1.5rem;
+  }
+
+  main.main article.content > blockquote {
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  main.main article.content > hr {
+    margin-left: calc((100% / 2) - 350px);
   }
 }

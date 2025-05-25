@@ -11,6 +11,7 @@ aside.hero picture img {
   aside.hero {
     display: flex;
     margin-bottom: 8rem;
+    margin-top: 8rem;
     justify-content: center;
   }
 

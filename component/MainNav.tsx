@@ -9,7 +9,7 @@ export const MainNav = ({ className }: { className?: string }) => (
 				coder.by(
 				<img src={heart} alt="❤️" class={'heart'} />)
 			</a>
-			<div class={'content'}>
+			<div class={'links'}>
 				<Link to={'/'}>Home</Link>
 				<Link to={'/archive'}>Blog</Link>
 				<Link to={'/talks'}>Talks</Link>

@@ -1,3 +1,13 @@
+.content {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 800px) {
+  .content {
+    margin-bottom: 8rem;
+  }
+}
+
 .content p {
   line-height: 150%;
   margin-bottom: 1rem;
@@ -32,7 +42,7 @@
   border-bottom: 1px solid var(--highlight-color);
   opacity: 0.5;
   position: absolute;
-  left: 0;
+  left: 1rem;
   bottom: -0.5rem;
 }
 
