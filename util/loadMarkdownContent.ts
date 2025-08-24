@@ -9,14 +9,6 @@ import remark2rehype from 'remark-rehype'
 import yaml from 'yaml'
 import { replaceImagesInMarkdown } from './replaceImagesInMarkdown.ts'
 
-const parseMarkdown = remark()
-	.use(frontmatter, ['yaml'])
-	.use(extract, { yaml: yaml.parse })
-	.use(remark2rehype, { allowDangerousHtml: true })
-	.use(format, {})
-	.use(html, { allowDangerousHtml: true })
-	.use(replaceImagesInMarkdown)
-
 export type CDNPhoto = {
 	url: string // e.g. 'https://7w7z6ydf2htamqdsm6nbxm7sma0nkltc.lambda-url.eu-central-1.on.aws/coderbyheart.com/media/18248d974deb8473d2145868b5cbd133800ac415c2576d34b7b3af432eacd486'
 	size: number // e.g. 618090
@@ -63,7 +55,14 @@ export const loadMarkdownContentFromFile = async (
 	file: string,
 ): Promise<MarkdownContent> => {
 	const source = await readFile(file, 'utf-8')
-	const md = await parseMarkdown.process(source)
+	const md = await remark()
+		.use(frontmatter, ['yaml'])
+		.use(extract, { yaml: yaml.parse })
+		.use(remark2rehype, { allowDangerousHtml: true })
+		.use(format, {})
+		.use(html, { allowDangerousHtml: true })
+		.use(replaceImagesInMarkdown(file))
+		.process(source)
 
 	return {
 		...md.data,

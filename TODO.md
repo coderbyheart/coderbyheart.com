@@ -1,3 +1,3 @@
-- Replace local media files
+- Render a static site
 - Use OIDC in GitHub action build step
 - Set up semantic release
