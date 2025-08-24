@@ -47,16 +47,14 @@ export type MarkdownContent = Record<string, any> & {
 	subtitle?: string
 }
 
-export const loadMarkdownContent = async (): Promise<
-	Array<MarkdownContent>
-> => {
-	const resourceFiles = (
-		await readdir(path.join(process.cwd(), 'content'))
-	).filter((f) => f.endsWith('.md'))
+export const loadMarkdownContent = async (
+	folder: string,
+): Promise<Array<MarkdownContent>> => {
+	const resourceFiles = (await readdir(folder)).filter((f) => f.endsWith('.md'))
 
 	return await Promise.all(
 		resourceFiles.map(async (f) =>
-			loadMarkdownContentFromFile(path.join(process.cwd(), 'content', f)),
+			loadMarkdownContentFromFile(path.join(folder, f)),
 		),
 	)
 }
