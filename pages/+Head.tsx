@@ -1,5 +1,8 @@
 import favicon from './favicon.ico'
 
+const base = import.meta.env.BASE_URL
+const asset = (file: string) => `${base.replace(/\/$/, '')}/${file}`
+
 export const Head = () => (
 	<>
 		<link rel="icon" href={favicon} />
@@ -9,19 +12,19 @@ export const Head = () => (
 			href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="./reset.css" />
-		<link rel="stylesheet" href="./Layout.css" />
-		<link rel="stylesheet" href="./Markdown.css" />
-		<link rel="stylesheet" href="./Footer.css" />
-		<link rel="stylesheet" href="./Me.css" />
-		<link rel="stylesheet" href="./MainNav.css" />
-		<link rel="stylesheet" href="./MetaNav.css" />
-		<link rel="stylesheet" href="./Hero.css" />
-		<link rel="stylesheet" href="./Title.css" />
-		<link rel="stylesheet" href="./Main.css" />
-		<link rel="stylesheet" href="./Start.css" />
-		<link rel="stylesheet" href="./Talks.css" />
-		<link rel="stylesheet" href="./MastodonStatus.css" />
+		<link rel="stylesheet" href={asset('reset.css')} />
+		<link rel="stylesheet" href={asset('Layout.css')} />
+		<link rel="stylesheet" href={asset('Markdown.css')} />
+		<link rel="stylesheet" href={asset('Footer.css')} />
+		<link rel="stylesheet" href={asset('Me.css')} />
+		<link rel="stylesheet" href={asset('MainNav.css')} />
+		<link rel="stylesheet" href={asset('MetaNav.css')} />
+		<link rel="stylesheet" href={asset('Hero.css')} />
+		<link rel="stylesheet" href={asset('Title.css')} />
+		<link rel="stylesheet" href={asset('Main.css')} />
+		<link rel="stylesheet" href={asset('Start.css')} />
+		<link rel="stylesheet" href={asset('Talks.css')} />
+		<link rel="stylesheet" href={asset('MastodonStatus.css')} />
 		<meta name="build-time" content={BUILD_TIME} />
 		<meta name="version" content={VERSION} />
 	</>
