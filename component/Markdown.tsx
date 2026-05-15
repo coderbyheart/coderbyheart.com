@@ -7,6 +7,8 @@ import {
 import { Dynamic, isServer } from 'solid-js/web'
 import { MastodonStatus } from './Markdown/CustomElement/MastodonStatus/MastodonStatus.tsx'
 import { getChaosEmbedURL } from './Markdown/CustomElement/MastodonStatus/getChaosEmbedURL.ts'
+import { YouTubeEmbed } from './Markdown/CustomElement/YouTubeEmbed/YouTubeEmbed.tsx'
+import { getYouTubeEmbedURL } from './Markdown/CustomElement/YouTubeEmbed/getYouTubeEmbedURL.ts'
 
 const genericComponent = (element: Element) => {
 	const attributesMap: { [key: string]: string } = {}
@@ -26,6 +28,9 @@ const elementToComponent = (
 	const maybeChaosEmbedURL = getChaosEmbedURL(element)
 	if (maybeChaosEmbedURL !== null)
 		return () => <MastodonStatus url={maybeChaosEmbedURL} />
+	const maybeYouTubeEmbedURL = getYouTubeEmbedURL(element)
+	if (maybeYouTubeEmbedURL !== null)
+		return () => <YouTubeEmbed url={maybeYouTubeEmbedURL} />
 	return genericComponent(element)
 }
 

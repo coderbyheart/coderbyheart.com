@@ -25,6 +25,7 @@ export const Head = () => (
 		<link rel="stylesheet" href={asset('Start.css')} />
 		<link rel="stylesheet" href={asset('Talks.css')} />
 		<link rel="stylesheet" href={asset('MastodonStatus.css')} />
+		<link rel="stylesheet" href={asset('YouTubeEmbed.css')} />
 		<meta name="build-time" content={BUILD_TIME} />
 		<meta name="version" content={VERSION} />
 	</>
