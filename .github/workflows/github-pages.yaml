@@ -11,74 +11,50 @@ permissions:
   id-token: write
   contents: read
   pages: write
+  actions: read
 
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     if:
       ${{ github.event_name == 'workflow_dispatch' ||
       (github.event.workflow_run.conclusion == 'success' &&
       github.event.workflow_run.head_branch == 'saga') }}
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          fetch-depth: 0
-
-      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
-        with:
-          node-version: "24.x"
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci --no-audit
-
-      - name: Set version
-        run:
-          echo "VERSION=`git describe --tags --always HEAD | tr -d '\n'`" >>
-          $GITHUB_ENV
-
-      - name: Build
+      - name: Determine source run ID
+        id: source
         env:
-          VERSION: ${{ env.VERSION }}
-          PHOTOS_BUCKET_NAME: photos.coderbyheart
-          PHOTOS_CDN_ENDPOINT: https://7w7z6ydf2htamqdsm6nbxm7sma0nkltc.lambda-url.eu-central-1.on.aws/
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: eu-central-1
-          CONTENTFUL_SPACE: ${{ secrets.CONTENTFUL_SPACE }}
-          CONTENTFUL_CONTENT_API_TOKEN:
-            ${{ secrets.CONTENTFUL_CONTENT_API_TOKEN }}
-        run: npm run build
-
-      - name: Save version
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
         run: |
-          mkdir -p ./dist/client/.well-known
-          echo ${{ env.VERSION }} > ./dist/client/.well-known/release
+          if [ "${{ github.event_name }}" = "workflow_run" ]; then
+            echo "run_id=${{ github.event.workflow_run.id }}" >> "$GITHUB_OUTPUT"
+          else
+            RUN_ID=$(gh run list --workflow=Test --branch=saga --status=success --limit=1 --json databaseId --jq '.[0].databaseId')
+            echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+          fi
 
-      - name: Write robots.txt to prevent indexing
-        run: |
-          cat > ./dist/client/robots.txt <<'EOF'
-          User-agent: *
-          Disallow: /
-          EOF
+      - name: Download dist/client artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-client
+          path: ./dist/client
+          run-id: ${{ steps.source.outputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: ./dist/client
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0

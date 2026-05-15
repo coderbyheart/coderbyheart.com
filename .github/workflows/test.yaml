@@ -33,20 +33,36 @@ jobs:
       - name: Install Playwright (Chromium)
         run: npx playwright install --with-deps chromium
 
+      - name: Export to-be released version
+        run: |
+          npx semantic-release --dry-run > semantic-release.out
+          echo "RELEASE_VERSION=$(cat semantic-release.out | grep -i 'the next release version is' | awk '{print $11}')" >> $GITHUB_ENV
+          cat semantic-release.out
+
       - name: Build
         env:
+          VERSION: ${{ env.RELEASE_VERSION }}
           PHOTOS_BUCKET_NAME: photos.coderbyheart
           PHOTOS_CDN_ENDPOINT: https://7w7z6ydf2htamqdsm6nbxm7sma0nkltc.lambda-url.eu-central-1.on.aws/
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: eu-central-1
-          CONTENTFUL_SPACE: ${{ secrets.CONTENTFUL_SPACE }}
-          CONTENTFUL_CONTENT_API_TOKEN:
-            ${{ secrets.CONTENTFUL_CONTENT_API_TOKEN }}
         run: npm run build
 
       - name: Run smoke test
         run: npm run test:e2e
+
+      - name: Save version
+        run: |
+          mkdir -p ./dist/client/.well-known
+          echo "${{ env.RELEASE_VERSION }}" > ./dist/client/.well-known/release
+
+      - name: Upload dist/client artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-client
+          path: ./dist/client
+          retention-days: 7
 
       - name: Semantic release
         id: semantic-release
