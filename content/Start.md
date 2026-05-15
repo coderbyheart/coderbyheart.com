@@ -17,11 +17,9 @@ consultant, coach, mentor, and founder to build cloud-based solutions for the
 Internet of Things using JavaScript at
 [Nordic Semiconductor](https://www.nordicsemi.com/).
 
-I [was previously](/leaving-twitter) active as
-<a href="https://twitter.com/coderbyheart" rel="me" title="I am no longer active on Twitter" style="text-decoration: line-through">@coderbyheart</a>
-on Twitter. Now I am on Mastodon, and you can follow
+I am on Mastodon, and you can follow
 [@coderbyheart@chaos.social](https://chaos.social/@coderbyheart) there for my
-daily ramblings about the challenges of writing software.
+ramblings about the challenges of writing software.
 
 I live in Oslo, Norway 🇳🇴 and share photos about my camping adventures and more
 on [photos.coderbyheart.com](https://photos.coderbyheart.com) and
