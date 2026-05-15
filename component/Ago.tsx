@@ -1,4 +1,4 @@
-import { createSignal, onCleanup } from 'solid-js'
+import { createSignal, onCleanup, onMount } from 'solid-js'
 
 const fmt = new Intl.NumberFormat()
 
@@ -6,12 +6,15 @@ export const Ago = (props: { time: Date; class?: string }) => {
 	const format = () => distance(props.time)
 	const [formatted, setFormatted] = createSignal<Distance>(format())
 
-	const i = setInterval(() => {
+	onMount(() => {
 		setFormatted(format())
-	}, getInterval(props.time))
+		const i = setInterval(() => {
+			setFormatted(format())
+		}, getInterval(props.time))
 
-	onCleanup(() => {
-		clearInterval(i)
+		onCleanup(() => {
+			clearInterval(i)
+		})
 	})
 
 	return (
@@ -26,7 +29,7 @@ export const Ago = (props: { time: Date; class?: string }) => {
 }
 
 const getInterval = (d: Date): number => {
-	const delta = Date.now() - d.getTime() / 1000
+	const delta = (Date.now() - d.getTime()) / 1000
 
 	if (delta < 60) return 1000
 	return 1000 * 60
