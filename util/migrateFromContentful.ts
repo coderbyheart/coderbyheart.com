@@ -5,6 +5,7 @@ import run from '@bifravst/run'
 import {
 	copyFileSync,
 	createReadStream,
+	mkdirSync,
 	readFileSync,
 	statSync,
 	writeFileSync,
@@ -17,6 +18,41 @@ import { exists } from './exists.ts'
 import { tempDir } from './tempDir.ts'
 import { typeToExtension } from './typeToExtension.ts'
 
+// Animated GIFs must be served as the original file, because the CDN
+// transforms them to WEBP and only the first frame is preserved. Move the
+// downloaded GIF into the post's content/media folder, rewrite the markdown
+// source so it references the local copy, then throw so the resulting changes
+// can be committed.
+const importGifToContent = (params: {
+	originalURL: string
+	sourceFile: string
+	cs: string
+	sourceGif: string
+}): never => {
+	const { originalURL, sourceFile, cs, sourceGif } = params
+	const slug = path.parse(sourceFile).name
+	const urlName = path.parse(new URL(originalURL).pathname).name
+	const filename = `${urlName.length > 0 ? urlName + '-' : ''}${cs.slice(0, 8)}.gif`
+	const targetDir = path.resolve(baseDir, 'content', 'media', slug)
+	const targetPath = path.join(targetDir, filename)
+	mkdirSync(targetDir, { recursive: true })
+	if (!exists(targetPath)) copyFileSync(sourceGif, targetPath)
+
+	const relPath = `../media/${slug}/${filename}`
+	const source = readFileSync(sourceFile, 'utf-8')
+	const updated = source.replaceAll(originalURL, relPath)
+	if (updated === source) {
+		throw new Error(
+			`Could not find ${originalURL} in ${sourceFile} to replace with ${relPath}.`,
+		)
+	}
+	writeFileSync(sourceFile, updated, 'utf-8')
+
+	throw new Error(
+		`Imported GIF ${originalURL} to ${targetPath} and rewrote ${sourceFile} to use ${relPath}. Commit the changes and re-run the build.`,
+	)
+}
+
 const s3 = new S3Client({})
 const { bucketName, photosCDNEndpoint } = fromEnv({
 	bucketName: 'PHOTOS_BUCKET_NAME',
@@ -28,16 +64,29 @@ const tmp = tempDir()
 /**
  * Once all images have been migrated to S3, this function can be removed.
  */
-export const migrateFromContentful = async (image: Photo): Promise<Photo> => {
+export const migrateFromContentful = async (
+	image: Photo,
+	sourceFile: string,
+): Promise<Photo> => {
 	const src = new URL(image.src)
 	const cs = checkSum(src)
 	const metaFilePath = path.join(cacheDir, cs + '.json')
 
-	if (exists(metaFilePath))
+	if (exists(metaFilePath)) {
+		const cdn = JSON.parse(readFileSync(metaFilePath, 'utf-8'))
+		if (cdn.type === 'GIF') {
+			importGifToContent({
+				originalURL: image.src,
+				sourceFile,
+				cs,
+				sourceGif: path.join(cacheDir, cs + '.gif'),
+			})
+		}
 		return {
 			...image,
-			cdn: JSON.parse(readFileSync(metaFilePath, 'utf-8')),
+			cdn,
 		}
+	}
 
 	const maybeMediaEntry = await getMediaEntry(cs)
 	const downloadURL =
@@ -66,6 +115,15 @@ export const migrateFromContentful = async (image: Photo): Promise<Photo> => {
 
 	copyFileSync(tempFile, localFilePath)
 	console.log(downloadURL, localFilePath)
+
+	if (type === 'GIF') {
+		importGifToContent({
+			originalURL: image.src,
+			sourceFile,
+			cs,
+			sourceGif: localFilePath,
+		})
+	}
 
 	const Key = `coderbyheart.com/media/${cs}`
 	try {

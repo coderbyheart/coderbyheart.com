@@ -53,12 +53,15 @@ export const replaceImagesInMarkdown =
 		})
 
 		for (const node of imageNodes) {
-			const cdnPhoto = await replaceImage({
-				alt: node.properties.alt,
-				src: node.properties.src.startsWith('.')
-					? path.resolve(path.parse(sourceFile).dir, node.properties.src)
-					: node.properties.src,
-			})
+			const cdnPhoto = await replaceImage(
+				{
+					alt: node.properties.alt,
+					src: node.properties.src.startsWith('.')
+						? path.resolve(path.parse(sourceFile).dir, node.properties.src)
+						: node.properties.src,
+				},
+				sourceFile,
+			)
 
 			if (cdnPhoto.cdn === undefined) {
 				node.properties.src = cdnPhoto.src

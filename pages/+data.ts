@@ -7,23 +7,27 @@ export const data = async (): Promise<{
 	pages: Map<string, MarkdownContent>
 	posts: Map<string, MarkdownContent>
 }> => {
-	const pages = await loadContentFromMarkdown(
-		path.join(process.cwd(), 'content'),
-	)
+	const pagesFolder = path.join(process.cwd(), 'content')
+	const pages = await loadContentFromMarkdown(pagesFolder)
 	for (const [key, page] of pages.entries()) {
 		pages.set(key, {
 			...page,
-			hero: page.hero !== undefined ? await replaceImage(page.hero) : undefined,
+			hero:
+				page.hero !== undefined
+					? await replaceImage(page.hero, path.join(pagesFolder, key + '.md'))
+					: undefined,
 		})
 	}
 
-	const posts = await loadContentFromMarkdown(
-		path.join(process.cwd(), 'content', 'post'),
-	)
+	const postsFolder = path.join(process.cwd(), 'content', 'post')
+	const posts = await loadContentFromMarkdown(postsFolder)
 	for (const [key, post] of posts.entries()) {
 		posts.set(key, {
 			...post,
-			hero: post.hero !== undefined ? await replaceImage(post.hero) : undefined,
+			hero:
+				post.hero !== undefined
+					? await replaceImage(post.hero, path.join(postsFolder, key + '.md'))
+					: undefined,
 		})
 	}
 

@@ -4,7 +4,10 @@ import { localPhotoToCDN } from './localPhotoToCDN.ts'
 import { migrateFromContentful } from './migrateFromContentful.ts'
 import { usePhotos } from './usePhotos.ts'
 
-export const replaceImage = async (image: Photo): Promise<Photo> => {
+export const replaceImage = async (
+	image: Photo,
+	sourceFile: string,
+): Promise<Photo> => {
 	if (!image.src.startsWith('http')) {
 		if (image.src.toLowerCase().endsWith('.svg')) return localImage(image)
 		if (image.src.toLowerCase().endsWith('.gif')) return localImage(image)
@@ -13,11 +16,5 @@ export const replaceImage = async (image: Photo): Promise<Photo> => {
 	if (image.src.startsWith('https://photos.coderbyheart.com/'))
 		return usePhotos(image)
 
-	if (image.src.toLowerCase().endsWith('.gif')) {
-		console.warn(
-			`Skipping GIF ${image.src} since it is not supported by the CDN!`,
-		)
-		return image
-	}
-	return migrateFromContentful(image)
+	return migrateFromContentful(image, sourceFile)
 }

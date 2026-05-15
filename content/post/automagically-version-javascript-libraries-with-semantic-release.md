@@ -59,7 +59,7 @@ changing the public API** (method names and signatures, exports) of the library.
 The consumer of the library must not need to change their implementation when
 installing the fixed version.
 
-![Oopsie](https://media.giphy.com/media/GDnomdqpSHlIs/giphy.gif)
+![Oopsie](../media/automagically-version-javascript-libraries-with-semantic-release/giphy-14d43a1b.gif)
 
 To release a fix (which will update the version from `2.3.4` to `2.3.5`, use the
 type `fix` in the commit message:
@@ -81,7 +81,7 @@ may add new exports, methods and even extra, optional method arguments, but the
 consumer of the library must not need to change their implementation when
 installing the library with the new feature.
 
-![Yeah](https://media.giphy.com/media/9G6FaVKbEUWrK/giphy.gif)
+![Yeah](../media/automagically-version-javascript-libraries-with-semantic-release/giphy-d73494db.gif)
 
 To release a feature (which will update the version from `2.3.4` to `2.4.0`, use
 the type `feat` in the commit message:
@@ -100,7 +100,7 @@ get renamed. Even if the change is very small, as soon as you are breaking the
 library's _contract_ (it's public API) it is considered a breaking change,
 [according to semver](https://semver.org/#spec-item-8).
 
-![Boom](https://media.giphy.com/media/aEI2mYEPQ4A2Q/giphy.gif)
+![Boom](../media/automagically-version-javascript-libraries-with-semantic-release/giphy-5724f124.gif)
 
 To release a breaking release (which will update the version from `2.3.4` to
 `3.0.0`, use the text `BREAKING CHANGE:` (followed by a space of two new-lines)
@@ -152,4 +152,4 @@ This new version will be written to the `package.json` and the package will be
 
 ## Happy releasing!
 
-![Lift off](https://media.giphy.com/media/bDZGZzd7B7Wh2/giphy.gif)
+![Lift off](../media/automagically-version-javascript-libraries-with-semantic-release/giphy-41dc7045.gif)
