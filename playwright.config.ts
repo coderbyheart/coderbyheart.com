@@ -21,7 +21,7 @@ export default defineConfig({
 		},
 	],
 	webServer: {
-		command: `npx --yes serve@14 -l ${port} dist/client`,
+		command: `npx vike preview --host ${host} --port ${port}`,
 		url: `http://${host}:${port}/`,
 		reuseExistingServer: !isCI,
 		stdout: 'pipe',
