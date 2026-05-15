@@ -23,13 +23,12 @@
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "types": ["vite/client"],
-    "baseUrl": ".",
     "paths": {
-      "#content/*": ["content/*"],
-      "#component/*": ["component/*"],
-      "#pages/*": ["pages/*"],
-      "#layout/*": ["layout/*"],
-      "#util/*": ["util/*"]
+      "#content/*": ["./content/*"],
+      "#component/*": ["./component/*"],
+      "#pages/*": ["./pages/*"],
+      "#layout/*": ["./layout/*"],
+      "#util/*": ["./util/*"]
     }
   },
   "exclude": ["node_modules"]
