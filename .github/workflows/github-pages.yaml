@@ -1,0 +1,83 @@
+name: Deploy to GitHub Pages
+
+on:
+  workflow_run:
+    workflows: [Test]
+    types: [completed]
+    branches: [saga]
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+  pages: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if:
+      ${{ github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == 'saga') }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version: "24.x"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci --no-audit
+
+      - name: Set version
+        run:
+          echo "VERSION=`git describe --tags HEAD | tr -d '\n'`" >> $GITHUB_ENV
+
+      - name: Build
+        env:
+          VERSION: ${{ env.VERSION }}
+          PHOTOS_BUCKET_NAME: photos.coderbyheart
+          PHOTOS_CDN_ENDPOINT: https://7w7z6ydf2htamqdsm6nbxm7sma0nkltc.lambda-url.eu-central-1.on.aws/
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: eu-central-1
+          CONTENTFUL_SPACE: ${{ secrets.CONTENTFUL_SPACE }}
+          CONTENTFUL_CONTENT_API_TOKEN:
+            ${{ secrets.CONTENTFUL_CONTENT_API_TOKEN }}
+        run: npm run build
+
+      - name: Save version
+        run: |
+          mkdir -p ./dist/client/.well-known
+          echo ${{ env.VERSION }} > ./dist/client/.well-known/release
+
+      - name: Write robots.txt to prevent indexing
+        run: |
+          cat > ./dist/client/robots.txt <<'EOF'
+          User-agent: *
+          Disallow: /
+          EOF
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+        with:
+          path: ./dist/client
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
