@@ -8,7 +8,8 @@
     "prepare": "husky && cp ./node_modules/the-new-css-reset/css/reset.css public",
     "postinstall": "check-node-version --package",
     "lint": "eslint --ext .js,.ts,.tsx src",
-    "build": "vike build"
+    "build": "vike build",
+    "test:e2e": "playwright test"
   },
   "keywords": [
     "Markus Tacker",
@@ -42,6 +43,7 @@
     "@bifravst/prettier-config": "1.1.17",
     "@bifravst/run": "1.2.0",
     "@commitlint/config-conventional": "21.0.1",
+    "@playwright/test": "1.60.0",
     "@types/lodash-es": "4.17.12",
     "bottleneck": "2.19.5",
     "check-node-version": "4.2.1",
