@@ -1,7 +1,7 @@
 import type { Photo } from '#util/loadMarkdownContent.ts'
+import { cacheImageInCDN } from './cacheImageInCDN.ts'
 import { localImage } from './localImage.ts'
 import { localPhotoToCDN } from './localPhotoToCDN.ts'
-import { migrateFromContentful } from './migrateFromContentful.ts'
 import { usePhotos } from './usePhotos.ts'
 
 export const replaceImage = async (
@@ -16,5 +16,5 @@ export const replaceImage = async (
 	if (image.src.startsWith('https://photos.coderbyheart.com/'))
 		return usePhotos(image)
 
-	return migrateFromContentful(image, sourceFile)
+	return cacheImageInCDN(image, sourceFile)
 }

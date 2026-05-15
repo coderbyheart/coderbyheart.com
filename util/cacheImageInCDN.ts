@@ -13,7 +13,6 @@ import {
 import path from 'node:path'
 import { baseDir, cacheDir } from './cacheDir.ts'
 import { checkSum } from './checkSum.ts'
-import { getMediaEntry } from './contentful/getMediaEntry.ts'
 import { exists } from './exists.ts'
 import { tempDir } from './tempDir.ts'
 import { typeToExtension } from './typeToExtension.ts'
@@ -61,10 +60,7 @@ const { bucketName, photosCDNEndpoint } = fromEnv({
 
 const tmp = tempDir()
 
-/**
- * Once all images have been migrated to S3, this function can be removed.
- */
-export const migrateFromContentful = async (
+export const cacheImageInCDN = async (
 	image: Photo,
 	sourceFile: string,
 ): Promise<Photo> => {
@@ -88,9 +84,7 @@ export const migrateFromContentful = async (
 		}
 	}
 
-	const maybeMediaEntry = await getMediaEntry(cs)
-	const downloadURL =
-		maybeMediaEntry !== null ? `https:${maybeMediaEntry}` : src.toString()
+	const downloadURL = src.toString()
 
 	console.debug(downloadURL, 'Downloading...')
 	const response = await fetch(downloadURL)
