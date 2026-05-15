@@ -60,6 +60,11 @@ export const replaceImagesInMarkdown =
 					: node.properties.src,
 			})
 
+			if (cdnPhoto.cdn === undefined) {
+				node.properties.src = cdnPhoto.src
+				continue
+			}
+
 			// Replace the image with a picture element if the CDN is available
 			// and the image is not a placeholder
 			if (cdnPhoto.cdn !== undefined) {

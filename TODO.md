@@ -1,3 +1,3 @@
-- Render a static site
+- The AWS Lambda image CDN does not support GIFs, yet. Make it happen!
 - Use OIDC in GitHub action build step
 - Set up semantic release

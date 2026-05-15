@@ -2,6 +2,7 @@ import type { Photo } from '#util/loadMarkdownContent.ts'
 import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3'
 import { fromEnv } from '@bifravst/from-env'
 import run from '@bifravst/run'
+import Bottleneck from 'bottleneck'
 import {
 	createReadStream,
 	readFileSync,
@@ -13,13 +14,17 @@ import { cacheDir } from './cacheDir.ts'
 import { fileCheckSum } from './checkSum.ts'
 import { exists } from './exists.ts'
 
-const s3 = new S3Client({})
+const s3 = new S3Client()
 const { bucketName, photosCDNEndpoint } = fromEnv({
 	bucketName: 'PHOTOS_BUCKET_NAME',
 	photosCDNEndpoint: 'PHOTOS_CDN_ENDPOINT',
 })(process.env)
 
-export const localPhotoToCDN = async (image: Photo): Promise<Photo> => {
+const limiter = new Bottleneck({
+	maxConcurrent: 2,
+})
+
+const upload = async (image: Photo): Promise<Photo> => {
 	const cs = fileCheckSum(image.src)
 	const metaFilePath = path.join(cacheDir, cs + '.json')
 
@@ -48,9 +53,13 @@ export const localPhotoToCDN = async (image: Photo): Promise<Photo> => {
 			}),
 		)
 	} catch (err) {
-		console.error(
-			`Failed to upload ${image.src} to S3!: ${(err as Error).message}`,
-		)
+		if ((err as any).Code !== 'PreconditionFailed') {
+			console.error(
+				`Failed to upload ${image.src} to S3!: ${(err as Error).message}`,
+			)
+			throw err
+		}
+		// The image already exists in the bucket, which is fine, we can proceed to generate the CDN URLs
 	}
 
 	// Preview images
@@ -62,7 +71,10 @@ export const localPhotoToCDN = async (image: Photo): Promise<Photo> => {
 		redirect: 'follow',
 	})
 	const orig = thumbnail.headers.get('x-amz-meta-original') // e.g. '/2023-12-10/IMG20231207121810.jpg JPEG 3456x4608 8-bit sRGB'
-	if (orig === null) throw new Error(`Failed to convert ${image.src}!`)
+	if (orig === null)
+		throw new Error(
+			`Failed to convert ${image.src} ${photosCDNEndpoint}${Key}?f=placeholder!`,
+		)
 
 	const cdnURL = `${photosCDNEndpoint}${Key}`
 
@@ -88,3 +100,6 @@ export const localPhotoToCDN = async (image: Photo): Promise<Photo> => {
 		cdn,
 	}
 }
+
+export const localPhotoToCDN = async (image: Photo): Promise<Photo> =>
+	limiter.schedule(async () => upload(image))
