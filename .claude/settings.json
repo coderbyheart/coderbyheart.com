@@ -5,14 +5,12 @@
   },
   "permissions": {
     "allow": [
-      "Bash(npm view *)",
-      "Bash(npm install *)",
+      "Bash(npm *)",
       "Bash(npx playwright *)",
       "Bash(npx prettier *)",
-      "Bash(git commit -m ' *)",
-      "Bash(git push *)",
-      "Bash(git pull *)",
-      "Bash(git stash *)"
+      "Bash(git *)",
+      "Bash(fnm *)",
+      "Bash(npx vike *)"
     ]
   }
 }
