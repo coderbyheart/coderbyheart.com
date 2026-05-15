@@ -1,4 +1,4 @@
-import { Link } from '#component/Link.tsx'
+import { Link, NavLink } from '#component/Link.tsx'
 import { isSSR } from '#util/isSSR.ts'
 import { debounce } from 'lodash-es'
 import { createEffect, createSignal } from 'solid-js'
@@ -34,15 +34,15 @@ export const MetaNav = (props: { className?: string }) => {
 						<span> &middot; {tagLine}</span>
 					</Link>
 				</div>
-				<div class={'content'}>
+				<div class={'navLinks'}>
 					<span>
-						<Link to={'/archive'}>Blog</Link>
+						<NavLink to={'/archive'}>Blog</NavLink>
 					</span>
 					<span>
-						<Link to={'/talks'}>Talks</Link>
+						<NavLink to={'/talks'}>Talks</NavLink>
 					</span>
 					<span>
-						<Link to={'/communities'}>Communities</Link>
+						<NavLink to={'/communities'}>Communities</NavLink>
 					</span>
 				</div>
 			</section>

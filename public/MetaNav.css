@@ -35,7 +35,7 @@ nav.meta .shrink strong {
   text-transform: uppercase;
 }
 
-nav.meta .content {
+nav.meta .navLinks {
   display: none;
 }
 
@@ -49,7 +49,7 @@ nav.meta > section {
   height: 40px;
 }
 
-nav.meta > section .content > span + span:before {
+nav.meta > section .navLinks > span + span:before {
   content: "·";
   padding: 0.25rem;
 }
@@ -60,7 +60,7 @@ nav.meta > section .content > span + span:before {
   }
 }
 
-nav.meta.scrolling .content {
+nav.meta.scrolling .navLinks {
   display: block;
 }
 
