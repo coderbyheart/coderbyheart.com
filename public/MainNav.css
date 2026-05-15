@@ -46,7 +46,8 @@ nav.main .links a {
   font-weight: 500;
 }
 
-nav.main .links a:hover {
+nav.main .links a:hover,
+nav.main .links a.active {
   color: var(--highlight-color);
   text-decoration: none;
 }
