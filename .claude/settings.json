@@ -6,5 +6,9 @@
       "Bash(npx playwright *)",
       "Bash(npx prettier *)"
     ]
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
   }
 }
