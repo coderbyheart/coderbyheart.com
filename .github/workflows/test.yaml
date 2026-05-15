@@ -5,6 +5,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -41,3 +44,7 @@ jobs:
 
       - name: Run smoke test
         run: npm run test:e2e
+
+      - name: Semantic release
+        id: semantic-release
+        run: npx semantic-release
