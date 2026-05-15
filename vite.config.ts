@@ -6,6 +6,7 @@ import { homepage, version } from './siteInfo.ts'
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [vike(), vikeSolid()],
+	base: process.env.BASE_PATH ?? '/',
 	build: {
 		sourcemap: true,
 	},

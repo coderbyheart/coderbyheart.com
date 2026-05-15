@@ -43,6 +43,7 @@ jobs:
 
       - name: Build
         env:
+          BASE_PATH: /${{ github.event.repository.name }}/
           VERSION: ${{ env.VERSION }}
           PHOTOS_BUCKET_NAME: photos.coderbyheart
           PHOTOS_CDN_ENDPOINT: https://7w7z6ydf2htamqdsm6nbxm7sma0nkltc.lambda-url.eu-central-1.on.aws/
