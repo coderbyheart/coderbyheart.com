@@ -30,14 +30,14 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit
 
-      - name: Install Playwright (Chromium)
-        run: npx playwright install --with-deps chromium
-
       - name: Export to-be released version
         run: |
           npx semantic-release --dry-run > semantic-release.out
           echo "RELEASE_VERSION=$(cat semantic-release.out | grep -i 'the next release version is' | awk '{print $11}')" >> $GITHUB_ENV
           cat semantic-release.out
+
+      - name: Install Playwright (Chromium)
+        run: npx playwright install --with-deps chromium
 
       - name: Build
         env:
@@ -58,12 +58,14 @@ jobs:
           echo "${{ env.RELEASE_VERSION }}" > ./dist/client/.well-known/release
 
       - name: Upload dist/client artifact
-        uses: actions/upload-artifact@v4
+        if: env.RELEASE_VERSION !=  ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: dist-client
           path: ./dist/client
           retention-days: 7
 
       - name: Semantic release
+        if: env.RELEASE_VERSION !=  ''
         id: semantic-release
         run: npx semantic-release
