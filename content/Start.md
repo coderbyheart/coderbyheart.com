@@ -19,7 +19,9 @@ Internet of Things using JavaScript at
 
 I am on Mastodon, and you can follow
 [@coderbyheart@chaos.social](https://chaos.social/@coderbyheart) there for my
-ramblings about the challenges of writing software.
+ramblings about the challenges of writing software. I was previously active on
+Twitter, and you can access
+[my archived Tweets here](https://twitter.coderbyheart.com/).
 
 I live in Oslo, Norway 🇳🇴 and share photos about my camping adventures and more
 on [photos.coderbyheart.com](https://photos.coderbyheart.com) and
