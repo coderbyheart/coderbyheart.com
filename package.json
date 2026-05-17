@@ -54,6 +54,7 @@
     "mdast": "3.0.0",
     "prettier": "3.8.3",
     "rehype-format": "5.0.1",
+    "rehype-prism-plus": "2.0.2",
     "rehype-stringify": "10.0.1",
     "remark": "15.0.1",
     "remark-extract-frontmatter": "3.2.0",

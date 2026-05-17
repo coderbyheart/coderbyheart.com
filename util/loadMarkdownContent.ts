@@ -1,6 +1,7 @@
 import { readdir, readFile } from 'node:fs/promises'
 import path, { parse } from 'node:path'
 import format from 'rehype-format'
+import rehypePrism from 'rehype-prism-plus'
 import html from 'rehype-stringify'
 import { remark } from 'remark'
 import extract from 'remark-extract-frontmatter'
@@ -59,6 +60,7 @@ export const loadMarkdownContentFromFile = async (
 		.use(frontmatter, ['yaml'])
 		.use(extract, { yaml: yaml.parse })
 		.use(remark2rehype, { allowDangerousHtml: true })
+		.use(rehypePrism, { ignoreMissing: true })
 		.use(format, {})
 		.use(html, { allowDangerousHtml: true })
 		.use(replaceImagesInMarkdown(file))
