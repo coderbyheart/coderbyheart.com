@@ -297,5 +297,6 @@ you actually need it rather than building it upfront for every aggregate.
 The full source, including a working test suite that runs against DynamoDB
 Local, is at
 [github.com/coderbyheart/aws-dynamodb-es-cqrs](https://github.com/coderbyheart/aws-dynamodb-es-cqrs).
-The package is also published to npm as `@coderbyheart/aws-dynamodb-es-cqrs` if
-you want to use it directly.
+The package is also published to npm as
+[`@coderbyheart/aws-dynamodb-es-cqrs`](https://www.npmjs.com/package/@coderbyheart/aws-dynamodb-es-cqrs)
+if you want to use it directly.
