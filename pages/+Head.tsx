@@ -27,6 +27,12 @@ export const Head = () => (
 		<link rel="stylesheet" href={asset('MastodonStatus.css')} />
 		<link rel="stylesheet" href={asset('YouTubeEmbed.css')} />
 		<link rel="icon" type="image/x-icon" href={asset('favicon.ico')} />
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="Markus Tacker · Software Crafter"
+			href={asset('rss.xml')}
+		/>
 		<meta name="build-time" content={BUILD_TIME} />
 		<meta name="version" content={VERSION} />
 	</>
