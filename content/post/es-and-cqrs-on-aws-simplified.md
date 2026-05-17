@@ -11,7 +11,7 @@ abstract: >-
 date: 2026-05-17T15:00:00+02:00
 ---
 
-![ES+CQRS on AWS: the simplest version yet](../media/ES-and-CQRS-on-AWS-simplified.png)
+![A clear glass icon-based diagram within a teal-blue framed, rounded rectangle, with text and arrows illustrating a transaction flow. The diagram, titled "Transaction" at the top in dark gray text, features two identical glass documents side-by-side. Beneath the left document, a small down arrow points to a reflective cylindrical object labeled "Events." Beneath the right document, an identical down arrow points to an identical cylindrical object labeled "Aggregate." The entire transparent glass setup is placed on a reflective white surface against a blurred, light studio background.](../media/ES-and-CQRS-on-AWS-simplified.png)
 
 I have been iterating on Event Sourcing and CQRS architectures for nearly a
 decade. When I first started with this pattern around 2016 and 2017, the
