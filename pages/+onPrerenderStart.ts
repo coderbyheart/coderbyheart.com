@@ -1,4 +1,5 @@
 import { loadContentFromMarkdown } from '#util/loadContentFromMarkdown.ts'
+import type { MarkdownContent } from '#util/loadMarkdownContent.ts'
 import { writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import type { PageContextServer } from 'vike/types'
@@ -59,7 +60,7 @@ export const onPrerenderStart = async (prerenderContext: {
 
 	const feedItems = Array.from(posts.values())
 		.filter((post) => post.date !== undefined && post.title !== undefined)
-		.map((post) => ({
+		.map((post): MarkdownContent & { pubDate: Date } => ({
 			...post,
 			pubDate: new Date(post.date as string | Date),
 		}))
