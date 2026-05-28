@@ -53,6 +53,7 @@ jobs:
         run: npm run test:e2e
 
       - name: Save version
+        if: env.RELEASE_VERSION !=  ''
         run: |
           mkdir -p ./dist/client/.well-known
           echo "${{ env.RELEASE_VERSION }}" > ./dist/client/.well-known/release
