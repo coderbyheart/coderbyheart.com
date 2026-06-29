@@ -37,7 +37,7 @@
     "npm": ">=11"
   },
   "devDependencies": {
-    "@aws-sdk/client-s3": "3.1075.0",
+    "@aws-sdk/client-s3": "3.1076.0",
     "@bifravst/eslint-config-typescript": "7.0.25",
     "@bifravst/from-env": "3.0.2",
     "@bifravst/prettier-config": "1.1.17",
