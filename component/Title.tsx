@@ -4,16 +4,25 @@ export const Title = ({
 	title,
 	subtitle,
 	date,
+	noheadline,
 }: {
 	title?: string | null
 	subtitle?: string | null
 	date?: string | null
+	noheadline?: boolean
 }) => {
-	if (title === null) return null
+	if (title === null && (subtitle === null || subtitle === undefined))
+		return null
 	return (
 		<header class={'title'}>
-			{subtitle !== null && subtitle !== undefined && <div>{subtitle}</div>}
-			<h1>{title}</h1>
+			{(noheadline ?? false) ? (
+				subtitle !== null && subtitle !== undefined && <h1>{subtitle}</h1>
+			) : (
+				<>
+					{subtitle !== null && subtitle !== undefined && <div>{subtitle}</div>}
+					{title !== null && title !== undefined && <h1>{title}</h1>}
+				</>
+			)}
 			{date !== null && date !== undefined && (
 				<time dateTime={date}>{format(new Date(date), 'd. MMMM yyyy')}</time>
 			)}
