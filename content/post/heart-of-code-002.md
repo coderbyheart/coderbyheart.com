@@ -17,55 +17,55 @@ I decided to sum up my week on Twitter from now on every weekend.
 
 You can go to jail if you _just follow the orders your managers gives you_:
 
-<https://twitter.com/tedneward/status/901135785969074177?embed>
+<https://twitter.com/tedneward/status/901135785969074177>
 
 Facebook is fucking disgusting:
 
-<https://twitter.com/dhh/status/900893798821134336?embed>
+<https://twitter.com/dhh/status/900893798821134336>
 
 Benjamin (a super awesome coffe-to-code organism) has created a GitHub repo
 where you can ask him questions:
 
-<https://twitter.com/benjamin/status/900473217118240768?embed>
+<https://twitter.com/benjamin/status/900473217118240768>
 
 ### JavaScript 🛠
 
 Dudes behaving like assholes will make contributors turn away, that's why
 [there is now a Node.js fork](https://github.com/ayojs/ayo):
 
-<https://twitter.com/maybekatz/status/899746713572786177?embed>
+<https://twitter.com/maybekatz/status/899746713572786177>
 
-<https://twitter.com/ohhoe/status/899748838302302212?embed>
+<https://twitter.com/ohhoe/status/899748838302302212>
 
-<https://twitter.com/maybekatz/status/900680829512294404?embed>
+<https://twitter.com/maybekatz/status/900680829512294404>
 
 It matters which behaviour you accept withing you community, because:
 
-<https://twitter.com/maybekatz/status/901288355773599744?embed>
+<https://twitter.com/maybekatz/status/901288355773599744>
 
 I've learned to appreciate async/await for this reason:
 
-<https://twitter.com/coderbyheart/status/900252517723930624?embed>
+<https://twitter.coderbyheart.com/status/900252517723930624>
 
 ### Web 🌍
 
 Learn how CSS is implemented in CSS (and why Rust is great for that):
 
-<https://twitter.com/coderbyheart/status/900267620515106816?embed>
+<https://twitter.coderbyheart.com/status/900267620515106816>
 
 ### Diversity 🌈
 
 Don't be shy, your will be senior in no time:
 
-<https://twitter.com/sehurlburt/status/901538910764793856?embed>
+<https://twitter.com/sehurlburt/status/901538910764793856>
 
 Because:
 
-<https://twitter.com/RidingWolf/status/900994562012917761?embed>
+<https://twitter.com/RidingWolf/status/900994562012917761>
 
 Railsgirls released a report on the impact of their initiative:
 
-<https://twitter.com/fox/status/901319347573891074?embed>
+<https://twitter.com/fox/status/901319347573891074>
 
 ### Conferences 💡
 
@@ -82,7 +82,7 @@ Railsgirls released a report on the impact of their initiative:
 I'm sponsoring a diversity ticket here, so please apply also to RuhrJS (October
 14th+15th 2017):
 
-<https://twitter.com/RuhrJS/status/900285456549638144?embed>
+<https://twitter.com/RuhrJS/status/900285456549638144>
 
 ### Listening to 🎧
 
@@ -93,5 +93,5 @@ I'm sponsoring a diversity ticket here, so please apply also to RuhrJS (October
 
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
-> [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)
+> [I'm happy to answer your questions](https://twitter.coderbyheart.com/status/895631124021563394)
 > ...

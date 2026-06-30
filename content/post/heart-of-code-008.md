@@ -17,91 +17,91 @@ week in Twitter, every Sunday.
 
 A report on the state of automated testing came out:
 
-<https://twitter.com/coderbyheart/status/917070835751489536?embed>
+<https://twitter.coderbyheart.com/status/917070835751489536>
 
 Five hours of setup, for two hours of LAN party:
 
-<https://twitter.com/Foone/status/912517731571736576?embed>
+<https://twitter.com/Foone/status/912517731571736576>
 
 Mozilla is the poster child of open-source:
 
-<https://twitter.com/coderbyheart/status/915472808020504576?embed>
+<https://twitter.coderbyheart.com/status/915472808020504576>
 
 AWS has some quirky behaviour when it comes to lambdas and environment
 variables, so use Parameter Store. I do and it works great.
 [Not only for that](https://github.com/coderbyheart/aws-ssm-keyring).
 
-<https://twitter.com/coderbyheart/status/914807927231406080?embed>
+<https://twitter.coderbyheart.com/status/914807927231406080>
 
 ### JavaScript 🛠
 
 npm now has 2FA and read-only tokens:
 
-<https://twitter.com/npmjs/status/915615028497264640?embed>
+<https://twitter.com/npmjs/status/915615028497264640>
 
 JavaScript (in contrast to Python) has no hard to explain concepts (like list
 comprehensions). It's a great beginners language:
 
-<https://twitter.com/NeoIghodaro/status/916908182122921984?embed>
+<https://twitter.com/NeoIghodaro/status/916908182122921984>
 
 Node.js is everywhere:
 
-<https://twitter.com/fhinkel/status/915603328607727621?embed>
+<https://twitter.com/fhinkel/status/915603328607727621>
 
-<https://twitter.com/fhinkel/status/915973586267004928?embed>
+<https://twitter.com/fhinkel/status/915973586267004928>
 
 ### Diversity 🌈
 
 It's sad that this is still not a thing:
 [equal pay](http://www.unwomen.org/en/news/in-focus/csw/equal-pay).
 
-<https://twitter.com/norway/status/916680335772938241?embed>
+<https://twitter.com/norway/status/916680335772938241>
 
 Verena tells her experience with RailsGirls (Thread):
 
-<https://twitter.com/viddity/status/914746997948780544?embed>
+<https://twitter.com/viddity/status/914746997948780544>
 
 Studies show that men won't believe evidence when it comes to gender bias:
 
-<https://twitter.com/coderbyheart/status/915095082864451585?embed>
+<https://twitter.coderbyheart.com/status/915095082864451585>
 
 ### Culture ✌️
 
 You should follow [Substack](https://twitter.com/substack), not only for their
 opinion:
 
-<https://twitter.com/WoodyZuill/status/916731091779801088?embed>
+<https://twitter.com/WoodyZuill/status/916731091779801088>
 
 Do this and the whole company will benefit (emphasis on **measurable**!):
 
-<https://twitter.com/johncutlefish/status/916957862835843072?embed>
+<https://twitter.com/johncutlefish/status/916957862835843072>
 
 Don't trust a consultancy that sells you the Spotify model. It's does not exist!
 
-<https://twitter.com/dwitherick/status/916253643858378752?embed>
+<https://twitter.com/dwitherick/status/916253643858378752>
 
 Thread with great resources on changing organizations:
 
-<https://twitter.com/adibolb/status/916206973862936578?embed>
+<https://twitter.com/adibolb/status/916206973862936578>
 
 ### Conferences 💡
 
 A BarCamp in my former hometown:
 
-<https://twitter.com/bc_rm/status/916562519329857537?embed>
+<https://twitter.com/bc_rm/status/916562519329857537>
 
 I signed up for codefreeze 2018!
 [Here is](https://coderbyheart.com/codefreeze-brings-the-magic-of-socrates-to-lapland/)
 why you should, too.
 
-<https://twitter.com/RidingWolf/status/916649224950992896?embed>
+<https://twitter.com/RidingWolf/status/916649224950992896>
 
 ### Jobs / Hiring 💪🏻
 
 Make yourself familiar with this, because soon I'll have more concrete details
 to share:
 
-<https://twitter.com/NordicTweets/status/915142730732449792?embed>
+<https://twitter.com/NordicTweets/status/915142730732449792>
 
 ### Listening to 🎧
 
@@ -113,5 +113,5 @@ to share:
 
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
-> [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)
+> [I'm happy to answer your questions](https://twitter.coderbyheart.com/status/895631124021563394)
 > ...

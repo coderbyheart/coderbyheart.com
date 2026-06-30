@@ -24,6 +24,6 @@ The slides are available at [bit.ly/fwtesting](https://bit.ly/fwtesting).
 Unfortunately there was no recording of the talk, but it got featured on
 [@internetofshit](https://twitter.com/internetofshit):
 
-<https://twitter.com/internetofshit/status/1532795048084983808?embed>
+<https://twitter.com/internetofshit/status/1532795048084983808>
 
 ![Nordic Testing Days 2022](../media/ntd2022-talk.jpeg)

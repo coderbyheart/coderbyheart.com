@@ -8,7 +8,7 @@ date: 2015-09-06T21:54:00.000Z
 
 During this year's Socrates Conference[¹](./the-magic-of-socrates-conference) I
 attended a session that questioned the importantance of
-techology[²](https://twitter.com/coderbyheart/status/637279996717998081) for the
+techology[²](https://twitter.coderbyheart.com/status/637279996717998081) for the
 overall success of projects&mdash;and I agree. Technology is just a tool, that
 can be replaced easily and has usually mo major influence in the project
 success. If your tech stack is built with robustness and modern software

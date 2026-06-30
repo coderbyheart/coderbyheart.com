@@ -112,9 +112,9 @@ organizational power structures. It's the environment I need to keep growing.
 My colleagues, too, were absolutely happy with the unconference, and all want to
 come back. In the closing session we drew a spider chart that sums it up nicely:
 
-<https://twitter.com/coderbyheart/status/1563554925615120386?embed>
+<https://twitter.coderbyheart.com/status/1563554925615120386>
 
-<https://twitter.com/coderbyheart/status/1565292728845565963?embed>
+<https://twitter.coderbyheart.com/status/1565292728845565963>
 
 ## Photos
 
@@ -135,29 +135,29 @@ correct order:
 
 ### Friday: Open-Space Day 1
 
-<https://twitter.com/coderbyheart/status/1563065904971128832?embed>
-<https://twitter.com/coderbyheart/status/1563100104474918913?embed>
-<https://twitter.com/coderbyheart/status/1563079699391463426?embed>
-<https://twitter.com/coderbyheart/status/1563093870728351746?embed>
-<https://twitter.com/coderbyheart/status/1563138705195278336?embed>
-<https://twitter.com/coderbyheart/status/1563161713481961475?embed>
-<https://twitter.com/coderbyheart/status/1563181885395648518?embed>
-<https://twitter.com/coderbyheart/status/1563229277101105153?embed>
+<https://twitter.coderbyheart.com/status/1563065904971128832>
+<https://twitter.coderbyheart.com/status/1563100104474918913>
+<https://twitter.coderbyheart.com/status/1563079699391463426>
+<https://twitter.coderbyheart.com/status/1563093870728351746>
+<https://twitter.coderbyheart.com/status/1563138705195278336>
+<https://twitter.coderbyheart.com/status/1563161713481961475>
+<https://twitter.coderbyheart.com/status/1563181885395648518>
+<https://twitter.coderbyheart.com/status/1563229277101105153>
 
 ### Saturday: Open-Space Day 2
 
-<https://twitter.com/coderbyheart/status/1563428280065134592?embed>
-<https://twitter.com/coderbyheart/status/1563443216351133697?embed>
-<https://twitter.com/coderbyheart/status/1563442274729873408?embed>
-<https://twitter.com/coderbyheart/status/1563457164064174081?embed>
-<https://twitter.com/coderbyheart/status/1563501080230907907?embed>
-<https://twitter.com/coderbyheart/status/1563517525312573441?embed>
-<https://twitter.com/coderbyheart/status/1563533539488169984?embed>
-<https://twitter.com/coderbyheart/status/1563548367128444930?embed>
-<https://twitter.com/coderbyheart/status/1563623742919655426?embed>
+<https://twitter.coderbyheart.com/status/1563428280065134592>
+<https://twitter.coderbyheart.com/status/1563443216351133697>
+<https://twitter.coderbyheart.com/status/1563442274729873408>
+<https://twitter.coderbyheart.com/status/1563457164064174081>
+<https://twitter.coderbyheart.com/status/1563501080230907907>
+<https://twitter.coderbyheart.com/status/1563517525312573441>
+<https://twitter.coderbyheart.com/status/1563533539488169984>
+<https://twitter.coderbyheart.com/status/1563548367128444930>
+<https://twitter.coderbyheart.com/status/1563623742919655426>
 
 ## Workshop Day
 
-<https://twitter.com/coderbyheart/status/1563802156142137344?embed>
-<https://twitter.com/coderbyheart/status/1563802399222947841?embed>
-<https://twitter.com/coderbyheart/status/1563818007549321217?embed>
+<https://twitter.coderbyheart.com/status/1563802156142137344>
+<https://twitter.coderbyheart.com/status/1563802399222947841>
+<https://twitter.coderbyheart.com/status/1563818007549321217>

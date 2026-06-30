@@ -115,7 +115,7 @@ Notes:
 - we use our
   [patched version of greenkeeper-lockfile](https://github.com/nRFCloud/greenkeeper-lockfile)
 - we disable audit on `npm ci`
-  [to not slow down the install](https://twitter.com/coderbyheart/status/994089445346435073)
+  [to not slow down the install](https://twitter.coderbyheart.com/status/994089445346435073)
 
 And here is the result on a real PR:
 

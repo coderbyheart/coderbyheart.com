@@ -42,5 +42,5 @@ no signup or download necessary. It works great without VR goggles and the
 spatial audio feature allows us to interact virtually even with bigger groups.
 
 If you’d like to try out some of these tools,
-[I am having an open remote coffee hour every workday from 15-16:00 Oslo time](https://twitter.com/coderbyheart/status/1239476222452813825)
+[I am having an open remote coffee hour every workday from 15-16:00 Oslo time](https://twitter.coderbyheart.com/status/1239476222452813825)
 where we try out these offers.

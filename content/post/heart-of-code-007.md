@@ -21,19 +21,19 @@ A day late, because I spent the weekend with a few colleagues from
 
 Did you know ...
 
-<https://twitter.com/coderbyheart/status/913297977795649537?embed>
+<https://twitter.coderbyheart.com/status/913297977795649537>
 
 Grid layout is heaven-sent, here is an awesome tutorial:
 
-<https://twitter.com/SaraSoueidan/status/913092170923614210?embed>
+<https://twitter.com/SaraSoueidan/status/913092170923614210>
 
 Only a few more years, and Twitter will be a Blog.
 
-<https://twitter.com/coderbyheart/status/912802813662711809?embed>
+<https://twitter.coderbyheart.com/status/912802813662711809>
 
 or a forum:
 
-<https://twitter.com/austin_walker/status/912793201592999936?embed>
+<https://twitter.com/austin_walker/status/912793201592999936>
 
 <!-- ### JavaScript 🛠 -->
 
@@ -41,43 +41,43 @@ or a forum:
 
 A very powerful statement:
 
-<https://twitter.com/coderbyheart/status/912562291081715713?embed>
+<https://twitter.coderbyheart.com/status/912562291081715713>
 
-<https://twitter.com/sehurlburt/status/911416253738213376?embed>
+<https://twitter.com/sehurlburt/status/911416253738213376>
 
 ### Culture ✌️
 
 Uncle Bob Martin crapped more shit on Twitter and his Blog. His personal
 opinions are disgusting and not tolerable.
 
-<https://twitter.com/RonJeffries/status/912683108461314048?embed>
+<https://twitter.com/RonJeffries/status/912683108461314048>
 
 The question is, do I reject a book about software he has authored because of
 this reason? Can knowledge be tainted?
 
-<https://twitter.com/Singsalad/status/913082583533199361?embed>
+<https://twitter.com/Singsalad/status/913082583533199361>
 
-<https://twitter.com/Singsalad/status/913082848076234752?embed>
+<https://twitter.com/Singsalad/status/913082848076234752>
 
-<https://twitter.com/Singsalad/status/913083077462827011?embed>
+<https://twitter.com/Singsalad/status/913083077462827011>
 
 And that goes without saying:
 
-<https://twitter.com/Gaohmee/status/911729603609206784?embed>
+<https://twitter.com/Gaohmee/status/911729603609206784>
 
 ### Conferences 💡
 
 I booked my tickets for ETC2018:
 
-<https://twitter.com/coderbyheart/status/912592461578620928?embed>
+<https://twitter.coderbyheart.com/status/912592461578620928>
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<https://twitter.com/coderbyheart/status/913766517652824064?embed>
+<https://twitter.coderbyheart.com/status/913766517652824064>
 
-<https://twitter.com/SoCraTesAT/status/913680229469753344?embed>
+<https://twitter.com/SoCraTesAT/status/913680229469753344>
 
-<https://twitter.com/coderbyheart/status/913683735106785280?embed>
+<https://twitter.coderbyheart.com/status/913683735106785280>
 
 <!-- ### Jobs / Hiring 💪🏻 -->
 
@@ -88,5 +88,5 @@ I booked my tickets for ETC2018:
 
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
-> [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)
+> [I'm happy to answer your questions](https://twitter.coderbyheart.com/status/895631124021563394)
 > ...

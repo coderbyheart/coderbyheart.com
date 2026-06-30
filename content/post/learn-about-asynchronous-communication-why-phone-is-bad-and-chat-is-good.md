@@ -8,7 +8,7 @@ date: 2015-06-28T11:30:00.000Z
 ---
 
 This post tries to explain the rationale behind one of
-[my recent tweets](https://twitter.com/coderbyheart/status/612577493594284032):
+[my recent tweets](https://twitter.coderbyheart.com/status/612577493594284032):
 
 > Everyone will work better if all understand the difference between sync and
 > async communication: **Phone is bad, Chat is good.** >

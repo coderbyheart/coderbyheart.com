@@ -24,7 +24,7 @@ attendees were coming from all over the world to meet with people who care about
 quality, customers, mental health and bring the desire to learn, share and
 teach.
 
-<https://twitter.com/coderbyheart/status/1225330258569764864?embed>
+<https://twitter.coderbyheart.com/status/1225330258569764864>
 
 It is a safe place to acknowledge that we, our behaviour and our skills are far
 from perfect, to connect with others and figure out _together_ how to be better
@@ -33,7 +33,7 @@ humans who work on computers.
 The closing keynote by [Ulrika Malmgren](https://twitter.com/Ulrikama)
 summarized this perfectly:
 
-<https://twitter.com/coderbyheart/status/1225807205783527424?embed>
+<https://twitter.coderbyheart.com/status/1225807205783527424>
 
 It is our responsibility to have honest conversations about our work because we
 happen to be influential to the lives of other with every keystroke and we owe
@@ -64,7 +64,7 @@ which currently is done using Confluence, Slack and email.
 from:
 [Discover to Deliver](https://www.ebgconsulting.com/blog/a-quick-dip-into-our-new-book-discover-to-deliver-agile-product-planning-analysis/)
 
-<https://twitter.com/coderbyheart/status/1225389623448342528?embed>
+<https://twitter.coderbyheart.com/status/1225389623448342528>
 
 This is super useful technique to uncover blind spots in a project and can be
 done with straightforward exercises which don't take up too much time. I will
@@ -93,7 +93,7 @@ Design Europe, and
 the same DNA, and hopefull next year, we can bring these three communities
 closer together.
 
-<https://twitter.com/coderbyheart/status/1225859527255392256?embed>
+<https://twitter.coderbyheart.com/status/1225859527255392256>
 
 > I thank my employer [Nordic Semiconductor](https://www.nordicsemi.com/) for
 > enabling me to attend this event on company time and cost under our competence

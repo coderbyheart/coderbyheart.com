@@ -18,7 +18,7 @@ daily work as a human working with other humans, earning their living through
 collaborating with others humans on coercing machines into providing more value
 than pain.
 
-<https://twitter.com/yodifiji/status/1480702460465451016?embed>
+<https://twitter.com/yodifiji/status/1480702460465451016>
 
 I've been given the privilege to very early discover that I could turn my
 fascination with computers into a job. Already as a teenager, I was able to find

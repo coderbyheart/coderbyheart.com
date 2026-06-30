@@ -13,43 +13,43 @@ date: 2017-10-29T14:00+01:00
 It's amazing how short the autumn here in Trondheim is, today we had the first
 snowfall of the season:
 
-<https://twitter.com/coderbyheart/status/924606668050190337?embed>
+<https://twitter.coderbyheart.com/status/924606668050190337>
 
 ### Jobs / Hiring 💪🏻
 
 Silvia shared a great resource for women looking into a career in tech:
 
-<https://twitter.com/SilviaHundegger/status/923519487751741441?embed>
+<https://twitter.com/SilviaHundegger/status/923519487751741441>
 
 You can also hire her (as a contractor) for your next venture:
 
-<https://twitter.com/coderbyheart/status/922437956752814081?embed>
+<https://twitter.coderbyheart.com/status/922437956752814081>
 
 ### Tech 🚀
 
 Some remarks on Software Architecture from a fellow Software Crafter:
 
-<https://twitter.com/Ookami86/status/922908515236220928?embed>
+<https://twitter.com/Ookami86/status/922908515236220928>
 
 I also need to emphasize this:
 
-<https://twitter.com/coderbyheart/status/924589685564944384?embed>
+<https://twitter.coderbyheart.com/status/924589685564944384>
 
 There is a nice new drag&drop library around (with an awesome demo page):
 
-<https://twitter.com/coderbyheart/status/923794863950303232?embed>
+<https://twitter.coderbyheart.com/status/923794863950303232>
 
 I started following [Honest Status Page](https://twitter.com/honest_update) for
 tweets like this:
 
-<https://twitter.com/honest_update/status/913443696833646592?embed>
+<https://twitter.com/honest_update/status/913443696833646592>
 
 ### JavaScript 🛠
 
 [Reason](https://reasonml.github.io/) is still very high on my _to check out_
 bucket list for its promise to improve the way we are writing JavaScript:
 
-<https://twitter.com/reasonml/status/924043510977740800?embed>
+<https://twitter.com/reasonml/status/924043510977740800>
 
 The next Node.js LTS release is coming (check out
 [this post](https://nodejs.org/en/blog/release/v8.0.0/) for an overview of the
@@ -58,46 +58,46 @@ important changes from v6). I personally like
 and
 [`Object.values`](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object/values).
 
-<https://twitter.com/nodejs/status/923987712343986176?embed>
+<https://twitter.com/nodejs/status/923987712343986176>
 
 [Node.js 8 enables http2 by default](https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V8.md#notable-changes-1),
 btw.
 
-<https://twitter.com/tomayac/status/922882277276835842?embed>
+<https://twitter.com/tomayac/status/922882277276835842>
 
 It's time to update, anyway:
 
-<https://twitter.com/nodejs/status/922955663864664065?embed>
+<https://twitter.com/nodejs/status/922955663864664065>
 
 My observation on using _Redirect_ in React apps:
 
-<https://twitter.com/coderbyheart/status/923964650542239744?embed>
+<https://twitter.coderbyheart.com/status/923964650542239744>
 
-<https://twitter.com/coderbyheart/status/924175477551587328?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/924175477551587328>
 
-<https://twitter.com/coderbyheart/status/924175558505848832?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/924175558505848832>
 
 ### Diversity 🌈
 
 Two articles that show how Men will be favored, no matter what:
 
-<https://twitter.com/jchyip/status/923151607633731584?embed>
+<https://twitter.com/jchyip/status/923151607633731584>
 
-<https://twitter.com/math_rachel/status/922609748607823872?embed>
+<https://twitter.com/math_rachel/status/922609748607823872>
 
 Diversity is about potential:
 
-<https://twitter.com/ClydeHyena/status/922391353215946752?embed>
+<https://twitter.com/ClydeHyena/status/922391353215946752>
 
 ### Culture ✌️
 
 A good article on David Marquet's book Turn The Ship Around:
 
-<https://twitter.com/corp_rebels/status/923430498642341888?embed>
+<https://twitter.com/corp_rebels/status/923430498642341888>
 
 Here is why teams should own their code, not a single person:
 
-<https://twitter.com/Lynoure/status/922939010976239618?embed>
+<https://twitter.com/Lynoure/status/922939010976239618>
 
 ### Conferences + Usergroups 💡
 
@@ -124,5 +124,5 @@ These are the conferences where you will be able to meet me:
 
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
-> [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)
+> [I'm happy to answer your questions](https://twitter.coderbyheart.com/status/895631124021563394)
 > ...

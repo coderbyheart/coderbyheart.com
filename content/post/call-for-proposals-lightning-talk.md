@@ -156,7 +156,7 @@ about new CfPs. Check out:
 
 ## Submitting
 
-<https://twitter.com/mary_grace/status/1090988453226074113?embed>
+<https://twitter.com/mary_grace/status/1090988453226074113>
 
 Once start submitting remember that you will receive rejections, and quite a lot
 of them. It's hard to give a ratio, because it depends on your talk and which
@@ -195,7 +195,7 @@ read:
 
 ## Code of Conducts
 
-<https://twitter.com/pati_gallardo/status/1058282328177471488?embed>
+<https://twitter.com/pati_gallardo/status/1058282328177471488>
 
 If you apply to a conference I highly encourage you to check out their Code of
 Conduct. Having **no** is a red flag, but having a single-paragraph one mit even
@@ -217,7 +217,7 @@ A good example is the
 
 ## Now, go and become a speaker!
 
-<https://twitter.com/devdevcharlie/status/1090367939889397760?embed>
+<https://twitter.com/devdevcharlie/status/1090367939889397760>
 
 You can find more resources on public speaking here:
 
@@ -226,6 +226,6 @@ You can find more resources on public speaking here:
 - [agiletestingdays.com/blog/it-always-starts-with-an-idea/](https://agiletestingdays.com/blog/it-always-starts-with-an-idea/)
 
 I am also always
-[happy to help](https://twitter.com/coderbyheart/status/940636875794067456).
+[happy to help](https://twitter.coderbyheart.com/status/940636875794067456).
 Feel free to reach out to me! If I can help you with your talk proposal, send me
 a Google Doc!

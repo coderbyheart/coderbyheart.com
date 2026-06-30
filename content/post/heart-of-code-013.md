@@ -16,83 +16,83 @@ was taken at 2pm and shows how the sun is already close to the horizon.
 
 But this week I compensated for the reducing sunlight:
 
-<https://twitter.com/coderbyheart/status/927577937217572866?embed>
+<https://twitter.coderbyheart.com/status/927577937217572866>
 
 ### Jobs / Hiring 💪🏻
 
 From my team:
 
-<https://twitter.com/coderbyheart/status/919970952489861122?embed>
+<https://twitter.coderbyheart.com/status/919970952489861122>
 
 If you wonder, why Trondheim is a great place to live:
 
-<https://twitter.com/coderbyheart/status/928623601707823104?embed>
+<https://twitter.coderbyheart.com/status/928623601707823104>
 
 From my network:
 
-<https://twitter.com/ESiersleben/status/928351023407812609?embed>
+<https://twitter.com/ESiersleben/status/928351023407812609>
 
-<https://twitter.com/Code_Door/status/927502280701685760?embed>
+<https://twitter.com/Code_Door/status/927502280701685760>
 
-<https://twitter.com/ThisIsMissEm/status/925726195941076992?embed>
+<https://twitter.com/ThisIsMissEm/status/925726195941076992>
 
 I wrote a post on how to build a professional network:
 
-<https://twitter.com/coderbyheart/status/927504106402603008?embed>
+<https://twitter.coderbyheart.com/status/927504106402603008>
 
 ### Tech 🚀
 
 True.
 
-<https://twitter.com/dbader_org/status/928445538516852736?embed>
+<https://twitter.com/dbader_org/status/928445538516852736>
 
 Writing modular software is important, but what makes for a good module?
 
-<https://twitter.com/coderbyheart/status/929348101609021442?embed>
+<https://twitter.coderbyheart.com/status/929348101609021442>
 
 Someone visualized the one sound that influenced my life the most:
 
-<https://twitter.com/coderbyheart/status/927597969297289216?embed>
+<https://twitter.coderbyheart.com/status/927597969297289216>
 
 ### JavaScript 🛠
 
 Using React means you need to learn a new set of paradigms, find some of them
 here:
 
-<https://twitter.com/coderbyheart/status/928883943277039618?embed>
+<https://twitter.coderbyheart.com/status/928883943277039618>
 
 You know that you **own** your dependencies, right?!
 
-<https://twitter.com/coderbyheart/status/928393488747696128?embed>
+<https://twitter.coderbyheart.com/status/928393488747696128>
 
 Since I am seeing this (and it violates the
 [SOLID](<https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)>)
 principles):
 
-<https://twitter.com/coderbyheart/status/928177969394257920?embed>
+<https://twitter.coderbyheart.com/status/928177969394257920>
 
 ### Diversity 🌈
 
 This is what Nordic Engineers look like:
 
-<https://twitter.com/NordicTweets/status/927632650747236353?embed>
+<https://twitter.com/NordicTweets/status/927632650747236353>
 
 ### Culture ✌️
 
 [nohello.com](http://www.nohello.com/) got it right, (also, check out
 [VSRE](http://vsre.info/)!).
 
-<https://twitter.com/coderbyheart/status/928591011672215557?embed>
+<https://twitter.coderbyheart.com/status/928591011672215557>
 
 If you don't have time to try things out at work, you might ask to run a _Kata_:
 
-<https://twitter.com/ladiesofcode/status/927980320862896129?embed>
+<https://twitter.com/ladiesofcode/status/927980320862896129>
 
 ### Conferences + Usergroups 💡
 
-<https://twitter.com/jsconfeu/status/928185361360179201?embed>
+<https://twitter.com/jsconfeu/status/928185361360179201>
 
-<https://twitter.com/FemtoConf/status/927914799614263300?embed>
+<https://twitter.com/FemtoConf/status/927914799614263300>
 
 ### Listening to 🎧
 
@@ -103,5 +103,5 @@ If you don't have time to try things out at work, you might ask to run a _Kata_:
 
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
-> [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/929317763067383808)
+> [I'm happy to answer your questions](https://twitter.coderbyheart.com/status/929317763067383808)
 > ...

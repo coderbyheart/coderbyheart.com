@@ -12,4 +12,4 @@ three months [CodeDoor](https://codedoor.com/About) and
 software can be used to tackle important problems. They will be focusing on
 natural disasters. This is going to be amazing!
 
-<https://twitter.com/coderbyheart/status/1334426175565934592?embed>
+<https://twitter.coderbyheart.com/status/1334426175565934592>

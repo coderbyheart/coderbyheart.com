@@ -10,7 +10,7 @@ abstract: >-
 date: 2018-09-16T21:00+02:00
 ---
 
-<https://twitter.com/coderbyheart/status/1041408149276774400?embed>
+<https://twitter.coderbyheart.com/status/1041408149276774400>
 
 If you think you want to talk about something you are _passionate_ about you are
 already a step further than 99%.

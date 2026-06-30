@@ -128,7 +128,7 @@ inside a test runner.
 
 [Video](https://vimeo.com/691826440) ·
 [Blog post](./i-am-a-coder-help-me-learn-to-collaborate) ·
-[Twitter Thread](https://twitter.com/coderbyheart/status/1119970835014529024)
+[Twitter Thread](https://twitter.coderbyheart.com/status/1119970835014529024)
 
 This talk is a wake up call and should inspire other developers like me, to
 start looking into improving their communication and collaboration skills. I
@@ -241,7 +241,7 @@ to leverage JavaScript down to the hardware to build your own solution.
 [J On the Beach](https://jonthebeach.com/) (Málaga, Spain) 📅 23-25. May 2018 ·
 [Slides](https://docs.google.com/presentation/d/1vMFDSY8kn52SxnC_iEUcmJ7SJY8jpfi__oAulxE-uvQ/edit?usp=sharing),
 [Video of Q&A](https://coderbyheart.com/jotb2018-interview)  
- 🇳🇴 [NDC](https://ndcoslo.com/speaker/markus-tacker/) (Oslo, Norway) 📅 11-15.
+🇳🇴 [NDC](https://ndcoslo.com/speaker/markus-tacker/) (Oslo, Norway) 📅 11-15.
 June 2018 ·
 [Slides](https://docs.google.com/presentation/d/1cqPLtr5r8eP4GcPPBLDb46UOjHU6xH8UMCZx5pAHa0c/edit?usp=sharing)  
 🇩🇪
@@ -484,7 +484,7 @@ Wie der dotHIV e.V. den #newgTLDs ihre Daseinsberechtigung gibt
 [Slides](https://docs.google.com/presentation/d/1BI_3-ua0IVl4P4dakHB4hXzn9h3wmVJHw0hZ5SO_hMo/edit)
 
 **Update January 2020:** I've revisisted this talk
-[here](https://twitter.com/coderbyheart/status/1212874457964064768).
+[here](https://twitter.coderbyheart.com/status/1212874457964064768).
 
 🇩🇪 [Donnerstalk im Heimathafen](http://heimathafen-wiesbaden.de/) (Wiesbaden,
 Germany) 📅 4. April 2013

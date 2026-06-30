@@ -13,7 +13,7 @@ quality at the [TestCraftCamp](https://TestCraftCamp.nl/).
 After all, the tester community aligns very closely with the software crafters
 community, so I feel very much at home in both of them:
 
-<https://twitter.com/S_2K/status/1368924555486564360?embed>
+<https://twitter.com/S_2K/status/1368924555486564360>
 
 Before I dive into the sessions I have attended and what I've learned, I'd like
 to share the set-up that was used for this conference, because this is a now
@@ -59,7 +59,7 @@ conference ... there we typically try to stay away from screens, or have only
 one person sit in front of a screen while everybody else watches. This leads to
 a different experience compared to having everybody being remote.
 
-<https://twitter.com/irjastraus/status/1370791393946374150?embed>
+<https://twitter.com/irjastraus/status/1370791393946374150>
 
 The omni-presence of a digital whiteboard also leads to much better note-taking,
 because everyone is logged in, and _on_ the board, there is much less hesitation

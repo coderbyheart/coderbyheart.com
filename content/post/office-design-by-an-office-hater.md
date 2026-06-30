@@ -111,8 +111,9 @@ You can walk through [the plan](https://goo.gl/ewUBFc) yourself and even modify
 it with the awesome Archilogic editor.
 
 <iframe src="https://spaces.archilogic.com/3d/!768cc6ba-c623-4f8f-9616-ad80515a9322?mode=view&amp;main-menu=interior&amp;view-menu=camera-bookmarks&amp;presentation=loop" width="768" height="550" frameBorder="0" onmousewheel="false" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
- 
-**What do you think about this design?** Please leave your feedback in the comments.
+
+**What do you think about this design?** Please leave your feedback in the
+comments.
 
 And start spreading the word that we as developers are interested in taking part
 in office space design and let me know, how your ideal workplace looks like!
@@ -121,13 +122,13 @@ in office space design and let me know, how your ideal workplace looks like!
 
 Here are some reactions (from other developers):
 
-<https://twitter.com/ryyppy/status/857537165944913920?embed&conversation=none>
+<https://twitter.com/ryyppy/status/857537165944913920>
 
-<https://twitter.com/fhopf/status/857548445510361088?embed>
+<https://twitter.com/fhopf/status/857548445510361088>
 
-<https://twitter.com/spinscale/status/857568366357360642?embed>
+<https://twitter.com/spinscale/status/857568366357360642>
 
-<https://twitter.com/SilviaHundegger/status/857575027511898112?embed&conversation=none>
+<https://twitter.com/SilviaHundegger/status/857575027511898112>
 
 ## Links
 

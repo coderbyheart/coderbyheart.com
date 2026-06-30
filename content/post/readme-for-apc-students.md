@@ -6,7 +6,7 @@ subtitle: Mentoring
 date: 2020-12-11T18:00:00.000Z
 ---
 
-[I am mentoring students](https://twitter.com/coderbyheart/status/1334426175565934592)
+[I am mentoring students](https://twitter.coderbyheart.com/status/1334426175565934592)
 and I gave them a README for my weekly office hour.
 
 I ask them for 4 things every week, because I think these are very important
@@ -49,7 +49,7 @@ work life:
    also help them uncover skills they didn't know they posessed or didn't think
    of being valuable.
 
-<https://twitter.com/marcobahn/status/1337353217592745995?embed>
+<https://twitter.com/marcobahn/status/1337353217592745995>
 
 Below is the full README.
 

@@ -15,9 +15,9 @@ The SoCraTes conferences are dear to my heart, and
 important conference date every year. This year some of us shared that we were
 attending and happy to be a [ConferenceBuddy](https://www.conferencebuddy.io/):
 
-<https://twitter.com/benjamin/status/1029742801767067648?embed>
+<https://twitter.com/benjamin/status/1029742801767067648>
 
-<https://twitter.com/coderbyheart/status/1030010907840192513?embed>
+<https://twitter.coderbyheart.com/status/1030010907840192513>
 
 I also created a public **#buddies** channel in the
 [conference Slack](https://socrates-conference.slack.com/), where I posted
@@ -47,6 +47,6 @@ nobody calls.
 
 And here is how a participant put it:
 
-<https://twitter.com/tdpauw/status/1030076022153199616?embed>
+<https://twitter.com/tdpauw/status/1030076022153199616>
 
-<https://twitter.com/tdpauw/status/1033731158918475776?embed>
+<https://twitter.com/tdpauw/status/1033731158918475776>

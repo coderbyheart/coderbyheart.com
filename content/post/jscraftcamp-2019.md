@@ -30,7 +30,7 @@ many indoor and outdoor spaces to gather around a whiteboard, beamer or table
 &mdash; and the way the building is layed out creates a lot of possibilities to
 interact or relax.
 
-<https://twitter.com/coderbyheart/status/1152127446721933313?embed>
+<https://twitter.coderbyheart.com/status/1152127446721933313>
 
 JSCraftCamp belongs to a bigger family of
 [Software Craft](https://softwarecrafters.org) conferences around the globe and
@@ -58,14 +58,14 @@ It was sad to see that the BBQ during the party on Friday focused mostly on
 serving supermarket meat, while vegetarians and especially vegans had a hard
 time finding a decent option.
 
-<https://twitter.com/coderbyheart/status/1152265721059139584?embed>
+<https://twitter.coderbyheart.com/status/1152265721059139584>
 
 I recommend conference organizers to look into options that can be prepared in
 advance and can serve everyone: chilies, lentil soups, or pastas can all be
 prepared in big portions, in advance and without needing to use meat or dairy
 ingredients.
 
-<https://twitter.com/Frerichs_S/status/1152525241840799747?embed>
+<https://twitter.com/Frerichs_S/status/1152525241840799747>
 
 I really loved the lunch: Burritos were served with meat, but also in sufficient
 quantities as vegetarian and vegan option, and everybody could be served at once
@@ -74,11 +74,11 @@ quantities as vegetarian and vegan option, and everybody could be served at once
 Coffee supply by [Peerigion](https://peerigon.com/) was amazing, they even had
 milk alternatives!
 
-<https://twitter.com/peerigon/status/1152129002032812034?embed>
+<https://twitter.com/peerigon/status/1152129002032812034>
 
 ## Marketplace
 
-<https://twitter.com/coderbyheart/status/1152135865201770497?embed>
+<https://twitter.coderbyheart.com/status/1152135865201770497>
 
 This was my first marketplace which was facilitated by
 [Cecilia Maria Zannini](https://twitter.com/cm_zannini) and she did an
@@ -86,13 +86,13 @@ incredible job of opening up the space and creating an inclusive and welcoming
 atmosphere. You could really tell that she cared deeply about making these two
 days special.
 
-<https://twitter.com/coderbyheart/status/1152129402890854400?embed>
+<https://twitter.coderbyheart.com/status/1152129402890854400>
 
 Both days had a good variety of sessions:
 
-<https://twitter.com/ajitsonlion/status/1152143860237307905?embed>
+<https://twitter.com/ajitsonlion/status/1152143860237307905>
 
-<https://twitter.com/NarigoDF/status/1152504992286289920?embed>
+<https://twitter.com/NarigoDF/status/1152504992286289920>
 
 ## My key take-aways
 
@@ -112,13 +112,13 @@ After we did not manage to solve it in the session, I pushed
 After going back and forth and getting more feedback from attendees, I finally
 managed to solve it on the next day:
 
-<https://twitter.com/coderbyheart/status/1152591342079565825?embed>
+<https://twitter.coderbyheart.com/status/1152591342079565825>
 
 This is why I love Open Spaces so much!
 
 ### Ask me anything: GraphQL
 
-<https://twitter.com/coderbyheart/status/1152545454137253888?embed>
+<https://twitter.coderbyheart.com/status/1152545454137253888>
 
 The questions I got made once again clear that GraphQL seems to be a technology
 that offers great benefits but those benefits are not immediately obvious to
@@ -137,13 +137,13 @@ the entire system but I should have prepared this session a little better to
 actually receive more feedback &mdash; which was the point for me to host this
 session: get other peoples opinion about the system I designed.
 
-<https://twitter.com/coderbyheart/status/1152546213830516736?embed>
+<https://twitter.coderbyheart.com/status/1152546213830516736>
 
-<https://twitter.com/_sasidhar/status/1152888906041503744?embed&conversation=none>
+<https://twitter.com/_sasidhar/status/1152888906041503744>
 
 ### Learn to collaborate
 
-<https://twitter.com/coderbyheart/status/1152190229601820672?embed>
+<https://twitter.coderbyheart.com/status/1152190229601820672>
 
 This was a great session around the topic I am working on for
 [my next talk](https://coderbyheart.com/talks/): how can I become better at
@@ -159,7 +159,7 @@ right now.
 
 ### Package registries
 
-<https://twitter.com/seriousManual/status/1152232064206475264?embed>
+<https://twitter.com/seriousManual/status/1152232064206475264>
 
 In this session we mostly talked about how we can deal with the no longer
 unlikely event that [npm](https://www.npmjs.com/) will shut down. We looked at
@@ -178,7 +178,7 @@ Things to look into are:
 - and for browsers to user [script type=module](https://v8.dev/features/modules)
   and resolve dependencies from URLs.
 
-<https://twitter.com/coderbyheart/status/1152451215978110979?embed>
+<https://twitter.coderbyheart.com/status/1152451215978110979>
 
 ## More
 
@@ -196,4 +196,4 @@ There is even more to discover even now that the JSCraftCamp is over:
 
 ## Thanks
 
-<https://twitter.com/coderbyheart/status/1152628944795054081?embed>
+<https://twitter.coderbyheart.com/status/1152628944795054081>

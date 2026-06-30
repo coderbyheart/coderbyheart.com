@@ -15,13 +15,13 @@ This conference hasn't been on my radar previously, but what caught my attention
 was the level of detail the organizers (most notably [Franzi] and [Maaret] put
 into creating an attendee-focused, inclusive and diverse event.
 
-<https://twitter.com/lisacrispin/status/965498092429684738?embed>
+<https://twitter.com/lisacrispin/status/965498092429684738>
 
 I initially had submitted an older [talk][talks] if mine on testing REST-APIs
 using BDD which was not accepted, but the experience during the submission
 process made me want to go to this conference any way.
 
-<https://twitter.com/maaretp/status/900672218816032768?embed>
+<https://twitter.com/maaretp/status/900672218816032768>
 
 Other than my [usual][socrates] [conferences][codefreeze], the ticket price was
 notable (800 €) but given the fact the this conference offered free tickets to
@@ -29,9 +29,9 @@ underrepresented groups, organized child care, and paid their speakers. This is
 (unfortunately) exceptional! I was happy to use the conference budget my
 employer [Nordic Semiconductor][nordic] grants us to support this!
 
-<https://twitter.com/EuroTestingConf/status/936305287308472320?embed>
+<https://twitter.com/EuroTestingConf/status/936305287308472320>
 
-<https://twitter.com/AdharaIT/status/958464191135977473?embed>
+<https://twitter.com/AdharaIT/status/958464191135977473>
 
 ## What did I learn?
 
@@ -45,7 +45,7 @@ communication and team-dynamics.
 [Gojko Adzic](https://twitter.com/gojkoadzic) explained that we are seeing a
 revolution in the field of UI testing.
 
-<https://twitter.com/coderbyheart/status/965511538059726848?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/965511538059726848>
 
 This was very insightful since I grew up with the notion in mind:
 
@@ -63,14 +63,14 @@ tester. Although this talk was mainly geared towards testers, I still enjoyed
 her insights into what it means to be a tester and improved my understanding of
 this role.
 
-<https://twitter.com/coderbyheart/status/965622543557283843?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/965622543557283843>
 
 [Zeger van Hese](https://twitter.com/TestSideStory) held a great keynote on
 being a sceptic. He stressed the point that it is important to (constantly)
 question information you have been given in order keep making the best
 decisions.
 
-<https://twitter.com/coderbyheart/status/965870628048957440?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/965870628048957440>
 
 He recommended
 [a set of context-free questions](//assets.contentful.com/bncv3c2gt878/4mvcQWNWhWQ0sgiKWCakEU/cce06a8bdc4d3e274ca47eb72d60fbe0/Gause_-_Context-Free_Questions.pdf)
@@ -83,7 +83,7 @@ which uses crowd-sourced data to solve mission-critical problems in
 space-travel. One might think that it's a long stretch to _testing_ but the
 learning of this talk for me was:
 
-<https://twitter.com/coderbyheart/status/965984483370569728?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/965984483370569728>
 
 Ergo, not all problems can be solved using software. A great reminder to stay
 humble.
@@ -94,7 +94,7 @@ There were four talk slots, each with four talks in parallel. I attended three
 of them, since I spent most of the fourth talk time talking with other
 attendees.
 
-<https://twitter.com/coderbyheart/status/965913802951790592?embed>
+<https://twitter.coderbyheart.com/status/965913802951790592>
 
 In this highly interesting talk [Matthew Butt](https://twitter.com/bnathyuw)
 explained his way to enable testing in software that depends on services, which
@@ -112,7 +112,7 @@ individual components. Matthew did a good job in illustrating this. You can find
 his slides
 [here](https://blog.matthewbutt.com/2018/02/20/european-testing-conference-unit-testing-the-hard-stuff-slides/).
 
-<https://twitter.com/coderbyheart/status/965590736669413378?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/965590736669413378>
 
 The talk was a tester's perspective of working with microservices, which
 provided some value for me since Emily was concerned with orchestrating the
@@ -122,7 +122,7 @@ so other teams or individuals can run integration tests and teams are
 responsible to run the integration tests with their latest code, otherwise there
 will be pain.
 
-<https://twitter.com/coderbyheart/status/965517620396134400?embed>
+<https://twitter.coderbyheart.com/status/965517620396134400>
 
 Albeit providing no new insights to me, Lynoure tried to take a new angle on
 _explaining how to write tests_: the mindset you put yourself in. Start from the
@@ -142,7 +142,7 @@ attended a workshop on BDD and one on Test Specification.
 In Vernon Richard's workshop on Scripted vs. Exploratory testing we got to
 experience the pain of scripted testing first hand.
 
-<https://twitter.com/coderbyheart/status/965564137890828291?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/965564137890828291>
 
 We
 [were given](https://drive.google.com/open?id=1Qif0_-MEcuAXaqfTePoxcCUSFTH5Cu3JQflGmbNEakk)
@@ -175,9 +175,9 @@ tutorial on how to write better BDD scenarios. Working in groups on suboptimal
 scenarios we worked towards writing one great at the end of the workshop. Their
 insights and tips we easy to follow and execute.
 
-<https://twitter.com/coderbyheart/status/965889984258506752?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/965889984258506752>
 
-<https://twitter.com/coderbyheart/status/965899224062791680?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/965899224062791680>
 
 From discussion with attendees one thing became clear though, too few teams are
 using this technique which enables discussion of features between stakeholders
@@ -190,12 +190,12 @@ first place.
 
 ### Open Space
 
-<https://twitter.com/coderbyheart/status/965939046492131328?embed>
+<https://twitter.coderbyheart.com/status/965939046492131328>
 
 Being an unconf fan I especially enjoyed this two-hour slot in the programme. It
 was hard to choose from from the roughly 25 sessions:
 
-<https://twitter.com/coderbyheart/status/965954415525064704?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/965954415525064704>
 
 The first session was by someone working for a big oil company and they were
 looking for a lean way to develop an alternative-energy car. It was fun to toy
@@ -203,9 +203,9 @@ around with that idea and imagine ways to enable this. Given the knowledge I
 have collected working at Nordic and as the son of an automobile industry
 veteran I could add some insights.
 
-<https://twitter.com/coderbyheart/status/965954967256358914?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/965954967256358914>
 
-<https://twitter.com/RidingWolf/status/965954663924322304?embed>
+<https://twitter.com/RidingWolf/status/965954663924322304>
 
 In the session on Continuous Deployment we talked about the do's and don'ts.
 Basically: you want your CI runners to be
@@ -214,14 +214,14 @@ Basically: you want your CI runners to be
 found [LambdaCD](http://www.lambda.cd/) to be his tool of choice. I would
 recommend [Travis](https://travis-ci.org/) + Makefiles to solve this.
 
-<https://twitter.com/coderbyheart/status/965962746415206401?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/965962746415206401>
 
 _How to Kanban better_ started as a question on how to improve Kanban but this
 session quickly turned into a team clinic, where we tried to find ways for a
 team to improve their internal shortcomings, which were just being revealed by
 using Kanban:
 
-<https://twitter.com/coderbyheart/status/965964932960354305?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/965964932960354305>
 
 ## Summary
 

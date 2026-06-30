@@ -21,7 +21,7 @@ an experienced backend developer to join the half of the team that works from
 the Portland office (check out
 [the pictures from my recent trip there](https://www.flickr.com/photos/tacker/albums/72157689530779415).
 
-<https://twitter.com/coderbyheart/status/917843307413360645?embed>
+<https://twitter.coderbyheart.com/status/917843307413360645>
 
 We are also hiring a senior-ish frontend developer for Trondheim, more details
 coming soon!
@@ -31,31 +31,31 @@ please apply!
 
 If you won't move to Trondheim, maybe this one is for you:
 
-<https://twitter.com/codeforde/status/917411716421619718?embed>
+<https://twitter.com/codeforde/status/917411716421619718>
 
 And if you are looking for a remote JavaScript job:
 
-<https://twitter.com/PatrickHeneise/status/917306828505088000?embed>
+<https://twitter.com/PatrickHeneise/status/917306828505088000>
 
 ### Tech 🚀
 
 Bash is the best functional programming language:
 
-<https://twitter.com/TIMGroup_Dev/status/918448495874461696?embed>
+<https://twitter.com/TIMGroup_Dev/status/918448495874461696>
 
 ### JavaScript 🛠
 
 Node.js is a first class citizen in V8:
 
-<https://twitter.com/coderbyheart/status/919500900158377984?embed>
+<https://twitter.coderbyheart.com/status/919500900158377984>
 
 Let husky automate stuff for you:
 
-<https://twitter.com/dtanzer/status/918383037414506496?embed>
+<https://twitter.com/dtanzer/status/918383037414506496>
 
 More security features for npm:
 
-<https://twitter.com/npmjs/status/915615028497264640?embed>
+<https://twitter.com/npmjs/status/915615028497264640>
 
 ### Diversity 🌈
 
@@ -65,37 +65,37 @@ Very simplified, but powerful:
 
 When hiring, read this:
 
-<https://twitter.com/drunkcod/status/918476413619056644?embed>
+<https://twitter.com/drunkcod/status/918476413619056644>
 
 ### Culture ✌️
 
 You know the difference between working manager and managing managers? I do.
 
-<https://twitter.com/jurgenappelo/status/917933170133295106?embed>
+<https://twitter.com/jurgenappelo/status/917933170133295106>
 
 You can't just copy&paste culture:
 
-<https://twitter.com/coderbyheart/status/917106443337248769?embed>
+<https://twitter.coderbyheart.com/status/917106443337248769>
 
 ### Conferences 💡
 
 It's great to see that there are tech conference organized by women:
 
-<https://twitter.com/coderbyheart/status/919578801432137728?embed>
+<https://twitter.coderbyheart.com/status/919578801432137728>
 
 A little reminder, why you should come to
 [codefreeze](http://www.codefreeze.fi/):
 
-<https://twitter.com/coderbyheart/status/917284877531340801?embed>
+<https://twitter.coderbyheart.com/status/917284877531340801>
 
 ### Listening to 🎧
 
-<https://twitter.com/coderbyheart/status/918772928925392896?embed>
+<https://twitter.coderbyheart.com/status/918772928925392896>
 
 and [Long Ambient](https://open.spotify.com/album/136AocmGvmUjqNsvAhtfU5) by
 Moby.
 
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
-> [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)
+> [I'm happy to answer your questions](https://twitter.coderbyheart.com/status/895631124021563394)
 > ...

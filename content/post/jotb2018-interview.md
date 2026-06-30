@@ -22,8 +22,8 @@ You can watch the full video on YouTube:
 
 I have selected some interesting questions on #JavaScript:
 
-<https://twitter.com/coderbyheart/status/1038791853431312384?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/1038791853431312384>
 
-<https://twitter.com/coderbyheart/status/1038791857818533888?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/1038791857818533888>
 
-<https://twitter.com/coderbyheart/status/1038791862239289345?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/1038791862239289345>

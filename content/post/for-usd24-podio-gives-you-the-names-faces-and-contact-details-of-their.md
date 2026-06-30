@@ -106,7 +106,7 @@ ago:
 Podio responded to
 [the Twitter thread](https://twitter.com/Podio/status/1148152555177857026):
 
-<https://twitter.com/Podio/status/1148152555177857026?embed&conversation=none>
+<https://twitter.com/Podio/status/1148152555177857026>
 
 ## Update 11. July 2019
 

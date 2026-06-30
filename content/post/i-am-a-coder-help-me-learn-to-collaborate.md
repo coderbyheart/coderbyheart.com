@@ -60,7 +60,7 @@ one), or an average?
 You can see that the label of ‘full stack developer’
 [is problematic already](https://twitter.com/AmarachiAmaechi/status/1185891780128133120).
 
-<https://twitter.com/coderbyheart/status/1185891780128133120?embed>
+<https://twitter.coderbyheart.com/status/1185891780128133120>
 
 If we consider more deeply what is needed to develop software, we also need to
 take into account the various requirements of the respective domain the
@@ -243,7 +243,7 @@ make autonomous decisions.
 I am just beginning to explore this space and I already have enough material for
 many years to come. I also invite you to run a session at an open-space you
 attend,
-[like I did at the JSCraftCamp 2019](https://twitter.com/coderbyheart/status/1152190229601820672),
+[like I did at the JSCraftCamp 2019](https://twitter.coderbyheart.com/status/1152190229601820672),
 this is a great way to spread awareness about this topic and also collect input
 from others on the resources they use to improve their collaboration skills. One
 outcome of this session was a list of book recommendations:
@@ -260,4 +260,4 @@ criticism, and can propose radical ideas.
 
 Because, as Kelsey Hightower put it:
 
-<https://twitter.com/coderbyheart/status/1393194153681440780?embed>
+<https://twitter.coderbyheart.com/status/1393194153681440780>

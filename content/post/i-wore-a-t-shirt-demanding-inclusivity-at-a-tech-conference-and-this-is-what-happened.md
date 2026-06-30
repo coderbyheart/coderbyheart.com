@@ -49,7 +49,7 @@ and not as a way to selectively address the male members of a group.
 
 After all **_Guys_ is not gender neutral**:
 
-<https://twitter.com/etiene_d/status/994509163693838337?embed>
+<https://twitter.com/etiene_d/status/994509163693838337>
 
 Not convinced? Please read [this](https://www.xaprb.com/blog/you-guys/)
 extensive post about the topic.
@@ -73,7 +73,7 @@ This obviously is not possible at events.
 
 So I made this t-shirt:
 
-<https://twitter.com/coderbyheart/status/1164957001438433280?embed>
+<https://twitter.coderbyheart.com/status/1164957001438433280>
 
 You can download the layout files
 [here](https://github.com/coderbyheart/inclusive-language-t-shirt), so you can

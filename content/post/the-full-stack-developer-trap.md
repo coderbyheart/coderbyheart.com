@@ -11,7 +11,7 @@ date: 2017-04-21T11:00+02:00
 ![Eagle soaring](../media/the-full-stack-developer-trap.jpg)
 
 > This is a replication of
-> [this tweet thread](https://twitter.com/coderbyheart/status/853163306349187072).
+> [this tweet thread](https://twitter.coderbyheart.com/status/853163306349187072).
 
 I would consider myself to be a full stack developer, but my strength is
 building backend systems for complex processes. My career started as a frontend

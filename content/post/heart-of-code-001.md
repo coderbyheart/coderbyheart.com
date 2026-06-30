@@ -15,76 +15,76 @@ I decided to sum up my week on Twitter from now on every weekend.
 
 ### Quote of the week
 
-<https://twitter.com/coderbyheart/status/898107322307936257?embed>
+<https://twitter.coderbyheart.com/status/898107322307936257>
 
 ### Software Craft
 
 We decided to drop the "Middleman" in "Softwarecraftsmanship":
 
-<https://twitter.com/coderbyheart/status/896679150379032576?embed>
+<https://twitter.coderbyheart.com/status/896679150379032576>
 
-<https://twitter.com/marcoemrich/status/897199629275725824?embed>
+<https://twitter.com/marcoemrich/status/897199629275725824>
 
 and take a stand against sexists within our community:
 
-<https://twitter.com/dmikeyanderson/status/897124081652293632?embed>
+<https://twitter.com/dmikeyanderson/status/897124081652293632>
 
 ### JavaScript
 
 Franziska writes on V8's bytecode:
 
-<https://twitter.com/fhinkel/status/898184918286643201?embed>
+<https://twitter.com/fhinkel/status/898184918286643201>
 
 A new official Node.js API for headless Chrome appeared:
 
-<https://twitter.com/coderbyheart/status/897864286525169664?embed>
+<https://twitter.coderbyheart.com/status/897864286525169664>
 
 I made a finger disco:
 
-<https://twitter.com/coderbyheart/status/897500349870755842?embed>
+<https://twitter.coderbyheart.com/status/897500349870755842>
 
 React (and other open-source projects by Facebook) will keep
 [the patent clause](https://github.com/facebook/react/blob/master/PATENTS) in
 their license:
 
-<https://twitter.com/coderbyheart/status/899165362750619651?embed>
+<https://twitter.coderbyheart.com/status/899165362750619651>
 
 ### Tech
 
 Contentful changed it's pricing model, which is great, because
 [I use it to build this website](https://github.com/coderbyheart/contentful-static-website-generator):
 
-<https://twitter.com/coderbyheart/status/898062887096397824?embed>
+<https://twitter.coderbyheart.com/status/898062887096397824>
 
 Bootstrap next major release is getting closer:
 
-<https://twitter.com/coderbyheart/status/896613287038734336?embed>
+<https://twitter.coderbyheart.com/status/896613287038734336>
 
 Tricks for the Chrome Developer tools:
 
-<https://twitter.com/fox/status/898397296798203905?embed>
+<https://twitter.com/fox/status/898397296798203905>
 
 ### People
 
 On hiring women for tech roles:
 
-<https://twitter.com/coderbyheart/status/896688570462818304?embed>
+<https://twitter.coderbyheart.com/status/896688570462818304>
 
-<https://twitter.com/MIT/status/898199017439547392?embed>
+<https://twitter.com/MIT/status/898199017439547392>
 
 On Code of Conducts:
 
-<https://twitter.com/fox/status/898046902884720640?embed>
+<https://twitter.com/fox/status/898046902884720640>
 
-<https://twitter.com/langziehohr/status/897832402361495553?embed>
+<https://twitter.com/langziehohr/status/897832402361495553>
 
 Why Code of Conducts are important:
 
-<https://twitter.com/fox/status/899129551522979840?embed>
+<https://twitter.com/fox/status/899129551522979840>
 
 I made a list of women in civic tech:
 
-<https://twitter.com/coderbyheart/status/897564594654384129?embed>
+<https://twitter.coderbyheart.com/status/897564594654384129>
 
 ### 🎧 Listening to
 
@@ -93,5 +93,5 @@ I made a list of women in civic tech:
 
 > Remember to [follow me on Twitter](https://twitter.com/coderbyheart)! DMs are
 > open!
-> [I'm happy to answer your questions](https://twitter.com/coderbyheart/status/895631124021563394)
+> [I'm happy to answer your questions](https://twitter.coderbyheart.com/status/895631124021563394)
 > ...

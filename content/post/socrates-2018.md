@@ -14,7 +14,7 @@ date: 2018-09-01T15:00+02:00
 
 When I left SoCraTes 2018 this year I was as energized as the years before:
 
-<https://twitter.com/coderbyheart/status/1033960643307687936?embed>
+<https://twitter.coderbyheart.com/status/1033960643307687936>
 
 [I have blogged about my experiences before](https://coderbyheart.com/the-magic-of-socrates-conference/),
 I called it _Magic_. It's magic because it is a place where I get to meet
@@ -41,7 +41,7 @@ session where women shared their experience with sexual harassment. It provides
 a view to what I need to look out for, in my own behavior and this of my
 coworkers which I would not otherwise.
 
-<https://twitter.com/coderbyheart/status/1033960647158050818?embed&conversation=none>
+<https://twitter.coderbyheart.com/status/1033960647158050818>
 
 I invite you to join our community and make it even more diverse:
 https://www.softwarecrafters.org/

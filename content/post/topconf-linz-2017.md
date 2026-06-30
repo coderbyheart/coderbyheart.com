@@ -71,7 +71,7 @@ opt-in too and you can start small.
 was meh. Nothing interesing to report, besides: use PageSpeed.
 
 Then I was in the Panel on Distributed Teams: you can watch it
-[here](https://twitter.com/coderbyheart/status/836959108590944256) … my battery
+[here](https://twitter.coderbyheart.com/status/836959108590944256) … my battery
 died after 50mins, though. The panel starts at around 7:30mins.
 
 ## Day 2
