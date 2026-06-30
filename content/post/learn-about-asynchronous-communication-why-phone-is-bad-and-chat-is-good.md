@@ -12,7 +12,7 @@ This post tries to explain the rationale behind one of
 
 > Everyone will work better if all understand the difference between sync and
 > async communication: **Phone is bad, Chat is good.** >
-> [#futureofwork](https://twitter.com/hashtag/futureofwork?src=hash)
+> [#futureofwork](https://twitter.coderbyheart.com/hashtag/futureofwork/)
 
 You can maximize your work output if you can use your work time in a way the
 suits your habits best. The more your work requires your undivided attention,

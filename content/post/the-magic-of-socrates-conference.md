@@ -24,7 +24,7 @@ head buzzing and the warm feeling that we as an industry are not solely made of
 people that hunt the next big thing and compromise their personal freedom, their
 health and their empathy.
 
-[#socrates15](https://twitter.com/hashtag/socrates15?src=hash) attendees also
-want to get rich: rich in ideas, options and connections &mdash; this is for me
-an important part in becomming a better software developer. Please join us next
-year!
+[#socrates15](https://twitter.coderbyheart.com/hashtag/socrates15) attendees
+also want to get rich: rich in ideas, options and connections &mdash; this is
+for me an important part in becomming a better software developer. Please join
+us next year!

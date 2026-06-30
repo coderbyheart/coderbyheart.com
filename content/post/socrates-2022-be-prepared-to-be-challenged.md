@@ -128,7 +128,7 @@ You can see all photos I've taken
 I've managed to attend a good amount of sessions, and
 [live-tweeted my experience](<https://twitter.com/search?f=live&q=(%23SoCraTes2022)%20(from%3Acoderbyheart)%20until%3A2022-08-28%20since%3A2022-08-26&src=typed_query>)
 (for your _inconvenience_ displayed in reverse order) using the hashtag
-[#SoCraTes2022](https://twitter.com/hashtag/SoCraTes2022?src=hashtag_click&f=live).
+[#SoCraTes2022](https://twitter.coderbyheart.com/hashtag/socrates2022).
 
 Nevertheless, for completeness I've collected the tweets below for you in the
 correct order:
