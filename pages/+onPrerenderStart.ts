@@ -35,7 +35,9 @@ export const onPrerenderStart = async (prerenderContext: {
 				date !== undefined
 					? new Date(date as string | Date).toISOString()
 					: buildTime
-			return { url, lastmod }
+			// GitHub Pages redirects `<url>` to `<url>/`, so use a trailing slash.
+			const urlWithTrailingSlash = url.endsWith('/') ? url : `${url}/`
+			return { url: urlWithTrailingSlash, lastmod }
 		})
 
 	const sitemapXml =
