@@ -30,7 +30,7 @@ verifizieren habe ich einen eigenen Test mit [Silex][2] (dem kleinen Bruder von
 Pull-Request][4]. Da ich inzwischen auch ein großer Fan von Python bin und sich
 zudem noch die Philosophie von [Bottle][5] und Silex sehr ähneln, habe ich
 dieses Framework zum Vergleich genommen. Beide Frameworks sind als Virtual Host
-konfiguriert, und werden mit Apache Bench *ab -n 10000 -c 10* aufgerufen. Die
+konfiguriert, und werden mit Apache Bench _ab -n 10000 -c 10_ aufgerufen. Die
 Ergebnisse sprechen für sich. Mit Templating-Engine und Datenbank-Zugriff
 liefert Bottle 16.632 Anfragen pro Sekunde aus, Silex lediglich 378.
 

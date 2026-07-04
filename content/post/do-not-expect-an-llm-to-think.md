@@ -55,8 +55,10 @@ usage comes to less than $2.00, you still pay $2.00.
 
 In the per-project billing, this is simple: sum the usage, apply the rate, check
 against the floor. The LLM ported this rule to the organization level by
-applying it _per project_. Three projects using $0.10 each would result in a
-$6.00 bill instead of $2.00, because each project individually hits the minimum.
+applying it _per project_. Three projects using
+$0.10 each would result in a
+$6.00 bill instead of $2.00, because each project
+individually hits the minimum.
 
 The minimum charge belongs on the organization invoice—the thing the customer
 actually pays—not on each individual project. But the concept of _the invoice_

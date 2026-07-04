@@ -4,8 +4,7 @@ import { name, tagLine } from '../info.ts'
 
 export const title = (pageContext: PageContext): string => {
 	const data = pageContext.data as
-		| { posts?: Map<string, MarkdownContent> }
-		| undefined
+		{ posts?: Map<string, MarkdownContent> } | undefined
 	const slug = pageContext.routeParams?.slug
 	const postTitle =
 		slug !== undefined ? data?.posts?.get(slug)?.title : undefined

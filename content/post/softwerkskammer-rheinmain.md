@@ -5,7 +5,7 @@ date: 2012-02-28T00:00:00.000Z
 lang: de
 ---
 
-Die Softwerkskammer ist eine UserGroup, die sich mit dem Thema *Software Craft*
+Die Softwerkskammer ist eine UserGroup, die sich mit dem Thema _Software Craft_
 befasst — zu deutsch also dem _Handwerk der Software-Entwicklung_. Es geht dabei
 um den Austausch zwischen Software-Professionals, die ihren Arbeitsalltag damit
 verbringen, komplexe Software-Systeme zu entwerfen, zu entwickeln und zu warten.
@@ -21,7 +21,7 @@ von meinen Eindrücken möchte ich an dieser Stelle berichten.
   <dt>
     <a href="http://www.flickr.com/photos/jstuker/6936227959/"><img src="http://farm8.staticflickr.com/7203/6936227959_b9f8b5977c.jpg" alt="2. Treffen der Softwerkskammer RheinMain bei Namics." /></a>
   </dt>
-  
+
   <dd>
     2. Treffen der Softwerkskammer RheinMain bei Namics. Foto von <a href="http://www.flickr.com/people/jstuker/">Jürg Stuker</a>.
   </dd>
