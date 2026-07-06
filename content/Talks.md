@@ -8,6 +8,11 @@ contribute to your event or conference.
 
 ![Me speaking at AdaCon 2025](https://photos.coderbyheart.com/photo/20241008T082310-3ec5e83b)
 
+## Draft: end-to-end testing a Stripe integration with AWS Textract (Lightning Talk)
+
+How I use [AWS Textract](https://aws.amazon.com/textract/) to automate compliant
+invoice document generation in Stripe.
+
 ## Strongly typed third-party integrations with TypeScript
 
 [Slides](https://coderbyheart.github.io/strongly-type-third-party-integrations-with-typescript/#/title-slide)
