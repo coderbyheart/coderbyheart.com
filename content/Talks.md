@@ -8,6 +8,15 @@ contribute to your event or conference.
 
 ![Me speaking at AdaCon 2025](https://photos.coderbyheart.com/photo/20241008T082310-3ec5e83b)
 
+## Draft: TDD in a post-code era
+
+When in a few years all of our source code is produced by LLMs, knowing
+foundational testing principles will become critical to ensure that we keep
+delivering high-quality software. In this talk I will given an overview of the
+testing principles that have existed for decades and will keep serving us in the
+future. Additionally, I will look at how these principles, augmented with the
+power of LLMs, can further be improved.
+
 ## Draft: end-to-end testing a Stripe integration with AWS Textract (Lightning Talk)
 
 How I use [AWS Textract](https://aws.amazon.com/textract/) to automate compliant
