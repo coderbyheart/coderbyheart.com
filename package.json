@@ -50,7 +50,7 @@
     "check-node-version": "4.2.1",
     "commitlint": "21.2.1",
     "husky": "9.1.7",
-    "lint-staged": "17.0.8",
+    "lint-staged": "17.1.0",
     "mdast": "3.0.0",
     "prettier": "3.9.5",
     "rehype-format": "5.0.1",
