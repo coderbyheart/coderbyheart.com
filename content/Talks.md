@@ -22,6 +22,18 @@ power of LLMs, can further be improved.
 How I use [AWS Textract](https://aws.amazon.com/textract/) to automate compliant
 invoice document generation in Stripe.
 
+## Lightning talk: How AWS Textract enables end-to-end testing of Stripe's invoice customization
+
+In this lightning talk, I will give a short overview of how AWS Textract, which
+allows to extract text from PDF documents, is used to write end-to-end tests for
+Nordic Semiconductor's IoT cloud platform nRF Cloud's customer invoicing
+feature, which is based on Stripe. I will also give a short recap of testing
+approaches and why in this case end-to-end black box testing was the choice he
+made.
+
+🇳🇴 [AWS UserGroup](https://www.meetup.com/aws-user-group-norway/), (Oslo,
+Norway) 📅 22. September 2026
+
 ## Strongly typed third-party integrations with TypeScript
 
 [Slides](https://coderbyheart.github.io/strongly-type-third-party-integrations-with-typescript/#/title-slide)
