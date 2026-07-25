@@ -43,7 +43,7 @@
     "@bifravst/prettier-config": "1.1.17",
     "@bifravst/run": "1.2.0",
     "@commitlint/config-conventional": "21.2.0",
-    "@playwright/test": "1.61.1",
+    "@playwright/test": "1.62.0",
     "@types/lodash-es": "4.17.12",
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
     "bottleneck": "2.19.5",
