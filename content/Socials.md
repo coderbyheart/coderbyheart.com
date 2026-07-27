@@ -29,4 +29,5 @@ personally. Feel free to follow me!_
 
 ## Web 1.0
 
-- Email: [m@coderbyheart.com](mailto:m@coderbyheart.com)
+- Email: [m@coderbyheart.com](mailto:m@coderbyheart.com) (end-to-end encryption
+  [via Proton](https://pr.tn/ref/G2ZQN8SG))
