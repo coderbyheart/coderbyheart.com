@@ -1,5 +1,5 @@
 ---
-subtitle: My social media links
+subtitle: My socials
 noheadline: true
 ---
 
@@ -15,11 +15,17 @@ You can find me on these sites:
   <a rel="me" href="https://www.instagram.com/coderbyheart/" title="Markus Tacker on Instagram">@coderbyheart</a>
 - GitHub:
   <a rel="me" href="https://github.com/coderbyheart" title="Markus Tacker on GitHub">@coderbyheart</a>
-- Matrix:
-  <a rel="me" href="https://matrix.to/#/@coderbyheart:matrix.org" title="Markus Tacker on Matrix">@coderbyheart:matrix.org</a>
 
 _Please note that I will reject connection requests from people I've never met
 personally. Feel free to follow me!_
+
+## Messaging
+
+- Signal:
+  [coderbyheart.42](https://signal.me/#eu/SrNdqOBa1X-GTQfHvkMhTtcs3v0_F88A1gvL5_Vags7MevSYE_ZMZ45LPbv7PUKo)
+- Matrix:
+  <a rel="me" href="https://matrix.to/#/@coderbyheart:matrix.org" title="Markus Tacker on Matrix">@coderbyheart:matrix.org</a>
+- WhatsApp (not secure): [@coderbyheart](https://wa.me/qr/SPGJ2GS4WTIAA1)
 
 ## Web 1.0
 
