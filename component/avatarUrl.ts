@@ -1,2 +1,2 @@
 export const avatarUrl = (width = 300): string =>
-	`//images.ctfassets.net/bncv3c2gt878/18M7LZPr4Dah1nSJagy6bk/09d2f6f4f373d983d0214ecd896bd89f/Me_2022-08?w=${width}&fm=webp`
+	`https://7w7z6ydf2htamqdsm6nbxm7sma0nkltc.lambda-url.eu-central-1.on.aws/2026-07-27/me-2026.jpg?f=scaled&q=9&w=${width}`
