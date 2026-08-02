@@ -1,7 +1,7 @@
 ---
 subtitle: Bring merino wool. Bring a swimsuit. Bring your unfinished ideas.
 title: Registration for Codefreeze 2027 is open
-abstract: Registration announcement for Codefreeze 2027
+abstract: It's about people. It always was.
 date: 2026-08-02T18:00:00.000Z
 tags:
   - codefreeze
@@ -12,8 +12,8 @@ tags:
   - codefreeze2027
 ---
 
-Sat 10 – Sat 17 January, in Kiilopää, Inari, Finland. Above the Arctic Circle.
-In January. On purpose.
+Sat 9 – Sat 16 January 2027, in Kiilopää, Inari, Finland. Above the Arctic
+Circle. In January. On purpose.
 
 ![High noon in Lapland in January. The sun is barely visible over the horizon and seen through a snowy landscape.](../media/codefreeze-2027-announcement.jpg)
 
