@@ -11,7 +11,9 @@ date: 2026-07-30T09:00:00+02:00
 > **tl;dr** [npm 12](https://github.com/npm/cli/releases/tag/v12.0.0) makes
 > dependency lifecycle scripts, Git dependencies, and remote tarballs opt-in.
 > Run `npm approve-scripts --allow-scripts-pending`, approve what you trust,
-> commit the allowlist.
+> commit the allowlist. However, npm 12 does not make your dependencies
+> trustworthy. It just stops them from running before you have decided whether
+> they are.
 
 The attacks all look the same. Someone steals a publish token, pushes a patch
 release with a `postinstall` script, and every CI runner that installs within
@@ -67,7 +69,7 @@ will break first. Make sure to read the error before running it again with
   `.npmrc` did nothing, silently, forever — a security control that only existed
   in your head. Now it fails the build. Misconfigured guardrails should be loud.
 
-## Side note: move to trusted publishing
+## Move to trusted publishing now
 
 Since a stolen token is how this starts, npm is deprecating 2FA-bypass granular
 access tokens in the same breath. From early August 2026 they can no longer
@@ -154,7 +156,35 @@ and every workflow is on the version the repository asks for:
   run: npm ci --no-audit
 ```
 
-## Bottom line
+## Using JSR.io breaks NPM v12 security improvements
 
-npm 12 does not make your dependencies trustworthy. It just stops them from
-running before you have decided whether they are.
+Unfortunately, because of NPM v12 I have to move packages off of
+[JSR](https://jsr.io/). In some setups I have transitive dependencies to more
+JSR hosted packages and this requires to set `allow-remote=all` for NPM v12.
+
+JSR packages are consumed through JSR's NPM compatibility layer, as
+`npm:@jsr/<scope>__…` aliases that resolve to tarball URLs on `npm.jsr.io`.
+
+NPM v12 classifies those as remote fetches and refuses them unless allow-remote
+is set. `allow-remote=root` only covers a project's own top-level dependencies.
+As soon as one of them pulls in a transitive JSR dependency, every host project
+consuming it has to relax the setting to `allow-remote=all`, which opens up the
+attack surface of arbitrary code sources that NPM v12 just closed.
+
+Publishing to NPM removes the need for it entirely: these packages become
+ordinary registry dependencies.
+
+## Tighten your AWS credential usage
+
+Even with NPM v12 it is still possible for malware to be executed. If an attack
+manages to infect a library that you execute manually (e.g. `jest`) it can also
+run arbitrary code in the context of your shell.
+
+To make it harder for credential stealers like in the
+[recent NPM supply chain attack](https://socket.dev/blog/popular-npm-packages-in-the-keyv-and-cacheable-namespaces-compromised-in-active-supply-chain)
+to acquire working credentials, stop using AWS access keys in your `.env` files.
+
+Switch to
+[AWS IAM Identity Center](https://docs.aws.amazon.com/singlesignon/latest/userguide/howtogetcredentials.html)
+which is free and allows to get short-lived credentials in a very convenient way
+using `aws sso`.
