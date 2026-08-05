@@ -117,7 +117,10 @@ that photos-scaler expects.
 
 ### Prerequisites
 
-- Node.js ≥ 24, npm ≥ 11
+- Node.js `>=24.18.1` and npm `>=12.0.2 <13` (enforced via
+  [check-node-version](https://www.npmjs.com/package/check-node-version) on
+  `npm install` and `npm ci`). In CI, the npm version from the `engines.npm`
+  directive is installed by the `.github/actions/install-npm` composite action.
 - [ImageMagick](https://imagemagick.org/) (`identify` must be on `$PATH` — used
   during the build to read image dimensions)
 - AWS credentials with write access to the `photos.coderbyheart` S3 bucket (only
