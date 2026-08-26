@@ -61,7 +61,7 @@
     "remark-frontmatter": "5.0.0",
     "remark-rehype": "11.1.2",
     "unist-util-visit": "5.1.0",
-    "vike": "0.4.262",
+    "vike": "0.4.263",
     "vike-solid": "0.8.4",
     "yaml": "2.9.0"
   },
