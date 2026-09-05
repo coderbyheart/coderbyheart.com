@@ -1,5 +1,5 @@
-import type { Root } from 'mdast'
 import path from 'node:path'
+import type { Root } from 'rehype-prism-plus/generator'
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
 import { replaceImage } from './replaceImages.ts'
