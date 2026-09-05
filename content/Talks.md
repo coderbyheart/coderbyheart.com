@@ -17,11 +17,6 @@ testing principles that have existed for decades and will keep serving us in the
 future. Additionally, I will look at how these principles, augmented with the
 power of LLMs, can further be improved.
 
-## Draft: end-to-end testing a Stripe integration with AWS Textract (Lightning Talk)
-
-How I use [AWS Textract](https://aws.amazon.com/textract/) to automate compliant
-invoice document generation in Stripe.
-
 ## Lightning talk: How AWS Textract enables end-to-end testing of Stripe's invoice customization
 
 In this lightning talk, I will give a short overview of how AWS Textract, which
