@@ -62,7 +62,7 @@
     "unist-util-visit": "5.1.0",
     "vike": "0.4.266",
     "vike-solid": "0.8.4",
-    "yaml": "2.9.0"
+    "yaml": "2.9.1"
   },
   "husky": {
     "hooks": {
