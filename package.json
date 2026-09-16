@@ -51,7 +51,7 @@
     "commitlint": "21.2.2",
     "husky": "9.1.7",
     "lint-staged": "17.5.1",
-    "prettier": "3.9.6",
+    "prettier": "3.9.7",
     "rehype-format": "5.0.1",
     "rehype-prism-plus": "2.0.2",
     "rehype-stringify": "10.0.1",
