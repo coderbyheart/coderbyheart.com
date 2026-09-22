@@ -19,6 +19,8 @@ power of LLMs, can further be improved.
 
 ## Lightning talk: How AWS Textract enables end-to-end testing of Stripe's invoice customization
 
+[Slides](https://coderbyheart.github.io/e2e-testing-with-aws-textract/)
+
 In this lightning talk, I will give a short overview of how AWS Textract, which
 allows to extract text from PDF documents, is used to write end-to-end tests for
 Nordic Semiconductor's IoT cloud platform nRF Cloud's customer invoicing
