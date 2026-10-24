@@ -59,7 +59,7 @@
     "remark-extract-frontmatter": "3.2.0",
     "remark-frontmatter": "5.0.0",
     "remark-rehype": "11.1.2",
-    "unist-util-visit": "5.1.0",
+    "unist-util-visit": "5.2.0",
     "vike": "0.4.268",
     "vike-solid": "0.8.8",
     "yaml": "2.9.1"
