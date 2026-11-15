@@ -33,6 +33,12 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit
 
+      - name: Check source code with oxlint
+        run: npx oxlint ./
+
+      - name: Check if source code is properly formatted
+        run: npx oxfmt --check
+
       - name: Export to-be released version
         run: |
           npx semantic-release --dry-run > semantic-release.out

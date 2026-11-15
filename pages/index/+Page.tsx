@@ -1,24 +1,24 @@
-import { Hero } from '#component/Hero/Hero.tsx'
-import { Markdown } from '#component/Markdown.tsx'
-import { Me } from '#component/Me.tsx'
-import { Main } from '#layout/Main.tsx'
-import type { MarkdownContent } from '#util/loadMarkdownContent.ts'
-import { useData } from 'vike-solid/useData'
+import { Hero } from "#component/Hero/Hero.tsx"
+import { Markdown } from "#component/Markdown.tsx"
+import { Me } from "#component/Me.tsx"
+import { Main } from "#layout/Main.tsx"
+import type { MarkdownContent } from "#util/loadMarkdownContent.ts"
+import { useData } from "vike-solid/useData"
 
 const Page = () => {
-	const { pages } = useData<{ pages: Map<string, MarkdownContent> }>()
+  const { pages } = useData<{ pages: Map<string, MarkdownContent> }>()
 
-	const start = pages.get('Start')
-	if (start === undefined) throw new Error('Start not found!')
-	return (
-		<>
-			<Main class={'start'}>
-				<Me />
-				<Markdown html={start.html} />
-			</Main>
-			{start.hero !== undefined && <Hero hero={start.hero} />}
-		</>
-	)
+  const start = pages.get("Start")
+  if (start === undefined) throw new Error("Start not found!")
+  return (
+    <>
+      <Main class={"start"}>
+        <Me />
+        <Markdown html={start.html} />
+      </Main>
+      {start.hero !== undefined && <Hero hero={start.hero} />}
+    </>
+  )
 }
 
 export default Page
