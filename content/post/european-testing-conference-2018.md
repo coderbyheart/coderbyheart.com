@@ -1,8 +1,7 @@
 ---
 title: European Testing Conference 2018
 subtitle: Conferences
-abstract:
-  A retrospective on what I learned during the European Testing Conference 2018
+abstract: A retrospective on what I learned during the European Testing Conference 2018
   in Amsterdam
 date: 2018-02-21T09:00+01:00
 ---

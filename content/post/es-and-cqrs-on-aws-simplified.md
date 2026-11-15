@@ -45,13 +45,13 @@ minimal:
 
 ```typescript
 export type AggregateEvent = {
-  eventId: ULID;
-  eventName: string;
-  aggregateName: string;
-  aggregateId: ULID;
-  aggregateVersion: AggregateVersion;
-  actorId: string;
-};
+  eventId: ULID
+  eventName: string
+  aggregateName: string
+  aggregateId: ULID
+  aggregateVersion: AggregateVersion
+  actorId: string
+}
 ```
 
 A few things worth noting here. `eventId` and `aggregateId` use
@@ -78,16 +78,16 @@ export const reduceEvents =
     applyEvent: ApplyEventFn<A>,
   ): ApplyEventsFn<A> =>
   (events: Array<AggregateEvent>, aggregate?: A) => {
-    if (events.length === 0) throw new Error("No events to reduce!");
+    if (events.length === 0) throw new Error("No events to reduce!")
     return events.reduce<A | undefined>((agg, event) => {
-      const result = applyEvent(event, agg);
+      const result = applyEvent(event, agg)
       if (result === undefined)
         throw new Error(
           `Unhandled event: ${event.eventName} (aggregateVersion: ${event.aggregateVersion})`,
-        );
-      return result;
-    }, aggregate) as A;
-  };
+        )
+      return result
+    }, aggregate) as A
+  }
 ```
 
 The domain-specific reducer wires this together. The blog post reducer handles
@@ -96,34 +96,32 @@ three events — created, published, and title changed — using typed event gua
 types precise:
 
 ```typescript
-export const blogpostReducer = reduceEvents<BlogPostAggregate>(
-  (event, aggregate) => {
-    if (isBlogPostCreatedEvent(event)) {
-      return {
-        $meta: fromEvent(event),
-        authorId: event.actorId,
-        title: event.title,
-      };
+export const blogpostReducer = reduceEvents<BlogPostAggregate>((event, aggregate) => {
+  if (isBlogPostCreatedEvent(event)) {
+    return {
+      $meta: fromEvent(event),
+      authorId: event.actorId,
+      title: event.title,
     }
-    if (isBlogPostPublishedEvent(event)) {
-      assertAggregateEvent(aggregate, event);
-      return {
-        ...aggregate,
-        $meta: updateFromEvent(aggregate.$meta, event),
-        isPublic: true,
-      };
+  }
+  if (isBlogPostPublishedEvent(event)) {
+    assertAggregateEvent(aggregate, event)
+    return {
+      ...aggregate,
+      $meta: updateFromEvent(aggregate.$meta, event),
+      isPublic: true,
     }
-    if (isBlogPostTitleChangedEvent(event)) {
-      assertAggregateEvent(aggregate, event);
-      return {
-        ...aggregate,
-        $meta: updateFromEvent(aggregate.$meta, event),
-        title: event.title,
-      };
+  }
+  if (isBlogPostTitleChangedEvent(event)) {
+    assertAggregateEvent(aggregate, event)
+    return {
+      ...aggregate,
+      $meta: updateFromEvent(aggregate.$meta, event),
+      title: event.title,
     }
-    return undefined;
-  },
-);
+  }
+  return undefined
+})
 ```
 
 The `assertAggregateEvent` call on the update and publish handlers is doing
@@ -143,15 +141,12 @@ Here is what creating a blog post looks like:
 
 ```typescript
 export const createBlogPostCommand =
-  (
-    persistBlogPost: PersistBlogPostFn,
-    reducer: ApplyEventsFn<BlogPostAggregate>,
-  ) =>
+  (persistBlogPost: PersistBlogPostFn, reducer: ApplyEventsFn<BlogPostAggregate>) =>
   async (
     data: Omit<BlogPostAggregate, "$meta" | "authorId">,
     actorId: string,
   ): Promise<BlogPostAggregate> => {
-    const id = ulid() as ULID;
+    const id = ulid() as ULID
     const event: BlogPostCreatedEvent = {
       eventId: ulid() as ULID,
       eventName: EventNames.BlogPostCreated,
@@ -160,11 +155,11 @@ export const createBlogPostCommand =
       aggregateVersion: v1,
       actorId,
       ...data,
-    };
-    const applied = reducer([event]);
-    await persistBlogPost(applied, event);
-    return applied;
-  };
+    }
+    const applied = reducer([event])
+    await persistBlogPost(applied, event)
+    return applied
+  }
 ```
 
 The reducer is injected alongside the persist function rather than imported
@@ -215,21 +210,17 @@ await db.send(
       },
     ],
   }),
-);
+)
 // ...
 if (err instanceof TransactionCanceledException) {
   if (err.CancellationReasons?.[0]?.Code === "ConditionalCheckFailed") {
-    throw new Error(
-      `Failed to persist "${aggregate.$meta.id}" due to version conflict!`,
-    );
+    throw new Error(`Failed to persist "${aggregate.$meta.id}" due to version conflict!`)
   }
   if (
     err.CancellationReasons?.[0]?.Code === "DuplicateItem" ||
     err.CancellationReasons?.[1]?.Code === "DuplicateItem"
   ) {
-    throw new Error(
-      `Failed to persist "${aggregate.$meta.id}" due to duplicate item!`,
-    );
+    throw new Error(`Failed to persist "${aggregate.$meta.id}" due to duplicate item!`)
   }
 }
 ```

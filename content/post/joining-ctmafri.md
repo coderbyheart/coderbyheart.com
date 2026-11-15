@@ -1,8 +1,7 @@
 ---
 title: I've joined CreaTech Motives Afrika's Advisory Board
 subtitle: Volunteering
-abstract:
-  I support the leadership of CreaTech Motives Afrika as a technical advisor as
+abstract: I support the leadership of CreaTech Motives Afrika as a technical advisor as
   part of their advisory board.
 date: 2023-01-01T18:00+01:00
 ---

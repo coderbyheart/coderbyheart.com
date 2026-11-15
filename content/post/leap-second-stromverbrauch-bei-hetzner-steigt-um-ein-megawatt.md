@@ -31,7 +31,5 @@ Selbst nach dem Töten aller Java-Prozesse und anschließendem Start von Jenkins
 verbrauchte dieser weiterhin 80-90% der CPU-Zeit. Erst ein Neustart des Servers
 brachte alles wieder in Normalzustand.
 
-[1]:
-  http://www.heise.de/newsticker/meldung/Schaltsekunde-Verlaengertes-Wochenende-1629612.html
-[2]:
-  http://www.heise.de/newsticker/meldung/Schaltsekunde-Linux-kann-einfrieren-1629683.html
+[1]: http://www.heise.de/newsticker/meldung/Schaltsekunde-Verlaengertes-Wochenende-1629612.html
+[2]: http://www.heise.de/newsticker/meldung/Schaltsekunde-Linux-kann-einfrieren-1629683.html

@@ -1,8 +1,7 @@
 ---
 title: "Building serverless applications on AWS"
 subtitle: Learning Resources
-abstract:
-  "This is the material I share with colleagues who want to learn the idiomatic
+abstract: "This is the material I share with colleagues who want to learn the idiomatic
   way of building serverless applications on AWS"
 date: 2025-03-23T10:00:00+01:00
 ---

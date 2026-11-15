@@ -1,8 +1,7 @@
 ---
 title: Introducing teamstatus.space
 subtitle: side-projects
-abstract:
-  Use teamstatus.space to collect project status updates asynchronously and
+abstract: Use teamstatus.space to collect project status updates asynchronously and
   distributed to speed up your sync meetings
 date: 2023-09-06T00:30:00.000+02:00
 ---

@@ -1,7 +1,6 @@
 ---
 title: README for APC students
-abstract:
-  I am mentoring students and I gave them a README for my weekly office hour.
+abstract: I am mentoring students and I gave them a README for my weekly office hour.
 subtitle: Mentoring
 date: 2020-12-11T18:00:00.000Z
 ---

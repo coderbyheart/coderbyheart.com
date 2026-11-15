@@ -17,5 +17,4 @@ nicht nur mit CSS-Media-Queries erreicht werden kann.
 
 [speckyboy.com: Responsive Design is Not About Screen Sizes Any More][1]
 
-[1]:
-  http://speckyboy.com/2013/09/11/responsive-design-is-not-about-screen-sizes-any-more/
+[1]: http://speckyboy.com/2013/09/11/responsive-design-is-not-about-screen-sizes-any-more/

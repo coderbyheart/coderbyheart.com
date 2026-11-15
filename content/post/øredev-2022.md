@@ -1,8 +1,7 @@
 ---
 title: Øredev 2022
 subtitle: Conferences
-abstract:
-  A look back at this years Øredev in Malmö; one of the best for-profit tech
+abstract: A look back at this years Øredev in Malmö; one of the best for-profit tech
   conferences I have attended so far
 date: 2022-11-14T00:00:00.000Z
 ---

@@ -1,8 +1,7 @@
 ---
 subtitle: Talks
 title: How to develop a cellular IoT project
-abstract:
-  A small lecture I gave on how to approach designing the software architecture
+abstract: A small lecture I gave on how to approach designing the software architecture
   for a cellular IoT project.
 date: 2024-02-08T14:00:00.000Z
 ---

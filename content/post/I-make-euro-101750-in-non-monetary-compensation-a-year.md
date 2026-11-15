@@ -113,9 +113,7 @@ salary will equal roughly €0.49. So in the end, both the company and me will
 benefit greatly from having this discussion.
 
 [hf]: https://en.wikipedia.org/wiki/Two-factor_theory
-[gs]:
-  https://www.destatis.de/DE/ZahlenFakten/GesamtwirtschaftUmwelt/VerdiensteArbeitskosten/VerdiensteVerdienstunterschiede/Tabellen/Bruttomonatsverdienste.html
+[gs]: https://www.destatis.de/DE/ZahlenFakten/GesamtwirtschaftUmwelt/VerdiensteArbeitskosten/VerdiensteVerdienstunterschiede/Tabellen/Bruttomonatsverdienste.html
 [gd]: https://www.glassdoor.com/
-[so]:
-  https://www.roberthalf.de/sites/roberthalf.de/files/pdf/noindex/gehaltsuebersicht-deutschland-2017-roberthalf.pdf
+[so]: https://www.roberthalf.de/sites/roberthalf.de/files/pdf/noindex/gehaltsuebersicht-deutschland-2017-roberthalf.pdf
 [ts]: https://townsquared.com/blog/2016/02/salary-transparency/

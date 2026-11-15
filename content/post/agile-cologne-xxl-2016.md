@@ -86,12 +86,8 @@ the grounds for it to grow roots.
 
 [1]: http://agilecologne.de/
 [2]: http://agilemanifesto.org/
-[su]:
-  https://www.flickr.com/photos/tacker/30109096515/in/album-72157671333742283/
-[mo]:
-  https://www.flickr.com/photos/tacker/29481516243/in/album-72157671333742283/
+[su]: https://www.flickr.com/photos/tacker/30109096515/in/album-72157671333742283/
+[mo]: https://www.flickr.com/photos/tacker/29481516243/in/album-72157671333742283/
 [gap]: http://geek-and-poke.com/geekandpoke/2016/4/26/finally-agile
-[probs]:
-  https://www.flickr.com/photos/tacker/29994987272/in/album-72157671333742283/
-[solution]:
-  https://www.flickr.com/photos/tacker/29481083554/in/album-72157671333742283/
+[probs]: https://www.flickr.com/photos/tacker/29994987272/in/album-72157671333742283/
+[solution]: https://www.flickr.com/photos/tacker/29481083554/in/album-72157671333742283/

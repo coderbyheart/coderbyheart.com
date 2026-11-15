@@ -35,6 +35,4 @@ for i in range(10):
 </pre>
 
 [1]: http://dummyimage.com/
-[2]:
-  http://www.flickr.com/photos/tacker/sets/72157627170208596/
-  "Lorem ipsum Set auf flickr"
+[2]: http://www.flickr.com/photos/tacker/sets/72157627170208596/ "Lorem ipsum Set auf flickr"

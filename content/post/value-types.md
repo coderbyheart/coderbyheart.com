@@ -38,7 +38,7 @@ invocation, with nevertheless invalid arguments:
 
 ```javascript
 // email argument is not an email
-m.sendEmail("John Doe", "Hello", "Text ...");
+m.sendEmail("John Doe", "Hello", "Text ...")
 ```
 
 It is also easy to flip the order of the arguments, because they are all typed
@@ -46,7 +46,7 @@ as `string`:
 
 ```javascript
 // email argument is not first
-m.sendEmail("Hello", "Text ...", "john@example.com");
+m.sendEmail("Hello", "Text ...", "john@example.com")
 ```
 
 If we instead turn `email` into a value object, we can mitigate these kinds of
@@ -55,8 +55,8 @@ errors:
 ```javascript
 class EmailValue {
   constructor(email) {
-    if (!isValidEmail(email)) throw new TypeError("Not an email: " + email);
-    this.email = email;
+    if (!isValidEmail(email)) throw new TypeError("Not an email: " + email)
+    this.email = email
   }
 }
 ```
@@ -65,7 +65,7 @@ Now the first example is no longer possible:
 
 ```javascript
 // throws TypeError
-m.sendEmail(new EmailValue("John Doe"), "Hello", "Text ...");
+m.sendEmail(new EmailValue("John Doe"), "Hello", "Text ...")
 ```
 
 The second example has become less likely to happen, because it's easier to spot
@@ -95,21 +95,21 @@ compare the two examples.
 Without value objects:
 
 ```javascript
-const { Mailer } = require("@acme/mailer");
+const { Mailer } = require("@acme/mailer")
 
-const m = new Mailer("localhost:25");
-m.sendEmail("john@example.com", "Hello", "Text ...");
+const m = new Mailer("localhost:25")
+m.sendEmail("john@example.com", "Hello", "Text ...")
 ```
 
 With value objects:
 
 ```javascript
-const { Mailer, SmtpHostValue } = require("@acme/mailer");
+const { Mailer, SmtpHostValue } = require("@acme/mailer")
 // let's share global domain value objects!
-const { EmailValue } = require("@acme/values");
+const { EmailValue } = require("@acme/values")
 
-const m = new Mailer(new SmtpHostValue("localhost", 25));
-m.sendEmail(new EmailValue("john@example.com"), "Hello", "Text ...");
+const m = new Mailer(new SmtpHostValue("localhost", 25))
+m.sendEmail(new EmailValue("john@example.com"), "Hello", "Text ...")
 ```
 
 We now require the caller to construct the arguments first using the correct
@@ -128,7 +128,7 @@ counter-intuitive:
 m.sendEmail(
   // "new" in an argument?
   new EmailValue("john@example.com"),
-);
+)
 ```
 
 Last but not least: _using_ instances of value objects becomes cumbersome.
@@ -155,19 +155,15 @@ class Mailer {
 For the caller `letter.email` is now an object:
 
 ```javascript
-const letter = await m.sendEmail(
-  new EmailValue("john@example.com"),
-  "Hello",
-  "Text ...",
-);
-typeof letter.email; // object(EmailValue)
+const letter = await m.sendEmail(new EmailValue("john@example.com"), "Hello", "Text ...")
+typeof letter.email // object(EmailValue)
 ```
 
 In order to access the value they would need to either _know_ that an EmailValue
 has a `email` property:
 
 ```javascript
-letter.email.email; // 'john@example.com'
+letter.email.email // 'john@example.com'
 ```
 
 This is weird and leads to generalizing the `primitive` value through having
@@ -177,7 +173,7 @@ them implement a `.toString()` method:
 class EmailValue {
   // ...
   toString() {
-    return this.email;
+    return this.email
   }
 }
 ```
@@ -185,7 +181,7 @@ class EmailValue {
 so consumers of the value can stringify it:
 
 ```javascript
-`${letter.email}`; // 'john@example.com'
+;`${letter.email}` // 'john@example.com'
 ```
 
 _Unless_ the value object is no longer a string but e.g. a float, or composite
@@ -194,8 +190,8 @@ value which can no longer be usefully represented as a string:
 ```javascript
 class SmtpHostValue {
   constructor(hostname, port) {
-    this.hostname = hostname;
-    this.port = port;
+    this.hostname = hostname
+    this.port = port
   }
 }
 ```
@@ -203,15 +199,15 @@ class SmtpHostValue {
 Although one could intuitively tend to implement it like this:
 
 ```javascript
-`${new SmtpHostValue("localhost", 25)}`; // 'localhost:25'
+;`${new SmtpHostValue("localhost", 25)}` // 'localhost:25'
 ```
 
 the problem here is that the string representation can not be used to construct
 the value object:
 
 ```javascript
-new EmailValue(`${new EmailValue("john@example.com")}`); // this works
-new SmtpHostValue(`${new SmtpHostValue("localhost", 25)}`); // this doesn't
+new EmailValue(`${new EmailValue("john@example.com")}`) // this works
+new SmtpHostValue(`${new SmtpHostValue("localhost", 25)}`) // this doesn't
 ```
 
 To be fair: in many cases you will simply be passing through value object
@@ -274,7 +270,7 @@ class Mailer {
 Let's look at the details:
 
 ```javascript
-email = validate(EmailValue)(email);
+email = validate(EmailValue)(email)
 ```
 
 `validate` is a method which is able to validate an argument against a given
@@ -289,8 +285,8 @@ It's important to note that `email` stays of type `String`, and also in the
 returned letter, the caller can now access its properties naturally:
 
 ```javascript
-const letter = await m.sendEmail("john@example.com", "Hello", "Text ...");
-typeof letter.email; // 'john@example.com'
+const letter = await m.sendEmail("john@example.com", "Hello", "Text ...")
+typeof letter.email // 'john@example.com'
 ```
 
 ### Code

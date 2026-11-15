@@ -1,8 +1,7 @@
 ---
 title: "The BDD Books: Formulation"
 subtitle: Book Review
-abstract:
-  An indepth guide for software teams to engage all stakeholders in creating
+abstract: An indepth guide for software teams to engage all stakeholders in creating
   up-to-date documentation that drives tests
 date: 2021-04-22T23:00+01:00
 ---

@@ -1,8 +1,7 @@
 ---
 title: On Code of Conducts
 subtitle: Conferences
-abstract:
-  Your event’s Code of Conduct extends beyond the event and it’s digital spaces
+abstract: Your event’s Code of Conduct extends beyond the event and it’s digital spaces
 date: 2023-05-16T15:00:00.000+01:00
 ---
 

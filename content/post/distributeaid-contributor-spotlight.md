@@ -1,8 +1,7 @@
 ---
 subtitle: Impact
 title: Why I contribute to DistributeAid
-abstract:
-  In this post I introduce myself for a DistributeAid contributor spotlight and
+abstract: In this post I introduce myself for a DistributeAid contributor spotlight and
   talk about the work I do for the non-profit.
 date: 2022-03-14T21:00:00.000Z
 ---

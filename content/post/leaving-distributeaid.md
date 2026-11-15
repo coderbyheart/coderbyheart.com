@@ -1,8 +1,7 @@
 ---
 title: I've left DistributeAid
 subtitle: Volunteering
-abstract:
-  After three years volunteering for DistributeAid I felt it no longer was a
+abstract: After three years volunteering for DistributeAid I felt it no longer was a
   good way to spend my time
 date: 2023-01-01T17:00+01:00
 ---
