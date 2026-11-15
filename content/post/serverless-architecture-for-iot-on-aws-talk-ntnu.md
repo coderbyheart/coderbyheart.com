@@ -1,8 +1,7 @@
 ---
 subtitle: Talk
 title: Serverless Architecture for IoT on AWS
-abstract:
-  An NTNU guest lecture on serverless and IoT and why they are a great match.
+abstract: An NTNU guest lecture on serverless and IoT and why they are a great match.
 date: 2022-02-23T20:00:00.000Z
 ---
 

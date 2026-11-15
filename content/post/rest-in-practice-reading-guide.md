@@ -1,8 +1,7 @@
 ---
 subtitle: Book review
 title: REST in Practice - a reading guide
-abstract:
-  While the book was published in 2010 and some of its contents have not aged
+abstract: While the book was published in 2010 and some of its contents have not aged
   well, it still provides a lot of things to learn. In this post I will give my
   recommendations on which sections are a must read, and which ones can be
   skipped in case you are-like me-not very fond of Java and XML.

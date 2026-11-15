@@ -12,9 +12,9 @@ This long wrapping in a if / else clause makes the code hard to read.
 
 ```javascript
 if (condition) {
-  doWork();
+  doWork()
 } else {
-  throw Error("Condition not met!");
+  throw Error("Condition not met!")
 }
 ```
 
@@ -22,9 +22,9 @@ if (condition) {
 
 ```javascript
 if (!condition) {
-  throw Error("Condition not met!");
+  throw Error("Condition not met!")
 }
-doWork();
+doWork()
 ```
 
 ## Stop nesting promises
@@ -39,12 +39,12 @@ getData((a) => {
     getMoreData(b, (c) => {
       getMoreData(c, (d) => {
         getMoreData(d, (e) => {
-          console.log(e);
-        });
-      });
-    });
-  });
-});
+          console.log(e)
+        })
+      })
+    })
+  })
+})
 ```
 
 ### Better
@@ -55,16 +55,16 @@ getData()
   .then((b) => getMoreData(b))
   .then((c) => getMoreData(c))
   .then((d) => getMoreData(d))
-  .then((e) => console.log(e));
+  .then((e) => console.log(e))
 ```
 
 ### Even better
 
 ```javascript
-const a = await getData();
-const b = await getMoreData(a);
-const c = await getMoreData(b);
-const d = await getMoreData(c);
-const e = await getMoreData(d);
-console.log(e);
+const a = await getData()
+const b = await getMoreData(a)
+const c = await getMoreData(b)
+const d = await getMoreData(c)
+const e = await getMoreData(d)
+console.log(e)
 ```

@@ -29,5 +29,4 @@ After that just make sure to update your assets via
 
 > `app/console assetic:dump`
 
-[1]:
-  http://symfony.com/doc/current/reference/configuration/framework.html#assets-version
+[1]: http://symfony.com/doc/current/reference/configuration/framework.html#assets-version

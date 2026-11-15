@@ -1,9 +1,7 @@
 ---
-title:
-  COVID-19 guide for Aid Workers built with GatsbyJS from a Google Drive folder
+title: COVID-19 guide for Aid Workers built with GatsbyJS from a Google Drive folder
 subtitle: resources.distributeaid.org
-abstract:
-  resources.distributeaid.org provides a browser-friendly UI for a Google Drive
+abstract: resources.distributeaid.org provides a browser-friendly UI for a Google Drive
   folder.
 date: 2020-05-19T18:00+02:00
 ---

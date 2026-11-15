@@ -13,10 +13,10 @@ Build scalable systems by separating concerns.
 ```javascript
 class UserManager {
   async createUser(email) {
-    const id = await this.userRepo.insert(email);
-    await this.upgradeAccount(id, "trial");
-    await this.sendConfirmationEmail(email);
-    await this.notifySlack(`Woot! ${email} has registered`);
+    const id = await this.userRepo.insert(email)
+    await this.upgradeAccount(id, "trial")
+    await this.sendConfirmationEmail(email)
+    await this.notifySlack(`Woot! ${email} has registered`)
   }
 }
 ```
@@ -36,16 +36,14 @@ which is better suited for them.
 ```javascript
 class UserManager {
   async createUser(email) {
-    const id = await this.userRepo.insert(email);
-    this.eventBus.publish("UserCreatedEvent", { id, email });
+    const id = await this.userRepo.insert(email)
+    this.eventBus.publish("UserCreatedEvent", { id, email })
   }
 }
 
 class TransactionalMailer {
   construct(eventBus) {
-    eventBus.on("UserCreated", (name, { email }) =>
-      this.sendConfirmationEmail(email),
-    );
+    eventBus.on("UserCreated", (name, { email }) => this.sendConfirmationEmail(email))
   }
 }
 ```

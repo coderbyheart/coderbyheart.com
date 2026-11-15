@@ -1,7 +1,6 @@
 ---
 subtitle: Talk
-title:
-  "Software Quality made this talk happen: push-to-deploy as the means to deal
+title: "Software Quality made this talk happen: push-to-deploy as the means to deal
   with uncertainty"
 abstract: >
   This talk is an encouragement for developers to trust their skills and tools,

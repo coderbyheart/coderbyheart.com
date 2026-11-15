@@ -53,5 +53,4 @@ The most important aspect of intent-based leadership in my opinion is that it
 establishes deliberate learning towards a common goal which enables
 organizations to grow and become truly agile.
 
-[dm]:
-  http://www.davidmarquet.com/?utm_source=coderbyheart&utm_medium=blogpost&utm_campaign=turn-your-ship-around
+[dm]: http://www.davidmarquet.com/?utm_source=coderbyheart&utm_medium=blogpost&utm_campaign=turn-your-ship-around

@@ -9,13 +9,13 @@ date: 2025-12-28T12:38+01:00
 **Bad**
 
 ```javascript
-myMethod(arg1, arg2, arg3);
+myMethod(arg1, arg2, arg3)
 ```
 
 **Good**
 
 ```javascript
-myMethod({ arg1, arg2, arg3 });
+myMethod({ arg1, arg2, arg3 })
 ```
 
 **Reasons**

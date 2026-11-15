@@ -1,7 +1,6 @@
 ---
 title: Meta is killing source code writing, if you like it or not
-subtitle:
-  Facebook changed the way we build frontends, Meta changes the way we build
+subtitle: Facebook changed the way we build frontends, Meta changes the way we build
   software
 abstract: >-
   Meta is investing billions into an LLM that writes software the Facebook way,

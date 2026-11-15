@@ -1,8 +1,7 @@
 ---
 subtitle: Cloud Native
 title: Migrating to AWS SDK v3 for JavaScript
-abstract:
-  Notes on migrating Bifravst to the completely rewritten AWS SDK for
+abstract: Notes on migrating Bifravst to the completely rewritten AWS SDK for
   JavaScript/TypeScript
 date: 2021-01-05T16:00:00.000Z
 ---
@@ -56,7 +55,7 @@ You always need to pass an object to the constructor, even if not providing any
 configuration.
 
 ```typescript
-const iot = new IoTClient({});
+const iot = new IoTClient({})
 ```
 
 ### Calling an operation
@@ -64,7 +63,7 @@ const iot = new IoTClient({});
 Operations are now called by _sending_ a _command_:
 
 ```typescript
-const { things } = await iot.send(new ListThingsCommand({}));
+const { things } = await iot.send(new ListThingsCommand({}))
 ```
 
 Here, again, you always need to pass an object to the constructor of the
@@ -171,18 +170,18 @@ when uploading a file with a custom content-type. The workaround is to
 ```javascript
 s3.middlewareStack.add(
   (next) => async (args) => {
-    delete args.request.headers["content-type"];
-    return next(args);
+    delete args.request.headers["content-type"]
+    return next(args)
   },
   { step: "build" },
-);
+)
 
 await s3.putObject({
   Bucket: bucket,
   Key: key,
   Body: body,
   ContentType: contentType,
-});
+})
 ```
 
 ## Custom signed HTTP requests

@@ -16,11 +16,11 @@ This hides dependencies to configuration values and makes them hard to spot.
 ```javascript
 class Foo {
   doSomething() {
-    console.log(process.env.MY_ENV);
+    console.log(process.env.MY_ENV)
   }
 }
 
-new Foo().doSomething();
+new Foo().doSomething()
 ```
 
 ## Good
@@ -28,12 +28,12 @@ new Foo().doSomething();
 ```javascript
 class Foo {
   constructor(myEnv) {
-    this.myEnv = myEnv;
+    this.myEnv = myEnv
   }
   doSomething() {
-    console.log(this.myEnv);
+    console.log(this.myEnv)
   }
 }
 
-new Foo(process.env.MY_ENV).doSomething();
+new Foo(process.env.MY_ENV).doSomething()
 ```

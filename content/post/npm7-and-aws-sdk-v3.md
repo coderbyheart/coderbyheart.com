@@ -1,9 +1,7 @@
 ---
 subtitle: Cloud Native
-title:
-  Handling NPM v7's unnecessary inclusion of peer dependencies with AWS SDK v3
-abstract:
-  When using NPM v7 to package lambdas using AWS SKD v3 it leads to unnecessary
+title: Handling NPM v7's unnecessary inclusion of peer dependencies with AWS SDK v3
+abstract: When using NPM v7 to package lambdas using AWS SKD v3 it leads to unnecessary
   large deployment pacakges.
 date: 2021-03-07T16:00:00.000Z
 ---

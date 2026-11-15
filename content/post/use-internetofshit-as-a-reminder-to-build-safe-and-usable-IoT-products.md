@@ -1,7 +1,6 @@
 ---
 subtitle: Tech Talk
-title:
-  How i use @internetofshit as a reminder to build safe and usable IoT products
+title: How i use @internetofshit as a reminder to build safe and usable IoT products
 abstract: an ad-hoc tech talk about an inspirational Twitter account
 date: 2023-09-19T13:30:00.000Z
 ---

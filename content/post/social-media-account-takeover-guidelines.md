@@ -1,8 +1,7 @@
 ---
 subtitle: Social Media account Takeovers
 title: Guidelines to ensure a safe experience
-abstract:
-  This document provides a code of conduct for these account Takeovers in order
+abstract: This document provides a code of conduct for these account Takeovers in order
   to enable the employee, the social media team, and the followers to have
   meaningful and positive interactions.
 date: 2022-07-19T10:00:00.000Z

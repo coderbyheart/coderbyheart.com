@@ -91,39 +91,36 @@ constructing class instances we need to package the lambdas before we run
 ### `cloudformation.ts`
 
 ```typescript
-import * as fs from "fs";
-import * as path from "path";
-import { packBaseLayer } from "@bifravst/package-layered-lambdas";
-import {
-  packLayeredLambdas,
-  WebpackMode,
-} from "@bifravst/package-layered-lambdas";
+import * as fs from "fs"
+import * as path from "path"
+import { packBaseLayer } from "@bifravst/package-layered-lambdas"
+import { packLayeredLambdas, WebpackMode } from "@bifravst/package-layered-lambdas"
 
-(async () => {
+;(async () => {
   // This is where we locally store the packaged lambdas
-  const outDir = path.resolve(__dirname, "pack");
+  const outDir = path.resolve(__dirname, "pack")
 
   // Create the directory if it does not exist
   try {
-    fs.statSync(outDir);
+    fs.statSync(outDir)
   } catch (_) {
-    fs.mkdirSync(outDir);
+    fs.mkdirSync(outDir)
   }
 
   // Set the name of the S3 bucket to store the lambdas
   // in reality we have another CDK App which provides this value,
   // but I have omitted it for the sakee of brevity
-  const bucketName = "cf-sourcecode";
+  const bucketName = "cf-sourcecode"
 
   // Location of the webpack config to use (see below)
-  const webpackConfig = path.resolve(__dirname, "tsconfig-webpack.json");
+  const webpackConfig = path.resolve(__dirname, "tsconfig-webpack.json")
 
   // Location of the tsConfig to use with dependency-tree (see below)
-  const tsConfig = path.resolve(__dirname, "tsconfig-dependency-tree.json");
+  const tsConfig = path.resolve(__dirname, "tsconfig-dependency-tree.json")
 
   // Now package your lambdas
   const layeredLambdas = await packLayeredLambdas<{
-    helloWorld: string;
+    helloWorld: string
   }>({
     // We group related lambdas per feature, this identifies the group
     id: "my-project-lambdas",
@@ -136,20 +133,20 @@ import {
       helloWorld: path.resolve(__dirname, "hello-world.ts"),
     },
     tsConfig,
-  });
+  })
 
   // And create the base layer
   const baseLayer = await packBaseLayer({
     srcDir: __dirname,
     outDir,
     Bucket: bucketName,
-  });
+  })
 
   // Now you can construct your CDK app and pass the locations
   // of the layered lambdas and the base layer location in,
   // to use them when constructing a Lambda function definition
-  new MyCDKApp(layeredLambdas, baseLayer).run();
-})();
+  new MyCDKApp(layeredLambdas, baseLayer).run()
+})()
 ```
 
 ### `tsconfig-webpack.json`

@@ -96,8 +96,7 @@ life. I will never forget my first codefreeze.
 [kiilopaa]: http://www.kiilopaa.fi/en/home.html
 [cf]: http://codefreeze.fi
 [socrates]: https://socrates-conference.de/
-[hashtagcf]:
-  https://twitter.com/search?f=tweets&vertical=default&q=%23codefreeze&src=typd
+[hashtagcf]: https://twitter.com/search?f=tweets&vertical=default&q=%23codefreeze&src=typd
 [sl]: https://www.suomenlatu.fi/
 [timetable]: https://trello.com/b/zIYeI0me/codefreeze-2017
 [aki]: https://www.linkedin.com/in/rinkkasatiainen/de

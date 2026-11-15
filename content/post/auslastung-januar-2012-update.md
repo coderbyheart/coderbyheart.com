@@ -30,6 +30,5 @@ Screenshots? [Gerne][8].
 [4]: http://auslastung.coderbyheart.de/trac/ticket/43
 [5]: http://auslastung.coderbyheart.de/trac/ticket/38
 [6]: http://auslastung.coderbyheart.de/trac/ticket/31
-[7]:
-  http://auslastung.coderbyheart.de/trac/timeline?from=02.01.2012&daysback=30&author=&ticket=on&changeset=on&update=Update
+[7]: http://auslastung.coderbyheart.de/trac/timeline?from=02.01.2012&daysback=30&author=&ticket=on&changeset=on&update=Update
 [8]: http://www.flickr.com/photos/tacker/sets/72157627176428815/

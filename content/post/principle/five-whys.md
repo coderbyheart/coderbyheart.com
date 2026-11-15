@@ -1,8 +1,7 @@
 ---
 subtitle: "42 first principles"
 title: 5 whys
-abstract:
-  The 5 whys method is so powerful because of its simplicity ... but be careful
+abstract: The 5 whys method is so powerful because of its simplicity ... but be careful
   not to come across as annoying when applying it. Showing persistence in
   uncovering fundamental truths about a thing takes practice, but always
   delivers.
