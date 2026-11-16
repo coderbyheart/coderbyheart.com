@@ -55,7 +55,7 @@
     "husky": "9.1.7",
     "lint-staged": "17.6.1",
     "oxfmt": "0.78.0",
-    "oxlint": "1.93.0",
+    "oxlint": "1.94.0",
     "rehype-format": "5.0.1",
     "rehype-prism-plus": "2.0.2",
     "rehype-stringify": "10.0.1",
