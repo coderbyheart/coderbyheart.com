@@ -40,7 +40,7 @@
     "the-new-css-reset": "1.11.3"
   },
   "devDependencies": {
-    "@aws-sdk/client-s3": "3.1170.0",
+    "@aws-sdk/client-s3": "3.1171.0",
     "@bifravst/from-env": "4.0.1",
     "@bifravst/run": "2.0.2",
     "@coderbyheart/oxlint-config": "1.0.1",
