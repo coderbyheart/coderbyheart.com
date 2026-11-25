@@ -33,7 +33,7 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@solid-primitives/intersection-observer": "2.2.5",
+    "@solid-primitives/intersection-observer": "3.0.0",
     "date-fns": "4.4.0",
     "lodash-es": "4.18.1",
     "solid-js": "1.9.20",
